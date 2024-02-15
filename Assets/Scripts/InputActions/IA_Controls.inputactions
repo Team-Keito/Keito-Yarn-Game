@@ -134,6 +134,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Dev",
+            "id": "f15af2cb-a0b5-4c5f-8efb-a7b9b3e82e6f",
+            "actions": [
+                {
+                    "name": "ChangeColor",
+                    "type": "Button",
+                    "id": "0bcb1231-919d-4e23-a413-e7021b459316",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpawnBall",
+                    "type": "Button",
+                    "id": "a7c4f46f-bc8e-426a-a5ef-7df22e264305",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cca887ef-3244-40dc-b647-47d03f37129e",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeColor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0a855cde-ea68-4643-94bf-8e9a28c70d40",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpawnBall",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

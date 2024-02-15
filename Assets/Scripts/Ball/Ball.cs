@@ -5,23 +5,30 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     [SerializeField]
-    private Color _color;
-
-    public Color Color { get => _color; }
+    private YarnColor _color;
+    public Color Color => _color.Color;
 
     private Rigidbody _rigidBody;
 
     // Start is called before the first frame update
     void Awake()
     {
-        GetComponent<Renderer>().material.color = _color;
+        if (_color)
+        {
+            GetComponent<Renderer>().material.color = Color;
+        }        
         _rigidBody = GetComponent<Rigidbody>();
+    }
+
+    public void SetColor(YarnColor color)
+    {
+        _color = color;
+        GetComponent<Renderer>().material.color = Color;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-
-        if (collision.gameObject.TryGetComponent<Ball>(out Ball hitBall) && hitBall.Color == _color)
+        if (collision.gameObject.TryGetComponent<Ball>(out Ball hitBall) && hitBall.Color == Color)
         {
             if (transform.position.y > hitBall.transform.position.y)
             {
