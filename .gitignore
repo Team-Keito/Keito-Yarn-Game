@@ -73,3 +73,7 @@ crashlytics-build.properties
 
 
 .DS_Store
+
+
+# from https://www.audiokinetic.com/library/edge/?source=Unity&id=unity__troubleshooting.html
+/[Aa]ssets/Wwise/Editor/ProjectData/AkWwiseProjectData*.asset*

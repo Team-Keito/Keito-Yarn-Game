@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1DA99209-5068-45EA-906C-0B308922446A}" SchemaVersion="103">
+	<InteractiveMusic>
+		<WorkUnit Name="Default Work Unit" ID="{1DA99209-5068-45EA-906C-0B308922446A}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSwitchContainer Name="Music" ID="{786E2F00-A681-40B1-B3FA-94228335239D}" ShortID="158769043">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicPlaylistContainer Name="MainMenu_Music" ID="{FFB4E166-6F73-4E83-A221-14F524382F86}" ShortID="559810162">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{9B9B1E3A-5C12-414C-A769-F4786AFB17F2}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{79E45C0E-03D0-4141-B0FB-47D4258CD499}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{C4EDCF13-4DB3-4138-AEA4-818995C9B224}" ShortID="822368376"/>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicSwitchContainer Name="Ingame_Music" ID="{9E82D9E6-AB53-409A-8A44-DA18A0B141F2}" ShortID="384490687">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{F993083A-50DE-42AB-BA5A-A7F2616EA445}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{2277444F-6F86-4FC8-8082-676E3B109445}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+						</MusicSwitchContainer>
+						<MusicPlaylistContainer Name="Pause_Music" ID="{11601BCB-BB9D-4B9B-86AE-7EC5F8FB546C}" ShortID="1011191562">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{E617BF4F-2DB2-49A2-9328-E8342C572942}" ShortID="579311778">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="15483.8775510204"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{FFB3D4E5-FB44-45A8-97FC-2B4D5572F429}" ShortID="949573183">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{FF725FF5-DEF3-4DEC-B320-E27ECA6A85E5}">
+													<Language>SFX</Language>
+													<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Base.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="254799321"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{AB30B628-CC5B-438D-989C-50F786E2A21A}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{9AF5A576-CB2C-465D-8966-F0F29EBE74CD}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{A6E4A4FD-D9BE-4C50-8546-11F99374761A}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{FF725FF5-DEF3-4DEC-B320-E27ECA6A85E5}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{3FC401AA-4D44-424F-B30E-EEA7C2F4B1E9}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{78A1F5F6-4249-4B24-B985-57A14CBECF65}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="15483.8775510204"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{03F7D533-3BA8-48B0-8C28-2A635B3E0702}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{D3B754D1-5FD9-4347-BB85-3E9A287436B2}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{3489C837-5E24-4FC3-8875-563626067356}" ShortID="815658421">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{2F658862-D94E-4C84-8084-F2E42D0C0BBE}" ShortID="1025413638">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{E617BF4F-2DB2-49A2-9328-E8342C572942}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{08FF9F00-B156-4B32-A357-80616F9A2B9C}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{21AC72B4-6F1C-4A18-B3CF-DDB2F4084FD5}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ObjectLists/>
+					<ArgumentList>
+						<ArgumentRef Name="GameStates" ID="{9B69ADE7-D470-45A4-B082-CFC321D4F120}"/>
+					</ArgumentList>
+					<EntryList>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Ingame_State" ID="{AE3FB139-1538-47C7-8325-8451E6E562C0}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Ingame_Music" ID="{9E82D9E6-AB53-409A-8A44-DA18A0B141F2}" WorkUnitID="{1DA99209-5068-45EA-906C-0B308922446A}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="MainMenu_State" ID="{2DDE41CF-9A05-4A70-8D2D-E01A0ECF4F28}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="MainMenu_Music" ID="{FFB4E166-6F73-4E83-A221-14F524382F86}" WorkUnitID="{1DA99209-5068-45EA-906C-0B308922446A}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Pause_State" ID="{0CA38F66-44BF-4288-92F6-94543C2B555B}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Pause_Music" ID="{11601BCB-BB9D-4B9B-86AE-7EC5F8FB546C}" WorkUnitID="{1DA99209-5068-45EA-906C-0B308922446A}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="None" ID="{C5F42A50-9E59-421E-8BD0-7863EDCA0C33}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Pause_Music" ID="{11601BCB-BB9D-4B9B-86AE-7EC5F8FB546C}" WorkUnitID="{1DA99209-5068-45EA-906C-0B308922446A}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+					</EntryList>
+				</MusicSwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceddf5576fb57644482d6b682eaa995f, type: 3}
+  m_Name: 0CA38F66-44BF-4288-92F6-94543C2B555B
+  m_EditorClassIdentifier: 
+  objectName: Pause_State
+  id: 1944582999
+  guid: 0CA38F66-44BF-4288-92F6-94543C2B555B
+  WwiseStateGroupReference: {fileID: 11400000, guid: b5979bc84689e344c98b7057118b3539, type: 2}
