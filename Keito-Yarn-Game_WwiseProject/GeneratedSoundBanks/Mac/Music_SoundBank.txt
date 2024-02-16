@@ -1,0 +1,15 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2932040671	Play_Music			\Default Work Unit\Play_Music	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	777429653	GameStates			\Default Work Unit\GameStates	
+
+State	ID	Name	State Group			Notes
+	748895195	None	GameStates			
+	1944582999	Pause_State	GameStates			
+	2678566748	Ingame_State	GameStates			
+	3205958645	MainMenu_State	GameStates			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	254799321	JasminaCarevic_Keito_124bmp_4-4_Base	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Mac\SFX\JasminaCarevic_Keito_124bmp_4-4_Base_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Pause_Music\JasminaCarevic_Keito_124bmp_4-4_Base\JasminaCarevic_Keito_124bmp_4-4_Base		2731420
+
