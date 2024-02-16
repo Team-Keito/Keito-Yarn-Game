@@ -6,17 +6,25 @@ using UnityEngine.UI;
 
 public class SpawnBall : MonoBehaviour
 {
-    [SerializeField] private List<YarnColor> _colors;
     [SerializeField] private float _ballDropHeight = 10;
+    [SerializeField] private List<YarnColorSO> _colors;
 
-    [SerializeField] private GameObject _ballPrefab;
-    [SerializeField] private Image _image;
-    [SerializeField] private GameObject _cusorIndicator;
+    [Space()]
+    [SerializeField, Tooltip("Prefab for Spawning ball")] 
+    private GameObject _ballPrefab;
+
+    //TODO: Should replace with better way to update
+    [SerializeField, Tooltip("Updates UI element")] 
+    private Image _image;
+
+    //Disable collision otherwise raytrace / moving pushes objects
+    [SerializeField, Tooltip("Cursor indactor placed in level (remove collision)")] 
+    private GameObject _cusorIndicator;
 
     private int _colorIndex = 0;
     private IA_Controls inputActions;
 
-    private YarnColor YarnColor => _colors[_colorIndex];
+    private YarnColorSO YarnColor => _colors[_colorIndex];
     private Color CurrentColor => YarnColor.Color;
     
 

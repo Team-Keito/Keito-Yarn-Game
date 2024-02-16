@@ -5,24 +5,25 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     [SerializeField]
-    private YarnColor _color;
-    public Color Color => _color.Color;
+    private YarnColorSO _yarnColor;
+
+    public YarnColorSO YarnColor => _yarnColor;
+    public Color Color => YarnColor.Color;
 
     private Rigidbody _rigidBody;
 
-    // Start is called before the first frame update
     void Awake()
     {
-        if (_color)
+        if (YarnColor)
         {
-            GetComponent<Renderer>().material.color = Color;
+            SetColor(YarnColor);
         }        
         _rigidBody = GetComponent<Rigidbody>();
     }
 
-    public void SetColor(YarnColor color)
+    public void SetColor(YarnColorSO color)
     {
-        _color = color;
+        _yarnColor = color;
         GetComponent<Renderer>().material.color = Color;
     }
 
@@ -30,6 +31,7 @@ public class Ball : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<Ball>(out Ball hitBall) && hitBall.Color == Color)
         {
+            //Destroy top ball & combine into bottom ball
             if (transform.position.y > hitBall.transform.position.y)
             {
                 Destroy(gameObject);

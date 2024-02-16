@@ -13,7 +13,7 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private float _clampVertical = 85f;
 
-    [SerializeField] private GameObject _camera;
+    [SerializeField] private Camera _camera;
 
     private Vector2 _currentRotation = new Vector2();
 
