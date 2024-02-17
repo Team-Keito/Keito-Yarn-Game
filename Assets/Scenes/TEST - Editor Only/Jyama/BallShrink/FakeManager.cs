@@ -11,7 +11,7 @@ public class FakeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject[] objects = GameObject.FindGameObjectsWithTag("Ball");
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("Yarn");
 
         foreach(GameObject go in objects)
         {

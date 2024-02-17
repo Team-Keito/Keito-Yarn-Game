@@ -7,8 +7,6 @@ public class BallCombine : MonoBehaviour
 {
     public UnityEvent OnCombine;
 
-    [SerializeField] private Color _color;
-
     [Space(5)]
     [SerializeField] private float _massMultiplier = 1f;
     [SerializeField] private float _massCap = 5f;
@@ -18,22 +16,22 @@ public class BallCombine : MonoBehaviour
     [SerializeField] private float _scaleCap = 5f;
 
     private Rigidbody _rigidBody;
+    private Renderer _renderer;
     private Vector3 _scaleVectorCap;
 
-    public Color Color => _color;
+    public Color Color => _renderer.material.color;
 
     void Start()
     {
-         SetColor(_color);
         _rigidBody = GetComponent<Rigidbody>();
+        _renderer = GetComponent<Renderer>();
 
         _scaleVectorCap = new Vector3(_scaleCap, _scaleCap, _scaleCap);
     }
 
     public void SetColor(Color color)
     {
-        _color = color;
-        GetComponent<Renderer>().material.color = _color;
+        _renderer.material.color = color;
     }
 
     /// <summary>

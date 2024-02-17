@@ -20,7 +20,7 @@ public class BallShrink : MonoBehaviour
     private float _shrinkRateCap = 0.1f;
 
     [Space(5)]
-    [SerializeField, Range(0.01f, 0.8f), Tooltip("Threshold speed to start shrink, based on horizontal magnitude")] 
+    [SerializeField, Range(0.1f, 3f), Tooltip("Threshold speed to start shrink, based on horizontal magnitude")] 
     private float _ThresholdSpeed = 0.1f;
 
     private Rigidbody _rigidbody;
@@ -59,8 +59,6 @@ public class BallShrink : MonoBehaviour
         {
             return;
         }
-
-        
 
         if (_isGrounded && horizantalVelocity.magnitude > _ThresholdSpeed)
         {
