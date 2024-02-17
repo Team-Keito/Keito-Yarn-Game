@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2051353701	Play_Cat_Meow			\Default Work Unit\Play_Cat_Meow	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	352831436	CATPOCALYPSE_CAT_MEOW_V1_14	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Mac\SFX\CATPOCALYPSE_CAT_MEOW_V1_14_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cat_Meow\CATPOCALYPSE_CAT_MEOW_V1_14		117264
+	707119013	CATPOCALYPSE_CAT_MEOW_V1_12	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Mac\SFX\CATPOCALYPSE_CAT_MEOW_V1_12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cat_Meow\CATPOCALYPSE_CAT_MEOW_V1_12		154464
+	757621186	CATPOCALYPSE_CAT_MEOW_V1_2	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Mac\SFX\CATPOCALYPSE_CAT_MEOW_V1_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cat_Meow\CATPOCALYPSE_CAT_MEOW_V1_2		160464
+	958241183	CATPOCALYPSE_CAT_MEOW_V1_6	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Mac\SFX\CATPOCALYPSE_CAT_MEOW_V1_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cat_Meow\CATPOCALYPSE_CAT_MEOW_V1_6		186464
+	958904981	CATPOCALYPSE_CAT_MEOW_V1_13	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Mac\SFX\CATPOCALYPSE_CAT_MEOW_V1_13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cat_Meow\CATPOCALYPSE_CAT_MEOW_V1_13		162464
+

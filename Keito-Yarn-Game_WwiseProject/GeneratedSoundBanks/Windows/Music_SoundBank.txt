@@ -3,13 +3,34 @@ Event	ID	Name			Wwise Object Path	Notes
 
 State Group	ID	Name			Wwise Object Path	Notes
 	777429653	GameStates			\Default Work Unit\GameStates	
+	3285234865	PlayerState			\Default Work Unit\PlayerState	
 
 State	ID	Name	State Group			Notes
 	748895195	None	GameStates			
 	1944582999	Pause_State	GameStates			
 	2678566748	Ingame_State	GameStates			
 	3205958645	MainMenu_State	GameStates			
+	748895195	None	PlayerState			
+	1852808225	Playing	PlayerState			
+	4158285989	Gameover	PlayerState			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	254799321	JasminaCarevic_Keito_124bmp_4-4_Base	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Base_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Pause_Music\JasminaCarevic_Keito_124bmp_4-4_Base\JasminaCarevic_Keito_124bmp_4-4_Base		2731420
+	33298597	GLOCK	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Track1_Glock_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist1\GLOCK		2731420
+	182486938	MARIMBAvsWHISTLER	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist2\MARIMBAvsWHISTLER		2731420
+	254799321	BASE	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Base_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist1\BASE		2731420
+	277768788	MARIMBAvsWHISTLE	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Track4_Whistler_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist4\MARIMBAvsWHISTLE		2731420
+	436674011	MARIMBA	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Track3_Marimba_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist3\MARIMBA		2731420
+	504052876	MARIMBA1vsWHISTLE	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Track1_Marimba1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist1\MARIMBA1vsWHISTLE		2731420
+	585377437	MARIMBA3	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba3_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist2\MARIMBA3		2731420
+	588819380	GLOCK	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Track4_Glock_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist4\GLOCK		2731420
+	624723718	MARIMBA2	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Track4_Marimba2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist4\MARIMBA2		2731420
+	665340794	MARIMBA2	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Track1_Marimba2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist1\MARIMBA2		2731420
+	678306688	MARIMBA2	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist2\MARIMBA2		2731420
+	694880164	GLOCK	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Track3_Glock_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist3\GLOCK		2731420
+	748666652	MARIMBA1vsWHISTLE	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Track1_Whistler_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist1\MARIMBA1vsWHISTLE		2731420
+	788221083	GLOCK	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Track2_Glock_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist2\GLOCK		2731420
+	806706298	MARIMBAvsWHISTLER	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Track2_Whistler_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist2\MARIMBAvsWHISTLER		2731420
+	944208439	JasminaCarevic_Keito_124bmp_4-4_MainMenu_Melody	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_MainMenu_Melody_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MainMenu_Music\JasminaCarevic_Keito_124bmp_4-4_MainMenu\JasminaCarevic_Keito_124bmp_4-4_MainMenu_Melody		2731420
+	946597395	XYLO	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Xylo_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist1\XYLO		2731420
+	1040641227	MARIMBAvsWHISTLE	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\JasminaCarevic_Keito_124bmp_4-4_Track4_Marimba1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Ingame_Music\IngameMusic_Playlist\Playlist4\MARIMBAvsWHISTLE		2731420
 
