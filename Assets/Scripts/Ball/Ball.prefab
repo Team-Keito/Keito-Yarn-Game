@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8575088842678913989}
   - component: {fileID: 8575088842678913977}
   - component: {fileID: 95605295803243147}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8575088842678913990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.015414, y: 7.18, z: 2.001069}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -127,4 +127,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acbd4f71046444448622b623871a91f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _color: {fileID: 0}
+  _yarnColor: {fileID: 0}

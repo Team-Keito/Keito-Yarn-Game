@@ -17,14 +17,12 @@ public class Test_CatHandler : MonoBehaviour
         _catAudioSource = GetComponent<AudioSource>();
     }
 
-    public void OnUpdateScore(int value, YarnColorSO color)
+    public void OnUpdateScore(int value)
     {
         Score += value;
-        _tempTextField.text = string.Format("Score: {0}\n{1}: {2}", Score, color.name, value);
+        _tempTextField.text = string.Format("Score: {0}\n+{1}", Score,value);
         Debug.Log(Score);
 
         _catAudioSource.Play();
     }
-
-
 }

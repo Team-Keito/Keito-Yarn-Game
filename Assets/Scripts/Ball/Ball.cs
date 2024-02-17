@@ -14,11 +14,18 @@ public class Ball : MonoBehaviour
 
     void Awake()
     {
-        if (YarnColor)
+        if (_yarnColor)
         {
             SetColor(YarnColor);
         }        
         _rigidBody = GetComponent<Rigidbody>();
+    }
+    private void OnValidate()
+    {
+        if (YarnColor)
+        {
+            SetColor(YarnColor);
+        }
     }
 
     public void SetColor(YarnColorSO color)
