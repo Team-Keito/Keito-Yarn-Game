@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="3296047412">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\SFXVolume"/>
+				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\MusicVolume"/>
+				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\MasterVolume"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="2641024368" Language="SFX" Hash="2090070045">
+			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
+			<ShortName>SFX_SoundBank</ShortName>
+			<Path>SFX_SoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2051353701" Name="Play_Cat_Meow" ObjectPath="\Events\Default Work Unit\Play_Cat_Meow" DurationType="OneShot" DurationMin="40.666668" DurationMax="40.666668">
+					<IncludedMemoryFiles>
+						<File Id="352831436" Language="SFX">
+							<ShortName>CATPOCALYPSE_CAT_MEOW_V1_14.wav</ShortName>
+							<Path>SFX\CATPOCALYPSE_CAT_MEOW_V1_14_10C4C929.wem</Path>
+						</File>
+						<File Id="707119013" Language="SFX">
+							<ShortName>CATPOCALYPSE_CAT_MEOW_V1_12.wav</ShortName>
+							<Path>SFX\CATPOCALYPSE_CAT_MEOW_V1_12_10C4C929.wem</Path>
+						</File>
+						<File Id="757621186" Language="SFX">
+							<ShortName>CATPOCALYPSE_CAT_MEOW_V1_2.wav</ShortName>
+							<Path>SFX\CATPOCALYPSE_CAT_MEOW_V1_2_10C4C929.wem</Path>
+						</File>
+						<File Id="958241183" Language="SFX">
+							<ShortName>CATPOCALYPSE_CAT_MEOW_V1_6.wav</ShortName>
+							<Path>SFX\CATPOCALYPSE_CAT_MEOW_V1_6_10C4C929.wem</Path>
+						</File>
+						<File Id="958904981" Language="SFX">
+							<ShortName>CATPOCALYPSE_CAT_MEOW_V1_13.wav</ShortName>
+							<Path>SFX\CATPOCALYPSE_CAT_MEOW_V1_13_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="3589812408" Language="SFX" Hash="3616244238">
+			<ObjectPath>\SoundBanks\Default Work Unit\Music_SoundBank</ObjectPath>
+			<ShortName>Music_SoundBank</ShortName>
+			<Path>Music_SoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="33298597" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track1_Glock.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Track1_Glock_D79FB2B7.wem</Path>
+						</File>
+						<File Id="182486938" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba1.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="254799321" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Base.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Base_D79FB2B7.wem</Path>
+						</File>
+						<File Id="277768788" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track4_Whistler.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Track4_Whistler_D79FB2B7.wem</Path>
+						</File>
+						<File Id="436674011" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track3_Marimba.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Track3_Marimba_D79FB2B7.wem</Path>
+						</File>
+						<File Id="504052876" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track1_Marimba1.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Track1_Marimba1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="585377437" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba3.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba3_D79FB2B7.wem</Path>
+						</File>
+						<File Id="588819380" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track4_Glock.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Track4_Glock_D79FB2B7.wem</Path>
+						</File>
+						<File Id="624723718" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track4_Marimba2.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Track4_Marimba2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="665340794" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track1_Marimba2.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Track1_Marimba2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="678306688" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba2.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="694880164" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track3_Glock.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Track3_Glock_D79FB2B7.wem</Path>
+						</File>
+						<File Id="748666652" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track1_Whistler.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Track1_Whistler_D79FB2B7.wem</Path>
+						</File>
+						<File Id="788221083" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track2_Glock.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Track2_Glock_D79FB2B7.wem</Path>
+						</File>
+						<File Id="806706298" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track2_Whistler.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Track2_Whistler_D79FB2B7.wem</Path>
+						</File>
+						<File Id="944208439" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_MainMenu_Melody.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_MainMenu_Melody_D79FB2B7.wem</Path>
+						</File>
+						<File Id="946597395" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Xylo.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Xylo_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1040641227" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track4_Marimba1.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Track4_Marimba1_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{AE3FB139-1538-47C7-8325-8451E6E562C0}">
+							<Children>
+								<SwitchContainer SwitchValue="{59D505F2-2BA8-4D2D-A54E-564052E321D3}">
+									<Media>
+										<File Id="33298597"/>
+										<File Id="182486938"/>
+										<File Id="254799321"/>
+										<File Id="277768788"/>
+										<File Id="436674011"/>
+										<File Id="504052876"/>
+										<File Id="585377437"/>
+										<File Id="588819380"/>
+										<File Id="624723718"/>
+										<File Id="665340794"/>
+										<File Id="678306688"/>
+										<File Id="694880164"/>
+										<File Id="748666652"/>
+										<File Id="788221083"/>
+										<File Id="806706298"/>
+										<File Id="946597395"/>
+										<File Id="1040641227"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{2DDE41CF-9A05-4A70-8D2D-E01A0ECF4F28}">
+							<Media>
+								<File Id="254799321"/>
+								<File Id="944208439"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{0CA38F66-44BF-4288-92F6-94543C2B555B}">
+							<Media>
+								<File Id="254799321"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{C5F42A50-9E59-421E-8BD0-7863EDCA0C33}">
+							<Media>
+								<File Id="254799321"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</IncludedEvents>
+			<StateGroups>
+				<StateGroup Id="777429653" Name="GameStates" ObjectPath="\States\Default Work Unit\GameStates" GUID="{9B69ADE7-D470-45A4-B082-CFC321D4F120}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\GameStates\None" GUID="{C5F42A50-9E59-421E-8BD0-7863EDCA0C33}"/>
+						<State Id="3205958645" Name="MainMenu_State" ObjectPath="\States\Default Work Unit\GameStates\MainMenu_State" GUID="{2DDE41CF-9A05-4A70-8D2D-E01A0ECF4F28}"/>
+						<State Id="2678566748" Name="Ingame_State" ObjectPath="\States\Default Work Unit\GameStates\Ingame_State" GUID="{AE3FB139-1538-47C7-8325-8451E6E562C0}"/>
+						<State Id="1944582999" Name="Pause_State" ObjectPath="\States\Default Work Unit\GameStates\Pause_State" GUID="{0CA38F66-44BF-4288-92F6-94543C2B555B}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3285234865" Name="PlayerState" ObjectPath="\States\Default Work Unit\PlayerState" GUID="{4E95AF37-1545-4577-9C92-B1769A4D9B05}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\PlayerState\None" GUID="{5D053314-007F-4A6B-8533-089DF45F12D4}"/>
+						<State Id="1852808225" Name="Playing" ObjectPath="\States\Default Work Unit\PlayerState\Playing" GUID="{59D505F2-2BA8-4D2D-A54E-564052E321D3}"/>
+						<State Id="4158285989" Name="Gameover" ObjectPath="\States\Default Work Unit\PlayerState\Gameover" GUID="{5ABABF18-6850-472E-B13D-67FDE00344EC}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CD330055-646D-425E-8C9F-F02BF73EFF79}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{CD330055-646D-425E-8C9F-F02BF73EFF79}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Cat_Meow" ID="{2BEB764D-E8BC-44F6-BA96-F876936847B8}" ShortID="940124937">
+					<PropertyList>
+						<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismLoopCount" Type="int32" Value="10"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="CATPOCALYPSE_CAT_MEOW_V1_2" ID="{7C7068B7-2572-4935-93E2-57111B97018E}" ShortID="78151175">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CATPOCALYPSE_CAT_MEOW_V1_2" ID="{E34313E5-8C56-4916-90ED-A2F8556CEF70}">
+									<Language>SFX</Language>
+									<AudioFile>CATPOCALYPSE_CAT_MEOW_V1_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="757621186"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="CATPOCALYPSE_CAT_MEOW_V1_2" ID="{E34313E5-8C56-4916-90ED-A2F8556CEF70}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CATPOCALYPSE_CAT_MEOW_V1_6" ID="{EF104C8C-C747-4F79-952A-EE74111DA50C}" ShortID="722742335">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CATPOCALYPSE_CAT_MEOW_V1_6" ID="{0BDE38B7-4D6E-4CE5-B57C-398CDF576BD3}">
+									<Language>SFX</Language>
+									<AudioFile>CATPOCALYPSE_CAT_MEOW_V1_6.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="958241183"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="CATPOCALYPSE_CAT_MEOW_V1_6" ID="{0BDE38B7-4D6E-4CE5-B57C-398CDF576BD3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CATPOCALYPSE_CAT_MEOW_V1_12" ID="{60D0593C-5966-401B-8C2C-87A49BC22C0E}" ShortID="233537935">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CATPOCALYPSE_CAT_MEOW_V1_12" ID="{5E5E2D3F-1166-49A7-86B9-F6A2D505ED30}">
+									<Language>SFX</Language>
+									<AudioFile>CATPOCALYPSE_CAT_MEOW_V1_12.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="707119013"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="CATPOCALYPSE_CAT_MEOW_V1_12" ID="{5E5E2D3F-1166-49A7-86B9-F6A2D505ED30}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CATPOCALYPSE_CAT_MEOW_V1_13" ID="{E0513557-46F4-461F-9B17-7B286264B8AC}" ShortID="754726349">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CATPOCALYPSE_CAT_MEOW_V1_13" ID="{7E173853-8E09-4753-99FE-4979415BAEDB}">
+									<Language>SFX</Language>
+									<AudioFile>CATPOCALYPSE_CAT_MEOW_V1_13.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="958904981"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="CATPOCALYPSE_CAT_MEOW_V1_13" ID="{7E173853-8E09-4753-99FE-4979415BAEDB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CATPOCALYPSE_CAT_MEOW_V1_14" ID="{2AE0FA5C-168D-410F-B3A8-89931FD9E7AC}" ShortID="388371777">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CATPOCALYPSE_CAT_MEOW_V1_14" ID="{6A2EECC4-8827-4F10-AABB-728ABDD19AAF}">
+									<Language>SFX</Language>
+									<AudioFile>CATPOCALYPSE_CAT_MEOW_V1_14.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="352831436"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="CATPOCALYPSE_CAT_MEOW_V1_14" ID="{6A2EECC4-8827-4F10-AABB-728ABDD19AAF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{EFF0B148-0024-4912-B316-5F6123798618}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{EFF0B148-0024-4912-B316-5F6123798618}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Music" ID="{8929DC38-502E-4C27-B12C-2D9254BC3C21}">
+					<ChildrenList>
+						<Action Name="" ID="{2AEF38E6-FCA8-43B6-AF93-97911B3D0DB5}" ShortID="328679274">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{786E2F00-A681-40B1-B3FA-94228335239D}" WorkUnitID="{1DA99209-5068-45EA-906C-0B308922446A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Cat_Meow" ID="{1396E1BF-D9E6-44B6-B719-8D2FC654836B}">
+					<ChildrenList>
+						<Action Name="" ID="{1215658E-561C-43EA-A281-268E6D9D1A35}" ShortID="241247511">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cat_Meow" ID="{2BEB764D-E8BC-44F6-BA96-F876936847B8}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
