@@ -13,12 +13,12 @@ GameObject:
   - component: {fileID: 2223748521248414918}
   - component: {fileID: 1379290104864335862}
   - component: {fileID: 309222586083112746}
-  - component: {fileID: 4965267156288511238}
   - component: {fileID: 3994358027059110642}
   - component: {fileID: 3447830896704646272}
+  - component: {fileID: 2928477762677485005}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 7b8cb3c0a7cd918448e6763bdaf0fc74, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,23 +118,11 @@ MonoBehaviour:
       m_Calls: []
   _groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   _minSize: 0.2
   _shrinkMultiplier: 0.5
   _shrinkMaxRate: 0.1
   _shrinkThresholdSpeed: 0.1
---- !u!114 &4965267156288511238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3256787847383666255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d8f9cd90ba93d94f8e2e194b6593044, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &3994358027059110642
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -259,3 +247,35 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &2928477762677485005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3256787847383666255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1acbd4f71046444448622b623871a91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnCombine:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 309222586083112746}
+        m_TargetAssemblyTypeName: BallShrink, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _color: {r: 0, g: 0, b: 0, a: 0}
+  _massMultiplier: 1
+  _massCap: 5
+  _scaleMultiplier: 1
+  _scaleCap: 5

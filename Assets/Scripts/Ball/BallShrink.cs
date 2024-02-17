@@ -28,19 +28,20 @@ public class BallShrink : MonoBehaviour
     private Vector3 _minVectorSize;
     private bool _isSmallest = false;
 
-    private bool _isGrounded => Physics.Raycast(transform.position, Vector3.down, _radius + 0.1f, _groundLayer);
+    private float _scaledRadius => _radius * transform.localScale.x + 0.1f;
+    private bool _isGrounded => Physics.Raycast(transform.position, Vector3.down, _scaledRadius, _groundLayer);
 
-    // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _trailRenderer = GetComponent<TrailRenderer>();
 
         _trailRenderer.emitting = false;
+        _trailRenderer.startColor = GetComponent<Renderer>().material.color;
 
         _radius = GetComponent<SphereCollider>().radius;
-        _minVectorSize = new Vector3(_minSize, _minSize, _minSize);
 
+        _minVectorSize = new Vector3(_minSize, _minSize, _minSize);
     }
 
     private void FixedUpdate()
@@ -48,24 +49,22 @@ public class BallShrink : MonoBehaviour
         Vector3 horizantalVelocity = _rigidbody.velocity;
         horizantalVelocity.y = 0;
 
-        if (horizantalVelocity != Vector3.zero && horizantalVelocity.magnitude >= _shrinkThresholdSpeed && _isGrounded)
+        if (horizantalVelocity != Vector3.zero && horizantalVelocity.magnitude > _shrinkThresholdSpeed && _isGrounded)
         {
             _trailRenderer.emitting = true;
             ShrinkBall(horizantalVelocity.magnitude);
              
             if(!_isSmallest && transform.localScale == _minVectorSize)
             {
-                OnSmallestSize.Invoke();
-                _isSmallest = true;
-            }  
+                HandleSmallestSize();
+            }
         }
         else
         {
             _trailRenderer.emitting = false;
-            Debug.Log("Disabled");
         }
     }
-    
+
     /// <summary>
     /// Shrinks ball based on movement speed. 
     /// </summary>
@@ -73,10 +72,27 @@ public class BallShrink : MonoBehaviour
     private void ShrinkBall(float magnitude)
     {
         float rate = Mathf.Min(Mathf.Abs(magnitude) * _shrinkMultiplier, _shrinkMaxRate);
+
         transform.localScale -= new Vector3(rate, rate, rate) * Time.fixedDeltaTime;
         transform.localScale = Vector3.Max(transform.localScale, _minVectorSize);
 
         _rigidbody.mass -= rate * Time.fixedDeltaTime;
         _rigidbody.mass = Mathf.Max(_rigidbody.mass, _minSize);
+    }
+
+    /// <summary>
+    /// Called on combined to re-enabled
+    /// </summary>
+    public void Reset()
+    {
+        gameObject.SetActive(true);
+        _isSmallest = false;
+    }
+
+    private void HandleSmallestSize()
+    {
+        OnSmallestSize.Invoke();
+        _isSmallest = true;
+        gameObject.SetActive(false);
     }
 }
