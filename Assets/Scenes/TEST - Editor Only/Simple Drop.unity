@@ -551,7 +551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yarnPrefabs:
-  - {fileID: 6453792562293160579, guid: 4f278b39139824cd2a7ef59506f1ac8a, type: 3}
+  - {fileID: 1998775315433358910, guid: 6f1991215cd624462896b6ad92f28885, type: 3}
   dropHeight: 10
 --- !u!23 &726517481
 MeshRenderer:
