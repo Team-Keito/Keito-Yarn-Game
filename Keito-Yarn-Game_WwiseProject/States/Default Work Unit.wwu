@@ -11,6 +11,13 @@
 						<State Name="Pause_State" ID="{0CA38F66-44BF-4288-92F6-94543C2B555B}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="PlayerState" ID="{4E95AF37-1545-4577-9C92-B1769A4D9B05}">
+					<ChildrenList>
+						<State Name="None" ID="{5D053314-007F-4A6B-8533-089DF45F12D4}"/>
+						<State Name="Playing" ID="{59D505F2-2BA8-4D2D-A54E-564052E321D3}"/>
+						<State Name="Gameover" ID="{5ABABF18-6850-472E-B13D-67FDE00344EC}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>
