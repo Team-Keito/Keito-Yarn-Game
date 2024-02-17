@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_CAT_MEOW = 2051353701U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
     } // namespace EVENTS
 
@@ -31,17 +32,39 @@ namespace AK
             } // namespace STATE
         } // namespace GAMESTATES
 
+        namespace PLAYERSTATE
+        {
+            static const AkUniqueID GROUP = 3285234865U;
+
+            namespace STATE
+            {
+                static const AkUniqueID GAMEOVER = 4158285989U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID PLAYING = 1852808225U;
+            } // namespace STATE
+        } // namespace PLAYERSTATE
+
     } // namespace STATES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID MASTERVOLUME = 2918011349U;
+        static const AkUniqueID MUSICVOLUME = 2346531308U;
+        static const AkUniqueID SFXVOLUME = 988953028U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID MUSIC_SOUNDBANK = 3589812408U;
+        static const AkUniqueID SFX_SOUNDBANK = 2641024368U;
     } // namespace BANKS
 
     namespace BUSSES
     {
-        static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MASTERVOLUME = 2918011349U;
+        static const AkUniqueID MUSICVOLUME = 2346531308U;
+        static const AkUniqueID SFXVOLUME = 988953028U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES
