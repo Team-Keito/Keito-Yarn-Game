@@ -111,3 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc3a54b205364a341a3cd12b999d0347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnCatScored:
+    m_PersistentCalls:
+      m_Calls: []
+  _ballTag: Ball

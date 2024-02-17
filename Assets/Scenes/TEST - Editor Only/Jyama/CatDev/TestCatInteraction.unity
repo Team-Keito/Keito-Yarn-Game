@@ -631,11 +631,23 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -6535755717125745071, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
+      propertyPath: OnCatScored.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6535755717125745071, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
       propertyPath: CatScored.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6535755717125745071, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
       propertyPath: CatScored.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1947204607}
+    - target: {fileID: -6535755717125745071, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
+      propertyPath: OnCatScored.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6535755717125745071, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
+      propertyPath: OnCatScored.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1947204607}
     - target: {fileID: -6535755717125745071, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
@@ -647,11 +659,27 @@ PrefabInstance:
       value: OnCatScore
       objectReference: {fileID: 0}
     - target: {fileID: -6535755717125745071, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
+      propertyPath: OnCatScored.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6535755717125745071, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
+      propertyPath: OnCatScored.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnCatScore
+      objectReference: {fileID: 0}
+    - target: {fileID: -6535755717125745071, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
       propertyPath: CatScored.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: TempCatEventHandler, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: -6535755717125745071, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
+      propertyPath: OnCatScored.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TempCatEventHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -6535755717125745071, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
       propertyPath: CatScored.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: -6535755717125745071, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
+      propertyPath: OnCatScored.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 356121733264728672, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
@@ -672,19 +700,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 356121733264728672, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 356121733264728672, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 356121733264728672, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 356121733264728672, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 356121733264728672, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -692,7 +720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 356121733264728672, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 356121733264728672, guid: 313a80c8c75226e4bab159afb597d5b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
