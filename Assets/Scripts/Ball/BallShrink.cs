@@ -9,26 +9,28 @@ public class BallShrink : MonoBehaviour
 
     [SerializeField] private LayerMask _groundLayer;
 
-    [SerializeField, Tooltip("Minimum ball scale")] 
+    [Space(5)]
+    [SerializeField, Range(0.01f, 0.5f), Tooltip("Minimum ball scale")] 
     private float _minSize = 0.2f;
 
-    [SerializeField, Tooltip("Multiplier of shrink rate")] 
+    [SerializeField, Range(0.01f, 1.5f), Tooltip("Multiplier of shrink rate")] 
     private float _shrinkMultiplier = 0.5f;
 
-    [SerializeField, Tooltip("Max shrink rate")] 
-    private float _shrinkMaxRate = 0.1f;
+    [SerializeField, Range(0.01f, 0.5f), Tooltip("Capped shrink rate")] 
+    private float _shrinkRateCap = 0.1f;
 
-    [SerializeField, Tooltip("Threshold speed to start shrink, based on horizontal magnitude")] 
-    private float _shrinkThresholdSpeed = 0.1f;
+    [Space(5)]
+    [SerializeField, Range(0.01f, 0.8f), Tooltip("Threshold speed to start shrink, based on horizontal magnitude")] 
+    private float _ThresholdSpeed = 0.1f;
 
     private Rigidbody _rigidbody;
     private TrailRenderer _trailRenderer;
     
-    private float _radius;
+    private float _baseRadius;
     private Vector3 _minVectorSize;
     private bool _isSmallest = false;
 
-    private float _scaledRadius => _radius * transform.localScale.x + 0.1f;
+    private float _scaledRadius => _baseRadius * transform.localScale.y + 0.1f;
     private bool _isGrounded => Physics.Raycast(transform.position, Vector3.down, _scaledRadius, _groundLayer);
 
     void Start()
@@ -39,24 +41,35 @@ public class BallShrink : MonoBehaviour
         _trailRenderer.emitting = false;
         _trailRenderer.startColor = GetComponent<Renderer>().material.color;
 
-        _radius = GetComponent<SphereCollider>().radius;
+        _baseRadius = GetComponent<SphereCollider>().radius;
 
         _minVectorSize = new Vector3(_minSize, _minSize, _minSize);
     }
 
+    /// <summary>
+    /// Checks for ground movement & speed threshold
+    /// to shrink ball & toggle trail
+    /// </summary>
     private void FixedUpdate()
     {
         Vector3 horizantalVelocity = _rigidbody.velocity;
         horizantalVelocity.y = 0;
 
-        if (horizantalVelocity != Vector3.zero && horizantalVelocity.magnitude > _shrinkThresholdSpeed && _isGrounded)
+        if (_isSmallest && horizantalVelocity == Vector3.zero)
+        {
+            return;
+        }
+
+        
+
+        if (_isGrounded && horizantalVelocity.magnitude > _ThresholdSpeed)
         {
             _trailRenderer.emitting = true;
             ShrinkBall(horizantalVelocity.magnitude);
              
             if(!_isSmallest && transform.localScale == _minVectorSize)
             {
-                HandleSmallestSize();
+                TriggerSmallestSize();
             }
         }
         else
@@ -66,12 +79,12 @@ public class BallShrink : MonoBehaviour
     }
 
     /// <summary>
-    /// Shrinks ball based on movement speed. 
+    /// Shrinks ball based on movement speed (magnitude). 
     /// </summary>
-    /// <param name="magnitude"></param>
+    /// <param name="magnitude">Speed value</param>
     private void ShrinkBall(float magnitude)
     {
-        float rate = Mathf.Min(Mathf.Abs(magnitude) * _shrinkMultiplier, _shrinkMaxRate);
+        float rate = Mathf.Min(Mathf.Abs(magnitude) * _shrinkMultiplier, _shrinkRateCap);
 
         transform.localScale -= new Vector3(rate, rate, rate) * Time.fixedDeltaTime;
         transform.localScale = Vector3.Max(transform.localScale, _minVectorSize);
@@ -81,18 +94,18 @@ public class BallShrink : MonoBehaviour
     }
 
     /// <summary>
-    /// Called on combined to re-enabled
+    /// Called OnCombined to re-enabled
     /// </summary>
     public void Reset()
     {
-        gameObject.SetActive(true);
         _isSmallest = false;
+        _trailRenderer.emitting = true;
     }
 
-    private void HandleSmallestSize()
+    private void TriggerSmallestSize()
     {
         OnSmallestSize.Invoke();
         _isSmallest = true;
-        gameObject.SetActive(false);
+        _trailRenderer.emitting = false;
     }
 }

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 478080431689479091}
   - component: {fileID: 2223748521248414918}
   - component: {fileID: 1379290104864335862}
-  - component: {fileID: 309222586083112746}
   - component: {fileID: 3994358027059110642}
   - component: {fileID: 3447830896704646272}
+  - component: {fileID: 309222586083112746}
   - component: {fileID: 2928477762677485005}
   m_Layer: 0
   m_Name: Ball
@@ -101,28 +101,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &309222586083112746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3256787847383666255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1add9fadbaef17449e78c485ab4b511, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnSmallestSize:
-    m_PersistentCalls:
-      m_Calls: []
-  _groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  _minSize: 0.2
-  _shrinkMultiplier: 0.5
-  _shrinkMaxRate: 0.1
-  _shrinkThresholdSpeed: 0.1
 --- !u!54 &3994358027059110642
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -246,7 +224,29 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
-  m_Emitting: 1
+  m_Emitting: 0
+--- !u!114 &309222586083112746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3256787847383666255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1add9fadbaef17449e78c485ab4b511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnSmallestSize:
+    m_PersistentCalls:
+      m_Calls: []
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  _minSize: 0.2
+  _shrinkMultiplier: 0.5
+  _shrinkRateCap: 0.1
+  _ThresholdSpeed: 0.1
 --- !u!114 &2928477762677485005
 MonoBehaviour:
   m_ObjectHideFlags: 0

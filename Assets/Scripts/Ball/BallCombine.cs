@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Ball : MonoBehaviour
+public class BallCombine : MonoBehaviour
 {
     public UnityEvent OnCombine;
 
     [SerializeField] private Color _color;
 
+    [Space(5)]
     [SerializeField] private float _massMultiplier = 1f;
     [SerializeField] private float _massCap = 5f;
 
+    [Space(5)]
     [SerializeField] private float _scaleMultiplier = 1f;
     [SerializeField] private float _scaleCap = 5f;
 
     private Rigidbody _rigidBody;
-
     private Vector3 _scaleVectorCap;
+
+    public Color Color => _color;
 
     void Start()
     {
@@ -33,9 +36,14 @@ public class Ball : MonoBehaviour
         GetComponent<Renderer>().material.color = _color;
     }
 
+    /// <summary>
+    /// Combine balls scale and mass.
+    /// Prevent combine if total greater than either cap.
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent<Ball>(out Ball hitBall) && hitBall._color == _color)
+        if (collision.gameObject.TryGetComponent<BallCombine>(out BallCombine hitBall) && hitBall.Color == Color)
         {
             Vector3 combinedScale = transform.localScale + hitBall.transform.localScale * _scaleMultiplier;
             float combinedMass = _rigidBody.mass + collision.rigidbody.mass * _massMultiplier;
@@ -45,7 +53,6 @@ public class Ball : MonoBehaviour
                 return;            
             }
 
-            //Destroy top ball & combine into bottom ball
             if (transform.position.y > hitBall.transform.position.y)
             {
                 Destroy(collision.gameObject);
