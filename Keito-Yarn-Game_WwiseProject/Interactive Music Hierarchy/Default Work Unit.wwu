@@ -4,12 +4,15 @@
 		<WorkUnit Name="Default Work Unit" ID="{1DA99209-5068-45EA-906C-0B308922446A}" PersistMode="Standalone">
 			<ChildrenList>
 				<MusicSwitchContainer Name="Music" ID="{786E2F00-A681-40B1-B3FA-94228335239D}" ShortID="158769043">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="124"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+							<ObjectRef Name="MusicVolume" ID="{0FD6194D-B572-4032-B14B-A5B20B96C65C}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -19,9 +22,145 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="JasminaCarevic_Keito_124bmp_4-4_MainMenu" ID="{0F8FFAD9-0184-43DC-B55C-AC155F1F8BE4}" ShortID="723278264">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="15953.9652877643"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{E0620ECB-B7D5-4F8F-B803-3649EBE3D1A2}" ShortID="674107326">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{D976BFCD-C983-4202-B216-9CC65E6830E3}">
+													<Language>SFX</Language>
+													<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Base.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="254799321"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{5DE6D64B-6ECF-49CD-B234-2C61C63F3166}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{BAB96B31-C436-4A66-A83D-6D14861E2DFD}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{9F25686D-A64F-48B6-A6CD-ADEA411E54B4}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{D976BFCD-C983-4202-B216-9CC65E6830E3}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="JasminaCarevic_Keito_124bmp_4-4_MainMenu_Melody" ID="{F59B9F59-BEE9-4CCC-90DB-413BDC865CD5}" ShortID="175580707">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_MainMenu_Melody" ID="{ED8CDB38-5025-49D7-B490-358B8D74427B}">
+													<Language>SFX</Language>
+													<AudioFile>JasminaCarevic_Keito_124bmp_4-4_MainMenu_Melody.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="944208439"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{68EB5E72-9079-4846-89FB-A7484A787BCE}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{5AD44E77-F732-4D7E-B9AD-2E3CE23383A6}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_MainMenu_Melody" ID="{5E282071-A98C-415B-ADAB-19D602B3DCBE}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_MainMenu_Melody" ID="{ED8CDB38-5025-49D7-B490-358B8D74427B}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{6A65A0FB-5214-4498-B8DA-4EF3266A0B31}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{D78E9E4B-378E-475E-9C01-9D6F05A45BEB}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="15483.8775510204"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
 							<TransitionList>
 								<MusicTransition Name="Root" ID="{9B9B1E3A-5C12-414C-A769-F4786AFB17F2}">
 									<PropertyList>
@@ -37,7 +176,19 @@
 							</TransitionList>
 							<ObjectLists/>
 							<Playlist>
-								<MusicPlaylistItem Name="" ID="{C4EDCF13-4DB3-4138-AEA4-818995C9B224}" ShortID="822368376"/>
+								<MusicPlaylistItem Name="" ID="{C4EDCF13-4DB3-4138-AEA4-818995C9B224}" ShortID="822368376">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{E07F9C85-D820-41C4-A264-1E4ABE34B98B}" ShortID="620212740">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="JasminaCarevic_Keito_124bmp_4-4_MainMenu" ID="{0F8FFAD9-0184-43DC-B55C-AC155F1F8BE4}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
 						<MusicSwitchContainer Name="Ingame_Music" ID="{9E82D9E6-AB53-409A-8A44-DA18A0B141F2}" ShortID="384490687">
@@ -46,9 +197,1413 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<MusicPlaylistContainer Name="IngameMusic_Playlist" ID="{BDF7FB74-4039-4B2E-A166-0AF4F7229475}" ShortID="533566205">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicSegment Name="Playlist1" ID="{36DBCD3D-EF78-426E-862A-3FF2172B4FBE}" ShortID="36004861">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="17168.696723067"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="BASE" ID="{CBA0E0C4-29FC-4FBC-824F-5B64498E090A}" ShortID="491797666">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{08468032-68AA-48AF-BB0B-5FAEE976B611}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Base.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="254799321"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{D762CE98-59DE-4A82-9A6B-706A9250023F}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{763F3921-D539-46FA-80CE-529C63F34686}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{A54144B7-69F4-4994-A59E-1CCEE376D9C2}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{08468032-68AA-48AF-BB0B-5FAEE976B611}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="GLOCK" ID="{5B416F73-8F14-4CFC-8C23-1D35F60FB72B}" ShortID="261848554">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Track1_Glock" ID="{17D0AB6D-90C5-4965-BD92-3E77A85AAAE8}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Track1_Glock.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="33298597"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{431D0982-B477-4F9F-BDA7-8A9B104723F9}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{FD28BF3B-C00E-4D69-BA82-239A6224CA52}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Track1_Glock" ID="{5886F0D6-57A0-4A4A-A2ED-942D01A4B2A3}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Track1_Glock" ID="{17D0AB6D-90C5-4965-BD92-3E77A85AAAE8}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{AEDFC113-61DA-408F-BC70-66C3D14FF8B9}">
+																		<ObjectLists/>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="MARIMBA1vsWHISTLE" ID="{999AE725-37C7-4E11-B92B-8659E6511A7A}" ShortID="389487009">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Track1_Marimba1" ID="{7A51A68B-970C-42D8-A875-E4BD8657F50B}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Track1_Marimba1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="504052876"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Track1_Whistler" ID="{92C20AFF-FF2C-417C-A9DB-EC766A735072}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Track1_Whistler.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="748666652"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{7E64A49E-2C03-49F4-8F6F-BEDE4D1A3104}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{F267966B-E1B3-4887-B372-28947D46D378}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Track1_Marimba1" ID="{B5C44826-AC2F-4DDC-9004-27C349D3D208}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Track1_Marimba1" ID="{7A51A68B-970C-42D8-A875-E4BD8657F50B}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{F686F4FD-475A-4813-8C6A-AA03C2E7F10A}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Track1_Whistler" ID="{9915E878-619E-4698-921E-122BDC4FB659}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Track1_Whistler" ID="{92C20AFF-FF2C-417C-A9DB-EC766A735072}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="MARIMBA2" ID="{700C28A2-C0D2-4B11-BEA9-8B2DBE9D9238}" ShortID="188089989">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Track1_Marimba2" ID="{AA087D99-4570-4A10-9315-94B4B446888E}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Track1_Marimba2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="665340794"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{8F04F4ED-C0BB-46AF-AFA1-48D334B07DFA}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{B23ECE17-690A-4182-9FFA-D61A71D1BC41}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Track1_Marimba2" ID="{D0C07B0F-0F6C-4CD9-A4CB-72F0A0A82FE8}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Track1_Marimba2" ID="{AA087D99-4570-4A10-9315-94B4B446888E}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{2E5224FE-1D46-447A-8C66-505768C5F160}">
+																		<ObjectLists/>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="XYLO" ID="{6CEBBAE2-3795-4A55-A701-BF7796D45773}" ShortID="8573644">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Xylo" ID="{BD5E0CD1-7700-466B-B601-FAE8E91AE3CF}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Xylo.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="946597395"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{24D282F1-C8B4-44D3-B2A9-FD997740A721}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{48730103-2C97-474B-80CA-016E0E835A2E}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Xylo" ID="{C4255247-277D-4570-A533-BA9B4F409BC5}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Xylo" ID="{BD5E0CD1-7700-466B-B601-FAE8E91AE3CF}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{1D28E846-763C-442F-BDE4-A7EB21087E0D}">
+																		<ObjectLists/>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{EA81CC69-2046-4C2D-A157-BCD415BCC8F5}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{93739C94-6BF9-47F0-85E0-97507E316516}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="15483.8775510204"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+										<MusicSegment Name="Playlist2" ID="{AF168892-1D23-46D3-90A1-61FC415683A1}" ShortID="887022953">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="15483.8775510204"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="BASE" ID="{3FFD4DE2-1394-4183-B308-EBB84174525E}" ShortID="929907552">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{500F60DA-2C2A-4E01-BA1E-F13EE1162DC4}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Base.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="254799321"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{E5261A35-0A41-4324-9227-567B754535D7}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{AED7200F-F253-4234-AA3B-7A6469F1D908}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{A21B9739-0351-489F-A1DD-BC3361721FBE}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{500F60DA-2C2A-4E01-BA1E-F13EE1162DC4}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="GLOCK" ID="{F66EA557-7899-4953-ABFB-8D56312243AA}" ShortID="910327094">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Track2_Glock" ID="{D9C526A0-48BC-4241-9C79-FF9384F258D3}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Track2_Glock.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="788221083"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{DDE71508-BE33-4004-9658-7B21D5F19B05}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{5A84C202-6985-463C-9379-4ABA96F1B8AD}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Track2_Glock" ID="{915568D9-55E1-4EF2-8A70-644F34618446}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Track2_Glock" ID="{D9C526A0-48BC-4241-9C79-FF9384F258D3}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="MARIMBAvsWHISTLER" ID="{F275AA88-2D34-47AC-BFD3-48F1F4ACC6EA}" ShortID="90773042">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba1" ID="{7D79D74D-90D9-4A36-8AE9-8A55FE3ADCED}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="182486938"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Track2_Whistler" ID="{A028C1F6-0225-4A5E-8E00-8DF2233639CD}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Track2_Whistler.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="806706298"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{0A967226-44E9-4033-B8D4-8E398E017B13}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{F9B2DF71-491A-4CB8-88BF-0B4A6AFF94C1}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba1" ID="{ABD76739-280B-413D-B9F8-8096F90565F7}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba1" ID="{7D79D74D-90D9-4A36-8AE9-8A55FE3ADCED}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{3881C820-7D63-4BB0-B72B-7E562D98F38F}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Track2_Whistler" ID="{A5C8D2C5-D925-4058-8723-E412B39D58C1}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Track2_Whistler" ID="{A028C1F6-0225-4A5E-8E00-8DF2233639CD}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="MARIMBA2" ID="{F886758E-2820-4BA1-ADC9-179AF7628968}" ShortID="925358513">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba2" ID="{67C5CEA5-7A98-4632-A3C9-FC1BA2EC953B}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="678306688"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{4ECF6D67-E5EA-4F85-AD23-6771FA17E654}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{C19762D7-C053-464F-A343-D33816CE2B8E}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba2" ID="{87C8569C-765D-4C1B-BBFA-5E78C8DB97B9}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba2" ID="{67C5CEA5-7A98-4632-A3C9-FC1BA2EC953B}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{F6903B4F-27FE-4151-884B-A9C880584E7F}">
+																		<ObjectLists/>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="MARIMBA3" ID="{5D96DD4D-8597-49B1-A7D1-249C363C2536}" ShortID="76127150">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba3" ID="{AD00DBF3-4C21-4E36-B273-9D22E0525D2E}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="585377437"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{C3365272-FA73-4176-8DDE-FBE080851DF2}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{D75C333D-F629-44A8-BAC0-B4E5205C4F9A}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba3" ID="{98E5AFB3-5E7A-4C0C-BB6E-39D04D46A079}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba3" ID="{AD00DBF3-4C21-4E36-B273-9D22E0525D2E}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{907BDB78-5298-4B51-AC14-5F4B8D7F0D81}">
+																		<ObjectLists/>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="XYLO" ID="{32CC6D84-F675-4741-A850-30E5F103AB21}" ShortID="457060591">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Xylo" ID="{2B83B725-0897-4DDD-855D-917549078CEA}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Xylo.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="946597395"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{0396615D-C6FB-443E-AA6A-2DE852FB3316}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{0BAFDA21-B7AF-446B-98C5-45A58F68E9C7}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Xylo" ID="{70D9FBFB-2E41-4C20-873B-16E2F6EC570E}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Xylo" ID="{2B83B725-0897-4DDD-855D-917549078CEA}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{2F691597-C523-4BBE-B7C2-188A90B03FC5}">
+																		<ObjectLists/>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{C0C5D519-D262-4BE4-A042-AEBAC605297E}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{8DC9B83B-9F06-4F32-96E4-6A5EC6B1DC28}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="15483.8775510204"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+										<MusicSegment Name="Playlist3" ID="{86D34E2E-57BF-49F2-A8D4-F74A81F74091}" ShortID="53242315">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="15483.8775510204"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="BASE" ID="{ECCBEA50-A833-4015-ABC2-7ADAA76BA02C}" ShortID="762316738">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{53C44CB7-2464-4CA1-B320-11F6E1676C1C}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Base.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="254799321"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{184FB264-2222-4225-AAE3-304DF6AA2CF2}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{164B6B91-CF70-4AEC-B782-055E0C8474E5}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{59E94468-26D3-4397-8B7A-3E3FE426A822}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{53C44CB7-2464-4CA1-B320-11F6E1676C1C}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="GLOCK" ID="{E2237035-2DB4-40AE-B88D-656DF0F45B48}" ShortID="791667753">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Track3_Glock" ID="{A26348C4-4AAB-4040-9241-5EBBAB6F6088}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Track3_Glock.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="694880164"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{57E59591-CDCA-462D-8CD6-EB02BBBA9BB3}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{DF47316E-6E93-4FB4-A9B6-C5B978FAD88D}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Track3_Glock" ID="{0DCF25B6-378C-42BC-A405-CD14EF5AA720}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Track3_Glock" ID="{A26348C4-4AAB-4040-9241-5EBBAB6F6088}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{7A3B7EC4-07DC-406F-A5B2-18D7D4D5B0E6}">
+																		<ObjectLists/>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="MARIMBA" ID="{F24BE6B0-7CB7-4234-A57E-6DC971EFE6C5}" ShortID="177872833">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Track3_Marimba" ID="{45E954BD-36A2-43A5-ABCF-2792BC1C89EC}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Track3_Marimba.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="436674011"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{576B4D20-C13F-44DC-8CC1-160BB5BAEA93}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{2FE5378A-3511-4C9C-96E8-B8E104F96554}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Track3_Marimba" ID="{2DA00DA9-F007-4210-AE51-DC7310662362}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Track3_Marimba" ID="{45E954BD-36A2-43A5-ABCF-2792BC1C89EC}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="XYLO" ID="{592BEF9B-3590-4964-BC49-9BF1923C51D6}" ShortID="714491089">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Xylo" ID="{23B6564F-7A4B-4838-952A-0F1738C76EA0}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Xylo.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="946597395"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{EC95C291-89D6-46C1-94D4-5A1EC0D577CF}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{9AEACBA5-B978-482B-BBAF-7CE1B3816737}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Xylo" ID="{530F616B-FBE8-46B8-858E-BF301DE46CCF}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Xylo" ID="{23B6564F-7A4B-4838-952A-0F1738C76EA0}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{14C9C965-C0BA-4BD1-9D06-BA2A0F550BE7}">
+																		<ObjectLists/>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{382553A2-B5C6-4F26-B886-E22F076447C8}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{196AFA30-C81A-4659-A347-65B6517F54B2}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="15483.8775510204"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+										<MusicSegment Name="Playlist4" ID="{53C76090-6660-48B1-A5ED-A4485AC1CAEE}" ShortID="485734531">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="15483.8775510204"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="BASE" ID="{96549E0B-CCC8-442C-BF50-906319395A61}" ShortID="618292337">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{F1D79C45-4637-4998-AA35-55B29B183E3F}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Base.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="254799321"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{4AFD4492-A1E1-40CF-95A0-C19155D03383}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{97C67C1D-3D78-469B-827D-C259F00CC7F7}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{C36BB641-26CE-4177-A1BF-56E9D64E6232}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{F1D79C45-4637-4998-AA35-55B29B183E3F}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="GLOCK" ID="{E4C1DE44-002D-4B10-BC3E-80C34028C7BB}" ShortID="1057566586">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Track4_Glock" ID="{D3EAB5C9-7397-4459-ACFC-677EAE7D1EF1}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Track4_Glock.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="588819380"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{7908A6F1-3CEA-4D4E-9530-11A948A75AF7}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{9CFADA71-37CD-456D-BF9C-FFEAD26FE222}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Track4_Glock" ID="{2F96F8D1-4989-4C41-95CB-33D61519B8BF}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Track4_Glock" ID="{D3EAB5C9-7397-4459-ACFC-677EAE7D1EF1}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{14361FDB-E7B3-4C51-98FE-11D3CF77BE3F}">
+																		<ObjectLists/>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="MARIMBAvsWHISTLE" ID="{156D8B3F-E704-4764-92F5-7B14563BE09D}" ShortID="620483461">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Track4_Marimba1" ID="{A49DBBB4-3265-4F7C-9992-38AE1E94EB93}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Track4_Marimba1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1040641227"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Track4_Whistler" ID="{A9958E4B-1B7E-46F6-80B2-8DCE1EEF7574}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Track4_Whistler.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="277768788"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{E78B466F-5CD2-4196-959D-F3A49F43DC04}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{7318E857-2EFD-434C-B60E-B5D057BF4657}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Track4_Marimba1" ID="{66D90885-AF2C-4BFC-B964-14341D5C76A5}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Track4_Marimba1" ID="{A49DBBB4-3265-4F7C-9992-38AE1E94EB93}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{B0B06A9C-5E08-4C55-A96E-3759E8D082DB}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Track4_Whistler" ID="{522DA02B-5B1C-48B8-99C5-ADA18B0729E2}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Track4_Whistler" ID="{A9958E4B-1B7E-46F6-80B2-8DCE1EEF7574}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="MARIMBA2" ID="{BB43C45A-6D31-4522-9A0D-2B444B02E318}" ShortID="705901639">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Track4_Marimba2" ID="{682DE876-4452-408B-95CA-1BC7869F6BFC}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Track4_Marimba2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="624723718"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{EA3FEF40-4234-44FC-9DA6-4CC7F9B09F5A}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{BB656DBB-38F3-406A-9E35-35C6272B7773}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Track4_Marimba2" ID="{CDCF3E4C-B05C-4930-9BA0-31FCA4EE894C}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Track4_Marimba2" ID="{682DE876-4452-408B-95CA-1BC7869F6BFC}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{2146C4B8-9719-4CE0-9ACB-5970FC750FBE}">
+																		<ObjectLists/>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="XYLO" ID="{388419D0-0872-4F82-812F-299CBC5472E3}" ShortID="501479889">
+													<PropertyList>
+														<Property Name="MusicTrackType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="JasminaCarevic_Keito_124bmp_4-4_Xylo" ID="{798302C8-F8D0-4B0D-B620-E161697E03EE}">
+															<Language>SFX</Language>
+															<AudioFile>JasminaCarevic_Keito_124bmp_4-4_Xylo.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="946597395"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{ECB985F2-ABEA-4111-A7B2-D84B5B0BCC3A}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{3D717D23-A131-4E18-BCB7-901A4A306065}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="JasminaCarevic_Keito_124bmp_4-4_Xylo" ID="{D71D2CCC-D1EF-49A5-BE93-D3B88A720BE0}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="15483.8775510204"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="JasminaCarevic_Keito_124bmp_4-4_Xylo" ID="{798302C8-F8D0-4B0D-B620-E161697E03EE}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{CDB81D08-54E4-4C0D-AAB1-24414F8732A6}">
+																		<ObjectLists/>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{1829FA9F-E38B-4413-9AC0-793522B5FDC7}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{4A1E64F6-29FB-4ABB-BDA2-F7FBF1E60431}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="15483.8775510204"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{438AA1C3-A703-4207-AB04-B1373B9A8A6F}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{EE7D17DB-94FD-449D-AA77-BFACFD682276}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists/>
+									<Playlist>
+										<MusicPlaylistItem Name="" ID="{46410BCE-CEEC-4521-A3C9-8914C9054BBE}" ShortID="692191205">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+												<Property Name="PlayMode" Type="int16" Value="2"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{7EE689A2-4387-46BA-8426-CA4F239D3631}" ShortID="702283212">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Playlist1" ID="{36DBCD3D-EF78-426E-862A-3FF2172B4FBE}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{62A76D11-1D10-41DB-92B6-00DE7E149F1C}" ShortID="111205801">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Playlist2" ID="{AF168892-1D23-46D3-90A1-61FC415683A1}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{1910A9D4-BE82-4FFE-A9A2-4598962B0043}" ShortID="370702628">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Playlist3" ID="{86D34E2E-57BF-49F2-A8D4-F74A81F74091}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{8B45A7C3-6AA9-4AA8-B6FE-C31A970CD05E}" ShortID="282830648">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Playlist4" ID="{53C76090-6660-48B1-A5ED-A4485AC1CAEE}"/>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Playlist>
+								</MusicPlaylistContainer>
+							</ChildrenList>
 							<TransitionList>
 								<MusicTransition Name="Root" ID="{F993083A-50DE-42AB-BA5A-A7F2616EA445}">
 									<PropertyList>
@@ -56,6 +1611,11 @@
 									</PropertyList>
 									<ChildrenList>
 										<MusicTransition Name="Transition" ID="{2277444F-6F86-4FC8-8082-676E3B109445}">
+											<PropertyList>
+												<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
+												<Property Name="DestinationPlaylistJumpTo" Type="int16" Value="2"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+											</PropertyList>
 											<TransitionInfo/>
 										</MusicTransition>
 									</ChildrenList>
@@ -63,6 +1623,19 @@
 								</MusicTransition>
 							</TransitionList>
 							<ObjectLists/>
+							<ArgumentList>
+								<ArgumentRef Name="PlayerState" ID="{4E95AF37-1545-4577-9C92-B1769A4D9B05}"/>
+							</ArgumentList>
+							<EntryList>
+								<Entry>
+									<Path>
+										<PathElementRef Name="Playing" ID="{59D505F2-2BA8-4D2D-A54E-564052E321D3}"/>
+									</Path>
+									<AudioNodeInfo>
+										<AudioNodeRef Name="IngameMusic_Playlist" ID="{BDF7FB74-4039-4B2E-A166-0AF4F7229475}" WorkUnitID="{1DA99209-5068-45EA-906C-0B308922446A}" Platform="Linked"/>
+									</AudioNodeInfo>
+								</Entry>
+							</EntryList>
 						</MusicSwitchContainer>
 						<MusicPlaylistContainer Name="Pause_Music" ID="{11601BCB-BB9D-4B9B-86AE-7EC5F8FB546C}" ShortID="1011191562">
 							<ReferenceList>
@@ -70,7 +1643,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -83,14 +1656,14 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<MusicTrack Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{FFB3D4E5-FB44-45A8-97FC-2B4D5572F429}" ShortID="949573183">
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -175,10 +1748,12 @@
 							<ObjectLists/>
 							<Playlist>
 								<MusicPlaylistItem Name="" ID="{3489C837-5E24-4FC3-8875-563626067356}" ShortID="815658421">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
 									<ChildrenList>
 										<MusicPlaylistItem Name="" ID="{2F658862-D94E-4C84-8084-F2E42D0C0BBE}" ShortID="1025413638">
 											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="0"/>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<SegmentRef Name="JasminaCarevic_Keito_124bmp_4-4_Base" ID="{E617BF4F-2DB2-49A2-9328-E8342C572942}"/>
@@ -195,6 +1770,11 @@
 							</PropertyList>
 							<ChildrenList>
 								<MusicTransition Name="Transition" ID="{21AC72B4-6F1C-4A18-B3CF-DDB2F4084FD5}">
+									<PropertyList>
+										<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
+										<Property Name="DestinationPlaylistJumpTo" Type="int16" Value="2"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+									</PropertyList>
 									<TransitionInfo/>
 								</MusicTransition>
 							</ChildrenList>
