@@ -1,40 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 /// <summary>
 /// Code for dropping yarn ball from a specific point
 /// </summary>
 public class YarnDropper : MonoBehaviour
 {
-    [SerializeField] GameObject yarnPrefab;
+    [SerializeField] GameObject[] yarnPrefabs;
     [SerializeField] float dropHeight = 10;
 
     public float DropperHeight => dropHeight;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Initializes the dropper
+    /// </summary>
     void Start()
     {
         transform.position = new(0, dropHeight, 0);
-        if (!yarnPrefab) Debug.LogError("Yarn ball not assigned!");
+        if (yarnPrefabs.Length == 0) Debug.LogError("No yarn ball prefabs assigned!");
     }
 
-    // Update is called once per frame
+#if UNITY_EDITOR
     void Update()
     {
-        // TODO: Make more generic with Input Action
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        // If in editor, test spawning with left mouse button
+        if (UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame)
         {
             SpawnYarnBall();
         }
     }
-
+#endif
     /// <summary>
-    /// Spawns a yarn ball prefab
+    /// Spawns a random yarn ball prefab
     /// </summary>
     public void SpawnYarnBall()
     {
-        Instantiate(yarnPrefab, transform.position, transform.rotation);
+        var yarn = yarnPrefabs[NextYarnChoice()];
+        Instantiate(yarn, transform.position, transform.rotation);
+    }
+
+    /// <summary>
+    /// Chooses the next yarn item
+    /// </summary>
+    /// <returns>An index of the yarn prefabs array</returns>
+    public int NextYarnChoice()
+    {
+        // TODO: Make next yarn choice smarter
+        return Random.Range(0, yarnPrefabs.Length);
     }
 }

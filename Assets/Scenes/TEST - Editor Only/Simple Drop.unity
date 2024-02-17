@@ -550,7 +550,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6ac4738d1c94f169e685cbaa453059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yarnPrefab: {fileID: 6453792562293160579, guid: 4f278b39139824cd2a7ef59506f1ac8a, type: 3}
+  yarnPrefabs:
+  - {fileID: 6453792562293160579, guid: 4f278b39139824cd2a7ef59506f1ac8a, type: 3}
   dropHeight: 10
 --- !u!23 &726517481
 MeshRenderer:
