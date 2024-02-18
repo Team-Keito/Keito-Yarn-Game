@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private int score, numOfYarn, randVal;
+    private int score, highScore, numOfYarn, randVal;
     private LinkedList<int> lastKnownLoc = new LinkedList<int>();
+    [SerializeField] private string mainMenuSceneName;
+    [SerializeField] private Text scoreText, highScoreText;
 
     public GameObject catGameObject;
     public GameObject[] spawnLocPrefab;
@@ -14,6 +18,12 @@ public class GameManager : MonoBehaviour
     {
         get { return score; }
         set { score = value; }
+    }
+
+    public int HighScore
+    {
+        get { return highScore; }
+        set { highScore = value > highScore ? score : highScore; }
     }
 
     public int NumOfYarn
@@ -57,5 +67,34 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void PauseGame()
+    {
+
+    }
+
+    public void ResumeGame()
+    {
+
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene(mainMenuSceneName);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void UpdateScore()
+    {
+        if(scoreText)
+            scoreText.text = "Current score: " + score;
+
+        if(highScoreText)
+            highScoreText.text = "High score: " + highScore;
     }
 }
