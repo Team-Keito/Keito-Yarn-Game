@@ -10,7 +10,7 @@ public class DropIndicator : MonoBehaviour
     [SerializeField, Range(3, 100)] int lineSteps = 3;
 
     [Header("TESTING ONLY")]
-    [SerializeField, Range(0.1f, 10)] float recalcuationRate = 1;
+    [SerializeField, Range(0.01f, 2)] float recalcuationRate = 1;
 
     // Start is called before the first frame update
     void Start()

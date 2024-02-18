@@ -7,37 +7,76 @@ using UnityEngine;
 /// </summary>
 public class YarnDropper : MonoBehaviour
 {
-    [SerializeField] GameObject[] yarnPrefabs;
-    [SerializeField] float dropHeight = 10;
+    private bool _onCoolDown = false;
+    [SerializeField] Camera _mainCam;
+    [SerializeField] GameObject[] _yarnPrefabs;
+    [SerializeField] float _dropHeight = 10;
+    [SerializeField] LayerMask _floorLayer;
+    [SerializeField] float _dropperCoolDown = 10f;
 
-    public float DropperHeight => dropHeight;
+
+    public float DropperHeight => _dropHeight;
 
     /// <summary>
     /// Initializes the dropper
     /// </summary>
     void Start()
     {
-        transform.position = new(0, dropHeight, 0);
-        if (yarnPrefabs.Length == 0) Debug.LogError("No yarn ball prefabs assigned!");
+        transform.position = new(0, _dropHeight, 0);
+        if (!_mainCam) _mainCam = Camera.main;
+        if (_yarnPrefabs.Length == 0) Debug.LogError("No yarn ball prefabs assigned!");
     }
 
-#if UNITY_EDITOR
+
     void Update()
     {
         // If in editor, test spawning with left mouse button
-        if (UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame)
+        if (UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame && !_onCoolDown)
         {
             SpawnYarnBall();
         }
+        transform.position = CalculateDropperPosition();
     }
-#endif
+
+    /// <summary>
+    /// Calculate where the dropper should go from mouse position
+    /// </summary>
+    /// <returns></returns>
+    public Vector3 CalculateDropperPosition()
+    {
+        Vector2 mouseScreenPosition = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+        Ray mouseRay = _mainCam.ScreenPointToRay(mouseScreenPosition);
+        if (Physics.Raycast(mouseRay, out RaycastHit hit, Mathf.Infinity, _floorLayer))
+        {
+            // Calculate dropper upwards from where on the floor it was hit from
+            return hit.point + Vector3.up * _dropHeight;
+        }
+        else
+        {
+            // Default to current position
+            return transform.position;
+        }
+    }
+
     /// <summary>
     /// Spawns a random yarn ball prefab
     /// </summary>
     public void SpawnYarnBall()
     {
-        var yarn = yarnPrefabs[NextYarnChoice()];
+        var yarn = _yarnPrefabs[NextYarnChoice()];
         Instantiate(yarn, transform.position, transform.rotation);
+        StartCoroutine(RunCoolDown());
+    }
+
+    /// <summary>
+    /// Coroutine for waiting between drops. Currently based on wait time
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator RunCoolDown()
+    {
+        _onCoolDown = true;
+        yield return new WaitForSeconds(_dropperCoolDown);
+        _onCoolDown = false;
     }
 
     /// <summary>
@@ -47,6 +86,6 @@ public class YarnDropper : MonoBehaviour
     public int NextYarnChoice()
     {
         // TODO: Make next yarn choice smarter
-        return Random.Range(0, yarnPrefabs.Length);
+        return Random.Range(0, _yarnPrefabs.Length);
     }
 }
