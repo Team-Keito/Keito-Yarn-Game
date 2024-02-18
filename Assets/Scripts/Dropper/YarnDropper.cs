@@ -8,6 +8,7 @@ using UnityEngine;
 public class YarnDropper : MonoBehaviour
 {
     private bool _onCoolDown = false;
+    private int _currentYarnChoice = 0;
     [SerializeField] Camera _mainCam;
     [SerializeField] GameObject[] _yarnPrefabs;
     [SerializeField] float _dropHeight = 10;
@@ -63,8 +64,9 @@ public class YarnDropper : MonoBehaviour
     /// </summary>
     public void SpawnYarnBall()
     {
-        var yarn = _yarnPrefabs[NextYarnChoice()];
+        var yarn = _yarnPrefabs[_currentYarnChoice];
         Instantiate(yarn, transform.position, transform.rotation);
+        _currentYarnChoice = NextYarnChoice();
         StartCoroutine(RunCoolDown());
     }
 
@@ -86,6 +88,6 @@ public class YarnDropper : MonoBehaviour
     public int NextYarnChoice()
     {
         // TODO: Make next yarn choice smarter
-        return Random.Range(0, _yarnPrefabs.Length);
+        return (_currentYarnChoice + 1) % _yarnPrefabs.Length;
     }
 }
