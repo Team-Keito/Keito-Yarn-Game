@@ -17,6 +17,7 @@ public class YarnDropper : MonoBehaviour
 
 
     public float DropperHeight => _dropHeight;
+    public Color CurrentColor() => _yarnPrefabs[_currentYarnChoice].gameObject.GetComponent<MeshRenderer>().sharedMaterial.color;
 
     /// <summary>
     /// Initializes the dropper

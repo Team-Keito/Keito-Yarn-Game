@@ -48,7 +48,6 @@ public class DropIndicator : MonoBehaviour
             for (int i = 0; i < lineSteps; i++)
             {
                 Vector3 position = Vector3.Lerp(start, end, (float)i / (lineSteps - 1));
-                Debug.Log(position);
                 indicatorLine.SetPosition(i, position);
             }
         }
