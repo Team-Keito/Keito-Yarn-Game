@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1097038416699116131}
   m_Layer: 0
   m_Name: Cat
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,4 +113,4 @@ MonoBehaviour:
   OnCatScored:
     m_PersistentCalls:
       m_Calls: []
-  _yarnTag: Yarn
+  _yarnTag: {fileID: 11400000, guid: a1d0c64b2d711b1408fdeb64edc363fb, type: 2}

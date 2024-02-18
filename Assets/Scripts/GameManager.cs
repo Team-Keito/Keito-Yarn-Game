@@ -10,9 +10,12 @@ public class GameManager : MonoBehaviour
     private LinkedList<int> lastKnownLoc = new LinkedList<int>();
     [SerializeField] private string mainMenuSceneName;
     [SerializeField] private Text scoreText, highScoreText;
+    [SerializeField] private TagSO _SpawnPoint;
 
     public GameObject catGameObject;
-    public GameObject[] spawnLocPrefab;
+
+    [System.NonSerialized]
+    public GameObject[] spawnLocPrefab; //kept public for test case. Now auto grabs based on spawnpoint tag.
 
     public int Score
     {
@@ -35,6 +38,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spawnLocPrefab = GameObject.FindGameObjectsWithTag(_SpawnPoint.Tag);
+
         randVal = Random.Range(0, spawnLocPrefab.Length);
         catGameObject = Instantiate(catGameObject, spawnLocPrefab[randVal].transform.position, spawnLocPrefab[randVal].transform.rotation);
     }
@@ -71,12 +76,12 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()
     {
-
+        Time.timeScale = 0;
     }
 
     public void ResumeGame()
     {
-
+        Time.timeScale = 1;
     }
 
     public void LoadMainMenu()
@@ -89,9 +94,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void UpdateScore()
+    public void UpdateScore(float value)
     {
-        if(scoreText)
+        score += (int)value;
+        highScore = Mathf.Max(score, highScore);
+
+        if (scoreText)
             scoreText.text = "Current score: " + score;
 
         if(highScoreText)
