@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
 
         randVal = Random.Range(0, spawnLocPrefab.Length);
         catGameObject = Instantiate(catGameObject, spawnLocPrefab[randVal].transform.position, spawnLocPrefab[randVal].transform.rotation);
+
+        catGameObject.GetComponent<CatYarnInteraction>().OnCatScored.AddListener(UpdateScore);
     }
 
     /// <summary>
