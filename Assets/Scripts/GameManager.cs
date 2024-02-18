@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private int score, highScore, numOfYarn, randVal;
     private LinkedList<int> lastKnownLoc = new LinkedList<int>();
     [SerializeField] private string mainMenuSceneName;
+    [SerializeField] private Text scoreText, highScoreText;
 
     public GameObject catGameObject;
     public GameObject[] spawnLocPrefab;
@@ -86,5 +87,14 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void UpdateScore()
+    {
+        if(scoreText)
+            scoreText.text = "Current score: " + score;
+
+        if(highScoreText)
+            highScoreText.text = "High score: " + highScore;
     }
 }
