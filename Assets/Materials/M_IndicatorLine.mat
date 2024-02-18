@@ -79,7 +79,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _Amount: 4
+    - _Amount: 10
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -102,7 +102,7 @@ Material:
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: -4
+    - _Speed: -5
     - _SrcBlend: 1
     - _Surface: 0
     - _Width: 0.5
