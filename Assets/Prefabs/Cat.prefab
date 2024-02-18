@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1615856383625042316}
   - component: {fileID: 6954317315421197925}
   - component: {fileID: 8799100115400775142}
+  - component: {fileID: 1097038416699116131}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -97,3 +98,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.99039155
   m_Center: {x: 0, y: 0.3, z: 0.28}
+--- !u!114 &1097038416699116131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4306071415022843939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3a54b205364a341a3cd12b999d0347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnCatScored:
+    m_PersistentCalls:
+      m_Calls: []
+  _yarnTag: Yarn
