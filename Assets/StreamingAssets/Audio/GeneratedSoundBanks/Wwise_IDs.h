@@ -14,7 +14,11 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_CAT_MEOW = 2051353701U;
+        static const AkUniqueID PLAY_CAT_PURR = 1160118988U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
+        static const AkUniqueID PLAY_YARN_HIT = 1677062370U;
+        static const AkUniqueID PLAY_YARN_MERGE = 3306819049U;
+        static const AkUniqueID PLAY_YARN_SHRINK = 1850992524U;
     } // namespace EVENTS
 
     namespace STATES

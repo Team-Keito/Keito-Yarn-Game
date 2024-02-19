@@ -16,8 +16,7 @@ GameObject:
   - component: {fileID: -4293314133452894743}
   - component: {fileID: -5202593958063176576}
   - component: {fileID: -1940726632899412579}
-  - component: {fileID: -1232637717924881407}
-  - component: {fileID: 8148236067478168695}
+  - component: {fileID: 2495046777849088545}
   m_Layer: 0
   m_Name: Yarn
   m_TagString: Yarn
@@ -292,7 +291,7 @@ MonoBehaviour:
   _shrinkMultiplier: 0.5
   _shrinkRateCap: 0.1
   _ThresholdSpeed: 0.1
---- !u!114 &-1232637717924881407
+--- !u!114 &2495046777849088545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -304,16 +303,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76dd1c0d838104f69830665014a601de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8148236067478168695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998775315433358910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b6414581bd466a40b711730e9b8b9be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _camera: {fileID: 0}
+  YarnCollisionSound: Play_Yarn_Hit

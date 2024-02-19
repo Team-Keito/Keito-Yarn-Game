@@ -7,6 +7,9 @@ public class YarnCollision : MonoBehaviour
 {
     public const string YARN_TAG = "Yarn";
     private bool hasCollidedBefore = false;
+    public string YarnCollisionSound = "Play_Yarn_Hit";
+    public string CatYarnCollisionSound = "Play_Cat_Purr";
+    public string YarnMergeCollisionSound = "Play_Yarn_Merge";
 
     /// <summary>
     /// When yarn first collides with another object
@@ -19,13 +22,15 @@ public class YarnCollision : MonoBehaviour
         bool isOtherSameColor = false;
         // TODO: Find cat component/tag
         bool isCat = false;
-
+        PostYarnCollisionEvent();
         // If yarn collides with another yarn
         if (isYarn)
         {
             if (isOtherSameColor)
             {
                 // TODO: Yarn combining SFX
+                PostYarnMergeCollisionEvent();
+
             }
             else
             {
@@ -36,17 +41,57 @@ public class YarnCollision : MonoBehaviour
         else if (isCat)
         {
             // TODO: Yarn-cat collision SFX
+            PostCatYarnCollisionEvent();
         }
         // If first collision
         else if (!hasCollidedBefore)
         {
             hasCollidedBefore = true;
-            // TODO: First yarn collision SFX
+          
         }
         // otherwise
         else
         {
-            // TODO: Yarn-other collision SFX
+            
+        }
+    }
+    public void PostYarnCollisionEvent()
+    {
+        // Check if the event name is valid
+        if (!string.IsNullOrEmpty(YarnCollisionSound))
+        {
+            // Post the Wwise yarn collision event by name
+            AkSoundEngine.PostEvent(YarnCollisionSound, gameObject);
+        }
+        else
+        {
+            Debug.LogError("Yarn Collision Sound event name is not specified!");
+        }
+    }
+    public void PostCatYarnCollisionEvent()
+    {
+        // Check if the event name is valid
+        if (!string.IsNullOrEmpty(CatYarnCollisionSound))
+        {
+            // Post the Wwise yarn collision event by name
+            AkSoundEngine.PostEvent(CatYarnCollisionSound, gameObject);
+        }
+        else
+        {
+            Debug.LogError("Cat-Yarn Collision Sound event name is not specified!");
+        }
+    }
+    public void PostYarnMergeCollisionEvent()
+    {
+        // Check if the event name is valid
+        if (!string.IsNullOrEmpty(YarnMergeCollisionSound))
+        {
+            // Post the Wwise yarn collision event by name
+            AkSoundEngine.PostEvent(YarnMergeCollisionSound, gameObject);
+        }
+        else
+        {
+            Debug.LogError("Cat-Yarn Collision Sound event name is not specified!");
         }
     }
 }
