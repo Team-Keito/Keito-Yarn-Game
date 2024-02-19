@@ -8,7 +8,7 @@ public class CatYarnInteraction : MonoBehaviour
     public UnityEvent<float> OnCatScored;
 
     [SerializeField, Tooltip("Tag for Yarnball")]
-    private string _yarnTag = "Yarn";
+    private TagSO _yarnTag;
 
     /// <summary>
     /// Trigger event when yarn ball collides. Uses Tag to check.
@@ -18,8 +18,7 @@ public class CatYarnInteraction : MonoBehaviour
     /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.tag);
-        if (collision.gameObject.CompareTag(_yarnTag))
+        if (collision.gameObject.CompareTag(_yarnTag.Tag))
         {
             //TODO: Add in color check / maybe pass more ball details.
 

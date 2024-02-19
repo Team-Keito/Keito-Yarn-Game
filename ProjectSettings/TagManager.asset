@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Yarn
+  - Cat
+  - SpawnPoint
+  - CameraLookAt
   layers:
   - Default
   - TransparentFX
