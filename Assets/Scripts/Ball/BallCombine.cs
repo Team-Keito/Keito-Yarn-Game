@@ -51,7 +51,7 @@ public class BallCombine : MonoBehaviour
                 return;            
             }
 
-            if (transform.position.y > hitBall.transform.position.y)
+            if (transform.position.y < hitBall.transform.position.y)
             {
                 Destroy(collision.gameObject);
 
