@@ -21,7 +21,7 @@
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\MasterVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="2090070045">
+		<SoundBank Id="2641024368" Language="SFX" Hash="1547581202">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
@@ -50,9 +50,97 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1160118988" Name="Play_Cat_Purr" ObjectPath="\Events\Default Work Unit\Play_Cat_Purr" DurationType="OneShot" DurationMin="0.845872" DurationMax="1.696203">
+					<IncludedMemoryFiles>
+						<File Id="364853297" Language="SFX">
+							<ShortName>CATPOCALYPSE_AUDIO_CAT_PURR_V1_7.wav</ShortName>
+							<Path>SFX\CATPOCALYPSE_AUDIO_CAT_PURR_V1_7_7FF3412B.wem</Path>
+						</File>
+						<File Id="829351928" Language="SFX">
+							<ShortName>CATPOCALYPSE_AUDIO_CAT_PURR_V1_4.wav</ShortName>
+							<Path>SFX\CATPOCALYPSE_AUDIO_CAT_PURR_V1_4_FCA25D5C.wem</Path>
+						</File>
+						<File Id="831537192" Language="SFX">
+							<ShortName>CATPOCALYPSE_AUDIO_CAT_PURR_V1_2.wav</ShortName>
+							<Path>SFX\CATPOCALYPSE_AUDIO_CAT_PURR_V1_2_577A596B.wem</Path>
+						</File>
+						<File Id="912852287" Language="SFX">
+							<ShortName>CATPOCALYPSE_AUDIO_CAT_PURR_V1_3.wav</ShortName>
+							<Path>SFX\CATPOCALYPSE_AUDIO_CAT_PURR_V1_3_3A89171E.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1677062370" Name="Play_Yarn_Hit" ObjectPath="\Events\Default Work Unit\Play_Yarn_Hit" DurationType="OneShot" DurationMin="0.120438" DurationMax="0.217759">
+					<IncludedMemoryFiles>
+						<File Id="202934990" Language="SFX">
+							<ShortName>Keito_Yarn_Hit_3_1.wav</ShortName>
+							<Path>SFX\Keito_Yarn_Hit_3_1_0CAF74EF.wem</Path>
+						</File>
+						<File Id="209445105" Language="SFX">
+							<ShortName>Keito_Yarn_Hit_4_1.wav</ShortName>
+							<Path>SFX\Keito_Yarn_Hit_4_1_3DD85924.wem</Path>
+						</File>
+						<File Id="270895424" Language="SFX">
+							<ShortName>Keito_Yarn_Hit_2_3.wav</ShortName>
+							<Path>SFX\Keito_Yarn_Hit_2_3_DA56EE95.wem</Path>
+						</File>
+						<File Id="282180228" Language="SFX">
+							<ShortName>Keito_Yarn_Hit_2_1.wav</ShortName>
+							<Path>SFX\Keito_Yarn_Hit_2_1_0BD89859.wem</Path>
+						</File>
+						<File Id="311792289" Language="SFX">
+							<ShortName>Keito_Yarn_Hit_3_3.wav</ShortName>
+							<Path>SFX\Keito_Yarn_Hit_3_3_6A0055DB.wem</Path>
+						</File>
+						<File Id="378373933" Language="SFX">
+							<ShortName>Keito_Yarn_Hit_3_2.wav</ShortName>
+							<Path>SFX\Keito_Yarn_Hit_3_2_FEB44518.wem</Path>
+						</File>
+						<File Id="399494428" Language="SFX">
+							<ShortName>Keito_Yarn_Hit_1_1.wav</ShortName>
+							<Path>SFX\Keito_Yarn_Hit_1_1_FC33EC86.wem</Path>
+						</File>
+						<File Id="536778659" Language="SFX">
+							<ShortName>Keito_Yarn_Hit_1_3.wav</ShortName>
+							<Path>SFX\Keito_Yarn_Hit_1_3_D6F15833.wem</Path>
+						</File>
+						<File Id="607197866" Language="SFX">
+							<ShortName>Keito_Yarn_Hit_4_3.wav</ShortName>
+							<Path>SFX\Keito_Yarn_Hit_4_3_C65C895C.wem</Path>
+						</File>
+						<File Id="732081429" Language="SFX">
+							<ShortName>Keito_Yarn_Hit_1_2.wav</ShortName>
+							<Path>SFX\Keito_Yarn_Hit_1_2_6A478A55.wem</Path>
+						</File>
+						<File Id="798520635" Language="SFX">
+							<ShortName>Keito_Yarn_Hit_2_2.wav</ShortName>
+							<Path>SFX\Keito_Yarn_Hit_2_2_0C82D019.wem</Path>
+						</File>
+						<File Id="1073338854" Language="SFX">
+							<ShortName>Keito_Yarn_Hit_4_2.wav</ShortName>
+							<Path>SFX\Keito_Yarn_Hit_4_2_D6310B06.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3306819049" Name="Play_Yarn_Merge" ObjectPath="\Events\Default Work Unit\Play_Yarn_Merge" DurationType="OneShot" DurationMin="0.483878" DurationMax="0.483878">
+					<IncludedMemoryFiles>
+						<File Id="357358170" Language="SFX">
+							<ShortName>Keito_Yarn_Merge.wav</ShortName>
+							<Path>SFX\Keito_Yarn_Merge_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1850992524" Name="Play_Yarn_Shrink" ObjectPath="\Events\Default Work Unit\Play_Yarn_Shrink" DurationType="OneShot" DurationMin="0.483878" DurationMax="0.483878">
+					<IncludedMemoryFiles>
+						<File Id="758871610" Language="SFX">
+							<ShortName>Keito_Yarn_Shrink.wav</ShortName>
+							<Path>SFX\Keito_Yarn_Shrink_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="3589812408" Language="SFX" Hash="3616244238">
+		<SoundBank Id="3589812408" Language="SFX" Hash="2023366427">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_SoundBank</ObjectPath>
 			<ShortName>Music_SoundBank</ShortName>
 			<Path>Music_SoundBank.bnk</Path>
@@ -62,6 +150,10 @@
 						<File Id="33298597" Language="SFX">
 							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track1_Glock.wav</ShortName>
 							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Track1_Glock_D79FB2B7.wem</Path>
+						</File>
+						<File Id="143496161" Language="SFX">
+							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Gameover.wav</ShortName>
+							<Path>SFX\JasminaCarevic_Keito_124bmp_4-4_Gameover_D79FB2B7.wem</Path>
 						</File>
 						<File Id="182486938" Language="SFX">
 							<ShortName>JasminaCarevic_Keito_124bmp_4-4_Track2_Marimba1.wav</ShortName>
@@ -154,6 +246,11 @@
 										<File Id="806706298"/>
 										<File Id="946597395"/>
 										<File Id="1040641227"/>
+									</Media>
+								</SwitchContainer>
+								<SwitchContainer SwitchValue="{5ABABF18-6850-472E-B13D-67FDE00344EC}">
+									<Media>
+										<File Id="143496161"/>
 									</Media>
 								</SwitchContainer>
 							</Children>
