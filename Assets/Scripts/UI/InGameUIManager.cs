@@ -19,6 +19,13 @@ public class InGameUIManager : MonoBehaviour
         _gameOverUI.SetActive(false);
     }
 
+    public void OnOpenPauseMenu()
+    {
+        _settingsUI.SetActive(false);
+        _confirmationUI.SetActive(false);
+        _pauseUI.SetActive(true);
+    }
+
     public void OnResetGame()
     {
         _gameOverUI.SetActive(false);

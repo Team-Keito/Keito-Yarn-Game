@@ -287,6 +287,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _minSize: 0.2
-  _shrinkMultiplier: 0.5
+  _shrinkMultiplier: 0.1
   _shrinkRateCap: 0.1
-  _ThresholdSpeed: 0.1
+  _ThresholdSpeed: 1

@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
         }
 
         catGameObject.transform.position = spawnLocPrefab[randInt].transform.position;
+        catGameObject.transform.rotation = spawnLocPrefab[randInt].transform.rotation;
         _currentLocationIndex = randInt;
     }
 
@@ -131,5 +132,7 @@ public class GameManager : MonoBehaviour
 
         if(highScoreText)
             highScoreText.text = "High score: " + highScore;
+
+        ChangeCatLocation();
     }
 }

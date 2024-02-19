@@ -11,5 +11,7 @@ public class DrawCubeGizmo : MonoBehaviour
     {
         Gizmos.color = _color;
         Gizmos.DrawWireCube(transform.position, _dim);
+
+        Gizmos.DrawLine(transform.position, transform.position + transform.forward);
     }
 }
