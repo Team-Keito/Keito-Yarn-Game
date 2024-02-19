@@ -27,6 +27,7 @@ public class YarnDropper : MonoBehaviour
     void Start()
     {
         transform.position = new(0, _dropHeight, 0);
+        _currentYarnChoice = Random.Range(0, _yarnPrefabs.Length);
         if (!_mainCam) _mainCam = Camera.main;
         if (_yarnPrefabs.Length == 0) Debug.LogError("No yarn ball prefabs assigned!");
     }
