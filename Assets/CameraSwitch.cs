@@ -6,11 +6,16 @@ using UnityEngine;
 public class CameraSwitch : MonoBehaviour
 {
     // Start is called before the first frame update
-    public  CinemachineFreeLook camera;
+    public CinemachineFreeLook _camera;
+
+    private void Start()
+    {
+        if (!_camera) _camera = FindObjectOfType<CinemachineFreeLook>();
+    }
 
     private void OnMouseDown()
     {
-        camera.Follow = this.transform;
-        camera.LookAt = this.transform;
+        _camera.Follow = this.transform;
+        _camera.LookAt = this.transform;
     }
 }

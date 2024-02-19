@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,7 +12,7 @@ public class GameManager : MonoBehaviour
     private int _maxDuplicateSpawn = 1;
 
     [SerializeField] private string mainMenuSceneName;
-    [SerializeField] private TextMeshProUGUI scoreText, highScoreText;
+    [SerializeField] private Text scoreText, highScoreText;
     [SerializeField] private TagSO _SpawnPoint;
 
     public GameObject catGameObject;
@@ -115,12 +113,12 @@ public class GameManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene(mainMenuSceneName);
+        StaticUIFunctionality.GoToSceneByName(mainMenuSceneName);
     }
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        StaticUIFunctionality.GoToSceneByName(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
     public void UpdateScore(float value)
@@ -134,7 +132,7 @@ public class GameManager : MonoBehaviour
         if (scoreText)
             scoreText.text = string.Format("Score: {0} ({1})", score, scoreVal);
 
-        if(highScoreText)
+        if (highScoreText)
             highScoreText.text = "High score: " + highScore;
 
         ChangeCatLocation();

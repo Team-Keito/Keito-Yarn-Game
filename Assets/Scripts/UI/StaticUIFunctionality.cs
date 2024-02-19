@@ -13,6 +13,7 @@ public class StaticUIFunctionality : MonoBehaviour
     /// <param name="buildIndex"></param>
     public static void GoToSceneByIndex(int buildIndex)
     {
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene(buildIndex);
     }
 
@@ -22,6 +23,7 @@ public class StaticUIFunctionality : MonoBehaviour
     /// <param name="buildIndex"></param>
     public static void GoToSceneByName(string sceneName)
     {
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene(sceneName);
     }
 

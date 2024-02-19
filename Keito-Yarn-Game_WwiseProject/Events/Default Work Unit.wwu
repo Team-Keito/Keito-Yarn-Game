@@ -25,6 +25,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Yarn_Hit" ID="{FF2DE81D-3A76-419D-B467-059CD36A65B3}">
+					<ChildrenList>
+						<Action Name="" ID="{885A5D0A-AA17-4EF0-894A-8F4C62281D88}" ShortID="546673717">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Yarn_Hit" ID="{4DCF044C-2D3B-4060-8F4D-B2F179823504}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Cat_Purr" ID="{31D552E9-3457-4D5F-9A88-1E21C35D7EE4}">
+					<ChildrenList>
+						<Action Name="" ID="{F4CE9F20-EA73-4484-A51B-61EC879EDA32}" ShortID="50083255">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cat_Purr" ID="{9BC3A515-8914-480A-BE34-F49A37C66DE9}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

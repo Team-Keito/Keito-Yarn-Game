@@ -19,16 +19,32 @@ public class InGameUIManager : MonoBehaviour
         _gameOverUI.SetActive(false);
     }
 
-    public void OnOpenPauseMenu()
+    // TEMP: This should be replaced by InputAction event
+    private void Update()
     {
-        _settingsUI.SetActive(false);
-        _confirmationUI.SetActive(false);
+        if (UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            if (Time.timeScale == 0)
+            {
+                OnResumeGame();
+            }
+            else
+            {
+                OnPauseGame();
+            }
+        }
+    }
+
+    public void OnPauseGame()
+    {
         _pauseUI.SetActive(true);
+        _gameManager.PauseGame();
     }
 
     public void OnResetGame()
     {
         _gameOverUI.SetActive(false);
+        _gameManager.ResumeGame();
         _gameManager.RestartGame();
     }
 
@@ -64,6 +80,13 @@ public class InGameUIManager : MonoBehaviour
 
     public void OnBackToMainMenu()
     {
+        _gameManager.ResumeGame();
         _gameManager.LoadMainMenu();
+    }
+
+    public void OnGameEnd()
+    {
+        _gameManager.PauseGame();
+        _gameOverUI.SetActive(true);
     }
 }
