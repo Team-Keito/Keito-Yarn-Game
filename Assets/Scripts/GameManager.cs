@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -113,23 +112,25 @@ public class GameManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene(mainMenuSceneName);
+        StaticUIFunctionality.GoToSceneByName(mainMenuSceneName);
     }
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        StaticUIFunctionality.GoToSceneByName(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
     public void UpdateScore(float value)
     {
+        // TEMP: For play test, randomize position on every scoring event
+        ChangeCatLocation();
         score += (int)value;
         highScore = Mathf.Max(score, highScore);
 
         if (scoreText)
             scoreText.text = "Current score: " + score;
 
-        if(highScoreText)
+        if (highScoreText)
             highScoreText.text = "High score: " + highScore;
     }
 }

@@ -1803,19 +1803,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Mouse Move: Move Dropper
+  m_text: 'Escape: Toggle Pause/Resume
 
-    Left Click: Drop Yarn Ball
+    A/Left Arrow: Camera Rotate Left
 
-    A/Left Arrow:
-    Camera Rotate Left
+    D/Right
+    Arrow: Camera Rotate Right
 
-    D/Right Arrow: Camera Rotate Right
+    W/Up Arrow: Camera Zoom In
 
-    W/Up Arrow: Camera
-    Zoom In
+    S/Down Arrow:
+    Camera Zoom Out
 
-    S/Down Arrow: Camera Zoom Out'
+    Mouse Move: Move Dropper
+
+    Left Click on Yarn/Level:
+    Focus on Yarn Ball/Level
+
+    Space: Drop Yarn Ball'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

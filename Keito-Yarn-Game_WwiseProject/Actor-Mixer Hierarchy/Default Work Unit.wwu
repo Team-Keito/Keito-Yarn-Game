@@ -138,6 +138,742 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</RandomSequenceContainer>
+				<BlendContainer Name="Yarn_Hit" ID="{4DCF044C-2D3B-4060-8F4D-B2F179823504}" ShortID="1070817757">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{7D08BDF1-E8DF-4447-9AA4-90647DC6DA82}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-50"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Yarn_Hit1" ID="{1DAD024B-775A-4A3B-8EE1-340305A3487B}" ShortID="711832285">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0D42FE70-7070-47E3-977D-0A76ED403DB0}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="20"/>
+													<Property Name="Min" Type="Real64" Value="-20"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Keito_Yarn_Hit_1_1" ID="{C3A5C68A-74CA-4C8D-902C-A79E72A0A7D5}" ShortID="997584616">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_Yarn_Hit_1_1" ID="{58A83FE1-D4EE-4A0D-995E-0F99B03D24CD}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0178276368018472"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.105028034202187"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Keito_Yarn_Hit_1_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="399494428"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_Yarn_Hit_1_1" ID="{58A83FE1-D4EE-4A0D-995E-0F99B03D24CD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Keito_Yarn_Hit_1_2" ID="{5D0F952E-F37B-4835-887F-6A3D102AB26E}" ShortID="672626210">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_Yarn_Hit_1_2" ID="{5F2C1649-7E7F-4C4C-9AC8-0F30650D72D9}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0318241779470409"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.148418953788412"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Keito_Yarn_Hit_1_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="732081429"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_Yarn_Hit_1_2" ID="{5F2C1649-7E7F-4C4C-9AC8-0F30650D72D9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Keito_Yarn_Hit_1_3" ID="{67F12BC9-B209-49DF-8E72-0A9D8A7A313C}" ShortID="373135372">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_Yarn_Hit_1_3" ID="{17725611-AE93-419D-BF57-ED8A98B30BEA}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.049020987705427"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0450676822453119"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.237593658152916"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Keito_Yarn_Hit_1_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="536778659"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_Yarn_Hit_1_3" ID="{17725611-AE93-419D-BF57-ED8A98B30BEA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Yarn_Hit2" ID="{441F94D0-B498-4D42-BD1F-E5103DEB85A0}" ShortID="657139250">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{15693D12-58F2-4977-A561-9876F7D3BE31}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="20"/>
+													<Property Name="Min" Type="Real64" Value="-20"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Keito_Yarn_Hit_2_1" ID="{73E9AE7E-011E-4EF0-8565-7AFC47A44689}" ShortID="880067927">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{B5BE473B-9F5E-40F0-AA80-D3CF6FDCFB78}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_Yarn_Hit_2_1" ID="{FC018759-D962-4FC0-86D6-4B394BFCDC65}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0219628081117504"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.125407634318095"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Keito_Yarn_Hit_2_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="282180228"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_Yarn_Hit_2_1" ID="{FC018759-D962-4FC0-86D6-4B394BFCDC65}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Keito_Yarn_Hit_2_2" ID="{24A9D596-D942-4925-8DF0-D541713C4214}" ShortID="269581884">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{559FF6CC-86A5-473E-8DD7-DBFC332555CF}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_Yarn_Hit_2_2" ID="{8CDD3FC0-29E4-4B79-AEFA-1F9A02E08732}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0321058078403775"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.160529039201888"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Keito_Yarn_Hit_2_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="798520635"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_Yarn_Hit_2_2" ID="{8CDD3FC0-29E4-4B79-AEFA-1F9A02E08732}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Keito_Yarn_Hit_2_3" ID="{DAEAE89C-81E9-4F69-A8FB-24C99AE7B503}" ShortID="393528380">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{5EB066C5-5F52-4308-A732-6D82BAE215AD}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_Yarn_Hit_2_3" ID="{B8AF2AC8-0761-415A-9CF6-A3D2A84C5596}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0166038829324833"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0347890880490127"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0237198327606905"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.232849691600778"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Keito_Yarn_Hit_2_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="270895424"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_Yarn_Hit_2_3" ID="{B8AF2AC8-0761-415A-9CF6-A3D2A84C5596}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Yarn_Hit3" ID="{D40DF030-8B70-4F4D-B49A-3CA315294964}" ShortID="324064474">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{5764E9CA-467F-4778-9B53-F32BF925A363}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="20"/>
+													<Property Name="Min" Type="Real64" Value="-20"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Keito_Yarn_Hit_3_1" ID="{67364EEF-1CAE-4116-8AC1-EE4F0BAC3E31}" ShortID="775441752">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{0EECD47C-4638-4A8D-97C6-01461153FCA6}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_Yarn_Hit_3_1" ID="{B5B5DA3A-B89C-4A32-AC68-00C1215944E6}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0151543375971078"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.116622511073395"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Keito_Yarn_Hit_3_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="202934990"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_Yarn_Hit_3_1" ID="{B5B5DA3A-B89C-4A32-AC68-00C1215944E6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Keito_Yarn_Hit_3_2" ID="{E50DC282-6F14-48D0-9EFD-91EB1CA585E9}" ShortID="506630087">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D9FCE2C6-0D13-4BA3-84C6-3AB4B56B2C28}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_Yarn_Hit_3_2" ID="{793E7CE8-46AE-43A3-A222-B8A61E92C3E6}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.013518234880159"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.139125167308303"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Keito_Yarn_Hit_3_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="378373933"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_Yarn_Hit_3_2" ID="{793E7CE8-46AE-43A3-A222-B8A61E92C3E6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Keito_Yarn_Hit_3_3" ID="{1398DE5F-D7C7-422F-A6ED-50225EE6C504}" ShortID="496133294">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_Yarn_Hit_3_3" ID="{4206E18D-6DF5-426F-B476-C07AEFE2A8FC}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0324171047729437"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.168806143146914"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Keito_Yarn_Hit_3_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="311792289"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_Yarn_Hit_3_3" ID="{4206E18D-6DF5-426F-B476-C07AEFE2A8FC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Yarn_Hit4" ID="{E53CCBF2-2339-448E-924A-8C69C1E0CAB0}" ShortID="864526576">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{02FA12BA-0DCD-4E7C-B5DE-F96257BA841E}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="20"/>
+													<Property Name="Min" Type="Real64" Value="-20"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Keito_Yarn_Hit_4_1" ID="{5EE4CC4A-AD06-4AB2-93E7-AC57B0C57B38}" ShortID="919312159">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_Yarn_Hit_4_1" ID="{9FF2CF0D-E249-4D35-A200-928368CF4369}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00395330546011508"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0164721060838128"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0696221017142489"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.166038829324833"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Keito_Yarn_Hit_4_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="209445105"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_Yarn_Hit_4_1" ID="{9FF2CF0D-E249-4D35-A200-928368CF4369}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Keito_Yarn_Hit_4_2" ID="{F57A70D8-301F-4186-A558-E949620FA94E}" ShortID="222289577">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_Yarn_Hit_4_2" ID="{32042293-9483-4107-B740-C171DBB463C7}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0230936512536049"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.125606932428144"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Keito_Yarn_Hit_4_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1073338854"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_Yarn_Hit_4_2" ID="{32042293-9483-4107-B740-C171DBB463C7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Keito_Yarn_Hit_4_3" ID="{B8F84D9A-C2DD-436B-8B80-5FA4EF8E8BDA}" ShortID="706886026">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_Yarn_Hit_4_3" ID="{509D0491-8D7A-49B9-BE55-71E306251A96}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00446516537649543"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0143877551020408"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.0845073891625616"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Keito_Yarn_Hit_4_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="607197866"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_Yarn_Hit_4_3" ID="{509D0491-8D7A-49B9-BE55-71E306251A96}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<ObjectLists/>
+				</BlendContainer>
+				<RandomSequenceContainer Name="Cat_Purr" ID="{9BC3A515-8914-480A-BE34-F49A37C66DE9}" ShortID="471153482">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{473DA5C4-4985-4304-9547-BC849DB96802}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="30"/>
+											<Property Name="Min" Type="Real64" Value="-30"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_2" ID="{8FBAA7E1-2789-4F8C-B4DA-B2B923C19644}" ShortID="252120601">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{311C4226-E082-44E1-999A-936129C3CED6}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_2" ID="{54C7B5BA-D40B-4D0C-8FE5-7E1D6BE5A19D}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0660818120351589"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.00660818120351592"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.08374171737661"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.25669388100068"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>CATPOCALYPSE_AUDIO_CAT_PURR_V1_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="831537192"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_2" ID="{54C7B5BA-D40B-4D0C-8FE5-7E1D6BE5A19D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_3" ID="{9EB5184F-A4A5-4FE3-AD30-CB792A76FC0E}" ShortID="362613683">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{E305CEAF-7DC2-47E0-8CEE-167B7B4B8E57}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_3" ID="{711EE195-8206-4A68-BAD2-81126569AA48}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.199548681541582"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.66706294371197"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>CATPOCALYPSE_AUDIO_CAT_PURR_V1_3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="912852287"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_3" ID="{711EE195-8206-4A68-BAD2-81126569AA48}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_4" ID="{6BD188A3-8197-4609-9BCB-4D5E8CB2461F}" ShortID="146602332">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{2449D252-CAD4-4C4B-9284-05C82FD9C535}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_4" ID="{DCF31E18-5F1C-43D0-8628-54E1877EF2DB}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.103924061866126"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.50229963235294"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.38722876521298"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>CATPOCALYPSE_AUDIO_CAT_PURR_V1_4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="829351928"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_4" ID="{DCF31E18-5F1C-43D0-8628-54E1877EF2DB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_7" ID="{58731615-B804-42AE-8FEE-9E141690D8FA}" ShortID="80686815">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{07259951-3AD4-40C8-9BAB-D0F3F1EC27A5}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_7" ID="{EF34E2D1-B050-48DE-98DE-D870B63047E3}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0638838742393509"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.860657750169033"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>CATPOCALYPSE_AUDIO_CAT_PURR_V1_7.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="364853297"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_7" ID="{EF34E2D1-B050-48DE-98DE-D870B63047E3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
