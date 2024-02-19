@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class GameManager : MonoBehaviour
     private int _maxDuplicateSpawn = 1;
 
     [SerializeField] private string mainMenuSceneName;
-    [SerializeField] private Text scoreText, highScoreText;
+    [SerializeField] private TextMeshProUGUI scoreText, highScoreText;
     [SerializeField] private TagSO _SpawnPoint;
 
     public GameObject catGameObject;
@@ -124,11 +125,14 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(float value)
     {
-        score += (int)value;
+        float scaledValue = value * 2;
+        int scoreVal = Mathf.Max(1, (int)(scaledValue * (scaledValue + 1) / 2));
+
+        score += scoreVal;
         highScore = Mathf.Max(score, highScore);
 
         if (scoreText)
-            scoreText.text = "Current score: " + score;
+            scoreText.text = string.Format("Score: {0} ({1})", score, scoreVal);
 
         if(highScoreText)
             highScoreText.text = "High score: " + highScore;
