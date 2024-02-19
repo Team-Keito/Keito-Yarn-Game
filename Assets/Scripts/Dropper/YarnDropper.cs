@@ -72,7 +72,9 @@ public class YarnDropper : MonoBehaviour
         {
             _remainingYarn--;
             var yarn = _yarnPrefabs[_currentYarnChoice];
-            Instantiate(yarn, transform.position, transform.rotation);
+
+            Vector3 randomOffset =  new Vector3(Random.value*0.01f, 0, Random.value *0.01f);
+            Instantiate(yarn, transform.position + randomOffset, Random.rotation);
             _currentYarnChoice = NextYarnChoice();
             StartCoroutine(RunCoolDown());
         }
