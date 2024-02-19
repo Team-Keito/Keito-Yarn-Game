@@ -36,7 +36,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         randVal = Random.Range(0, spawnLocPrefab.Length);
-        catGameObject = Instantiate(catGameObject, spawnLocPrefab[randVal].transform.position, spawnLocPrefab[randVal].transform.rotation);
+
+        if(spawnLocPrefab.Length != 0)
+            catGameObject = Instantiate(catGameObject, spawnLocPrefab[randVal].transform.position, spawnLocPrefab[randVal].transform.rotation);
     }
 
     /// <summary>
