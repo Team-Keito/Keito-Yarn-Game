@@ -123,6 +123,8 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(float value)
     {
+        // TEMP: For play test, randomize position on every scoring event
+        ChangeCatLocation();
         score += (int)value;
         highScore = Mathf.Max(score, highScore);
 
