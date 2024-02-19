@@ -33,7 +33,7 @@ public class YarnDropper : MonoBehaviour
     void Update()
     {
         // If in editor, test spawning with left mouse button
-        if (UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame && !_onCoolDown)
+        if (UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame && !_onCoolDown)
         {
             SpawnYarnBall();
         }

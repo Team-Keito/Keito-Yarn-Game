@@ -19,6 +19,28 @@ public class InGameUIManager : MonoBehaviour
         _gameOverUI.SetActive(false);
     }
 
+    // TEMP: This should be replaced by InputAction event
+    private void Update()
+    {
+        if (UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            if (Time.timeScale == 0)
+            {
+                OnResumeGame();
+            }
+            else
+            {
+                OnPauseGame();
+            }
+        }
+    }
+
+    public void OnPauseGame()
+    {
+        _pauseUI.SetActive(true);
+        _gameManager.PauseGame();
+    }
+
     public void OnResetGame()
     {
         _gameOverUI.SetActive(false);
