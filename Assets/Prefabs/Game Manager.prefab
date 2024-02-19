@@ -47,5 +47,5 @@ MonoBehaviour:
   mainMenuSceneName: Main Menu
   scoreText: {fileID: 0}
   highScoreText: {fileID: 0}
+  _SpawnPoint: {fileID: 11400000, guid: 77dade94725caf542a48e1bc05c44481, type: 2}
   catGameObject: {fileID: 4306071415022843939, guid: e236b0395904249168c1906d20806d06, type: 3}
-  spawnLocPrefab: []
