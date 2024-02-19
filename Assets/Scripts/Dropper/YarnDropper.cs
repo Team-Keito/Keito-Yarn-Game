@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// Code for dropping yarn ball from a specific point
@@ -10,15 +11,16 @@ public class YarnDropper : MonoBehaviour
     private bool _onCoolDown = false;
     private int _currentYarnChoice = 0;
     [SerializeField] Camera _mainCam;
+    [SerializeField] int _remainingYarn = 20;
     [SerializeField] GameObject[] _yarnPrefabs;
     [SerializeField] float _dropHeight = 10;
     [SerializeField] LayerMask _floorLayer;
     [SerializeField] float _dropperCoolDown = 10f;
-
+    public UnityEvent OnGameEnd = new();
 
     public float DropperHeight => _dropHeight;
     public Color CurrentColor() => _yarnPrefabs[_currentYarnChoice].gameObject.GetComponent<MeshRenderer>().sharedMaterial.color;
-
+    public int YarnRemaining => _remainingYarn;
     /// <summary>
     /// Initializes the dropper
     /// </summary>
@@ -65,10 +67,18 @@ public class YarnDropper : MonoBehaviour
     /// </summary>
     public void SpawnYarnBall()
     {
-        var yarn = _yarnPrefabs[_currentYarnChoice];
-        Instantiate(yarn, transform.position, transform.rotation);
-        _currentYarnChoice = NextYarnChoice();
-        StartCoroutine(RunCoolDown());
+        if (_remainingYarn > 0)
+        {
+            _remainingYarn--;
+            var yarn = _yarnPrefabs[_currentYarnChoice];
+            Instantiate(yarn, transform.position, transform.rotation);
+            _currentYarnChoice = NextYarnChoice();
+            StartCoroutine(RunCoolDown());
+        }
+        else
+        {
+            OnGameEnd.Invoke();
+        }
     }
 
     /// <summary>

@@ -44,6 +44,7 @@ public class InGameUIManager : MonoBehaviour
     public void OnResetGame()
     {
         _gameOverUI.SetActive(false);
+        _gameManager.ResumeGame();
         _gameManager.RestartGame();
     }
 
@@ -79,6 +80,13 @@ public class InGameUIManager : MonoBehaviour
 
     public void OnBackToMainMenu()
     {
+        _gameManager.ResumeGame();
         _gameManager.LoadMainMenu();
+    }
+
+    public void OnGameEnd()
+    {
+        _gameManager.PauseGame();
+        _gameOverUI.SetActive(true);
     }
 }
