@@ -12,8 +12,10 @@ public class GameManager : MonoBehaviour
     private int _maxDuplicateSpawn = 1;
 
     [SerializeField] private string mainMenuSceneName;
-    [SerializeField] private Text scoreText, highScoreText;
+    [SerializeField] private Text scoreText, ingameScore, highScoreText;
     [SerializeField] private TagSO _SpawnPoint;
+
+    [SerializeField] private float _scoreMulitplier = 2;
 
     public GameObject catGameObject;
 
@@ -79,6 +81,7 @@ public class GameManager : MonoBehaviour
         }
 
         catGameObject.transform.position = spawnLocPrefab[randInt].transform.position;
+        catGameObject.transform.rotation = spawnLocPrefab[randInt].transform.rotation;
         _currentLocationIndex = randInt;
     }
 
@@ -122,15 +125,23 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(float value)
     {
-        // TEMP: For play test, randomize position on every scoring event
-        ChangeCatLocation();
-        score += (int)value;
+        //Score based on Suika scoring.
+        float scaledValue = value * _scoreMulitplier;
+        int scoreVal = Mathf.Max(1, (int)(scaledValue * (scaledValue + 1) / 2));
+
+        score += scoreVal;
         highScore = Mathf.Max(score, highScore);
 
         if (scoreText)
-            scoreText.text = "Current score: " + score;
+        {
+            scoreText.text = string.Format("Score: {0}", score);
+            ingameScore.text = scoreText.text;
+        }
+            
 
         if (highScoreText)
             highScoreText.text = "High score: " + highScore;
+
+        ChangeCatLocation();
     }
 }
