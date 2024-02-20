@@ -80,12 +80,12 @@ public class GameManager : MonoBehaviour
         if (spawnLocPrefab.Length == 0)
         {
             Debug.LogError("No Spawn Location Set");
-
-            _currentLocationIndex = Random.Range(0, spawnLocPrefab.Length);
-            catGameObject = Instantiate(catGameObject, spawnLocPrefab[_currentLocationIndex].transform.position, spawnLocPrefab[_currentLocationIndex].transform.rotation);
-
-            catGameObject.GetComponent<CatYarnInteraction>().OnCatScored.AddListener(UpdateScore);
+            return;
         }
+
+        _currentLocationIndex = Random.Range(0, spawnLocPrefab.Length);
+        catGameObject = Instantiate(catGameObject, spawnLocPrefab[_currentLocationIndex].transform.position, spawnLocPrefab[_currentLocationIndex].transform.rotation);
+        catGameObject.GetComponent<CatYarnInteraction>().OnCatScored.AddListener(UpdateScore);
 
         InvokeRepeating("Timer", 1f, timePerSecond);
     }
@@ -164,8 +164,8 @@ public class GameManager : MonoBehaviour
     {
         currTime++;
         currTimeText.text = "Time Past: " + currTime;
-        
-        if(score > targetScore)
+
+        if (score > targetScore)
         {
             BestTime = currTime;
 
@@ -189,7 +189,7 @@ public class GameManager : MonoBehaviour
             scoreText.text = string.Format("Score: {0}", score);
             ingameScore.text = scoreText.text;
         }
-            
+
 
         if (highScoreText)
             highScoreText.text = "High score: " + highScore;
