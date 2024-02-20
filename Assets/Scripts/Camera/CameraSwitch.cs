@@ -1,6 +1,4 @@
 using Cinemachine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraSwitch : MonoBehaviour
@@ -26,11 +24,10 @@ public class CameraSwitch : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
+    public void Focus()
     {
         _camera.m_YAxis.Value = _zoomLevel;
         _camera.Follow = _target;
-        _camera.LookAt = _target;
-        
+        _camera.LookAt = _target;        
     }
 }
