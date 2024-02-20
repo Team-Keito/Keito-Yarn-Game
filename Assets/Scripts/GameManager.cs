@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -27,6 +28,8 @@ public class GameManager : MonoBehaviour
 
     [System.NonSerialized]
     public GameObject[] spawnLocPrefab; //kept public for test case. Now auto grabs based on spawnpoint tag.
+
+    public UnityEvent OnGameEnd = new();
 
     public int Score
     {
@@ -165,7 +168,10 @@ public class GameManager : MonoBehaviour
         if(score > targetScore)
         {
             BestTime = currTime;
+
             CancelInvoke("Timer");
+
+            OnGameEnd.Invoke();
         }
     }
 
