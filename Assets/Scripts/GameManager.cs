@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private int score, highScore, numOfYarn;
+    private int score, highScore, numOfYarn, currTime = 0, bestTime = 0;
     private int _currentLocationIndex, _sameSpawnCount = 0;
 
     [SerializeField, Tooltip("Max # times cat can stay in same spot before force move")]
     private int _maxDuplicateSpawn = 1;
 
+    [SerializeField] private int targetScore = 0;
+
+    [SerializeField, Tooltip("The rate to increase the current time every second")]
+    private float timePerSecond = 1f;
+
     [SerializeField] private string mainMenuSceneName;
-    [SerializeField] private Text scoreText, ingameScore, highScoreText;
+    [SerializeField] private TextMeshProUGUI scoreText, ingameScore, highScoreText, targetScoreText, currTimeText;
     [SerializeField] private TagSO _SpawnPoint;
 
     [SerializeField] private float _scoreMulitplier = 2;
@@ -28,10 +34,31 @@ public class GameManager : MonoBehaviour
         set { score = value; }
     }
 
+    // Records the new high score if the current score exceeds the previous high score
     public int HighScore
     {
         get { return highScore; }
         set { highScore = value > highScore ? score : highScore; }
+    }
+
+    // The goal number that the player needs to reach
+    public int TargetScore
+    {
+        get { return targetScore; }
+        set { targetScore = value; }
+    }
+
+    // Records the current best time if it exceeds the previous best time
+    public int BestTime
+    {
+        get { return bestTime; }
+        set { bestTime = value > bestTime ? value : bestTime; }
+    }
+
+    public int CurrentTime
+    {
+        get { return currTime; }
+        set { currTime = value; }
     }
 
     public int NumOfYarn
@@ -43,17 +70,21 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        targetScoreText.text = "Goal: " + targetScore;
+
         spawnLocPrefab = GameObject.FindGameObjectsWithTag(_SpawnPoint.Tag);
 
         if (spawnLocPrefab.Length == 0)
         {
             Debug.LogError("No Spawn Location Set");
+
+            _currentLocationIndex = Random.Range(0, spawnLocPrefab.Length);
+            catGameObject = Instantiate(catGameObject, spawnLocPrefab[_currentLocationIndex].transform.position, spawnLocPrefab[_currentLocationIndex].transform.rotation);
+
+            catGameObject.GetComponent<CatYarnInteraction>().OnCatScored.AddListener(UpdateScore);
         }
 
-        _currentLocationIndex = Random.Range(0, spawnLocPrefab.Length);
-        catGameObject = Instantiate(catGameObject, spawnLocPrefab[_currentLocationIndex].transform.position, spawnLocPrefab[_currentLocationIndex].transform.rotation);
-
-        catGameObject.GetComponent<CatYarnInteraction>().OnCatScored.AddListener(UpdateScore);
+        InvokeRepeating("Timer", 1f, timePerSecond);
     }
 
     /// <summary>
@@ -121,6 +152,21 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         StaticUIFunctionality.GoToSceneByName(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
+
+    /// <summary>
+    /// Timer for counting how much time has passed. Also records best time if it is less than current time.
+    /// </summary>
+    public void Timer()
+    {
+        currTime++;
+        currTimeText.text = "Time Past: " + currTime;
+        
+        if(score > targetScore)
+        {
+            BestTime = currTime;
+            CancelInvoke("Timer");
+        }
     }
 
     public void UpdateScore(float value)
