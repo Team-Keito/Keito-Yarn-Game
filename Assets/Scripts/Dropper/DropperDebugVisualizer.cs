@@ -5,7 +5,6 @@ using UnityEngine;
 public class DropperDebugVisualizer : MonoBehaviour
 {
     [SerializeField] UnityEngine.UI.Image _yarnImage;
-    [SerializeField] UnityEngine.UI.Text _yarnText;
     [SerializeField] YarnDropper _dropper;
 
     void Start()
@@ -18,6 +17,5 @@ public class DropperDebugVisualizer : MonoBehaviour
     void Update()
     {
         _yarnImage.color = _dropper.CurrentColor();
-        _yarnText.text = $"Remaining: {_dropper.YarnRemaining}";
     }
 }
