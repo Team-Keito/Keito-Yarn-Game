@@ -10,6 +10,7 @@ public class InGameUIManager : Base_InputSystem
     [SerializeField] GameObject _settingsUI;
     [SerializeField] GameObject _confirmationUI;
     [SerializeField] GameObject _gameOverUI;
+    [SerializeField] PlayerPrefSO masterSO, musicSO, soundSO;
 
     void Start()
     {
@@ -87,5 +88,12 @@ public class InGameUIManager : Base_InputSystem
     {
         _gameManager.PauseGame();
         _gameOverUI.SetActive(true);
+    }
+
+    public void OnResetSettings()
+    {
+        PlayerPrefs.DeleteKey(masterSO.currKey.ToString());
+        PlayerPrefs.DeleteKey(musicSO.currKey.ToString());
+        PlayerPrefs.DeleteKey(soundSO.currKey.ToString());
     }
 }

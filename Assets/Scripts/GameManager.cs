@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string mainMenuSceneName;
     [SerializeField] private TextMeshProUGUI scoreText, ingameScore, highScoreText, targetScoreText, currTimeText;
     [SerializeField] private TagSO _SpawnPoint;
+    [SerializeField] private PlayerPrefSO _BestTimePlayerPref;
 
     [SerializeField] private float _scoreMulitplier = 2;
 
@@ -74,6 +75,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         targetScoreText.text = "Goal: " + targetScore;
+
+        // Sets the best time to the default best time if it doesn't find the key for it
+        BestTime = PlayerPrefs.HasKey(_BestTimePlayerPref.currKey.ToString()) ? PlayerPrefs.GetInt(_BestTimePlayerPref.currKey.ToString()) : bestTime;
 
         spawnLocPrefab = GameObject.FindGameObjectsWithTag(_SpawnPoint.Tag);
 
@@ -168,6 +172,9 @@ public class GameManager : MonoBehaviour
         if (score > targetScore)
         {
             BestTime = currTime;
+
+            PlayerPrefs.SetInt(_BestTimePlayerPref.currKey.ToString(), BestTime);
+            PlayerPrefs.Save();
 
             CancelInvoke("Timer");
 
