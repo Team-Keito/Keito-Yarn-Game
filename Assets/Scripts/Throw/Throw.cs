@@ -50,17 +50,21 @@ public class Throw : Base_InputSystem
     private Vector3 _forceVector;
     private bool _onCoolDown;
 
-    private GameObject _nextPrefab;
+    private GameObject _nextPrefab, _futurePrefab; //TODO improve later
+    private Color _nextColor;
 
     private Vector3 startOffset => CalcOffset(Camera.main.transform, _postionOffset);
 
-    
+    public Color GetNextColor => _nextColor;
 
     private void Start()
     {
         _force = (_minForce + _maxForce) / 2;
 
         _nextPrefab = GetNextPrefab();
+        _futurePrefab = GetNextPrefab();
+        _nextColor = _nextPrefab.GetComponent<Renderer>().sharedMaterial.color;
+
         _lineRenderer = gameObject.GetComponent<LineRenderer>();
 
         _input.Player.Fire.started += Fire_started;
@@ -144,6 +148,8 @@ public class Throw : Base_InputSystem
 
         OnStartThrow.Invoke();
 
+        _nextColor = _futurePrefab.GetComponent<Renderer>().sharedMaterial.color;
+
         StartCoroutine(RunCoolDown());
     }
 
@@ -158,15 +164,18 @@ public class Throw : Base_InputSystem
 
         ThrowItem(current);
         current = null;
-        DisableThrower();
-        _nextPrefab = GetNextPrefab();
+        
+        _nextPrefab = _futurePrefab;
+        _futurePrefab = GetNextPrefab();
 
+        DisableThrower();
         OnThrow.Invoke();
     }
     #endregion
 
     private void DisableThrower()
     {
+        _nextColor = _nextPrefab.GetComponent<Renderer>().sharedMaterial.color;
         _lineRenderer.enabled = false;
         _indicator.SetActive(false);
     }
