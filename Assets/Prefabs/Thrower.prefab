@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6619656791428142736
 Transform:
   m_ObjectHideFlags: 0
@@ -132,13 +132,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _thrownPrefab: {fileID: 1998775315433358910, guid: 6f1991215cd624462896b6ad92f28885, type: 3}
   _indicator: {fileID: 6619656791428142749}
+  _throwPrefabs:
+  - {fileID: 3154276696338372515, guid: 2630d7eda4b5643cab9f5ec813539c8e, type: 3}
+  - {fileID: 2025155149542869593, guid: b44bc3028160b4c6297273c41618fff4, type: 3}
+  - {fileID: 660840053069172341, guid: b47f1a3820f32416d859f089a75473e1, type: 3}
   _force: 20
-  _offset: {x: 2, y: 0, z: 0.5}
+  _offset: {x: 1, y: -0.5, z: 0.5}
   _linePoints: 25
   _totalTime: 2
   _layerMask:
     serializedVersion: 2
     m_Bits: 193
+  _clampVertical: 85
+  _clampHorizontal: 85
+  _rotationSpeed: 5
 --- !u!114 &6619656793355588178
 MonoBehaviour:
   m_ObjectHideFlags: 0
