@@ -136,6 +136,7 @@ MonoBehaviour:
   - {fileID: 660840053069172341, guid: b47f1a3820f32416d859f089a75473e1, type: 3}
   _postionOffset: {x: 1, y: -0.5, z: 0.5}
   _rotationOffset: {x: -20, y: 0}
+  _coolDownLength: 0.7
   _linePoints: 25
   _totalTime: 2
   _layerMask:
@@ -148,7 +149,7 @@ MonoBehaviour:
   _minForce: 10
   _maxForce: 25
   _forceChangeSpeed: 0.8
-  OnRandomPowerChange:
+  OnPowerChange:
     m_PersistentCalls:
       m_Calls: []
   OnThrow:

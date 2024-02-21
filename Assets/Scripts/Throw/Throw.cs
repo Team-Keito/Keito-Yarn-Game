@@ -14,6 +14,8 @@ public class Throw : Base_InputSystem
     [SerializeField, Tooltip("x & y are flipped cause unity euler")] 
     private Vector2 _rotationOffset;
 
+    [SerializeField] private float _coolDownLength = 0.7f;
+
     [Space(5)]
     [SerializeField] private int _linePoints = 25;
     [SerializeField] private float _totalTime = 2f;
@@ -46,6 +48,9 @@ public class Throw : Base_InputSystem
 
     private float _force = 20f;
     private Vector3 _forceVector;
+    private bool _onCoolDown;
+    
+
     private Vector3 startOffset => CalcOffset(Camera.main.transform, _postionOffset);
 
     
@@ -104,6 +109,11 @@ public class Throw : Base_InputSystem
     #region Input events for start / end click
     private void Fire_started(InputAction.CallbackContext obj)
     {
+        if (_onCoolDown)
+        {
+            return;
+        }
+
         isHeld = true;
         timeRandomForce = 0.5f; //start Random force at average
 
@@ -117,14 +127,21 @@ public class Throw : Base_InputSystem
         UpdateLineColor(current);
 
         OnStartThrow.Invoke();
+
+        StartCoroutine(RunCoolDown());
     }
 
     private void Fire_canceled(InputAction.CallbackContext obj)
     {
+        if (!isHeld)
+        {
+            return;
+        }
+
         isHeld = false;
 
         ThrowItem(current);
-
+        current = null;
         _lineRenderer.enabled = false;
         _indicator.SetActive(false);
 
@@ -220,5 +237,13 @@ public class Throw : Base_InputSystem
             offset.x * transform.forward +
             offset.y * transform.up +
             offset.z * transform.right;
+    }
+
+
+    IEnumerator RunCoolDown()
+    {
+        _onCoolDown = true;
+        yield return new WaitForSeconds(_coolDownLength);
+        _onCoolDown = false;
     }
 }
