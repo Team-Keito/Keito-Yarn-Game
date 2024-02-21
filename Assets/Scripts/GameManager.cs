@@ -169,7 +169,7 @@ public class GameManager : MonoBehaviour
         currTime++;
         currTimeText.text = "Time Past: " + currTime;
 
-        if (score > targetScore)
+        if (score >= targetScore)
         {
             BestTime = currTime;
 

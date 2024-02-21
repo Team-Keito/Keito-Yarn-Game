@@ -48,7 +48,6 @@ public class InGameUIManager : Base_InputSystem
         _gameOverUI.SetActive(false);
         _gameManager.ResumeGame();
         _gameManager.RestartGame();
-        AkSoundEngine.SetState("GameStates", "IngameState");
     }
 
     public void OnResumeGame()
