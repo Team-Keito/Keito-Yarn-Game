@@ -19,6 +19,8 @@ public class BallCombine : MonoBehaviour
     private Renderer _renderer;
     private Vector3 _scaleVectorCap;
 
+    public string YarnCombineSound = "Play_Yarn_Combine";
+
     public Color Color => _renderer.material.color;
 
     void Start()
@@ -45,6 +47,7 @@ public class BallCombine : MonoBehaviour
         {
             Vector3 combinedScale = transform.localScale + hitBall.transform.localScale * _scaleMultiplier;
             float combinedMass = _rigidBody.mass + collision.rigidbody.mass * _massMultiplier;
+            
 
             if (combinedScale.x > _scaleVectorCap.x || combinedMass > _massCap)
             {
@@ -60,6 +63,7 @@ public class BallCombine : MonoBehaviour
                 _rigidBody.mass = Mathf.Min(combinedMass, _massCap);
 
                 OnCombine.Invoke();
+                AkSoundEngine.PostEvent(YarnCombineSound, gameObject);
             }
         }
     }

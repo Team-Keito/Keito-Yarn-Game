@@ -6,6 +6,11 @@
 				<GameParameter Name="MasterVolume" ID="{059C2B49-0C86-4948-9130-58488696048B}"/>
 				<GameParameter Name="MusicVolume" ID="{3A4E3210-72B7-44BA-BABA-0637CA3E8FEF}"/>
 				<GameParameter Name="SFXVolume" ID="{DB772168-0D22-49B6-9958-948AA1EC0BD3}"/>
+				<GameParameter Name="VolumeChange" ID="{146E0643-7B5E-49B5-8912-A3328AD1A445}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

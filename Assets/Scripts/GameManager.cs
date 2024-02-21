@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private int score, highScore, numOfYarn, currTime = 0, bestTime = 0;
+    private int score, highScore, numOfYarn, currTime = 0, bestTime = -1;
     private int _currentLocationIndex, _sameSpawnCount = 0;
 
     [SerializeField, Tooltip("Max # times cat can stay in same spot before force move")]
@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     private float timePerSecond = 1f;
 
     [SerializeField] private string mainMenuSceneName;
-    [SerializeField] private TextMeshProUGUI scoreText, ingameScore, highScoreText, targetScoreText, currTimeText;
+    [SerializeField] private TextMeshProUGUI endTimeText, ingameScore, bestTimeText, targetScoreText, currTimeText;
     [SerializeField] private TagSO _SpawnPoint;
     [SerializeField] private PlayerPrefSO _BestTimePlayerPref;
 
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
     public int BestTime
     {
         get { return bestTime; }
-        set { bestTime = value > bestTime ? value : bestTime; }
+        set { bestTime = bestTime < 0 || value < bestTime ? value : bestTime; }
     }
 
     public int CurrentTime
@@ -169,7 +169,7 @@ public class GameManager : MonoBehaviour
         currTime++;
         currTimeText.text = "Time Past: " + currTime;
 
-        if (score > targetScore)
+        if (score >= targetScore)
         {
             BestTime = currTime;
 
@@ -177,6 +177,9 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.Save();
 
             CancelInvoke("Timer");
+
+            endTimeText.text = string.Format("Final Time: {0}", CurrentTime);
+            bestTimeText.text = string.Format("Best Time: {0}", BestTime);
 
             OnGameEnd.Invoke();
         }
@@ -191,15 +194,7 @@ public class GameManager : MonoBehaviour
         score += scoreVal;
         highScore = Mathf.Max(score, highScore);
 
-        if (scoreText)
-        {
-            scoreText.text = string.Format("Score: {0}", score);
-            ingameScore.text = scoreText.text;
-        }
-
-
-        if (highScoreText)
-            highScoreText.text = "High score: " + highScore;
+        ingameScore.text = string.Format("Score: {0}", score);
 
         ChangeCatLocation();
     }

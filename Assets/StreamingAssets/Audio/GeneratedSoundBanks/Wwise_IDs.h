@@ -16,9 +16,8 @@ namespace AK
         static const AkUniqueID PLAY_CAT_MEOW = 2051353701U;
         static const AkUniqueID PLAY_CAT_PURR = 1160118988U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
+        static const AkUniqueID PLAY_YARN_COMBINE = 554607610U;
         static const AkUniqueID PLAY_YARN_HIT = 1677062370U;
-        static const AkUniqueID PLAY_YARN_MERGE = 3306819049U;
-        static const AkUniqueID PLAY_YARN_SHRINK = 1850992524U;
     } // namespace EVENTS
 
     namespace STATES
@@ -29,7 +28,8 @@ namespace AK
 
             namespace STATE
             {
-                static const AkUniqueID INGAME_STATE = 2678566748U;
+                static const AkUniqueID GAME_OVER = 1432716332U;
+                static const AkUniqueID INGAMESTATE = 3656907969U;
                 static const AkUniqueID MAINMENU_STATE = 3205958645U;
                 static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID PAUSE_STATE = 1944582999U;
@@ -42,7 +42,6 @@ namespace AK
 
             namespace STATE
             {
-                static const AkUniqueID GAMEOVER = 4158285989U;
                 static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID PLAYING = 1852808225U;
             } // namespace STATE
@@ -55,6 +54,7 @@ namespace AK
         static const AkUniqueID MASTERVOLUME = 2918011349U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID SFXVOLUME = 988953028U;
+        static const AkUniqueID VOLUMECHANGE = 2801574179U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

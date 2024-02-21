@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -39,6 +40,7 @@ public class InGameUIManager : Base_InputSystem
     {
         _pauseUI.SetActive(true);
         _gameManager.PauseGame();
+        AkSoundEngine.SetState("GameStates", "Pause_State");
     }
 
     public void OnResetGame()
@@ -51,6 +53,7 @@ public class InGameUIManager : Base_InputSystem
     public void OnResumeGame()
     {
         _gameManager.ResumeGame();
+        AkSoundEngine.SetState("GameStates", "IngameState");
         _pauseUI.SetActive(false);
     }
 
@@ -70,6 +73,7 @@ public class InGameUIManager : Base_InputSystem
     {
         _confirmationUI.SetActive(true);
         _pauseUI.SetActive(false);
+
     }
 
     public void OnCloseConfirmation()
@@ -88,6 +92,7 @@ public class InGameUIManager : Base_InputSystem
     {
         _gameManager.PauseGame();
         _gameOverUI.SetActive(true);
+       
     }
 
     public void OnResetSettings()
