@@ -64,31 +64,33 @@ public class Throw : Base_InputSystem
         _input.Player.Fire.started += Fire_started;
         _input.Player.Fire.canceled += Fire_canceled;
 
+        _input.Player.Cancel.performed += Cancel_performed;
+
         transform.position = CalcOffset(Camera.main.transform, _postionOffset);
         transform.SetParent(Camera.main.transform, true);
     }
 
+    private void Cancel_performed(InputAction.CallbackContext obj)
+    {
+        isHeld = false;
 
+        Destroy(current);
+        DisableThrower();
+    }
 
     private void Update()
     {
         if (isHeld)
         {
             UpdateForce();
-
-            Vector2 mouseDelta = Mouse.current.delta.ReadValue();
-            _currentRotation.y += mouseDelta.x * Time.deltaTime * _rotationSpeed;
-            _currentRotation.x += -mouseDelta.y * Time.deltaTime * _rotationSpeed;
-
-            _currentRotation.x = Mathf.Clamp(_currentRotation.x, -_clampVertical, _clampVertical);
-            _currentRotation.y = Mathf.Clamp(_currentRotation.y, -_clampHorizontal, _clampHorizontal);
-
-            transform.localRotation = Quaternion.Euler(_currentRotation.x, _currentRotation.y, 0);
+            UpdateRotation();
 
             _forceVector = _force * transform.forward;
 
             DrawWithDrag(_forceVector);
             _indicator.transform.position = _lineRenderer.GetPosition(_lineRenderer.positionCount - 1);
+
+
             current.transform.position = startOffset;
         }      
     }
@@ -103,6 +105,18 @@ public class Throw : Base_InputSystem
             OnPowerChange.Invoke(delta);
             _force = Mathf.Lerp(_minForce, _maxForce, delta);
         }        
+    }
+
+    private void UpdateRotation()
+    {
+        Vector2 mouseDelta = Mouse.current.delta.ReadValue();
+        _currentRotation.y += mouseDelta.x * Time.deltaTime * _rotationSpeed;
+        _currentRotation.x += -mouseDelta.y * Time.deltaTime * _rotationSpeed;
+
+        _currentRotation.x = Mathf.Clamp(_currentRotation.x, -_clampVertical, _clampVertical);
+        _currentRotation.y = Mathf.Clamp(_currentRotation.y, -_clampHorizontal, _clampHorizontal);
+
+        transform.localRotation = Quaternion.Euler(_currentRotation.x, _currentRotation.y, 0);
     }
 
 
@@ -142,12 +156,18 @@ public class Throw : Base_InputSystem
 
         ThrowItem(current);
         current = null;
-        _lineRenderer.enabled = false;
-        _indicator.SetActive(false);
+        DisableThrower();
 
         OnThrow.Invoke();
     }
     #endregion
+
+    private void DisableThrower()
+    {
+        _lineRenderer.enabled = false;
+        _indicator.SetActive(false);
+    }
+
 
     private void UpdateLineColor(GameObject obj)
     {
@@ -199,7 +219,7 @@ public class Throw : Base_InputSystem
     /// Draws by calc trajectory w/drag & stops on 1st collision or time travelled
     /// </summary>
     /// <param name="ForceVector"></param>
-    private void DrawWithDrag(Vector3 ForceVector)
+    private bool DrawWithDrag(Vector3 ForceVector)
     {
         _lineRenderer.positionCount = _linePoints;
         float time = _totalTime / _linePoints;
@@ -219,11 +239,13 @@ public class Throw : Base_InputSystem
             {
                 _lineRenderer.SetPosition(i, hit.point);
                 _lineRenderer.positionCount = i + 1;
-                return;
+                return true;
             }
 
             currentPos += delta;
         }
+
+        return false;
     }
 
     /// <summary>

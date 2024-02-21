@@ -142,8 +142,8 @@ MonoBehaviour:
   _layerMask:
     serializedVersion: 2
     m_Bits: 449
-  _clampVertical: 85
-  _clampHorizontal: 70
+  _clampVertical: 45
+  _clampHorizontal: 45
   _rotationSpeed: 5
   _useRandomForce: 1
   _minForce: 10

@@ -73,6 +73,15 @@ namespace UnityEngine.InputSystem
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Cancel"",
+                    ""type"": ""Button"",
+                    ""id"": ""641df082-fdc6-494c-96b0-861f9fc6e057"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -337,6 +346,17 @@ namespace UnityEngine.InputSystem
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Focus"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8185dc54-0a57-489a-b9f9-26722169199b"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cancel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -929,6 +949,7 @@ namespace UnityEngine.InputSystem
             m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
             m_Player_Menu = m_Player.FindAction("Menu", throwIfNotFound: true);
             m_Player_Focus = m_Player.FindAction("Focus", throwIfNotFound: true);
+            m_Player_Cancel = m_Player.FindAction("Cancel", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1007,6 +1028,7 @@ namespace UnityEngine.InputSystem
         private readonly InputAction m_Player_Fire;
         private readonly InputAction m_Player_Menu;
         private readonly InputAction m_Player_Focus;
+        private readonly InputAction m_Player_Cancel;
         public struct PlayerActions
         {
             private @PlayerControls m_Wrapper;
@@ -1016,6 +1038,7 @@ namespace UnityEngine.InputSystem
             public InputAction @Fire => m_Wrapper.m_Player_Fire;
             public InputAction @Menu => m_Wrapper.m_Player_Menu;
             public InputAction @Focus => m_Wrapper.m_Player_Focus;
+            public InputAction @Cancel => m_Wrapper.m_Player_Cancel;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -1040,6 +1063,9 @@ namespace UnityEngine.InputSystem
                 @Focus.started += instance.OnFocus;
                 @Focus.performed += instance.OnFocus;
                 @Focus.canceled += instance.OnFocus;
+                @Cancel.started += instance.OnCancel;
+                @Cancel.performed += instance.OnCancel;
+                @Cancel.canceled += instance.OnCancel;
             }
 
             private void UnregisterCallbacks(IPlayerActions instance)
@@ -1059,6 +1085,9 @@ namespace UnityEngine.InputSystem
                 @Focus.started -= instance.OnFocus;
                 @Focus.performed -= instance.OnFocus;
                 @Focus.canceled -= instance.OnFocus;
+                @Cancel.started -= instance.OnCancel;
+                @Cancel.performed -= instance.OnCancel;
+                @Cancel.canceled -= instance.OnCancel;
             }
 
             public void RemoveCallbacks(IPlayerActions instance)
@@ -1246,6 +1275,7 @@ namespace UnityEngine.InputSystem
             void OnFire(InputAction.CallbackContext context);
             void OnMenu(InputAction.CallbackContext context);
             void OnFocus(InputAction.CallbackContext context);
+            void OnCancel(InputAction.CallbackContext context);
         }
         public interface IUIActions
         {
