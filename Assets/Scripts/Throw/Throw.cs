@@ -49,7 +49,8 @@ public class Throw : Base_InputSystem
     private float _force = 20f;
     private Vector3 _forceVector;
     private bool _onCoolDown;
-    
+
+    private GameObject _nextPrefab;
 
     private Vector3 startOffset => CalcOffset(Camera.main.transform, _postionOffset);
 
@@ -59,6 +60,7 @@ public class Throw : Base_InputSystem
     {
         _force = (_minForce + _maxForce) / 2;
 
+        _nextPrefab = GetNextPrefab();
         _lineRenderer = gameObject.GetComponent<LineRenderer>();
 
         _input.Player.Fire.started += Fire_started;
@@ -157,6 +159,7 @@ public class Throw : Base_InputSystem
         ThrowItem(current);
         current = null;
         DisableThrower();
+        _nextPrefab = GetNextPrefab();
 
         OnThrow.Invoke();
     }
@@ -179,7 +182,7 @@ public class Throw : Base_InputSystem
     #region Spawn Thrown Objects
     private void SpawnNextThrownObject()
     {
-        GameObject prefab = GetNextPrefab();
+        GameObject prefab = _nextPrefab;
 
         Rigidbody rigidbody = prefab.GetComponent<Rigidbody>();
         mass = rigidbody.mass;
