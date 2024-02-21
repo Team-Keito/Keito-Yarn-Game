@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 
-public class Throw : Base_InputSystem
+public class Throw : MonoBehaviour
 {
     [SerializeField] private GameObject _indicator;
     [SerializeField] private GameObject[] _throwPrefabs;
@@ -67,10 +67,10 @@ public class Throw : Base_InputSystem
 
         _lineRenderer = gameObject.GetComponent<LineRenderer>();
 
-        _input.Player.Fire.started += Fire_started;
-        _input.Player.Fire.canceled += Fire_canceled;
+        InputManager.Input.Player.Fire.started += Fire_started;
+        InputManager.Input.Player.Fire.canceled += Fire_canceled;
 
-        _input.Player.Cancel.performed += Cancel_performed;
+        InputManager.Input.Player.Cancel.performed += Cancel_performed;
 
         transform.position = CalcOffset(Camera.main.transform, _postionOffset);
         transform.SetParent(Camera.main.transform, true);

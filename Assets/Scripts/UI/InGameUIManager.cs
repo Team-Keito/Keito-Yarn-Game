@@ -4,7 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InGameUIManager : Base_InputSystem
+public class InGameUIManager : MonoBehaviour
 {
     [SerializeField] GameManager _gameManager;
     [SerializeField] GameObject _pauseUI;
@@ -21,19 +21,25 @@ public class InGameUIManager : Base_InputSystem
         _confirmationUI.SetActive(false);
         _gameOverUI.SetActive(false);
 
-        _input.Player.Menu.performed += Menu_performed;
+        InputManager.Input.Player.Menu.performed += Menu_performed;
+        InputManager.Input.UI.Cancel.performed += Cancel_performed;
+    }
+
+    private void Cancel_performed(InputAction.CallbackContext obj)
+    {
+        if (_settingsUI.activeSelf)
+        {
+            OnSettingsClose();
+        }
+        else
+        {
+            OnResumeGame();
+        }
     }
 
     private void Menu_performed(InputAction.CallbackContext obj)
     {
-        if (Time.timeScale == 0)
-        {
-            OnResumeGame();
-        }
-        else
-        {
-            OnPauseGame();
-        }
+        OnPauseGame();
     }
 
     public void OnPauseGame()
@@ -41,6 +47,7 @@ public class InGameUIManager : Base_InputSystem
         _pauseUI.SetActive(true);
         _gameManager.PauseGame();
         AkSoundEngine.SetState("GameStates", "Pause_State");
+        InputManager.Instance.SwitchControls(ControlMap.UI);
     }
 
     public void OnResetGame()
@@ -55,6 +62,8 @@ public class InGameUIManager : Base_InputSystem
         _gameManager.ResumeGame();
         AkSoundEngine.SetState("GameStates", "IngameState");
         _pauseUI.SetActive(false);
+
+        InputManager.Instance.SwitchControls(ControlMap.Player);
     }
 
     public void OnSettingsOpen()
