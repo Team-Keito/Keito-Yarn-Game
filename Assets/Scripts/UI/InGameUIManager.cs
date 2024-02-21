@@ -31,6 +31,10 @@ public class InGameUIManager : MonoBehaviour
         {
             OnSettingsClose();
         }
+        else if (_confirmationUI.activeSelf)
+        {
+            OnCloseConfirmation();
+        }
         else
         {
             OnResumeGame();
