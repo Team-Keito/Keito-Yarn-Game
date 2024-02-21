@@ -11,7 +11,7 @@ public class Throw : Base_InputSystem
 
     [Space(5)]
     [SerializeField] private Vector3 _postionOffset;
-    [SerializeField, Tooltip("x & y are flipped cause unity euler")] 
+    [SerializeField, Tooltip("x & y are flipped cause unity euler")]
     private Vector2 _rotationOffset;
 
     [SerializeField] private float _coolDownLength = 0.7f;
@@ -98,7 +98,7 @@ public class Throw : Base_InputSystem
 
 
             current.transform.position = startOffset;
-        }      
+        }
     }
 
     private void UpdateForce()
@@ -110,7 +110,7 @@ public class Throw : Base_InputSystem
 
             OnPowerChange.Invoke(delta);
             _force = Mathf.Lerp(_minForce, _maxForce, delta);
-        }        
+        }
     }
 
     private void UpdateRotation()
@@ -164,7 +164,7 @@ public class Throw : Base_InputSystem
 
         ThrowItem(current);
         current = null;
-        
+
         _nextPrefab = _futurePrefab;
         _futurePrefab = GetNextPrefab();
 
@@ -239,13 +239,13 @@ public class Throw : Base_InputSystem
         Vector3 currentPos = startOffset;
         Vector3 currentVelocity = ForceVector / mass;
 
-        for(int i = 0; i < _linePoints; i++)
+        for (int i = 0; i < _linePoints; i++)
         {
             _lineRenderer.SetPosition(i, currentPos);
 
             currentVelocity += Physics.gravity * time;
             currentVelocity *= (1 - drag * time);
-            
+
             Vector3 delta = currentVelocity * time;
             if (Physics.Raycast(currentPos, delta.normalized, out RaycastHit hit, delta.magnitude, _layerMask))
             {
