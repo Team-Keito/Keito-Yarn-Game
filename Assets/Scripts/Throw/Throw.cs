@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
+
 public class Throw : Base_InputSystem
 {
     [SerializeField] private GameObject _indicator;
@@ -24,7 +26,11 @@ public class Throw : Base_InputSystem
     [SerializeField] private bool _useRandomForce = true;
     [SerializeField] private float _minForce = 10f;
     [SerializeField] private float _maxForce = 25f;
-    [SerializeField] private float _forceChangeSpeed = 0.1f;
+    [SerializeField] private float _forceChangeSpeed = 0.8f;
+
+    public UnityEvent<float> OnRandomPowerChange;
+    public UnityEvent OnThrow;
+    public UnityEvent OnStartThrow;
 
     private LineRenderer _lineRenderer;
 
@@ -34,6 +40,7 @@ public class Throw : Base_InputSystem
     private bool isHeld = false;
     private Vector2 _currentRotation;
 
+    private float timeRandomForce = 0f;
 
     private float _force = 20f;
     private Vector3 _forceVector;
@@ -83,7 +90,10 @@ public class Throw : Base_InputSystem
     {
         if (_useRandomForce)
         {
-            float delta = Mathf.PingPong(_forceChangeSpeed * Time.time, 1);
+            timeRandomForce += Time.deltaTime * _forceChangeSpeed;
+            float delta = Mathf.PingPong(timeRandomForce, 1);
+
+            OnRandomPowerChange.Invoke(delta);
             _force = Mathf.Lerp(_minForce, _maxForce, delta);
         }        
     }
@@ -93,6 +103,7 @@ public class Throw : Base_InputSystem
     private void Fire_started(InputAction.CallbackContext obj)
     {
         isHeld = true;
+        timeRandomForce = 0.5f; //start Random force at average
 
         _lineRenderer.enabled = true;
         _indicator.SetActive(true);
@@ -102,6 +113,8 @@ public class Throw : Base_InputSystem
 
         SpawnNextThrownObject();
         UpdateLineColor(current);
+
+        OnStartThrow.Invoke();
     }
 
     private void Fire_canceled(InputAction.CallbackContext obj)
@@ -112,6 +125,8 @@ public class Throw : Base_InputSystem
 
         _lineRenderer.enabled = false;
         _indicator.SetActive(false);
+
+        OnThrow.Invoke();
     }
     #endregion
 
