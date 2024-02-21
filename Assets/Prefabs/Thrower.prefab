@@ -93,7 +93,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6619656793355588176}
   - component: {fileID: 6619656793355588179}
-  - component: {fileID: 6619656793355588178}
   - component: {fileID: 6619656793355588177}
   m_Layer: 0
   m_Name: Thrower
@@ -130,13 +129,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb9072fc2addbd4b9cead121ffd5794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _thrownPrefab: {fileID: 1998775315433358910, guid: 6f1991215cd624462896b6ad92f28885, type: 3}
   _indicator: {fileID: 6619656791428142749}
   _throwPrefabs:
   - {fileID: 3154276696338372515, guid: 2630d7eda4b5643cab9f5ec813539c8e, type: 3}
   - {fileID: 2025155149542869593, guid: b44bc3028160b4c6297273c41618fff4, type: 3}
   - {fileID: 660840053069172341, guid: b47f1a3820f32416d859f089a75473e1, type: 3}
-  _force: 20
   _offset: {x: 1, y: -0.5, z: 0.5}
   _linePoints: 25
   _totalTime: 2
@@ -146,23 +143,10 @@ MonoBehaviour:
   _clampVertical: 85
   _clampHorizontal: 85
   _rotationSpeed: 5
---- !u!114 &6619656793355588178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6619656793355588189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e21d1bea26203ec469cc54fe7afa37c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _linePoints: 25
-  _totalTime: 2
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 0
+  _useRandomForce: 1
+  _minForce: 10
+  _maxForce: 25
+  _forceChangeSpeed: 0.8
 --- !u!120 &6619656793355588177
 LineRenderer:
   m_ObjectHideFlags: 0

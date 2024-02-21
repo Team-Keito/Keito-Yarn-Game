@@ -8,7 +8,6 @@ public class Throw : Base_InputSystem
     [SerializeField] private GameObject[] _throwPrefabs;
 
     [Space(5)]
-    [SerializeField] private float _force = 20f;
     [SerializeField] private Vector3 _offset;
 
     [Space(5)]
@@ -21,6 +20,12 @@ public class Throw : Base_InputSystem
     [SerializeField] private float _clampHorizontal = 85f;
     [SerializeField] private float _rotationSpeed = 5f;
 
+    [Space(5)]
+    [SerializeField] private bool _useRandomForce = true;
+    [SerializeField] private float _minForce = 10f;
+    [SerializeField] private float _maxForce = 25f;
+    [SerializeField] private float _forceChangeSpeed = 0.1f;
+
     private LineRenderer _lineRenderer;
 
     private float mass, drag;
@@ -29,6 +34,8 @@ public class Throw : Base_InputSystem
     private bool isHeld = false;
     private Vector2 _currentRotation;
 
+
+    private float _force = 20f;
     private Vector3 _forceVector;
     private Vector3 startOffset => CalcOffset(Camera.main.transform, _offset);
 
@@ -36,6 +43,8 @@ public class Throw : Base_InputSystem
 
     private void Start()
     {
+        _force = (_minForce + _maxForce) / 2;
+
         _lineRenderer = gameObject.GetComponent<LineRenderer>();
 
         _input.Player.Fire.started += Fire_started;
@@ -51,6 +60,8 @@ public class Throw : Base_InputSystem
     {
         if (isHeld)
         {
+            UpdateForce();
+
             Vector2 mouseDelta = Mouse.current.delta.ReadValue();
             _currentRotation.y += mouseDelta.x * Time.deltaTime * _rotationSpeed;
             _currentRotation.x += -mouseDelta.y * Time.deltaTime * _rotationSpeed;
@@ -67,6 +78,16 @@ public class Throw : Base_InputSystem
             current.transform.position = startOffset;
         }      
     }
+
+    private void UpdateForce()
+    {
+        if (_useRandomForce)
+        {
+            float delta = Mathf.PingPong(_forceChangeSpeed * Time.time, 1);
+            _force = Mathf.Lerp(_minForce, _maxForce, delta);
+        }        
+    }
+
 
     #region Input events for start / end click
     private void Fire_started(InputAction.CallbackContext obj)
