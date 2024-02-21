@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Code for dropping yarn ball from a specific point
 /// </summary>
-public class YarnDropper : MonoBehaviour
+public class YarnDropper : Base_InputSystem
 {
     private bool _onCoolDown = false;
     private int _currentYarnChoice = 0;
@@ -30,16 +31,20 @@ public class YarnDropper : MonoBehaviour
         _currentYarnChoice = Random.Range(0, _yarnPrefabs.Length);
         if (!_mainCam) _mainCam = Camera.main;
         if (_yarnPrefabs.Length == 0) Debug.LogError("No yarn ball prefabs assigned!");
+
+        _input.Player.Fire.performed += Fire_performed;
     }
 
+    private void Fire_performed(InputAction.CallbackContext obj)
+    {
+        if (!_onCoolDown && Time.timeScale != 0)
+        {
+            SpawnYarnBall();
+        }        
+    }
 
     void Update()
     {
-        // If in editor, test spawning with left mouse button
-        if (UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame && !_onCoolDown)
-        {
-            SpawnYarnBall();
-        }
         transform.position = CalculateDropperPosition();
     }
 
@@ -49,7 +54,7 @@ public class YarnDropper : MonoBehaviour
     /// <returns></returns>
     public Vector3 CalculateDropperPosition()
     {
-        Vector2 mouseScreenPosition = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+        Vector2 mouseScreenPosition = Mouse.current.position.ReadValue();
         Ray mouseRay = _mainCam.ScreenPointToRay(mouseScreenPosition);
         if (Physics.Raycast(mouseRay, out RaycastHit hit, Mathf.Infinity, _floorLayer))
         {
