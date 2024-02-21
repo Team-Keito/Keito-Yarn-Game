@@ -75,6 +75,11 @@
 						</Bus>
 						<Bus Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}">
 							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
 										<RTPC Name="" ID="{4C668A73-2FC2-4A76-8A93-2000C98D5C64}" ShortID="529106864">

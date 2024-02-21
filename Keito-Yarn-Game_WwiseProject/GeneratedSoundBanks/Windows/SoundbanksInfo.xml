@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3067528758">
+		<SoundBank Id="1355168291" Language="SFX" Hash="809473865">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -21,12 +21,12 @@
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\MasterVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="1547581202">
+		<SoundBank Id="2641024368" Language="SFX" Hash="3252587379">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2051353701" Name="Play_Cat_Meow" ObjectPath="\Events\Default Work Unit\Play_Cat_Meow" DurationType="OneShot" DurationMin="40.666668" DurationMax="40.666668">
+				<Event Id="2051353701" Name="Play_Cat_Meow" ObjectPath="\Events\Default Work Unit\Play_Cat_Meow" DurationType="OneShot" DurationMin="0.610417" DurationMax="0.970833">
 					<IncludedMemoryFiles>
 						<File Id="352831436" Language="SFX">
 							<ShortName>CATPOCALYPSE_CAT_MEOW_V1_14.wav</ShortName>
@@ -54,19 +54,27 @@
 					<IncludedMemoryFiles>
 						<File Id="364853297" Language="SFX">
 							<ShortName>CATPOCALYPSE_AUDIO_CAT_PURR_V1_7.wav</ShortName>
-							<Path>SFX\CATPOCALYPSE_AUDIO_CAT_PURR_V1_7_7FF3412B.wem</Path>
+							<Path>SFX\CATPOCALYPSE_AUDIO_CAT_PURR_V1_7_5BE965EA.wem</Path>
 						</File>
 						<File Id="829351928" Language="SFX">
 							<ShortName>CATPOCALYPSE_AUDIO_CAT_PURR_V1_4.wav</ShortName>
-							<Path>SFX\CATPOCALYPSE_AUDIO_CAT_PURR_V1_4_FCA25D5C.wem</Path>
+							<Path>SFX\CATPOCALYPSE_AUDIO_CAT_PURR_V1_4_E20273B0.wem</Path>
 						</File>
 						<File Id="831537192" Language="SFX">
 							<ShortName>CATPOCALYPSE_AUDIO_CAT_PURR_V1_2.wav</ShortName>
-							<Path>SFX\CATPOCALYPSE_AUDIO_CAT_PURR_V1_2_577A596B.wem</Path>
+							<Path>SFX\CATPOCALYPSE_AUDIO_CAT_PURR_V1_2_82BE384A.wem</Path>
 						</File>
 						<File Id="912852287" Language="SFX">
 							<ShortName>CATPOCALYPSE_AUDIO_CAT_PURR_V1_3.wav</ShortName>
-							<Path>SFX\CATPOCALYPSE_AUDIO_CAT_PURR_V1_3_3A89171E.wem</Path>
+							<Path>SFX\CATPOCALYPSE_AUDIO_CAT_PURR_V1_3_DD6D5B0B.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="554607610" Name="Play_Yarn_Combine" ObjectPath="\Events\Default Work Unit\Play_Yarn_Combine" DurationType="OneShot" DurationMin="0.483878" DurationMax="0.483878">
+					<IncludedMemoryFiles>
+						<File Id="766138444" Language="SFX">
+							<ShortName>Keito_Yarn_Merge.wav</ShortName>
+							<Path>SFX\Keito_Yarn_Merge_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -74,73 +82,60 @@
 					<IncludedMemoryFiles>
 						<File Id="202934990" Language="SFX">
 							<ShortName>Keito_Yarn_Hit_3_1.wav</ShortName>
-							<Path>SFX\Keito_Yarn_Hit_3_1_0CAF74EF.wem</Path>
+							<Path>SFX\Keito_Yarn_Hit_3_1_7B5CBA06.wem</Path>
 						</File>
 						<File Id="209445105" Language="SFX">
 							<ShortName>Keito_Yarn_Hit_4_1.wav</ShortName>
-							<Path>SFX\Keito_Yarn_Hit_4_1_3DD85924.wem</Path>
+							<Path>SFX\Keito_Yarn_Hit_4_1_15B42152.wem</Path>
 						</File>
 						<File Id="270895424" Language="SFX">
 							<ShortName>Keito_Yarn_Hit_2_3.wav</ShortName>
-							<Path>SFX\Keito_Yarn_Hit_2_3_DA56EE95.wem</Path>
+							<Path>SFX\Keito_Yarn_Hit_2_3_CE9259E3.wem</Path>
 						</File>
 						<File Id="282180228" Language="SFX">
 							<ShortName>Keito_Yarn_Hit_2_1.wav</ShortName>
-							<Path>SFX\Keito_Yarn_Hit_2_1_0BD89859.wem</Path>
+							<Path>SFX\Keito_Yarn_Hit_2_1_71D6EA29.wem</Path>
 						</File>
 						<File Id="311792289" Language="SFX">
 							<ShortName>Keito_Yarn_Hit_3_3.wav</ShortName>
-							<Path>SFX\Keito_Yarn_Hit_3_3_6A0055DB.wem</Path>
+							<Path>SFX\Keito_Yarn_Hit_3_3_4D7D1289.wem</Path>
 						</File>
 						<File Id="378373933" Language="SFX">
 							<ShortName>Keito_Yarn_Hit_3_2.wav</ShortName>
-							<Path>SFX\Keito_Yarn_Hit_3_2_FEB44518.wem</Path>
+							<Path>SFX\Keito_Yarn_Hit_3_2_EA35470F.wem</Path>
 						</File>
 						<File Id="399494428" Language="SFX">
 							<ShortName>Keito_Yarn_Hit_1_1.wav</ShortName>
-							<Path>SFX\Keito_Yarn_Hit_1_1_FC33EC86.wem</Path>
+							<Path>SFX\Keito_Yarn_Hit_1_1_E46D598D.wem</Path>
 						</File>
 						<File Id="536778659" Language="SFX">
 							<ShortName>Keito_Yarn_Hit_1_3.wav</ShortName>
-							<Path>SFX\Keito_Yarn_Hit_1_3_D6F15833.wem</Path>
+							<Path>SFX\Keito_Yarn_Hit_1_3_247279A8.wem</Path>
 						</File>
 						<File Id="607197866" Language="SFX">
 							<ShortName>Keito_Yarn_Hit_4_3.wav</ShortName>
-							<Path>SFX\Keito_Yarn_Hit_4_3_C65C895C.wem</Path>
+							<Path>SFX\Keito_Yarn_Hit_4_3_13CA782C.wem</Path>
 						</File>
 						<File Id="732081429" Language="SFX">
 							<ShortName>Keito_Yarn_Hit_1_2.wav</ShortName>
-							<Path>SFX\Keito_Yarn_Hit_1_2_6A478A55.wem</Path>
+							<Path>SFX\Keito_Yarn_Hit_1_2_55C9B6AD.wem</Path>
 						</File>
 						<File Id="798520635" Language="SFX">
 							<ShortName>Keito_Yarn_Hit_2_2.wav</ShortName>
-							<Path>SFX\Keito_Yarn_Hit_2_2_0C82D019.wem</Path>
+							<Path>SFX\Keito_Yarn_Hit_2_2_2D65FBB5.wem</Path>
 						</File>
 						<File Id="1073338854" Language="SFX">
 							<ShortName>Keito_Yarn_Hit_4_2.wav</ShortName>
-							<Path>SFX\Keito_Yarn_Hit_4_2_D6310B06.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="3306819049" Name="Play_Yarn_Merge" ObjectPath="\Events\Default Work Unit\Play_Yarn_Merge" DurationType="OneShot" DurationMin="0.483878" DurationMax="0.483878">
-					<IncludedMemoryFiles>
-						<File Id="357358170" Language="SFX">
-							<ShortName>Keito_Yarn_Merge.wav</ShortName>
-							<Path>SFX\Keito_Yarn_Merge_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="1850992524" Name="Play_Yarn_Shrink" ObjectPath="\Events\Default Work Unit\Play_Yarn_Shrink" DurationType="OneShot" DurationMin="0.483878" DurationMax="0.483878">
-					<IncludedMemoryFiles>
-						<File Id="758871610" Language="SFX">
-							<ShortName>Keito_Yarn_Shrink.wav</ShortName>
-							<Path>SFX\Keito_Yarn_Shrink_10C4C929.wem</Path>
+							<Path>SFX\Keito_Yarn_Hit_4_2_942BE0C2.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="2801574179" Name="VolumeChange" ObjectPath="\Game Parameters\Default Work Unit\VolumeChange"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3589812408" Language="SFX" Hash="2023366427">
+		<SoundBank Id="3589812408" Language="SFX" Hash="254333691">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_SoundBank</ObjectPath>
 			<ShortName>Music_SoundBank</ShortName>
 			<Path>Music_SoundBank.bnk</Path>
@@ -248,11 +243,6 @@
 										<File Id="1040641227"/>
 									</Media>
 								</SwitchContainer>
-								<SwitchContainer SwitchValue="{5ABABF18-6850-472E-B13D-67FDE00344EC}">
-									<Media>
-										<File Id="143496161"/>
-									</Media>
-								</SwitchContainer>
 							</Children>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{2DDE41CF-9A05-4A70-8D2D-E01A0ECF4F28}">
@@ -271,6 +261,11 @@
 								<File Id="254799321"/>
 							</Media>
 						</SwitchContainer>
+						<SwitchContainer SwitchValue="{A0DCA826-7E6F-4462-87D3-15F4CCF6BFC5}">
+							<Media>
+								<File Id="143496161"/>
+							</Media>
+						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 			</IncludedEvents>
@@ -279,15 +274,15 @@
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\GameStates\None" GUID="{C5F42A50-9E59-421E-8BD0-7863EDCA0C33}"/>
 						<State Id="3205958645" Name="MainMenu_State" ObjectPath="\States\Default Work Unit\GameStates\MainMenu_State" GUID="{2DDE41CF-9A05-4A70-8D2D-E01A0ECF4F28}"/>
-						<State Id="2678566748" Name="Ingame_State" ObjectPath="\States\Default Work Unit\GameStates\Ingame_State" GUID="{AE3FB139-1538-47C7-8325-8451E6E562C0}"/>
+						<State Id="3656907969" Name="IngameState" ObjectPath="\States\Default Work Unit\GameStates\IngameState" GUID="{AE3FB139-1538-47C7-8325-8451E6E562C0}"/>
 						<State Id="1944582999" Name="Pause_State" ObjectPath="\States\Default Work Unit\GameStates\Pause_State" GUID="{0CA38F66-44BF-4288-92F6-94543C2B555B}"/>
+						<State Id="1432716332" Name="Game_over" ObjectPath="\States\Default Work Unit\GameStates\Game_over" GUID="{A0DCA826-7E6F-4462-87D3-15F4CCF6BFC5}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="3285234865" Name="PlayerState" ObjectPath="\States\Default Work Unit\PlayerState" GUID="{4E95AF37-1545-4577-9C92-B1769A4D9B05}">
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\PlayerState\None" GUID="{5D053314-007F-4A6B-8533-089DF45F12D4}"/>
 						<State Id="1852808225" Name="Playing" ObjectPath="\States\Default Work Unit\PlayerState\Playing" GUID="{59D505F2-2BA8-4D2D-A54E-564052E321D3}"/>
-						<State Id="4158285989" Name="Gameover" ObjectPath="\States\Default Work Unit\PlayerState\Gameover" GUID="{5ABABF18-6850-472E-B13D-67FDE00344EC}"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
