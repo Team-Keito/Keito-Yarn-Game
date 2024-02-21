@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -1940726632899412579}
   - component: {fileID: 2495046777849088545}
   - component: {fileID: 2558765689392952487}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Yarn
   m_TagString: Yarn
   m_Icon: {fileID: 0}
@@ -319,4 +319,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6414581bd466a40b711730e9b8b9be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 0}
+  _target: {fileID: 0}
+  _zoomLevel: 0.5
