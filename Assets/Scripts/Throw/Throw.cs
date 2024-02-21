@@ -30,7 +30,7 @@ public class Throw : Base_InputSystem
     [SerializeField] private float _maxForce = 25f;
     [SerializeField] private float _forceChangeSpeed = 0.8f;
 
-    public UnityEvent<float> OnRandomPowerChange;
+    public UnityEvent<float> OnPowerChange;
     public UnityEvent OnThrow;
     public UnityEvent OnStartThrow;
 
@@ -95,7 +95,7 @@ public class Throw : Base_InputSystem
             timeRandomForce += Time.deltaTime * _forceChangeSpeed;
             float delta = Mathf.PingPong(timeRandomForce, 1);
 
-            OnRandomPowerChange.Invoke(delta);
+            OnPowerChange.Invoke(delta);
             _force = Mathf.Lerp(_minForce, _maxForce, delta);
         }        
     }
