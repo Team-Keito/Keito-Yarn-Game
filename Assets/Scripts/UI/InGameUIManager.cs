@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class InGameUIManager : MonoBehaviour
+public class InGameUIManager : Base_InputSystem
 {
     [SerializeField] GameManager _gameManager;
     [SerializeField] GameObject _pauseUI;
     [SerializeField] GameObject _settingsUI;
     [SerializeField] GameObject _confirmationUI;
     [SerializeField] GameObject _gameOverUI;
+    [SerializeField] PlayerPrefSO masterSO, musicSO, soundSO;
 
     void Start()
     {
@@ -18,21 +20,19 @@ public class InGameUIManager : MonoBehaviour
         _settingsUI.SetActive(false);
         _confirmationUI.SetActive(false);
         _gameOverUI.SetActive(false);
+
+        _input.Player.Menu.performed += Menu_performed;
     }
 
-    // TEMP: This should be replaced by InputAction event
-    private void Update()
+    private void Menu_performed(InputAction.CallbackContext obj)
     {
-        if (UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (Time.timeScale == 0)
         {
-            if (Time.timeScale == 0)
-            {
-                OnResumeGame();
-            }
-            else
-            {
-                OnPauseGame();
-            }
+            OnResumeGame();
+        }
+        else
+        {
+            OnPauseGame();
         }
     }
 
@@ -94,5 +94,12 @@ public class InGameUIManager : MonoBehaviour
         _gameManager.PauseGame();
         _gameOverUI.SetActive(true);
        
+    }
+
+    public void OnResetSettings()
+    {
+        PlayerPrefs.DeleteKey(masterSO.currKey.ToString());
+        PlayerPrefs.DeleteKey(musicSO.currKey.ToString());
+        PlayerPrefs.DeleteKey(soundSO.currKey.ToString());
     }
 }
