@@ -11,7 +11,7 @@ public class Throw : Base_InputSystem
 
     [Space(5)]
     [SerializeField] private Vector3 _postionOffset;
-    [SerializeField, Tooltip("x & y are flipped cause unity euler")] 
+    [SerializeField, Tooltip("x & y are flipped cause unity euler")]
     private Vector2 _rotationOffset;
 
     [SerializeField] private float _coolDownLength = 0.7f;
@@ -50,17 +50,21 @@ public class Throw : Base_InputSystem
     private Vector3 _forceVector;
     private bool _onCoolDown;
 
-    private GameObject _nextPrefab;
+    private GameObject _nextPrefab, _futurePrefab; //TODO improve later
+    private Color _nextColor;
 
     private Vector3 startOffset => CalcOffset(Camera.main.transform, _postionOffset);
 
-    
+    public Color GetNextColor => _nextColor;
 
     private void Start()
     {
         _force = (_minForce + _maxForce) / 2;
 
         _nextPrefab = GetNextPrefab();
+        _futurePrefab = GetNextPrefab();
+        _nextColor = _nextPrefab.GetComponent<Renderer>().sharedMaterial.color;
+
         _lineRenderer = gameObject.GetComponent<LineRenderer>();
 
         _input.Player.Fire.started += Fire_started;
@@ -94,7 +98,7 @@ public class Throw : Base_InputSystem
 
 
             current.transform.position = startOffset;
-        }      
+        }
     }
 
     private void UpdateForce()
@@ -106,7 +110,7 @@ public class Throw : Base_InputSystem
 
             OnPowerChange.Invoke(delta);
             _force = Mathf.Lerp(_minForce, _maxForce, delta);
-        }        
+        }
     }
 
     private void UpdateRotation()
@@ -144,6 +148,8 @@ public class Throw : Base_InputSystem
 
         OnStartThrow.Invoke();
 
+        _nextColor = _futurePrefab.GetComponent<Renderer>().sharedMaterial.color;
+
         StartCoroutine(RunCoolDown());
     }
 
@@ -158,15 +164,18 @@ public class Throw : Base_InputSystem
 
         ThrowItem(current);
         current = null;
-        DisableThrower();
-        _nextPrefab = GetNextPrefab();
 
+        _nextPrefab = _futurePrefab;
+        _futurePrefab = GetNextPrefab();
+
+        DisableThrower();
         OnThrow.Invoke();
     }
     #endregion
 
     private void DisableThrower()
     {
+        _nextColor = _nextPrefab.GetComponent<Renderer>().sharedMaterial.color;
         _lineRenderer.enabled = false;
         _indicator.SetActive(false);
     }
@@ -230,13 +239,13 @@ public class Throw : Base_InputSystem
         Vector3 currentPos = startOffset;
         Vector3 currentVelocity = ForceVector / mass;
 
-        for(int i = 0; i < _linePoints; i++)
+        for (int i = 0; i < _linePoints; i++)
         {
             _lineRenderer.SetPosition(i, currentPos);
 
             currentVelocity += Physics.gravity * time;
             currentVelocity *= (1 - drag * time);
-            
+
             Vector3 delta = currentVelocity * time;
             if (Physics.Raycast(currentPos, delta.normalized, out RaycastHit hit, delta.magnitude, _layerMask))
             {
