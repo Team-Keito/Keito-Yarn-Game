@@ -64,6 +64,15 @@ namespace UnityEngine.InputSystem
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Focus"",
+                    ""type"": ""Button"",
+                    ""id"": ""6b5aa7c1-d0bf-4178-aee0-9e525272a76f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -306,6 +315,28 @@ namespace UnityEngine.InputSystem
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8c70a191-d9ae-4632-88f3-511572899913"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Focus"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6351bed6-7650-4686-8676-c6a424fd1454"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Focus"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -897,6 +928,7 @@ namespace UnityEngine.InputSystem
             m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
             m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
             m_Player_Menu = m_Player.FindAction("Menu", throwIfNotFound: true);
+            m_Player_Focus = m_Player.FindAction("Focus", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -974,6 +1006,7 @@ namespace UnityEngine.InputSystem
         private readonly InputAction m_Player_Move;
         private readonly InputAction m_Player_Fire;
         private readonly InputAction m_Player_Menu;
+        private readonly InputAction m_Player_Focus;
         public struct PlayerActions
         {
             private @PlayerControls m_Wrapper;
@@ -982,6 +1015,7 @@ namespace UnityEngine.InputSystem
             public InputAction @Move => m_Wrapper.m_Player_Move;
             public InputAction @Fire => m_Wrapper.m_Player_Fire;
             public InputAction @Menu => m_Wrapper.m_Player_Menu;
+            public InputAction @Focus => m_Wrapper.m_Player_Focus;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -1003,6 +1037,9 @@ namespace UnityEngine.InputSystem
                 @Menu.started += instance.OnMenu;
                 @Menu.performed += instance.OnMenu;
                 @Menu.canceled += instance.OnMenu;
+                @Focus.started += instance.OnFocus;
+                @Focus.performed += instance.OnFocus;
+                @Focus.canceled += instance.OnFocus;
             }
 
             private void UnregisterCallbacks(IPlayerActions instance)
@@ -1019,6 +1056,9 @@ namespace UnityEngine.InputSystem
                 @Menu.started -= instance.OnMenu;
                 @Menu.performed -= instance.OnMenu;
                 @Menu.canceled -= instance.OnMenu;
+                @Focus.started -= instance.OnFocus;
+                @Focus.performed -= instance.OnFocus;
+                @Focus.canceled -= instance.OnFocus;
             }
 
             public void RemoveCallbacks(IPlayerActions instance)
@@ -1205,6 +1245,7 @@ namespace UnityEngine.InputSystem
             void OnMove(InputAction.CallbackContext context);
             void OnFire(InputAction.CallbackContext context);
             void OnMenu(InputAction.CallbackContext context);
+            void OnFocus(InputAction.CallbackContext context);
         }
         public interface IUIActions
         {

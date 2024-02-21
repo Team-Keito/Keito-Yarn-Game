@@ -10,4 +10,10 @@ public class TagSO : ScriptableObject
     private string _tag;
 
     public string Tag => _tag;
+
+
+    public bool Compare(GameObject Go)
+    {
+        return Go.CompareTag(_tag);
+    }
 }
