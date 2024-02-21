@@ -134,19 +134,29 @@ MonoBehaviour:
   - {fileID: 3154276696338372515, guid: 2630d7eda4b5643cab9f5ec813539c8e, type: 3}
   - {fileID: 2025155149542869593, guid: b44bc3028160b4c6297273c41618fff4, type: 3}
   - {fileID: 660840053069172341, guid: b47f1a3820f32416d859f089a75473e1, type: 3}
-  _offset: {x: 1, y: -0.5, z: 0.5}
+  _postionOffset: {x: 1, y: -0.5, z: 0.5}
+  _rotationOffset: {x: -20, y: 0}
   _linePoints: 25
   _totalTime: 2
   _layerMask:
     serializedVersion: 2
     m_Bits: 449
   _clampVertical: 85
-  _clampHorizontal: 10
+  _clampHorizontal: 70
   _rotationSpeed: 5
   _useRandomForce: 1
   _minForce: 10
   _maxForce: 25
   _forceChangeSpeed: 0.8
+  OnRandomPowerChange:
+    m_PersistentCalls:
+      m_Calls: []
+  OnThrow:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStartThrow:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!120 &6619656793355588177
 LineRenderer:
   m_ObjectHideFlags: 0

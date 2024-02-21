@@ -10,7 +10,9 @@ public class Throw : Base_InputSystem
     [SerializeField] private GameObject[] _throwPrefabs;
 
     [Space(5)]
-    [SerializeField] private Vector3 _offset;
+    [SerializeField] private Vector3 _postionOffset;
+    [SerializeField, Tooltip("x & y are flipped cause unity euler")] 
+    private Vector2 _rotationOffset;
 
     [Space(5)]
     [SerializeField] private int _linePoints = 25;
@@ -44,7 +46,7 @@ public class Throw : Base_InputSystem
 
     private float _force = 20f;
     private Vector3 _forceVector;
-    private Vector3 startOffset => CalcOffset(Camera.main.transform, _offset);
+    private Vector3 startOffset => CalcOffset(Camera.main.transform, _postionOffset);
 
     
 
@@ -57,7 +59,7 @@ public class Throw : Base_InputSystem
         _input.Player.Fire.started += Fire_started;
         _input.Player.Fire.canceled += Fire_canceled;
 
-        transform.position = CalcOffset(Camera.main.transform, _offset);
+        transform.position = CalcOffset(Camera.main.transform, _postionOffset);
         transform.SetParent(Camera.main.transform, true);
     }
 
@@ -109,7 +111,7 @@ public class Throw : Base_InputSystem
         _indicator.SetActive(true);
 
         transform.rotation = Camera.main.transform.rotation;
-        _currentRotation = Vector2.zero;
+        _currentRotation = _rotationOffset;
 
         SpawnNextThrownObject();
         UpdateLineColor(current);

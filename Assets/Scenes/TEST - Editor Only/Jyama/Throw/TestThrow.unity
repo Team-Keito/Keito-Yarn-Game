@@ -2409,8 +2409,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6619656793355588179, guid: 14ffe2503bb1d074ab7f4fc4652fb2ee, type: 3}
+      propertyPath: _useRandomForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6619656793355588179, guid: 14ffe2503bb1d074ab7f4fc4652fb2ee, type: 3}
       propertyPath: _layerMask.m_Bits
-      value: 193
+      value: 449
+      objectReference: {fileID: 0}
+    - target: {fileID: 6619656793355588179, guid: 14ffe2503bb1d074ab7f4fc4652fb2ee, type: 3}
+      propertyPath: _rotationOffset.x
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6619656793355588179, guid: 14ffe2503bb1d074ab7f4fc4652fb2ee, type: 3}
+      propertyPath: _rotationOffset.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6619656793355588189, guid: 14ffe2503bb1d074ab7f4fc4652fb2ee, type: 3}
       propertyPath: m_Name
