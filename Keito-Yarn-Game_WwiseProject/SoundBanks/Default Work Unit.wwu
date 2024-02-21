@@ -13,6 +13,7 @@
 				<SoundBank Name="SFX_SoundBank" ID="{5F04EF33-0B5A-4021-ACEB-772520F472F9}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Yarn_Hit" ID="{FF2DE81D-3A76-419D-B467-059CD36A65B3}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Yarn_Combine" ID="{07BED5A3-025B-42CA-883F-C0E23C8A9B93}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Cat_Meow" ID="{1396E1BF-D9E6-44B6-B719-8D2FC654836B}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Cat_Purr" ID="{31D552E9-3457-4D5F-9A88-1E21C35D7EE4}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

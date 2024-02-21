@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class YarnCollision : MonoBehaviour
 {
     public const string YARN_TAG = "Yarn";
+    public const string CAT_TAG = "Cat";
     private bool hasCollidedBefore = false;
     public string YarnCollisionSound = "Play_Yarn_Hit";
     public string CatYarnCollisionSound = "Play_Cat_Purr";
@@ -21,7 +22,8 @@ public class YarnCollision : MonoBehaviour
         // TODO: Same color yarn collision
         bool isOtherSameColor = false;
         // TODO: Find cat component/tag
-        bool isCat = false;
+        bool isCat = other.gameObject.CompareTag(CAT_TAG);
+        /*bool isCat = false;*/
         PostYarnCollisionEvent();
         // If yarn collides with another yarn
         if (isYarn)

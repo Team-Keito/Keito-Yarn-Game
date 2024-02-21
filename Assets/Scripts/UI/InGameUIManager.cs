@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class InGameUIManager : MonoBehaviour
@@ -39,6 +40,7 @@ public class InGameUIManager : MonoBehaviour
     {
         _pauseUI.SetActive(true);
         _gameManager.PauseGame();
+        AkSoundEngine.SetState("GameStates", "Pause_State");
     }
 
     public void OnResetGame()
@@ -46,11 +48,13 @@ public class InGameUIManager : MonoBehaviour
         _gameOverUI.SetActive(false);
         _gameManager.ResumeGame();
         _gameManager.RestartGame();
+        AkSoundEngine.SetState("GameStates", "IngameState");
     }
 
     public void OnResumeGame()
     {
         _gameManager.ResumeGame();
+        AkSoundEngine.SetState("GameStates", "IngameState");
         _pauseUI.SetActive(false);
     }
 
@@ -70,6 +74,7 @@ public class InGameUIManager : MonoBehaviour
     {
         _confirmationUI.SetActive(true);
         _pauseUI.SetActive(false);
+
     }
 
     public void OnCloseConfirmation()
@@ -88,5 +93,6 @@ public class InGameUIManager : MonoBehaviour
     {
         _gameManager.PauseGame();
         _gameOverUI.SetActive(true);
+       
     }
 }

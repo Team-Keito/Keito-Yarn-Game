@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceddf5576fb57644482d6b682eaa995f, type: 3}
   m_Name: AE3FB139-1538-47C7-8325-8451E6E562C0
   m_EditorClassIdentifier: 
-  objectName: Ingame_State
-  id: 2678566748
+  objectName: IngameState
+  id: 3656907969
   guid: AE3FB139-1538-47C7-8325-8451E6E562C0
   WwiseStateGroupReference: {fileID: 11400000, guid: b5979bc84689e344c98b7057118b3539, type: 2}
