@@ -63,7 +63,7 @@ public class TossingIndicator : MonoBehaviour
         // Find the reflected vector (dampened by some value)
         Vector2 mouseInfo = (mouseScreenOffset - mouseScreenCenter) / _forceDamping;
         // Rotate by the camera's "y" rotation Euler value (depending on the angle)
-        mouseInfo = Vec2AngleRotate(mouseInfo, _thrower.CameraYRotation);
+        mouseInfo = _thrower.SlingshotDirection * Vec2AngleRotate(mouseInfo, -_thrower.CameraYRotation);
         // Update indicators
         _ballHitIndicator.SetActive(true);
         _spawnIndicatorMaterial.color = _thrower.YarnColor;

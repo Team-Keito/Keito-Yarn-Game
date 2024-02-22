@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,18 +13,23 @@ public class ThrowDropper : Base_InputSystem
     [SerializeField] float _maxHeight = 10;
 
     [SerializeField] LayerMask _layerMask;
+    [SerializeField] NextYarn _yarnChooser;
     [SerializeField] float _coolDownLength = 0.7f;
 
     [SerializeField] Camera _mainCam;
+    [SerializeField] bool _inDoubleClickMode = true;
+    [SerializeField] bool _inSlingshotMode = true;
     private bool _isHeld = false;
     private bool _onCoolDown = false;
+    private GameObject _currentYarn = null;
 
 
     public Vector3 TosserPosition { get; private set; } = Vector3.zero;
     public LayerMask ThrowerMask => _layerMask;
     public bool IsHolding => _isHeld;
     // TODO: Replace with actual yarn color
-    public Color YarnColor => _isHeld ? Color.magenta : Color.white;
+    public Color YarnColor { get; private set; } = Color.white;
+    public int SlingshotDirection => _inSlingshotMode ? -1 : 1;
 
     /// <summary>
     /// This value is the center point from where the mouse is held
@@ -39,7 +45,29 @@ public class ThrowDropper : Base_InputSystem
     void Start()
     {
         if (!_mainCam) _mainCam = Camera.main;
+        if (!_yarnChooser) _yarnChooser = GetComponent<NextYarn>();
         _input.Player.Fire.started += Fire_started;
+        _input.Player.Fire.canceled += Fire_canceled;
+        _input.Player.Cancel.performed += Cancel_performed;
+    }
+
+    private void StartHolding()
+    {
+        // _currentYarn = Instantiate(_yarnChooser.GetCurrent, transform);
+        // YarnColor = _currentYarn.GetComponent<MeshRenderer>().sharedMaterial.color;
+        _isHeld = true;
+        CenterMouse = Mouse.current.position.ReadValue();
+        YarnSpawnPosition = transform.position;
+    }
+
+    private void ThrowYarn()
+    {
+        // _currentYarn.GetComponent<Rigidbody>().AddForce();
+        _currentYarn = null;
+        _yarnChooser.ChooseNextYarn();
+        YarnColor = Color.white;
+        _isHeld = false;
+        StartCoroutine(RunCoolDown());
     }
 
     private void Fire_started(InputAction.CallbackContext obj)
@@ -48,19 +76,33 @@ public class ThrowDropper : Base_InputSystem
         {
             return;
         }
-        if (_isHeld)
+        if (_inDoubleClickMode && _isHeld)
         {
             // Throw
-            StartCoroutine(RunCoolDown());
-            _isHeld = false;
+            ThrowYarn();
         }
         else
         {
             // Toggling hold on and store mouse center
-            _isHeld = true;
-            CenterMouse = Mouse.current.position.ReadValue();
-            YarnSpawnPosition = transform.position;
+            StartHolding();
         }
+
+    }
+
+    private void Fire_canceled(InputAction.CallbackContext context)
+    {
+        if (!_inDoubleClickMode && _isHeld)
+        {
+            // Throw
+            ThrowYarn();
+        }
+    }
+
+    private void Cancel_performed(InputAction.CallbackContext context)
+    {
+        // Regardless of double click mode,
+        // immediately stop holding
+        _isHeld = false;
 
     }
 

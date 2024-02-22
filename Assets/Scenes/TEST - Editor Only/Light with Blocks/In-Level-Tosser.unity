@@ -629,6 +629,7 @@ GameObject:
   - component: {fileID: 647394266}
   - component: {fileID: 647394265}
   - component: {fileID: 647394264}
+  - component: {fileID: 647394268}
   m_Layer: 0
   m_Name: In-Level Thrower
   m_TagString: Untagged
@@ -672,8 +673,11 @@ MonoBehaviour:
   _layerMask:
     serializedVersion: 2
     m_Bits: 320
+  _yarnChooser: {fileID: 647394268}
   _coolDownLength: 0.7
   _mainCam: {fileID: 0}
+  _inDoubleClickMode: 1
+  _inSlingshotMode: 1
 --- !u!120 &647394266
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -790,6 +794,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &647394268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647394263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56527cac3831d4f48a15377c44bd8306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _yarnPrefabs:
+  - {fileID: 3154276696338372515, guid: 2630d7eda4b5643cab9f5ec813539c8e, type: 3}
 --- !u!1 &738637707
 GameObject:
   m_ObjectHideFlags: 0
