@@ -11,8 +11,18 @@ public class TestNextColorDisplay : MonoBehaviour
 
     private void Start()
     {
-        _slingshot.OnNextColorChange.AddListener(UpdateNextColor);
+        
 
+    }
+
+    private void OnEnable()
+    {
+        _slingshot.OnNextColorChange.AddListener(UpdateNextColor);
+    }
+
+    private void OnDisable()
+    {
+        _slingshot.OnNextColorChange.RemoveListener(UpdateNextColor);
     }
 
     private void UpdateNextColor(LinkedList<Color> Colors)

@@ -58,14 +58,27 @@ public class SlingShot : Base_InputSystem
 
         _lineRenderer = gameObject.GetComponent<LineRenderer>();
 
-        _input.Player.Fire.started += Fire_started;
-        _input.Player.Fire.canceled += Fire_canceled;
 
-        _input.Player.Cancel.performed += Cancel_performed;
 
         //Parents object to Camera w/offset (Avoids jittery movement)
         transform.position = CalcOffset(Camera.main.transform, _postionOffset);
         transform.SetParent(Camera.main.transform, true);
+    }
+
+    private void OnEnable()
+    {
+        _input.Player.Fire.started += Fire_started;
+        _input.Player.Fire.canceled += Fire_canceled;
+
+        _input.Player.Cancel.performed += Cancel_performed;
+    }
+
+    private void OnDisable()
+    {
+        _input.Player.Fire.started -= Fire_started;
+        _input.Player.Fire.canceled -= Fire_canceled;
+
+        _input.Player.Cancel.performed -= Cancel_performed;
     }
 
     private void Update()
