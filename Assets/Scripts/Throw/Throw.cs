@@ -67,13 +67,24 @@ public class Throw : MonoBehaviour
 
         _lineRenderer = gameObject.GetComponent<LineRenderer>();
 
+        transform.position = CalcOffset(Camera.main.transform, _postionOffset);
+        transform.SetParent(Camera.main.transform, true);
+    }
+
+    private void OnEnable()
+    {
         InputManager.Input.Player.Fire.started += Fire_started;
         InputManager.Input.Player.Fire.canceled += Fire_canceled;
 
         InputManager.Input.Player.Cancel.performed += Cancel_performed;
+    }
 
-        transform.position = CalcOffset(Camera.main.transform, _postionOffset);
-        transform.SetParent(Camera.main.transform, true);
+    private void OnDisable()
+    {
+        InputManager.Input.Player.Fire.started -= Fire_started;
+        InputManager.Input.Player.Fire.canceled -= Fire_canceled;
+
+        InputManager.Input.Player.Cancel.performed -= Cancel_performed;
     }
 
     private void Cancel_performed(InputAction.CallbackContext obj)

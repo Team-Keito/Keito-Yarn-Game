@@ -20,9 +20,18 @@ public class InGameUIManager : MonoBehaviour
         _settingsUI.SetActive(false);
         _confirmationUI.SetActive(false);
         _gameOverUI.SetActive(false);
+    }
 
+    private void OnEnable()
+    {
         InputManager.Input.Player.Menu.performed += Menu_performed;
         InputManager.Input.UI.Cancel.performed += Cancel_performed;
+    }
+
+    private void OnDisable()
+    {
+        InputManager.Input.Player.Menu.performed -= Menu_performed;
+        InputManager.Input.UI.Cancel.performed -= Cancel_performed;
     }
 
     private void Cancel_performed(InputAction.CallbackContext obj)
@@ -51,7 +60,6 @@ public class InGameUIManager : MonoBehaviour
         _pauseUI.SetActive(true);
         _gameManager.PauseGame();
         AkSoundEngine.SetState("GameStates", "Pause_State");
-        InputManager.Instance.SwitchControls(ControlMap.UI);
     }
 
     public void OnResetGame()
@@ -66,8 +74,6 @@ public class InGameUIManager : MonoBehaviour
         _gameManager.ResumeGame();
         AkSoundEngine.SetState("GameStates", "IngameState");
         _pauseUI.SetActive(false);
-
-        InputManager.Instance.SwitchControls(ControlMap.Player);
     }
 
     public void OnSettingsOpen()

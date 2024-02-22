@@ -7,7 +7,8 @@ public class InputManager : MonoBehaviour
 {
     public static InputManager Instance { get; private set; }
 
-    public static PlayerControls Input { get; private set; }
+    public ControlMap Current;
+    public static PlayerControls Input;
 
     private void Awake()
     {
@@ -34,6 +35,7 @@ public class InputManager : MonoBehaviour
 
     public void SwitchControls(ControlMap map)
     {
+        Current = map;
         Input.Disable();
         switch (map)
         {

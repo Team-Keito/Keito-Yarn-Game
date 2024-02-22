@@ -5,10 +5,16 @@ using UnityEngine.InputSystem;
 
 public class FocusChecker : MonoBehaviour
 {
-    private void Start()
+    private void OnEnable()
     {
         InputManager.Input.Player.Focus.performed += Focus_performed;
     }
+
+    private void OnDisable()
+    {
+        InputManager.Input.Player.Focus.performed -= Focus_performed;
+    }
+
 
     private void Focus_performed(InputAction.CallbackContext obj)
     {
