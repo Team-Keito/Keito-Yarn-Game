@@ -2808,6 +2808,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlingShot
       objectReference: {fileID: 0}
+    - target: {fileID: 8863162284197567729, guid: fe5b652869545104cb7c87fcfab96402, type: 3}
+      propertyPath: _horizontal.Speed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8863162284197567731, guid: fe5b652869545104cb7c87fcfab96402, type: 3}
       propertyPath: m_RootOrder
       value: 6
