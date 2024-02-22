@@ -40,7 +40,7 @@ public class SlingShot : Base_InputSystem
 
     private LineRenderer _lineRenderer;
 
-    private float _force, _mass, _drag;
+    private float _force, _mass, _drag, _radius;
     private GameObject _currentBall;
 
     private bool _isHeld = false;
@@ -51,15 +51,12 @@ public class SlingShot : Base_InputSystem
 
     private Vector3 StartOffset => CalcOffset(Camera.main.transform, _postionOffset);
 
-
     private void Start()
     {
         _PrefabPicker.Setup();
         OnNextColorChange.Invoke(GetNextColors());
 
         _lineRenderer = gameObject.GetComponent<LineRenderer>();
-
-
 
         //Parents object to Camera w/offset (Avoids jittery movement)
         transform.position = CalcOffset(Camera.main.transform, _postionOffset);
@@ -197,6 +194,7 @@ public class SlingShot : Base_InputSystem
         Rigidbody rigidbody = prefab.GetComponent<Rigidbody>();
         _mass = rigidbody.mass;
         _drag = rigidbody.drag;
+        _radius = prefab.transform.localScale.x * prefab.GetComponent<SphereCollider>().radius;
 
         _currentBall = Instantiate(prefab, StartOffset, Quaternion.identity, transform);
     }
@@ -251,10 +249,12 @@ public class SlingShot : Base_InputSystem
             currentVelocity += Physics.gravity * time;
             currentVelocity *= (1 - _drag * time);
 
+            //Sphere Cast to get accurate hit. Ray didn't account for radius.
             Vector3 delta = currentVelocity * time;
-            if (Physics.Raycast(currentPos, delta.normalized, out RaycastHit hit, delta.magnitude, _layerMask))
+            if (Physics.SphereCast(currentPos, _radius, delta.normalized, out RaycastHit hit, delta.magnitude, _layerMask))
             {
-                _lineRenderer.SetPosition(i, hit.point);
+                //Get accurate center hit position. 'hit.point' snaped center to point.
+                _lineRenderer.SetPosition(i, currentPos + hit.distance * delta.normalized);
                 _lineRenderer.positionCount = i + 1;
                 return true;
             }
