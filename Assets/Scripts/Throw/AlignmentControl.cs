@@ -13,12 +13,12 @@ public class AlignmentControl
 
     private int _invert => Invert ? -1 : 1;
 
-    public float Calc(float value, float delta)
+    public float CalcRotation(float value, float delta)
     {
-        return Calc(value, delta, Min, Max);
+        return CalcRotation(value, delta, Min, Max);
     }
 
-    public float Calc(float value, float delta, float min, float max)
+    public float CalcRotation(float value, float delta, float min, float max)
     {
         value += delta * Time.deltaTime * Speed * _invert;
         return Mathf.Clamp(value, min, max);

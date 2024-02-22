@@ -23,9 +23,10 @@ public class SlingShot : Base_InputSystem
     [SerializeField] private LayerMask _layerMask;
 
     [Space(5)]
+    [SerializeField] private bool _isToggle = false;
     [SerializeField] private AlignmentControl _horizontal;
     [SerializeField] private AlignmentControl _forceVertical;
-
+    
     [SerializeField, Range(0, 1)] private float _startForceMulti = 0.5f;
     #endregion
 
@@ -68,7 +69,7 @@ public class SlingShot : Base_InputSystem
     private void OnEnable()
     {
         _input.Player.Enable();
-        _input.Player.Fire.canceled += Fire_canceled;
+        _input.Player.Fire.canceled += Fire_completed;
         _input.Player.Fire.performed += Fire_performed;
 
         _input.Player.Cancel.performed += Cancel_performed;
@@ -79,7 +80,7 @@ public class SlingShot : Base_InputSystem
     {
         _input.Player.Disable();
         _input.Player.Fire.performed -= Fire_performed;
-        _input.Player.Fire.canceled -= Fire_canceled;
+        _input.Player.Fire.canceled -= Fire_completed;
 
         _input.Player.Cancel.performed -= Cancel_performed;
     }
@@ -95,35 +96,64 @@ public class SlingShot : Base_InputSystem
             DrawWithDrag(_forceVector);
             _indicator.transform.position = _lineRenderer.GetPosition(_lineRenderer.positionCount - 1);
 
-
             _currentBall.transform.position = StartOffset;
         }
     }
-
 
     private void UpdateRotation()
     {
         Vector2 mouseDelta = _input.Player.Move.ReadValue<Vector2>();
 
-        _force = _forceVertical.Calc(_force, mouseDelta.y);
+        _force = _forceVertical.CalcRotation(_force, mouseDelta.y);
 
-        _currentRotation.y = _horizontal.Calc(_currentRotation.y, mouseDelta.x);
+        _currentRotation.y = _horizontal.CalcRotation(_currentRotation.y, mouseDelta.x);
         transform.localRotation = Quaternion.Euler(_currentRotation.x, _currentRotation.y, 0);        
     }
 
 
     #region Input events for start / end click
     //Start hold
-
-
     private void Fire_performed(InputAction.CallbackContext obj)
     {
-        if (_onCoolDown)
+        if (!_isHeld && _onCoolDown)
         {
             return;
         }
-        _isHeld = true;
 
+        _isHeld = _isToggle ? !_isHeld : true;
+        
+        if (_isHeld)
+        {
+            StartThrow();
+        }
+        else
+        {
+            CompleteThrow();
+        }
+    }
+
+    //Released
+    private void Fire_completed(InputAction.CallbackContext obj)
+    {
+        if (!_isHeld || _isToggle)
+        {
+            return;
+        }
+
+        CompleteThrow();
+    }
+
+    //Canceled Fire
+    private void Cancel_performed(InputAction.CallbackContext obj)
+    {
+        _isHeld = false;
+
+        Destroy(_currentBall);
+        ToggleIndicator(false);
+    }
+
+    private void StartThrow()
+    {
         ToggleIndicator(true);
         UpdateLineColor(_PrefabPicker.GetColor());
         ResetSelf();
@@ -135,16 +165,9 @@ public class SlingShot : Base_InputSystem
         StartCoroutine(RunCoolDown());
     }
 
-    //Released
-    private void Fire_canceled(InputAction.CallbackContext obj)
+    private void CompleteThrow()
     {
         ToggleIndicator(false);
-
-        if (!_isHeld)
-        {
-            return;
-        }
-
         _isHeld = false;
 
         ThrowItem(_currentBall);
@@ -152,18 +175,10 @@ public class SlingShot : Base_InputSystem
 
         _PrefabPicker.Remove();
         OnNextColorChange.Invoke(GetNextColors());
-        
+
         OnThrow.Invoke();
     }
 
-    //Canceled Fire
-    private void Cancel_performed(InputAction.CallbackContext obj)
-    {
-        _isHeld = false;
-
-        Destroy(_currentBall);
-        ToggleIndicator(false);
-    }
     #endregion
 
     private void ResetSelf()
