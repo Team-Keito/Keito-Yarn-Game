@@ -50,12 +50,11 @@ public class SlingShot : Base_InputSystem
 
     private Vector3 StartOffset => CalcOffset(Camera.main.transform, _postionOffset);
 
-    public LinkedList<Color> NextColors => _PrefabPicker.NextColors;
-
 
     private void Start()
     {
         _PrefabPicker.Setup();
+        OnNextColorChange.Invoke(GetNextColors());
 
         _lineRenderer = gameObject.GetComponent<LineRenderer>();
 
@@ -133,7 +132,7 @@ public class SlingShot : Base_InputSystem
         _currentBall = null;
 
         _PrefabPicker.Remove();
-        OnNextColorChange.Invoke(NextColors);
+        OnNextColorChange.Invoke(GetNextColors());
 
         Debug.Log(_force);
 
@@ -257,5 +256,10 @@ public class SlingShot : Base_InputSystem
         _onCoolDown = true;
         yield return new WaitForSeconds(_coolDownLength);
         _onCoolDown = false;
+    }
+
+    public LinkedList<Color> GetNextColors()
+    {
+        return _PrefabPicker.NextColors;
     }
 }

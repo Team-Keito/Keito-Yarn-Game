@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class NextColor 
+public class NextColor
 {
     [SerializeField] private int _count = 3;
     [SerializeField] private GameObject[] _prefabs;
