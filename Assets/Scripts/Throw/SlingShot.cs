@@ -27,28 +27,30 @@ public class SlingShot : Base_InputSystem
     [SerializeField] private AlignmentControl _forceVertical;
 
     [SerializeField, Range(0, 1)] private float _startForceMulti = 0.5f;
+    #endregion
 
-    
-
+    #region Events
+    //Events:
     public UnityEvent<float> OnPowerChange;
     public UnityEvent OnThrow;
     public UnityEvent OnStartThrow;
+    public UnityEvent<LinkedList<Color>> OnNextColorChange;
     #endregion
-
-    private float _force = 20f;
 
     private LineRenderer _lineRenderer;
 
-    private float mass, drag;
-    private GameObject current;
+    private float _force, _mass, _drag;
+    private GameObject _currentBall;
 
-    private bool isHeld = false;
+    private bool _isHeld = false;
     private Vector2 _currentRotation;
 
     private Vector3 _forceVector;
     private bool _onCoolDown;
 
-    private Vector3 startOffset => CalcOffset(Camera.main.transform, _postionOffset);
+    private Vector3 StartOffset => CalcOffset(Camera.main.transform, _postionOffset);
+
+    public LinkedList<Color> NextColors => _PrefabPicker.NextColors;
 
 
     private void Start()
@@ -62,21 +64,14 @@ public class SlingShot : Base_InputSystem
 
         _input.Player.Cancel.performed += Cancel_performed;
 
+        //Parents object to Camera w/offset (Avoids jittery movement)
         transform.position = CalcOffset(Camera.main.transform, _postionOffset);
         transform.SetParent(Camera.main.transform, true);
     }
 
-    private void Cancel_performed(InputAction.CallbackContext obj)
-    {
-        isHeld = false;
-
-        Destroy(current);
-        ToggleIndicator(false);
-    }
-
     private void Update()
     {
-        if (isHeld)
+        if (_isHeld)
         {
             UpdateRotation();
 
@@ -86,7 +81,7 @@ public class SlingShot : Base_InputSystem
             _indicator.transform.position = _lineRenderer.GetPosition(_lineRenderer.positionCount - 1);
 
 
-            current.transform.position = startOffset;
+            _currentBall.transform.position = StartOffset;
         }
     }
 
@@ -103,44 +98,56 @@ public class SlingShot : Base_InputSystem
 
 
     #region Input events for start / end click
+    //Start hold
     private void Fire_started(InputAction.CallbackContext obj)
     {
         if (_onCoolDown)
         {
             return;
         }
-        isHeld = true;
+        _isHeld = true;
 
         ToggleIndicator(true);
 
         ResetSelf();
 
         SpawnNextThrownObject();
-        UpdateLineColor(current);
+        UpdateLineColor(_currentBall);
 
         OnStartThrow.Invoke();
 
         StartCoroutine(RunCoolDown());
     }
 
+    //Released
     private void Fire_canceled(InputAction.CallbackContext obj)
     {
-        if (!isHeld)
+        if (!_isHeld)
         {
             return;
         }
 
-        isHeld = false;
+        _isHeld = false;
 
-        ThrowItem(current);
-        current = null;
+        ThrowItem(_currentBall);
+        _currentBall = null;
 
         _PrefabPicker.Remove();
+        OnNextColorChange.Invoke(NextColors);
 
         Debug.Log(_force);
 
         ToggleIndicator(false);
         OnThrow.Invoke();
+    }
+
+    //Canceled Fire
+    private void Cancel_performed(InputAction.CallbackContext obj)
+    {
+        _isHeld = false;
+
+        Destroy(_currentBall);
+        ToggleIndicator(false);
     }
     #endregion
 
@@ -160,10 +167,10 @@ public class SlingShot : Base_InputSystem
         GameObject prefab = _PrefabPicker.GetPrefab();
 
         Rigidbody rigidbody = prefab.GetComponent<Rigidbody>();
-        mass = rigidbody.mass;
-        drag = rigidbody.drag;
+        _mass = rigidbody.mass;
+        _drag = rigidbody.drag;
 
-        current = Instantiate(prefab, startOffset, Quaternion.identity, transform);
+        _currentBall = Instantiate(prefab, StartOffset, Quaternion.identity, transform);
     }
     #endregion
 
@@ -207,15 +214,15 @@ public class SlingShot : Base_InputSystem
         _lineRenderer.positionCount = _linePoints;
         float time = _totalTime / _linePoints;
 
-        Vector3 currentPos = startOffset;
-        Vector3 currentVelocity = ForceVector / mass;
+        Vector3 currentPos = StartOffset;
+        Vector3 currentVelocity = ForceVector / _mass;
 
         for (int i = 0; i < _linePoints; i++)
         {
             _lineRenderer.SetPosition(i, currentPos);
 
             currentVelocity += Physics.gravity * time;
-            currentVelocity *= (1 - drag * time);
+            currentVelocity *= (1 - _drag * time);
 
             Vector3 delta = currentVelocity * time;
             if (Physics.Raycast(currentPos, delta.normalized, out RaycastHit hit, delta.magnitude, _layerMask))

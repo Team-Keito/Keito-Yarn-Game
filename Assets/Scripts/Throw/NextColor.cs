@@ -6,8 +6,9 @@ using UnityEngine;
 public class NextColor 
 {
     [SerializeField] private int _count = 3;
-    [SerializeField] private GameObject[] _prefabs;    
+    [SerializeField] private GameObject[] _prefabs;
 
+    public LinkedList<Color> NextColors = new LinkedList<Color>();
     public LinkedList<GameObject> NextYarns = new LinkedList<GameObject>();
 
     public void Setup()
@@ -19,7 +20,6 @@ public class NextColor
         }
     }
 
-
     public GameObject GetPrefab()
     {
         return NextYarns.First.Value;
@@ -28,17 +28,20 @@ public class NextColor
     public void Remove()
     {
         NextYarns.RemoveFirst();
+        NextColors.RemoveFirst();
         Add();
     }
 
     public Color GetColor()
     {
-        return GetPrefab().GetComponent<Renderer>().sharedMaterial.color;
+        return NextColors.First.Value;
     }
 
     private void Add()
     {
-        NextYarns.AddLast(GetRandomPrefab());
+        GameObject go = GetRandomPrefab();
+        NextYarns.AddLast(go);
+        NextColors.AddLast(go.GetComponent<Renderer>().sharedMaterial.color);
     }
 
     private GameObject GetRandomPrefab()
