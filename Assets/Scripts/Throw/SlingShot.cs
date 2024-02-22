@@ -68,16 +68,17 @@ public class SlingShot : Base_InputSystem
     private void OnEnable()
     {
         _input.Player.Enable();
-        _input.Player.Fire.started += Fire_started;
         _input.Player.Fire.canceled += Fire_canceled;
+        _input.Player.Fire.performed += Fire_performed;
 
         _input.Player.Cancel.performed += Cancel_performed;
     }
 
+
     private void OnDisable()
     {
         _input.Player.Disable();
-        _input.Player.Fire.started -= Fire_started;
+        _input.Player.Fire.performed -= Fire_performed;
         _input.Player.Fire.canceled -= Fire_canceled;
 
         _input.Player.Cancel.performed -= Cancel_performed;
@@ -102,7 +103,7 @@ public class SlingShot : Base_InputSystem
 
     private void UpdateRotation()
     {
-        Vector2 mouseDelta = Mouse.current.delta.ReadValue();
+        Vector2 mouseDelta = _input.Player.Move.ReadValue<Vector2>();
 
         _force = _forceVertical.Calc(_force, mouseDelta.y);
 
@@ -113,7 +114,9 @@ public class SlingShot : Base_InputSystem
 
     #region Input events for start / end click
     //Start hold
-    private void Fire_started(InputAction.CallbackContext obj)
+
+
+    private void Fire_performed(InputAction.CallbackContext obj)
     {
         if (_onCoolDown)
         {
@@ -122,11 +125,10 @@ public class SlingShot : Base_InputSystem
         _isHeld = true;
 
         ToggleIndicator(true);
-
+        UpdateLineColor(_PrefabPicker.GetColor());
         ResetSelf();
 
         SpawnNextThrownObject();
-        UpdateLineColor(_currentBall);
 
         OnStartThrow.Invoke();
 
@@ -136,6 +138,8 @@ public class SlingShot : Base_InputSystem
     //Released
     private void Fire_canceled(InputAction.CallbackContext obj)
     {
+        ToggleIndicator(false);
+
         if (!_isHeld)
         {
             return;
@@ -148,10 +152,7 @@ public class SlingShot : Base_InputSystem
 
         _PrefabPicker.Remove();
         OnNextColorChange.Invoke(GetNextColors());
-
-        Debug.Log(_force);
-
-        ToggleIndicator(false);
+        
         OnThrow.Invoke();
     }
 
@@ -171,8 +172,6 @@ public class SlingShot : Base_InputSystem
         _currentRotation = _rotationOffset;
 
         _force = (_forceVertical.Min + _forceVertical.Max) * _startForceMulti;
-
-        Debug.Log(_force);
     }
 
     #region Spawn Thrown Objects
@@ -213,9 +212,8 @@ public class SlingShot : Base_InputSystem
     #endregion
 
     #region Line Render
-    private void UpdateLineColor(GameObject obj)
+    private void UpdateLineColor(Color color)
     {
-        Color color = obj.GetComponent<Renderer>().material.color;
         _lineRenderer.material.SetColor("_Color", color);
     }
 
