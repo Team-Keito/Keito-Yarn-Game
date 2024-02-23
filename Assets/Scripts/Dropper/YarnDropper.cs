@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 /// <summary>
 /// Code for dropping yarn ball from a specific point
 /// </summary>
-public class YarnDropper : Base_InputSystem
+public class YarnDropper : MonoBehaviour
 {
     private bool _onCoolDown = false;
     private int _currentYarnChoice = 0;
@@ -32,7 +32,17 @@ public class YarnDropper : Base_InputSystem
         if (!_mainCam) _mainCam = Camera.main;
         if (_yarnPrefabs.Length == 0) Debug.LogError("No yarn ball prefabs assigned!");
 
-        _input.Player.Fire.performed += Fire_performed;
+        
+    }
+
+    private void OnEnable()
+    {
+        InputManager.Input.Player.Fire.performed += Fire_performed;
+    }
+
+    private void OnDisable()
+    {
+        InputManager.Input.Player.Fire.performed -= Fire_performed;
     }
 
     private void Fire_performed(InputAction.CallbackContext obj)
