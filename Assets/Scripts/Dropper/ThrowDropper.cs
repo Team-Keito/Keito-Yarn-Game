@@ -15,6 +15,7 @@ public class ThrowDropper : Base_InputSystem
     [SerializeField] LayerMask _layerMask;
     [SerializeField] NextYarn _yarnChooser;
     [SerializeField] float _coolDownLength = 0.7f;
+    [SerializeField] float _forceDamping = 10;
 
     [SerializeField] Camera _mainCam;
     [SerializeField] bool _inDoubleClickMode = true;
@@ -22,6 +23,7 @@ public class ThrowDropper : Base_InputSystem
     private bool _isHeld = false;
     private bool _onCoolDown = false;
     private GameObject _currentYarn = null;
+    private Rigidbody _currentYarnRb = null;
 
 
     public Vector3 TosserPosition { get; private set; } = Vector3.zero;
@@ -41,6 +43,10 @@ public class ThrowDropper : Base_InputSystem
     public Vector3 YarnSpawnPosition { get; private set; }
 
     public float CameraYRotation => _mainCam.transform.rotation.eulerAngles.y;
+    // Yarn is perfect sphere (scale: x = y = z) and scale gives diameter
+    public float YarnRadius => _currentYarn != null ? _currentYarn.transform.localScale.x / 2 : 0.5f;
+    public float YarnMass => _currentYarnRb != null ? _currentYarnRb.mass : 1;
+    public float YarnDrag => _currentYarnRb != null ? _currentYarnRb.drag : 1;
 
     void Start()
     {
@@ -51,10 +57,17 @@ public class ThrowDropper : Base_InputSystem
         _input.Player.Cancel.performed += Cancel_performed;
     }
 
+    private void AssignCurrent()
+    {
+        _currentYarn = Instantiate(_yarnChooser.GetCurrent(), transform.position, transform.rotation);
+        _currentYarn.SetActive(false);
+        _currentYarnRb = _currentYarn.GetComponent<Rigidbody>();
+    }
+
     private void StartHolding()
     {
-        // _currentYarn = Instantiate(_yarnChooser.GetCurrent, transform);
-        // YarnColor = _currentYarn.GetComponent<MeshRenderer>().sharedMaterial.color;
+        AssignCurrent();
+        YarnColor = _currentYarn.GetComponent<MeshRenderer>().sharedMaterial.color;
         _isHeld = true;
         CenterMouse = Mouse.current.position.ReadValue();
         YarnSpawnPosition = transform.position;
@@ -62,10 +75,13 @@ public class ThrowDropper : Base_InputSystem
 
     private void ThrowYarn()
     {
-        // _currentYarn.GetComponent<Rigidbody>().AddForce();
-        _currentYarn = null;
+        _currentYarn.SetActive(true);
+        // Apply calculated force
+        _currentYarn.GetComponent<Rigidbody>().AddForce(CalculateTossForce(), ForceMode.Impulse);
+        // Remove current
+        (_currentYarnRb, _currentYarn) = (null, null);
         _yarnChooser.ChooseNextYarn();
-        YarnColor = Color.white;
+        YarnColor = _yarnChooser.GetCurrent().GetComponent<MeshRenderer>().sharedMaterial.color;
         _isHeld = false;
         StartCoroutine(RunCoolDown());
     }
@@ -137,21 +153,41 @@ public class ThrowDropper : Base_InputSystem
     }
 
     /// <summary>
-    /// Calculate how much power for a toss
+    /// Helper Math function (may be moved out of this class)
     /// </summary>
+    /// <param name="vector">Vector to rotate</param>
+    /// <param name="degrees">The degree angle to rotate by</param>
     /// <returns></returns>
-    public float CalculateTossPower()
+    public static Vector2 Vec2AngleRotate(Vector2 vector, float degrees)
     {
-        return 0;
+        float x = vector.x;
+        float y = vector.y;
+
+        float angle = degrees * Mathf.Deg2Rad;
+        float sin = Mathf.Sin(angle);
+        float cos = Mathf.Cos(angle);
+
+        Vector2 newVec = new Vector2((cos * x) - (sin * y), (sin * x) + (cos * y));
+
+        // Debug.LogWarning($"{vector} + {degrees}° => {newVec}");
+        return newVec;
     }
 
     /// <summary>
-    /// Calculate what direction the toss will be in
+    /// Calculate the power and direction of the toss
     /// </summary>
     /// <returns></returns>
-    public Vector3 CalculateTossDirection()
+    public Vector3 CalculateTossForce()
     {
-        return Vector3.zero;
+        // Get where the mouse started holding from
+        Vector2 mouseScreenCenter = CenterMouse;
+        // Get where the mouse currently is
+        Vector2 mouseScreenOffset = Mouse.current.position.ReadValue();
+        // Find the reflected vector (dampened by some value)
+        Vector2 mouseInfo = (mouseScreenOffset - mouseScreenCenter) / _forceDamping;
+        // Rotate by the camera's "y" rotation Euler value (depending on the angle)
+        mouseInfo = SlingshotDirection * Vec2AngleRotate(mouseInfo, -CameraYRotation);
+        return new(mouseInfo.x, 0, mouseInfo.y);
     }
 
 

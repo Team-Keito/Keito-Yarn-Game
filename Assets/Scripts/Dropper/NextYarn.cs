@@ -8,15 +8,20 @@ using UnityEngine;
 public class NextYarn : MonoBehaviour
 {
     [SerializeField] GameObject[] _yarnPrefabs;
-    private GameObject _currentPrefab;
-    private GameObject _nextPrefab;
-    public GameObject GetCurrent => _currentPrefab;
-    public GameObject GetNext => _nextPrefab;
+    private GameObject _currentYarn;
+    private GameObject _nextYarn;
+    public GameObject GetCurrent() => _currentYarn;
+    public GameObject GetNext() => _nextYarn;
+
+    private void Awake()
+    {
+        ChooseNextYarn();
+    }
 
     public GameObject ChooseNextYarn()
     {
-        _currentPrefab = _nextPrefab;
-        _nextPrefab = _yarnPrefabs[Random.Range(0, _yarnPrefabs.Length)];
-        return _nextPrefab;
+        _currentYarn = _nextYarn != null ? _nextYarn : _yarnPrefabs[Random.Range(0, _yarnPrefabs.Length)];
+        _nextYarn = _yarnPrefabs[Random.Range(0, _yarnPrefabs.Length)];
+        return _nextYarn;
     }
 }
