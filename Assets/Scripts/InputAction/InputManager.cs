@@ -19,10 +19,6 @@ public class InputManager : MonoBehaviour
         else
         {
             Instance = this;
-        }
-
-        if (Input == null)
-        {
             Input = new PlayerControls();
         }
     }
