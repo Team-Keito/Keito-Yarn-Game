@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class FocusChecker : Base_InputSystem
+public class FocusChecker : MonoBehaviour
 {
-    private void Start()
+    private void OnEnable()
     {
-        _input.Player.Focus.performed += Focus_performed;
+        InputManager.Input.Player.Focus.performed += Focus_performed;
     }
+
+    private void OnDisable()
+    {
+        InputManager.Input.Player.Focus.performed -= Focus_performed;
+    }
+
 
     private void Focus_performed(InputAction.CallbackContext obj)
     {

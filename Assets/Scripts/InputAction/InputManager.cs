@@ -3,13 +3,60 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[CreateAssetMenu]
-public class InputManager: ScriptableObject
+public class InputManager : MonoBehaviour
 {
+    public static InputManager Instance { get; private set; }
+
+    public ControlMap Current;
     public static PlayerControls Input;
 
-    private void Start()
+    private void Awake()
     {
-        Input = new PlayerControls();
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+
+        if (Input == null)
+        {
+            Input = new PlayerControls();
+        }
     }
+
+    private void OnEnable()
+    {
+        Input.Enable();
+    }
+
+    private void OnDisable()
+    {
+        Input.Disable();
+    }
+
+    public void SwitchControls(ControlMap map)
+    {
+        Current = map;
+        Input.Disable();
+        switch (map)
+        {
+            case ControlMap.Player:
+                Input.Player.Enable();
+                break;
+
+            case ControlMap.UI:
+                Input.UI.Enable();
+                break;
+        }
+    }
+}
+
+
+public enum ControlMap {
+    None,
+    Player,
+    UI,
 }
