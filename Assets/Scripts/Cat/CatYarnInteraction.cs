@@ -22,7 +22,7 @@ public class CatYarnInteraction : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(_yarnTag.Tag))
         {
-            bool isFavorite = collision.gameObject.GetComponent<ColorController>().Color;
+            bool isFavorite = FavoriteColor == collision.gameObject.GetComponent<ColorController>().Color;
 
             OnCatScored.Invoke(collision.transform.localScale.x, isFavorite);
             Destroy(collision.gameObject);

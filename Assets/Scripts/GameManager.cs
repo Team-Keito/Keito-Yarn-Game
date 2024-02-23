@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private float _scoreMulitplier = 2;
 
+    [SerializeField] private ColorSO[] _colorList;
+
     public GameObject catGameObject;
 
     [System.NonSerialized]
@@ -89,7 +91,10 @@ public class GameManager : MonoBehaviour
 
         _currentLocationIndex = Random.Range(0, spawnLocPrefab.Length);
         catGameObject = Instantiate(catGameObject, spawnLocPrefab[_currentLocationIndex].transform.position, spawnLocPrefab[_currentLocationIndex].transform.rotation);
-        catGameObject.GetComponent<CatYarnInteraction>().OnCatScored.AddListener(UpdateScore);
+        CatYarnInteraction CatInteract = catGameObject.GetComponent<CatYarnInteraction>();
+
+        CatInteract.OnCatScored.AddListener(UpdateScore);
+        UpdateCatColor();
 
         InvokeRepeating("Timer", 1f, timePerSecond);
     }
@@ -120,6 +125,8 @@ public class GameManager : MonoBehaviour
 
         catGameObject.transform.position = spawnLocPrefab[randInt].transform.position;
         catGameObject.transform.rotation = spawnLocPrefab[randInt].transform.rotation;
+
+        UpdateCatColor();
         _currentLocationIndex = randInt;
     }
 
@@ -139,6 +146,19 @@ public class GameManager : MonoBehaviour
         }
 
         return randInt;
+    }
+
+    private void UpdateCatColor()
+    {
+        ColorSO color = GetRandomColor();
+        catGameObject.GetComponent<CatYarnInteraction>().FavoriteColor = color;
+        catGameObject.GetComponent<Renderer>().material.color = color.Color;
+    }
+
+    private ColorSO GetRandomColor()
+    {
+        int RandInt = Random.Range(0, _colorList.Length);
+        return _colorList[RandInt];
     }
 
     public void PauseGame()
@@ -190,6 +210,8 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(float value, bool isFavoriteColor)
     {
+        //TODO - add score for favorite
+
         //Score based on Suika scoring.
         float scaledValue = value * _scoreMulitplier;
         int scoreVal = Mathf.Max(1, (int)(scaledValue * (scaledValue + 1) / 2));

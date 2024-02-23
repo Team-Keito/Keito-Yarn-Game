@@ -12,7 +12,7 @@ public class CatSounds : MonoBehaviour
         {
             OnFavoriteColor();
         }
-        else if (score > 15)
+        else if (score > 1)
         {
             OnHighScore();
         }
@@ -24,16 +24,16 @@ public class CatSounds : MonoBehaviour
 
     public void OnFavoriteColor()
     {
-
+        Debug.Log("Favorite Color");
     }
 
     public void OnHighScore()
     {
-
+        Debug.Log("High Score");
     }
 
     public void DefaultScoreSound()
     {
-
+        Debug.Log("Default Score Sound");
     }
 }
