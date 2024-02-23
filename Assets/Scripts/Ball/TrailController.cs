@@ -14,10 +14,13 @@ public class TrailController : MonoBehaviour
         _trailRenderer = GetComponent<TrailRenderer>();
         _trailRenderer.startColor = GetComponent<Renderer>().material.color;
         _trailRenderer.enabled = _showTrailOnDrop;
+
+        enabled = !_showTrailOnDrop;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         _trailRenderer.enabled = true;
+        enabled = false;
     }
 }

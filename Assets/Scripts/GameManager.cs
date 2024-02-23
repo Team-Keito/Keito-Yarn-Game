@@ -144,13 +144,13 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0;
-        InputManager.Instance.SwitchControls(ControlMap.UI);
+        InputManager.SwitchControls(ControlMap.UI);
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1;
-        InputManager.Instance.SwitchControls(ControlMap.Player);
+        InputManager.SwitchControls(ControlMap.Player);
     }
 
     public void LoadMainMenu()
@@ -160,7 +160,7 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        InputManager.Instance.SwitchControls(ControlMap.Player);
+        InputManager.SwitchControls(ControlMap.Player);
         StaticUIFunctionality.GoToSceneByName(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 

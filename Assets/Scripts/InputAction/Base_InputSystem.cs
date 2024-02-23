@@ -5,5 +5,5 @@ using UnityEngine.InputSystem;
 
 public class Base_InputSystem : MonoBehaviour
 {
-    protected PlayerControls _input = InputManager.Input;
+    protected PlayerControls _input => InputManager.Input;
 }

@@ -6,7 +6,6 @@ public class Cull : MonoBehaviour
 {
     private void OnBecameInvisible()
     {
-        Debug.Log("culled");
         Destroy(gameObject);
     }
 }

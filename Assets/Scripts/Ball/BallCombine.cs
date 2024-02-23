@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class BallCombine : MonoBehaviour
 {
     public UnityEvent OnCombine;
+    public UnityEvent OnMaxSize;
 
     [Space(5)]
     [SerializeField] private float _massMultiplier = 1f;
@@ -51,6 +52,7 @@ public class BallCombine : MonoBehaviour
 
             if (combinedScale.x > _scaleVectorCap.x || combinedMass > _massCap)
             {
+                OnMaxSize.Invoke();
                 return;            
             }
 
