@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2073104285201860524}
   - component: {fileID: 2073104285201860527}
   - component: {fileID: 2073104285201860526}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 2073104286220983130}
   - component: {fileID: 2073104286220983133}
   - component: {fileID: 2073104286220983132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 2073104286234696687}
   - component: {fileID: 2073104286234696686}
   - component: {fileID: 2073104286234696673}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

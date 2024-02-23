@@ -152,7 +152,7 @@ MonoBehaviour:
   _maxHeight: 3
   _layerMask:
     serializedVersion: 2
-    m_Bits: 320
+    m_Bits: 832
   _yarnChooser: {fileID: 7427530437782223116}
   _coolDownLength: 0.7
   _forceDamping: 100

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6450907546601551042}
   - component: {fileID: 2415125880095981786}
   - component: {fileID: 4811753583376273565}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 5280920269716859006}
   - component: {fileID: 5383936156764670291}
   - component: {fileID: 4635049992696377541}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 9221243209785339895}
   - component: {fileID: 58944291725919210}
   - component: {fileID: 6730100577903083997}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 6449016134032446362}
   - component: {fileID: 112442145746437573}
   - component: {fileID: 1131851637483438078}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 3142829241865093335}
   - component: {fileID: 926918213374824026}
   - component: {fileID: 1449540873601215049}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 5584501240576424294}
   - component: {fileID: 3687033315446242889}
   - component: {fileID: 5686601808713440389}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -571,7 +571,7 @@ GameObject:
   - component: {fileID: 8670244658701074664}
   - component: {fileID: 5289176864981623185}
   - component: {fileID: 3485928699895827210}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

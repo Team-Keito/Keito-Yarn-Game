@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2204282110985711366}
   - component: {fileID: 614204766164108024}
   - component: {fileID: 4275203772206077651}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Leg Rest_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 2204282112110967616}
   - component: {fileID: 2204282112110967617}
   - component: {fileID: 2204282112110967622}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
