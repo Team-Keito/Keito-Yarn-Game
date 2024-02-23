@@ -80,6 +80,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_FavoriteYarnColor" ID="{62E5ADA2-7BBA-4354-A9FA-4766877C4A91}">
+					<ChildrenList>
+						<Action Name="" ID="{A9BF4FEE-D09B-414E-A296-70A8882662E6}" ShortID="973606299">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FavoriteYarnColor" ID="{03139F3D-6C42-4012-8142-4A3F06C5019C}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_HighScore" ID="{C551C504-BB9E-4E9B-B57F-C2605063030B}">
+					<ChildrenList>
+						<Action Name="" ID="{53DE0CD1-DCB1-4A0A-ABDE-DB082CE99FB8}" ShortID="245834171">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="HighScore" ID="{5646C782-3167-464A-9062-5FBA689BBA75}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
