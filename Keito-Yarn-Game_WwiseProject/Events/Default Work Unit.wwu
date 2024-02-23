@@ -58,6 +58,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_ThrowYarn" ID="{C3F426FE-588F-464C-9F4B-FE96FC5675C4}">
+					<ChildrenList>
+						<Action Name="" ID="{CE3B73D1-C1C1-4AB2-B172-5787D6DA9F99}" ShortID="246436235">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ThrowYarn" ID="{830B9874-639A-4BD5-932F-8AE0B443889C}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ButtonClick" ID="{221ABB39-BBDB-41E1-B6A0-F3B0F004C4C3}">
+					<ChildrenList>
+						<Action Name="" ID="{DDFC7F90-3251-43FB-8308-5312CAE81925}" ShortID="242018311">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ButtonClick" ID="{6895C694-7DC8-4FE1-A6AA-0221829D5B18}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
