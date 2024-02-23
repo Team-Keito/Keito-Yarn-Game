@@ -48,14 +48,16 @@ MonoBehaviour:
   _maxDuplicateSpawn: 1
   targetScore: 0
   timePerSecond: 1
+  score: 0
+  highScore: 0
   mainMenuSceneName: Main Menu
   endTimeText: {fileID: 0}
-  ingameScore: {fileID: 0}
   bestTimeText: {fileID: 0}
-  targetScoreText: {fileID: 0}
   currTimeText: {fileID: 0}
   _SpawnPoint: {fileID: 11400000, guid: 77dade94725caf542a48e1bc05c44481, type: 2}
   _BestTimePlayerPref: {fileID: 11400000, guid: c67cf08776876f347bc8e0345dfdbeac, type: 2}
+  scoreSlider: {fileID: 0}
+  scoreColor: {fileID: 0}
   _scoreMulitplier: 2
   catGameObject: {fileID: 4306071415022843939, guid: e236b0395904249168c1906d20806d06, type: 3}
   OnGameEnd:
@@ -73,3 +75,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daa345483aad8cb40adbcfb1e942ee51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Default: 1
