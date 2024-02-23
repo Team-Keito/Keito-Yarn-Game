@@ -52,9 +52,22 @@ public class ThrowDropper : Base_InputSystem
     {
         if (!_mainCam) _mainCam = Camera.main;
         if (!_yarnChooser) _yarnChooser = GetComponent<NextYarn>();
+    }
+
+    private void OnEnable()
+    {
+        _input.Player.Enable();
         _input.Player.Fire.started += Fire_started;
         _input.Player.Fire.canceled += Fire_canceled;
         _input.Player.Cancel.performed += Cancel_performed;
+    }
+
+    private void OnDisable()
+    {
+        _input.Player.Disable();
+        _input.Player.Fire.started -= Fire_started;
+        _input.Player.Fire.canceled -= Fire_canceled;
+        _input.Player.Cancel.performed -= Cancel_performed;
     }
 
     private void AssignCurrent()
