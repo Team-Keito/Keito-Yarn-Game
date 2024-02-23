@@ -188,7 +188,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void UpdateScore(float value)
+    public void UpdateScore(float value, bool isFavoriteColor)
     {
         //Score based on Suika scoring.
         float scaledValue = value * _scoreMulitplier;
