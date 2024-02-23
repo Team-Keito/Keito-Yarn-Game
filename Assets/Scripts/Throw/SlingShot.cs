@@ -168,6 +168,7 @@ public class SlingShot : MonoBehaviour
         _isHeld = false;
 
         ThrowItem(_currentBall);
+        AkSoundEngine.PostEvent("Play_ThrowYarn", gameObject);
         _currentBall = null;
 
         _PrefabPicker.Remove();
