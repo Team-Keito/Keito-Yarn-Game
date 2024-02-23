@@ -24,7 +24,7 @@ public class BallShrink : MonoBehaviour
     private float _ThresholdSpeed = 0.1f;
 
     private Rigidbody _rigidbody;
-    private TrailRenderer _trailRenderer;
+
     
     private float _baseRadius;
     private Vector3 _minVectorSize;
@@ -36,10 +36,7 @@ public class BallShrink : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _trailRenderer = GetComponent<TrailRenderer>();
-
-        _trailRenderer.emitting = false;
-        _trailRenderer.startColor = GetComponent<Renderer>().material.color;
+        
 
         _baseRadius = GetComponent<SphereCollider>().radius;
 
@@ -62,17 +59,12 @@ public class BallShrink : MonoBehaviour
 
         if (_isGrounded && horizantalVelocity.magnitude > _ThresholdSpeed)
         {
-            _trailRenderer.emitting = true;
             ShrinkBall(horizantalVelocity.magnitude);
              
             if(!_isSmallest && transform.localScale == _minVectorSize)
             {
                 TriggerSmallestSize();
             }
-        }
-        else
-        {
-            _trailRenderer.emitting = false;
         }
     }
 
@@ -97,13 +89,11 @@ public class BallShrink : MonoBehaviour
     public void Reset()
     {
         _isSmallest = false;
-        _trailRenderer.emitting = true;
     }
 
     private void TriggerSmallestSize()
     {
         OnSmallestSize.Invoke();
         _isSmallest = true;
-        _trailRenderer.emitting = false;
     }
 }
