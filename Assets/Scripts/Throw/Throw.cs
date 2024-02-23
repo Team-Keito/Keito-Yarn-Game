@@ -174,6 +174,7 @@ public class Throw : MonoBehaviour
         isHeld = false;
 
         ThrowItem(current);
+        AkSoundEngine.PostEvent("Play_ThrowYarn", gameObject);
         current = null;
 
         _nextPrefab = _futurePrefab;
