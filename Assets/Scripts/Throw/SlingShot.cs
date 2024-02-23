@@ -35,7 +35,7 @@ public class SlingShot : MonoBehaviour
     public UnityEvent<float> OnPowerChange;
     public UnityEvent OnThrow;
     public UnityEvent OnStartThrow;
-    public UnityEvent<LinkedList<Color>> OnNextColorChange;
+    public UnityEvent<Queue<Color>> OnNextColorChange;
     #endregion
 
     private LineRenderer _lineRenderer;
@@ -287,7 +287,7 @@ public class SlingShot : MonoBehaviour
         _onCoolDown = false;
     }
 
-    public LinkedList<Color> GetNextColors()
+    public Queue<Color> GetNextColors()
     {
         return _PrefabPicker.NextColors;
     }

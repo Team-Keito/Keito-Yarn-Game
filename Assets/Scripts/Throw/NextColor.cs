@@ -8,8 +8,8 @@ public class NextColor
     [SerializeField] private int _count = 3;
     [SerializeField] private GameObject[] _prefabs;
 
-    public LinkedList<Color> NextColors = new LinkedList<Color>();
-    public LinkedList<GameObject> NextYarns = new LinkedList<GameObject>();
+    public Queue<Color> NextColors = new();
+    public Queue<GameObject> NextYarns = new();
 
     public void Setup()
     {
@@ -22,32 +22,31 @@ public class NextColor
 
     public GameObject GetPrefab()
     {
-        return NextYarns.First.Value;
-    }
-
-    public void Remove()
-    {
-        NextYarns.RemoveFirst();
-        NextColors.RemoveFirst();
-        Add();
+        return NextYarns.Peek();
     }
 
     public Color GetColor()
     {
-        return NextColors.First.Value;
+        return NextColors.Peek();
+    }
+
+    public void Remove()
+    {
+        NextYarns.Dequeue();
+        NextColors.Dequeue();
+        Add();
     }
 
     private void Add()
     {
         GameObject go = GetRandomPrefab();
-        NextYarns.AddLast(go);
-        NextColors.AddLast(go.GetComponent<Renderer>().sharedMaterial.color);
+        NextYarns.Enqueue(go);
+        NextColors.Enqueue(go.GetComponent<Renderer>().sharedMaterial.color);
     }
 
     private GameObject GetRandomPrefab()
     {        
         int RandInt = Random.Range(0, _prefabs.Length);
-
         return _prefabs[RandInt];
     }
 }
