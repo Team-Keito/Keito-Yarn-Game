@@ -15,12 +15,12 @@ public class FurnatureMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        furnatureRb = GetComponent<Rigidbody>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag(_YarnTag.Tag))
+        if (collision.gameObject.CompareTag(_YarnTag.Tag))
         {
             OnFurnatureMove.Invoke(furnatureRb.velocity);
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 
-public class SlingShot : Base_InputSystem
+public class SlingShot : MonoBehaviour
 {
     #region Serialize Fields
     [SerializeField] private GameObject _indicator;
@@ -65,21 +65,21 @@ public class SlingShot : Base_InputSystem
 
     private void OnEnable()
     {
-        _input.Player.Enable();
-        _input.Player.Fire.canceled += Fire_completed;
-        _input.Player.Fire.performed += Fire_performed;
+        InputManager.Input.Player.Enable();
+        InputManager.Input.Player.Fire.canceled += Fire_completed;
+        InputManager.Input.Player.Fire.performed += Fire_performed;
 
-        _input.Player.Cancel.performed += Cancel_performed;
+        InputManager.Input.Player.Cancel.performed += Cancel_performed;
     }
 
 
     private void OnDisable()
     {
-        _input.Player.Disable();
-        _input.Player.Fire.performed -= Fire_performed;
-        _input.Player.Fire.canceled -= Fire_completed;
+        InputManager.Input.Player.Disable();
+        InputManager.Input.Player.Fire.performed -= Fire_performed;
+        InputManager.Input.Player.Fire.canceled -= Fire_completed;
 
-        _input.Player.Cancel.performed -= Cancel_performed;
+        InputManager.Input.Player.Cancel.performed -= Cancel_performed;
     }
 
     private void Update()
@@ -99,7 +99,7 @@ public class SlingShot : Base_InputSystem
 
     private void UpdateRotation()
     {
-        Vector2 mouseDelta = _input.Player.Move.ReadValue<Vector2>();
+        Vector2 mouseDelta = InputManager.Input.Player.Move.ReadValue<Vector2>();
 
         _force = _forceVertical.CalcRotation(_force, mouseDelta.y);
 
