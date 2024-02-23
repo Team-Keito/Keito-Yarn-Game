@@ -155,6 +155,7 @@ MonoBehaviour:
     m_Bits: 320
   _yarnChooser: {fileID: 7427530437782223116}
   _coolDownLength: 0.7
+  _forceDamping: 100
   _mainCam: {fileID: 0}
   _inDoubleClickMode: 1
   _inSlingshotMode: 1
@@ -176,7 +177,6 @@ MonoBehaviour:
   _lineIndicator: {fileID: 7427530437782223114}
   _linePoints: 25
   _totalTime: 2
-  _forceDamping: 100
 --- !u!114 &7427530437782223116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +191,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _yarnPrefabs:
   - {fileID: 3154276696338372515, guid: 2630d7eda4b5643cab9f5ec813539c8e, type: 3}
+  - {fileID: 2025155149542869593, guid: b44bc3028160b4c6297273c41618fff4, type: 3}
+  - {fileID: 660840053069172341, guid: b47f1a3820f32416d859f089a75473e1, type: 3}
 --- !u!1 &7427530438606129962
 GameObject:
   m_ObjectHideFlags: 0
