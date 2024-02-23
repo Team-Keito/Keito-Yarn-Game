@@ -4,7 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InGameUIManager : Base_InputSystem
+public class InGameUIManager : MonoBehaviour
 {
     [SerializeField] GameManager _gameManager;
     [SerializeField] GameObject _pauseUI;
@@ -20,20 +20,39 @@ public class InGameUIManager : Base_InputSystem
         _settingsUI.SetActive(false);
         _confirmationUI.SetActive(false);
         _gameOverUI.SetActive(false);
+    }
 
-        _input.Player.Menu.performed += Menu_performed;
+    private void OnEnable()
+    {
+        InputManager.Input.Player.Menu.performed += Menu_performed;
+        InputManager.Input.UI.Cancel.performed += Cancel_performed;
+    }
+
+    private void OnDisable()
+    {
+        InputManager.Input.Player.Menu.performed -= Menu_performed;
+        InputManager.Input.UI.Cancel.performed -= Cancel_performed;
+    }
+
+    private void Cancel_performed(InputAction.CallbackContext obj)
+    {
+        if (_settingsUI.activeSelf)
+        {
+            OnSettingsClose();
+        }
+        else if (_confirmationUI.activeSelf)
+        {
+            OnCloseConfirmation();
+        }
+        else
+        {
+            OnResumeGame();
+        }
     }
 
     private void Menu_performed(InputAction.CallbackContext obj)
     {
-        if (Time.timeScale == 0)
-        {
-            OnResumeGame();
-        }
-        else
-        {
-            OnPauseGame();
-        }
+        OnPauseGame();
     }
 
     public void OnPauseGame()

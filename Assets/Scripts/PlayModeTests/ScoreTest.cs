@@ -45,4 +45,22 @@ public class ScoreTest
 
         Assert.AreNotEqual(10, testObject.HighScore);
     }
+
+    [Test]
+    public void ScorePercentageIsZeroTest()
+    {
+        testObject.Score = 0;
+        testObject.TargetScore = 5;
+
+        Assert.AreEqual(0, testObject.Score / testObject.TargetScore);
+    }
+
+    [Test]
+    public void ScorePercentageExceedsZeroTest()
+    {
+        testObject.Score = 1;
+        testObject.TargetScore = 5;
+
+        Assert.Greater(testObject.Score / testObject.TargetScore, 0);
+    }
 }

@@ -8,29 +8,53 @@ public class AudioVolumeSettings : MonoBehaviour
     public string wwiseMasterRTPCName = "MasterVolume";
     public Slider masterVolumeSlider;
     public PlayerPrefSO masterSO;
+    private float masterVol = 50f;
 
     public string wwiseMusicRTPCName = "MusicVolume";
     public Slider musicVolumeSlider;
     public PlayerPrefSO musicSO;
+    private float musicVol = 50f;
 
     public string wwiseSFXRTPCName = "SFXVolume";
     public Slider sfxVolumeSlider;
     public PlayerPrefSO soundSO;
+    private float soundVol = 50f;
 
     private void Start()
     {
         // Sets the volumes to their defaults in the editor if the key for the volume types isn't there
-        float masterVol = PlayerPrefs.HasKey(masterSO.currKey.ToString()) ? PlayerPrefs.GetFloat(masterSO.currKey.ToString()) : masterVolumeSlider.value;
-        float musicVol = PlayerPrefs.HasKey(musicSO.currKey.ToString()) ? PlayerPrefs.GetFloat(masterSO.currKey.ToString()) : musicVolumeSlider.value;
-        float soundVol = PlayerPrefs.HasKey(soundSO.currKey.ToString()) ? PlayerPrefs.GetFloat(masterSO.currKey.ToString()) : sfxVolumeSlider.value;
+        masterVol = masterVolumeSlider.value;
+        musicVol = musicVolumeSlider.value;
+        soundVol = sfxVolumeSlider.value;
 
-        AkSoundEngine.SetRTPCValue(wwiseMasterRTPCName, masterVol);
-        AkSoundEngine.SetRTPCValue(wwiseMusicRTPCName, musicVol);
-        AkSoundEngine.SetRTPCValue(wwiseSFXRTPCName, soundVol);
+        if(PlayerPrefs.HasKey(masterSO.currKey.ToString()))
+            masterVolumeSlider.value = PlayerPrefs.GetFloat(masterSO.currKey.ToString());
+
+        if(PlayerPrefs.HasKey(musicSO.currKey.ToString()))
+            musicVolumeSlider.value = PlayerPrefs.GetFloat(musicSO.currKey.ToString());
+
+        if(PlayerPrefs.HasKey(soundSO.currKey.ToString()))
+            sfxVolumeSlider.value = PlayerPrefs.GetFloat(soundSO.currKey.ToString());
+
+        AkSoundEngine.SetRTPCValue(wwiseMasterRTPCName, masterVolumeSlider.value);
+        AkSoundEngine.SetRTPCValue(wwiseMusicRTPCName, musicVolumeSlider.value);
+        AkSoundEngine.SetRTPCValue(wwiseSFXRTPCName, sfxVolumeSlider.value);
 
         masterVolumeSlider.onValueChanged.AddListener(UpdateMasterVolume);
         musicVolumeSlider.onValueChanged.AddListener(UpdateMusicVolume);
         sfxVolumeSlider.onValueChanged.AddListener(UpdateSFXVolume);
+    }
+
+    public void ResetSettings()
+    {
+        PlayerPrefs.DeleteKey(masterSO.currKey.ToString());
+        masterVolumeSlider.value = masterVol;
+        
+        PlayerPrefs.DeleteKey(musicSO.currKey.ToString());
+        musicVolumeSlider.value = musicVol;
+
+        PlayerPrefs.DeleteKey(soundSO.currKey.ToString());
+        sfxVolumeSlider.value = soundVol;
     }
 
     private void UpdateMasterVolume(float value)
