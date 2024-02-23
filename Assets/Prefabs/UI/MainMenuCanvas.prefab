@@ -133,22 +133,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Escape: Toggle Pause/Resume
-
-    A/Left Arrow: Camera Rotate Left
-
-    D/Right
-    Arrow: Camera Rotate Right
-
-    W/Up Arrow: Camera Zoom In
-
-    S/Down Arrow:
-    Camera Zoom Out
-
-    Right Click on Yarn/Level: Focus on Yarn Ball/Level
-
-    Left
-    click: Toss Yarn Ball (hold to control power of throw)'
+  m_text: "Escape: Toggle Pause/Resume\nA/Left Arrow: Camera Rotate Left\nD/Right
+    Arrow: Camera Rotate Right\nW/Up Arrow: Camera Zoom In\nS/Down Arrow: Camera
+    Zoom Out\nLeft click: Yarn Ball Tossing\n   - Hold and Move to position toss\n   
+    -Let go: Toss the yarn ball\n    - Right click: Cancel tossing"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -175,8 +163,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 58
+  m_fontSizeBase: 58
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
