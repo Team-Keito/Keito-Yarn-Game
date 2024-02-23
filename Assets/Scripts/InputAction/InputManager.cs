@@ -7,8 +7,10 @@ public class InputManager : MonoBehaviour
 {
     public static InputManager Instance { get; private set; }
 
-    public ControlMap Current;
-    public static PlayerControls Input;
+    public ControlMap Default;
+
+    private static PlayerControls _input;
+    public static PlayerControls Input { get => _input != null ? _input : (_input = new PlayerControls()); }
 
     private void Awake()
     {
@@ -21,10 +23,7 @@ public class InputManager : MonoBehaviour
             Instance = this;
         }
 
-        if (Input == null)
-        {
-            Input = new PlayerControls();
-        }
+        SwitchControls(Default);
     }
 
     private void OnEnable()
@@ -32,23 +31,34 @@ public class InputManager : MonoBehaviour
         Input.Enable();
     }
 
-    private void OnDisable()
-    {
+    private void OnDisable()    {
         Input.Disable();
     }
 
-    public void SwitchControls(ControlMap map)
+    public static void SwitchControls(ControlMap map)
     {
-        Current = map;
         Input.Disable();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         switch (map)
         {
             case ControlMap.Player:
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
                 Input.Player.Enable();
                 break;
 
+                
             case ControlMap.UI:
                 Input.UI.Enable();
+                break;
+
+            case ControlMap.None:
+                break;
+
+            default:
+                Input.Enable();
                 break;
         }
     }
@@ -56,7 +66,8 @@ public class InputManager : MonoBehaviour
 
 
 public enum ControlMap {
-    None,
+    All,
     Player,
     UI,
+    None,
 }
