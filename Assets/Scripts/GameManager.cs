@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private int score, highScore, numOfYarn, currTime = 0, bestTime = -1;
+    private int numOfYarn, currTime = 0, bestTime = -1;
     private int _currentLocationIndex, _sameSpawnCount = 0;
 
     [SerializeField, Tooltip("Max # times cat can stay in same spot before force move")]
@@ -16,12 +16,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int targetScore = 0;
 
     [SerializeField, Tooltip("The rate to increase the current time every second")]
-    private float timePerSecond = 1f;
+    private float timePerSecond = 1f, score, highScore;
 
     [SerializeField] private string mainMenuSceneName;
-    [SerializeField] private TextMeshProUGUI endTimeText, ingameScore, bestTimeText, targetScoreText, currTimeText;
+    [SerializeField] private TextMeshProUGUI endTimeText, bestTimeText, currTimeText;
     [SerializeField] private TagSO _SpawnPoint;
     [SerializeField] private PlayerPrefSO _BestTimePlayerPref;
+    [SerializeField] private Slider scoreSlider;
+    [SerializeField] private GameObject scoreColor;
 
     [SerializeField] private float _scoreMulitplier = 2;
 
@@ -32,14 +34,14 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent OnGameEnd = new();
 
-    public int Score
+    public float Score
     {
         get { return score; }
         set { score = value; }
     }
 
     // Records the new high score if the current score exceeds the previous high score
-    public int HighScore
+    public float HighScore
     {
         get { return highScore; }
         set { highScore = value > highScore ? score : highScore; }
@@ -74,8 +76,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        targetScoreText.text = "Goal: " + targetScore;
-
         // Sets the best time to the default best time if it doesn't find the key for it
         BestTime = PlayerPrefs.HasKey(_BestTimePlayerPref.currKey.ToString()) ? PlayerPrefs.GetInt(_BestTimePlayerPref.currKey.ToString()) : bestTime;
 
@@ -197,7 +197,16 @@ public class GameManager : MonoBehaviour
         score += scoreVal;
         highScore = Mathf.Max(score, highScore);
 
-        ingameScore.text = string.Format("Score: {0}", score);
+        scoreSlider.value = score / targetScore;
+
+        if (scoreSlider.value < 0.25f)
+            scoreColor.GetComponent<Image>().color = Color.red;
+        else if (scoreSlider.value > 0.25f && scoreSlider.value < 0.75f)
+            scoreColor.GetComponent<Image>().color = Color.yellow;
+        else if (scoreSlider.value > 0.75f && scoreSlider.value < 0.99f)
+            scoreColor.GetComponent<Image>().color = Color.green;
+        else
+            scoreColor.GetComponent<Image>().color = Color.blue;
 
         ChangeCatLocation();
     }
