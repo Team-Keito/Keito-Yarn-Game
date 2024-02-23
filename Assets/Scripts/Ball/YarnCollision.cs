@@ -57,6 +57,12 @@ public class YarnCollision : MonoBehaviour
             
         }
     }
+
+    public void OnMaxSize()
+    {
+        //TODO - Add max size sound
+    }
+
     public void PostYarnCollisionEvent()
     {
         // Check if the event name is valid

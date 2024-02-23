@@ -10,10 +10,7 @@ public class CatYarnInteraction : MonoBehaviour
     [SerializeField, Tooltip("Tag for Yarnball")]
     private TagSO _yarnTag;
 
-    public GameObject FavoriteColor;
-
-
-
+    public ColorSO FavoriteColor;
 
     /// <summary>
     /// Trigger event when yarn ball collides. Uses Tag to check.
@@ -25,11 +22,9 @@ public class CatYarnInteraction : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(_yarnTag.Tag))
         {
-            if(FavoriteColor)
+            bool isFavorite = collision.gameObject.GetComponent<ColorController>().Color;
 
-            //TODO: Add in color check / maybe pass more ball details.
-
-            OnCatScored.Invoke(collision.transform.localScale.x, false);
+            OnCatScored.Invoke(collision.transform.localScale.x, isFavorite);
             Destroy(collision.gameObject);
         }
     }
