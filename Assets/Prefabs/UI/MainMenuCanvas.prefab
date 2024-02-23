@@ -55,8 +55,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 800
     m_Right: 800
-    m_Top: 100
-    m_Bottom: 100
+    m_Top: 200
+    m_Bottom: 400
   m_ChildAlignment: 1
   m_Spacing: 100
   m_ChildForceExpandWidth: 1
@@ -681,7 +681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197592162346664244, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 62.35
       objectReference: {fileID: 0}
     - target: {fileID: 4730258435426739334, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_Pivot.x
@@ -819,7 +819,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197592162346664244, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 60.55
       objectReference: {fileID: 0}
     - target: {fileID: 4730258435426739334, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_Pivot.x
