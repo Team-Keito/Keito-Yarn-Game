@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -1940726632899412579}
   - component: {fileID: 2495046777849088545}
   - component: {fileID: 2558765689392952487}
+  - component: {fileID: 2505694825250285039}
   m_Layer: 8
   m_Name: Yarn
   m_TagString: Yarn
@@ -161,7 +162,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 3
+  m_Time: 1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.2
@@ -258,6 +259,7 @@ MonoBehaviour:
   _massCap: 5
   _scaleMultiplier: 1
   _scaleCap: 5
+  YarnCombineSound: Play_Yarn_Combine
 --- !u!114 &-1940726632899412579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,3 +323,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
   _zoomLevel: 0.5
+--- !u!114 &2505694825250285039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998775315433358910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf67c11852754640832c9c0fbd3033d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showTrailOnDrop: 0

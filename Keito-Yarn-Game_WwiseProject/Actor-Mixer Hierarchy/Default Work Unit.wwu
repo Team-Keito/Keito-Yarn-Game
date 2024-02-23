@@ -931,7 +931,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+							<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -970,6 +970,56 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</RandomSequenceContainer>
+				<Folder Name="UI" ID="{69637609-9C82-489C-811A-AF2CDCC6DE3A}" ShortID="164679409">
+					<ChildrenList>
+						<Sound Name="ButtonClick" ID="{6895C694-7DC8-4FE1-A6AA-0221829D5B18}" ShortID="582759241">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SugarRush_ButtonClick" ID="{4EF11307-3A4C-4D0C-A019-C5A6E9FDA706}">
+									<Language>SFX</Language>
+									<AudioFile>SugarRush_ButtonClick.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="611564981"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SugarRush_ButtonClick" ID="{4EF11307-3A4C-4D0C-A019-C5A6E9FDA706}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ThrowYarn" ID="{830B9874-639A-4BD5-932F-8AE0B443889C}" ShortID="697648653">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CATPOCALYPSE_AUDIO_RESROUCE_GET_BUBBLE_POP_V1_10" ID="{02D4C495-F9E8-414F-8C9F-9642E311426C}">
+									<Language>SFX</Language>
+									<AudioFile>CATPOCALYPSE_AUDIO_RESROUCE_GET_BUBBLE_POP_V1_10.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="835207708"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="CATPOCALYPSE_AUDIO_RESROUCE_GET_BUBBLE_POP_V1_10" ID="{02D4C495-F9E8-414F-8C9F-9642E311426C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
