@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] spawnLocPrefab; //kept public for test case. Now auto grabs based on spawnpoint tag.
 
     public UnityEvent OnGameEnd = new();
+    public UnityEvent<float, bool> OnCatScored;
 
     public float Score
     {
@@ -97,6 +98,8 @@ public class GameManager : MonoBehaviour
 
         CatInteract.OnCatScored.AddListener(UpdateScore);
         UpdateCatColor();
+
+        OnCatScored.AddListener(catGameObject.GetComponent<CatSounds>().OnScoredEvent);
 
         InvokeRepeating("Timer", 1f, timePerSecond);
     }
@@ -220,6 +223,8 @@ public class GameManager : MonoBehaviour
         {
             scoreVal = (scoreVal * _favColorMulti) + _favColorFlatBounus;
         }
+
+        OnCatScored.Invoke(scoreVal, isFavoriteColor);
 
         score += scoreVal;
         highScore = Mathf.Max(score, highScore);

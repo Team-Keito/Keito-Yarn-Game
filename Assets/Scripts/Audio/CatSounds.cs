@@ -7,16 +7,17 @@ public class CatSounds : MonoBehaviour
     private string FavoriteYarnColorSound = "Play_FavoriteYarnColor";
     private string DefualtScore = "Play_Cat_Purr";
     private string HighScore = "Play_HighScore";
-        public void OnScoredEvent(float score, bool isFavoriteColor)
+
+    [SerializeField] private int _highScore = 10;
+    public void OnScoredEvent(float score, bool isFavoriteColor)
     {
-        if (isFavoriteColor)
-        {
-            OnFavoriteColor();
-        }
-        else if (score > 1)
+        if (score > _highScore)
         {
             OnHighScore();
-        }
+        }else if (isFavoriteColor)
+        {
+            OnFavoriteColor();
+        } 
         else
         {
             DefaultScoreSound();

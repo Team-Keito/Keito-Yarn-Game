@@ -101,6 +101,7 @@ MonoBehaviour:
   Green: {fileID: 2100000, guid: 99241912d7064a14287b6f79381c706c, type: 2}
   Reject: {fileID: 2100000, guid: a6d141cbb43996e4683843c46314abd7, type: 2}
   _render: {fileID: 5297466516554578859}
+  _rejectShowTime: 1
 --- !u!1 &4306071415022843939
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,23 +214,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc3a54b205364a341a3cd12b999d0347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnCatScored:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1029533692401839570}
-        m_TargetAssemblyTypeName: CatSounds, Scripts
-        m_MethodName: OnScoredEvent
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   _thoughtBubble: {fileID: 328679437897280706}
   _yarnTag: {fileID: 11400000, guid: a1d0c64b2d711b1408fdeb64edc363fb, type: 2}
+  _minSize: 0.6
+  OnCatScored:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRejectBallSize:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFavoriteColor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1029533692401839570
 MonoBehaviour:
   m_ObjectHideFlags: 0
