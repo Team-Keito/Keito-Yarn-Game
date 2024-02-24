@@ -26,19 +26,24 @@ public class CatSounds : MonoBehaviour
 
     public void OnFavoriteColor()
     {
-        Debug.Log("Favorite Color");
+        //Debug.Log("Favorite Color");
         AkSoundEngine.PostEvent(FavoriteYarnColorSound, gameObject);
     }
 
     public void OnHighScore()
     {
-        Debug.Log("High Score");
+        //Debug.Log("High Score");
         AkSoundEngine.PostEvent(HighScore, gameObject);
     }
 
     public void DefaultScoreSound()
     {
-        Debug.Log("Default Score Sound");
+        //Debug.Log("Default Score Sound");
         AkSoundEngine.PostEvent(DefualtScore, gameObject);
+    }
+
+    public void OnRejectBallSize()
+    {
+        Debug.Log("Reject Size Sound");
     }
 }
