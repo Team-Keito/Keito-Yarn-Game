@@ -5,20 +5,23 @@ using UnityEngine.Events;
 
 public class CatYarnInteraction : MonoBehaviour
 {
-    public UnityEvent<float, bool> OnCatScored;
-
     [SerializeField] private ThoughtBubble _thoughtBubble;
     [SerializeField, Tooltip("Tag for Yarnball")]
     private TagSO _yarnTag;
 
-    [SerializeField] private float _minSize = 0.5f;
-    
+    [SerializeField] private float _minSize = 0.6f;
+
+    public UnityEvent<float, bool> OnCatScored;
+    public UnityEvent OnRejectBallSize;
+    public UnityEvent<ColorSO> OnFavoriteColor;
+
     private ColorSO _favoriteColor;
 
     public void SetFavoriteColor(ColorSO color)
     {
         _favoriteColor = color;
         _thoughtBubble.ChangeColor(color);
+        OnFavoriteColor.Invoke(color);
     }
 
     /// <summary>
@@ -38,7 +41,7 @@ public class CatYarnInteraction : MonoBehaviour
             }
             else
             {
-                RejectBall(collision);
+                RejectBallSize(collision);
             }
         }
     }
@@ -51,8 +54,9 @@ public class CatYarnInteraction : MonoBehaviour
         Destroy(collision.gameObject);
     }
 
-    private void RejectBall(Collision collision)
+    private void RejectBallSize(Collision collision)
     {
         _thoughtBubble.RejectBall();
+        OnRejectBallSize.Invoke();
     }
 }

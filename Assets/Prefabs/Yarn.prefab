@@ -272,7 +272,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _massMultiplier: 1
-  _massCap: 5
+  _massCap: 10
   _scaleMultiplier: 1
   _scaleCap: 5
   YarnCombineSound: Play_Yarn_Combine
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998775315433358910}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1add9fadbaef17449e78c485ab4b511, type: 3}
   m_Name: 
@@ -325,6 +325,7 @@ MonoBehaviour:
   YarnCollisionSound: Play_Yarn_Hit
   CatYarnCollisionSound: Play_Cat_Purr
   YarnMergeCollisionSound: Play_Yarn_Merge
+  MaxSizeGlowSound: Play_MaxSizeGlow
 --- !u!114 &2558765689392952487
 MonoBehaviour:
   m_ObjectHideFlags: 0
