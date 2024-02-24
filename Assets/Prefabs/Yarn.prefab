@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 2495046777849088545}
   - component: {fileID: 2558765689392952487}
   - component: {fileID: 2505694825250285039}
-  - component: {fileID: 8981885912593688717}
+  - component: {fileID: -7796720557547338020}
   m_Layer: 8
   m_Name: Yarn
   m_TagString: Yarn
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showTrailOnDrop: 0
---- !u!114 &8981885912593688717
+--- !u!114 &-7796720557547338020
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
