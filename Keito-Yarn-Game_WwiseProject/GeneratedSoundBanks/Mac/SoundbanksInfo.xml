@@ -21,7 +21,7 @@
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\MasterVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="4087423062">
+		<SoundBank Id="2641024368" Language="SFX" Hash="4051559943">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
@@ -139,6 +139,14 @@
 						<File Id="912852287" Language="SFX">
 							<ShortName>CATPOCALYPSE_AUDIO_CAT_PURR_V1_3.wav</ShortName>
 							<Path>SFX\CATPOCALYPSE_AUDIO_CAT_PURR_V1_3_DD6D5B0B.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2782737696" Name="Play_MaxSizeGlow" ObjectPath="\Events\Default Work Unit\Play_MaxSizeGlow" DurationType="OneShot" DurationMin="7.71925" DurationMax="7.71925">
+					<IncludedMemoryFiles>
+						<File Id="579490520" Language="SFX">
+							<ShortName>Keito_MaxSizeGlow.wav</ShortName>
+							<Path>SFX\Keito_MaxSizeGlow_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

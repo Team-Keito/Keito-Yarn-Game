@@ -1574,6 +1574,36 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</BlendContainer>
+				<Sound Name="MaxSizeGlow" ID="{F5392106-195D-4BE9-8BE7-6C4A7D29AD1C}" ShortID="1057915798">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Keito_MaxSizeGlow" ID="{44603BD2-62A9-44B5-8670-693A385491C4}">
+							<Language>SFX</Language>
+							<AudioFile>Keito_MaxSizeGlow.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="579490520"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Keito_MaxSizeGlow" ID="{44603BD2-62A9-44B5-8670-693A385491C4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

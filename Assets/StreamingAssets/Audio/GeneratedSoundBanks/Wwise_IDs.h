@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID PLAY_CAT_PURR = 1160118988U;
         static const AkUniqueID PLAY_FAVORITEYARNCOLOR = 3575780237U;
         static const AkUniqueID PLAY_HIGHSCORE = 2349590460U;
+        static const AkUniqueID PLAY_MAXSIZEGLOW = 2782737696U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_THROWYARN = 2777424796U;
         static const AkUniqueID PLAY_YARN_COMBINE = 554607610U;

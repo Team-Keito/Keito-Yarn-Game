@@ -11,6 +11,7 @@ public class YarnCollision : MonoBehaviour
     public string YarnCollisionSound = "Play_Yarn_Hit";
     public string CatYarnCollisionSound = "Play_Cat_Purr";
     public string YarnMergeCollisionSound = "Play_Yarn_Merge";
+    public string MaxSizeGlowSound = "Play_MaxSizeGlow";
 
     /// <summary>
     /// When yarn first collides with another object
@@ -61,6 +62,8 @@ public class YarnCollision : MonoBehaviour
     public void OnMaxSize()
     {
         //TODO - Add max size sound
+        AkSoundEngine.PostEvent(MaxSizeGlowSound, gameObject);
+
     }
 
     public void PostYarnCollisionEvent()

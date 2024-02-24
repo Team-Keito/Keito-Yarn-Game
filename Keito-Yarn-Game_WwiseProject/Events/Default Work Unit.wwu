@@ -102,6 +102,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_MaxSizeGlow" ID="{D08BE6FC-B03A-4E1D-96FB-F3F526D1CCA2}">
+					<ChildrenList>
+						<Action Name="" ID="{FA0D1ABC-2634-481C-89E0-4264525877B5}" ShortID="73853738">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MaxSizeGlow" ID="{F5392106-195D-4BE9-8BE7-6C4A7D29AD1C}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
