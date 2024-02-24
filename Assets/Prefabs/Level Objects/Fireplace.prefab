@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1347522866750058881}
   - component: {fileID: 1150127326508125568}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fireplace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 1347522866785508302}
   - component: {fileID: 1347522866785508297}
   - component: {fileID: 1347522866785508296}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 1347522866825323902}
   - component: {fileID: 1347522866825323897}
   - component: {fileID: 1347522866825323896}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 1347522867120837886}
   - component: {fileID: 1347522867120837881}
   - component: {fileID: 1347522867120837880}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
