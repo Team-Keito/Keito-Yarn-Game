@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField, Tooltip("Max # times cat can stay in same spot before force move")]
     private int _maxDuplicateSpawn = 1;
-
+    [SerializeField, Tooltip("The index of the first spawn position of the cat (number outside of range will give random index)")]
+    private int _firstSpawnIndex = -1;
     [SerializeField] private int targetScore = 0;
 
     [SerializeField, Tooltip("The rate to increase the current time every second")]
@@ -87,8 +88,9 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        _currentLocationIndex = Random.Range(0, spawnLocPrefab.Length);
-        catGameObject = Instantiate(catGameObject, spawnLocPrefab[_currentLocationIndex].transform.position, spawnLocPrefab[_currentLocationIndex].transform.rotation);
+        // Instantiate, then assign position+rotation
+        catGameObject = Instantiate(catGameObject);
+        ChangeCatLocation(0 <= _firstSpawnIndex && _firstSpawnIndex < spawnLocPrefab.Length ? _firstSpawnIndex : null);
         catGameObject.GetComponent<CatYarnInteraction>().OnCatScored.AddListener(UpdateScore);
 
         InvokeRepeating("Timer", 1f, timePerSecond);
@@ -97,7 +99,8 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Changes the cats location pseudorandomly
     /// </summary>
-    public void ChangeCatLocation()
+    /// <param name="explicitIndex">Optional explicit index for the spawn point to use (value clamped in range).</param>
+    public void ChangeCatLocation(int? explicitIndex = null)
     {
         if (spawnLocPrefab.Length <= 1)
         {
@@ -105,7 +108,9 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        int randInt = Random.Range(0, spawnLocPrefab.Length);
+        int randInt = explicitIndex.HasValue
+                    ? Mathf.Clamp(explicitIndex.Value, 0, spawnLocPrefab.Length)
+                    : Random.Range(0, spawnLocPrefab.Length);
 
         if (randInt == _currentLocationIndex)
         {
@@ -118,8 +123,7 @@ public class GameManager : MonoBehaviour
             _sameSpawnCount = 0;
         }
 
-        catGameObject.transform.position = spawnLocPrefab[randInt].transform.position;
-        catGameObject.transform.rotation = spawnLocPrefab[randInt].transform.rotation;
+        catGameObject.transform.SetPositionAndRotation(spawnLocPrefab[randInt].transform.position, spawnLocPrefab[randInt].transform.rotation);
         _currentLocationIndex = randInt;
     }
 
