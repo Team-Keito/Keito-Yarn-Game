@@ -9,7 +9,7 @@ public class CatSounds : MonoBehaviour
     private string HighScore = "Play_HighScore";
     private string RejectBallSound = "Play_CatRefusesYarn";
 
-    [SerializeField] private int _highScore = 10;
+    [SerializeField] private int _highScore = 20;
     public void OnScoredEvent(float score, bool isFavoriteColor)
     {
         if (score > _highScore)
