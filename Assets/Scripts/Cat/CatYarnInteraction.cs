@@ -10,9 +10,10 @@ public class CatYarnInteraction : MonoBehaviour
     [SerializeField] private ThoughtBubble _thoughtBubble;
     [SerializeField, Tooltip("Tag for Yarnball")]
     private TagSO _yarnTag;
+
+    [SerializeField] private float _minSize = 0.5f;
     
     private ColorSO _favoriteColor;
-
 
     public void SetFavoriteColor(ColorSO color)
     {
@@ -31,10 +32,27 @@ public class CatYarnInteraction : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(_yarnTag.Tag))
         {
-            bool isFavorite = _favoriteColor == collision.gameObject.GetComponent<ColorController>().Color;
-
-            OnCatScored.Invoke(collision.transform.localScale.x, isFavorite);
-            Destroy(collision.gameObject);
+            if(collision.transform.localScale.x > _minSize)
+            {
+                AcceptBall(collision);
+            }
+            else
+            {
+                RejectBall(collision);
+            }
         }
+    }
+
+    private void AcceptBall(Collision collision)
+    {
+        bool isFavorite = _favoriteColor == collision.gameObject.GetComponent<ColorController>().Color;
+
+        OnCatScored.Invoke(collision.transform.localScale.x, isFavorite);
+        Destroy(collision.gameObject);
+    }
+
+    private void RejectBall(Collision collision)
+    {
+        _thoughtBubble.RejectBall();
     }
 }

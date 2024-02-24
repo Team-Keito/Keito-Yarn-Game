@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int targetScore = 0;
 
     [SerializeField, Tooltip("The rate to increase the current time every second")]
-    private float timePerSecond = 1f, score, highScore, _favColorMulti = 1.5f;
+    private float timePerSecond = 1f, score, highScore;
 
     [SerializeField] private string mainMenuSceneName;
     [SerializeField] private TextMeshProUGUI endTimeText, bestTimeText, currTimeText;
@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject scoreColor;
 
     [SerializeField] private float _scoreMulitplier = 2;
+    [SerializeField] private float _favColorMulti = 1.5f;
+    [SerializeField] private float _favColorFlatBounus = 0;
 
     [SerializeField] private ColorSO[] _colorList;
 
@@ -210,17 +212,17 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(float value, bool isFavoriteColor)
     {
-        //TODO - add score for favorite
-        float favColorMultiplier = isFavoriteColor ? _favColorMulti : 1;
-
         //Score based on Suika scoring.
         float scaledValue = value * _scoreMulitplier;
-        int scoreVal = Mathf.Max(1, (int)(scaledValue * (scaledValue + 1) / 2));
+        float scoreVal = Mathf.Max(1, (scaledValue * (scaledValue + 1) / 2));
 
-        score += scoreVal * favColorMultiplier;
+        if (isFavoriteColor)
+        {
+            scoreVal = (scoreVal * _favColorMulti) + _favColorFlatBounus;
+        }
+
+        score += scoreVal;
         highScore = Mathf.Max(score, highScore);
-
-        Debug.Log($"{isFavoriteColor} +{scoreVal} * {favColorMultiplier} = {scoreVal * favColorMultiplier} Total:{score}");
 
         scoreSlider.value = score / targetScore;
 

@@ -6,7 +6,9 @@ public class ThoughtBubble : MonoBehaviour
 {
     [SerializeField] Material Red, Blue, Green, Reject;
     [SerializeField] private Renderer _render;
+    [SerializeField] private float _rejectShowTime = 1f;
 
+    private ColorSO _currentColor;
     private Camera _camera;    
 
     // Start is called before the first frame update
@@ -15,9 +17,15 @@ public class ThoughtBubble : MonoBehaviour
         _camera = Camera.main;
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        transform.rotation = _camera.transform.rotation;
+    }
+
     public void ChangeColor(ColorSO color)
     {
-        Debug.Log($"{_render} -- {Red}");
+        _currentColor = color;
         switch (color.name)
         {
             case "Red":
@@ -34,12 +42,14 @@ public class ThoughtBubble : MonoBehaviour
 
     public void RejectBall()
     {
-        _render.material = Reject;
+        _render.sharedMaterial = Reject;
+        StartCoroutine(TempShow());   
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator TempShow()
     {
-        transform.rotation = _camera.transform.rotation;
+        yield return new WaitForSeconds(_rejectShowTime);
+        ChangeColor(_currentColor);
     }
+
 }
