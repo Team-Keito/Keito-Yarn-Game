@@ -21,7 +21,7 @@
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\MasterVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="4051559943">
+		<SoundBank Id="2641024368" Language="SFX" Hash="3209785407">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
@@ -75,6 +75,14 @@
 						<File Id="912852287" Language="SFX">
 							<ShortName>CATPOCALYPSE_AUDIO_CAT_PURR_V1_3.wav</ShortName>
 							<Path>SFX\CATPOCALYPSE_AUDIO_CAT_PURR_V1_3_DD6D5B0B.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1815447315" Name="Play_CatRefusesYarn" ObjectPath="\Events\Default Work Unit\Play_CatRefusesYarn" DurationType="OneShot" DurationMin="0.9125" DurationMax="0.9125">
+					<IncludedMemoryFiles>
+						<File Id="107562848" Language="SFX">
+							<ShortName>CATPOCALYPSE_CAT_MEOW_V1_4.wav</ShortName>
+							<Path>SFX\CATPOCALYPSE_CAT_MEOW_V1_4_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

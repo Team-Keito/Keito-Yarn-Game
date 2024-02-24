@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	554607610	Play_Yarn_Combine			\Default Work Unit\Play_Yarn_Combine	
 	1160118988	Play_Cat_Purr			\Default Work Unit\Play_Cat_Purr	
 	1677062370	Play_Yarn_Hit			\Default Work Unit\Play_Yarn_Hit	
+	1815447315	Play_CatRefusesYarn			\Default Work Unit\Play_CatRefusesYarn	
 	2051353701	Play_Cat_Meow			\Default Work Unit\Play_Cat_Meow	
 	2349590460	Play_HighScore			\Default Work Unit\Play_HighScore	
 	2777424796	Play_ThrowYarn			\Default Work Unit\Play_ThrowYarn	
@@ -13,6 +14,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2801574179	VolumeChange			\Default Work Unit\VolumeChange	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	107562848	CatRefusesYarn	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\CATPOCALYPSE_CAT_MEOW_V1_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CatRefusesYarn		175264
 	202934990	Keito_Yarn_Hit_3_1	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\Keito_Yarn_Hit_3_1_7B5CBA06.wem		\Actor-Mixer Hierarchy\Default Work Unit\Yarn_Hit\Yarn_Hit3\Keito_Yarn_Hit_3_1		20636
 	209445105	Keito_Yarn_Hit_4_1	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\Keito_Yarn_Hit_4_1_15B42152.wem		\Actor-Mixer Hierarchy\Default Work Unit\Yarn_Hit\Yarn_Hit4\Keito_Yarn_Hit_4_1		17072
 	270895424	Keito_Yarn_Hit_2_3	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Windows\SFX\Keito_Yarn_Hit_2_3_CE9259E3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Yarn_Hit\Yarn_Hit2\Keito_Yarn_Hit_2_3		36956
