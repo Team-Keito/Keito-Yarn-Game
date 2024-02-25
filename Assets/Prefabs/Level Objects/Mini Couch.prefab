@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4826178607489231268}
   - component: {fileID: 7302111376465048818}
   - component: {fileID: 4818734791901717813}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 8683643823064254514}
   - component: {fileID: 8479283905894855774}
   - component: {fileID: 7233563456104841221}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 411220434822305973}
   - component: {fileID: -1757113816499410101}
   - component: {fileID: -2748769643239647614}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mini Couch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 8935713022357180606}
   - component: {fileID: 4401879670202534400}
   - component: {fileID: 773667358247163093}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 9110628953451848599}
   - component: {fileID: 1246644462712715723}
   - component: {fileID: 3206080534325618945}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
