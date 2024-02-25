@@ -9,8 +9,9 @@ public class YarnCollision : MonoBehaviour
     public const string CAT_TAG = "Cat";
     private bool hasCollidedBefore = false;
     public string YarnCollisionSound = "Play_Yarn_Hit";
-    public string CatYarnCollisionSound = "Play_Cat_Purr";
+    //public string CatYarnCollisionSound = "Play_Cat_Purr";
     public string YarnMergeCollisionSound = "Play_Yarn_Merge";
+    public string MaxSizeGlowSound = "Play_MaxSizeGlow";
 
     /// <summary>
     /// When yarn first collides with another object
@@ -43,7 +44,7 @@ public class YarnCollision : MonoBehaviour
         else if (isCat)
         {
             // TODO: Yarn-cat collision SFX
-            PostCatYarnCollisionEvent();
+            //PostCatYarnCollisionEvent(); //Now handled on Cat prefab > CatSound
         }
         // If first collision
         else if (!hasCollidedBefore)
@@ -57,6 +58,14 @@ public class YarnCollision : MonoBehaviour
             
         }
     }
+
+    public void OnMaxSize()
+    {
+        //TODO - Add max size sound
+        AkSoundEngine.PostEvent(MaxSizeGlowSound, gameObject);
+
+    }
+
     public void PostYarnCollisionEvent()
     {
         // Check if the event name is valid
@@ -70,7 +79,7 @@ public class YarnCollision : MonoBehaviour
             Debug.LogError("Yarn Collision Sound event name is not specified!");
         }
     }
-    public void PostCatYarnCollisionEvent()
+/*    public void PostCatYarnCollisionEvent()
     {
         // Check if the event name is valid
         if (!string.IsNullOrEmpty(CatYarnCollisionSound))
@@ -82,7 +91,7 @@ public class YarnCollision : MonoBehaviour
         {
             Debug.LogError("Cat-Yarn Collision Sound event name is not specified!");
         }
-    }
+    }*/
     public void PostYarnMergeCollisionEvent()
     {
         // Check if the event name is valid
