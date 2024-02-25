@@ -9,10 +9,18 @@ public class OffScreenIndicator : MonoBehaviour
 {
     [SerializeField] private GameObject _target;
     [SerializeField] private Camera _camera;
+
+    [Space(5)]
     [SerializeField] private Image _indicatorUI;
     [SerializeField] private float _imageRotationOffset = 180;
+    [SerializeField, Range(0, 1)] private float _borderOffset = 0.1f;
+
+    [Space(5)]
+    [SerializeField] private bool _showOnscreenTracker = false;
+    [SerializeField] private float _onscreenOffset = 200;
 
     private Vector3 _center, _boundsCenter;
+    private float _boundSize;
 
     #region Setup
     // Start is called before the first frame update
@@ -20,9 +28,11 @@ public class OffScreenIndicator : MonoBehaviour
     {
         if (!_camera) _camera = Camera.main;
 
+        _boundSize = 1 - _borderOffset;
+
         Vector3 screen = new Vector3(Screen.width, Screen.height);
         _center = screen / 2;
-        _boundsCenter = (screen * 0.9f) / 2;
+        _boundsCenter = (screen * _boundSize) / 2;
 
         if(!_target) enabled = false;
     }
@@ -56,15 +66,25 @@ public class OffScreenIndicator : MonoBehaviour
             && targetPoint.x >= 0 && targetPoint.x <= Screen.width 
             && targetPoint.y >= 0 && targetPoint.y <= Screen.height;
 
+        _indicatorUI.enabled = true;
         if (!isOnScreen)
-        {
-            _indicatorUI.enabled = true;
+        {            
             OffscreenTracker(targetPoint);
+        }
+        else if (_showOnscreenTracker)
+        {
+            OnScreenTracker(targetPoint);
         }
         else
         {
-            _indicatorUI.enabled = false;
+            _indicatorUI.enabled = false;            
         }
+    }
+
+    private void OnScreenTracker(Vector3 targetPoint)
+    {
+        targetPoint.y = Mathf.Clamp(targetPoint.y + 200, _borderOffset * Screen.height, _boundSize * Screen.height);
+        UpdateElement(targetPoint, _imageRotationOffset);
     }
 
     private void OffscreenTracker(Vector3 targetPoint)
