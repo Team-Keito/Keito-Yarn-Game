@@ -27,7 +27,6 @@ public class AddTargetLookAt : MonoBehaviour
         // Get transform if not already assigned using the tag provided
         if (!_inLevelLookAt && _lookAtTag && GameObject.FindGameObjectWithTag(_lookAtTag.Tag) is GameObject found)
         {
-            Debug.LogWarning("GO FOUND");
             _inLevelLookAt = found.transform;
         }
         // If transform is there, add it to the target group
