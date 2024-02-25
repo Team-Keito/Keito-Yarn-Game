@@ -26,6 +26,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject scoreColor;
 
     [SerializeField] private float _scoreMulitplier = 2;
+    [SerializeField] private float _favColorMulti = 1.5f;
+    [SerializeField] private float _favColorFlatBounus = 0;
+
+    [SerializeField] private ColorSO[] _colorList;
 
     public GameObject catGameObject;
 
@@ -33,6 +37,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] spawnLocPrefab; //kept public for test case. Now auto grabs based on spawnpoint tag.
 
     public UnityEvent OnGameEnd = new();
+    public UnityEvent<float, bool> OnCatScored;
 
     public float Score
     {
@@ -89,7 +94,12 @@ public class GameManager : MonoBehaviour
 
         _currentLocationIndex = Random.Range(0, spawnLocPrefab.Length);
         catGameObject = Instantiate(catGameObject, spawnLocPrefab[_currentLocationIndex].transform.position, spawnLocPrefab[_currentLocationIndex].transform.rotation);
-        catGameObject.GetComponent<CatYarnInteraction>().OnCatScored.AddListener(UpdateScore);
+        CatYarnInteraction CatInteract = catGameObject.GetComponent<CatYarnInteraction>();
+
+        CatInteract.OnCatScored.AddListener(UpdateScore);
+        UpdateCatColor();
+
+        OnCatScored.AddListener(catGameObject.GetComponent<CatSounds>().OnScoredEvent);
 
         InvokeRepeating("Timer", 1f, timePerSecond);
     }
@@ -120,6 +130,8 @@ public class GameManager : MonoBehaviour
 
         catGameObject.transform.position = spawnLocPrefab[randInt].transform.position;
         catGameObject.transform.rotation = spawnLocPrefab[randInt].transform.rotation;
+
+        UpdateCatColor();
         _currentLocationIndex = randInt;
     }
 
@@ -139,6 +151,19 @@ public class GameManager : MonoBehaviour
         }
 
         return randInt;
+    }
+
+    private void UpdateCatColor()
+    {
+        ColorSO color = GetRandomColor();
+        catGameObject.GetComponent<CatYarnInteraction>().SetFavoriteColor(color);
+        catGameObject.GetComponentInChildren<Renderer>().material.color = color.Color;
+    }
+
+    private ColorSO GetRandomColor()
+    {
+        int RandInt = Random.Range(0, _colorList.Length);
+        return _colorList[RandInt];
     }
 
     public void PauseGame()
@@ -188,11 +213,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void UpdateScore(float value)
+    public void UpdateScore(float value, bool isFavoriteColor)
     {
         //Score based on Suika scoring.
         float scaledValue = value * _scoreMulitplier;
-        int scoreVal = Mathf.Max(1, (int)(scaledValue * (scaledValue + 1) / 2));
+        float scoreVal = Mathf.Max(1, (scaledValue * (scaledValue + 1) / 2));
+
+        if (isFavoriteColor)
+        {
+            scoreVal = (scoreVal * _favColorMulti) + _favColorFlatBounus;
+        }
+
+        OnCatScored.Invoke(scoreVal, isFavoriteColor);
 
         score += scoreVal;
         highScore = Mathf.Max(score, highScore);
