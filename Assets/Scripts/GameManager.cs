@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent OnGameEnd = new();
     public UnityEvent<float, bool> OnCatScored;
+    public UnityEvent<GameObject> OnCatSpawn;
 
     public float Score
     {
@@ -101,7 +102,17 @@ public class GameManager : MonoBehaviour
 
         OnCatScored.AddListener(catGameObject.GetComponent<CatSounds>().OnScoredEvent);
 
-        InvokeRepeating("Timer", 1f, timePerSecond);
+        OnCatSpawn.Invoke(catGameObject);
+
+        if (currTimeText)
+        {
+            InvokeRepeating("Timer", 1f, timePerSecond);
+        }
+        else
+        {
+            Debug.LogWarning("Missing UI Reference: Timer");
+        }
+        
     }
 
     /// <summary>
@@ -215,6 +226,8 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(float value, bool isFavoriteColor)
     {
+        ChangeCatLocation();
+
         //Score based on Suika scoring.
         float scaledValue = value * _scoreMulitplier;
         float scoreVal = Mathf.Max(1, (scaledValue * (scaledValue + 1) / 2));
@@ -229,17 +242,22 @@ public class GameManager : MonoBehaviour
         score += scoreVal;
         highScore = Mathf.Max(score, highScore);
 
-        scoreSlider.value = score / targetScore;
+        if (scoreSlider)
+        {
+            scoreSlider.value = score / targetScore;
 
-        if (scoreSlider.value < 0.25f)
-            scoreColor.GetComponent<Image>().color = Color.red;
-        else if (scoreSlider.value > 0.25f && scoreSlider.value < 0.75f)
-            scoreColor.GetComponent<Image>().color = Color.yellow;
-        else if (scoreSlider.value > 0.75f && scoreSlider.value < 0.99f)
-            scoreColor.GetComponent<Image>().color = Color.green;
+            if (scoreSlider.value < 0.25f)
+                scoreColor.GetComponent<Image>().color = Color.red;
+            else if (scoreSlider.value > 0.25f && scoreSlider.value < 0.75f)
+                scoreColor.GetComponent<Image>().color = Color.yellow;
+            else if (scoreSlider.value > 0.75f && scoreSlider.value < 0.99f)
+                scoreColor.GetComponent<Image>().color = Color.green;
+            else
+                scoreColor.GetComponent<Image>().color = Color.blue;
+        }
         else
-            scoreColor.GetComponent<Image>().color = Color.blue;
-
-        ChangeCatLocation();
+        {
+            Debug.LogWarning("Missing UI Reference: Score Slider");
+        }
     }
 }
