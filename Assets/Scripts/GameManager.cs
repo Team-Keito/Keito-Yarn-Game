@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour
     {
         ColorSO color = GetRandomColor();
         catGameObject.GetComponent<CatYarnInteraction>().SetFavoriteColor(color);
-        catGameObject.GetComponent<Renderer>().material.color = color.Color;
+        catGameObject.GetComponentInChildren<Renderer>().material.color = color.Color;
     }
 
     private ColorSO GetRandomColor()
