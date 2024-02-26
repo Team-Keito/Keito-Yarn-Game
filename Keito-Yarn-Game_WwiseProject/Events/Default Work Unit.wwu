@@ -113,6 +113,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_CatRefusesYarn" ID="{65113F18-4B2A-4234-ABA6-AB2487FA9834}">
+					<ChildrenList>
+						<Action Name="" ID="{3D03131C-283B-4937-B241-A800E4C6ACC7}" ShortID="396429382">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CatRefusesYarn" ID="{55D4A977-CDDC-455B-8D7C-946C4E0010C3}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
