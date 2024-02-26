@@ -7,7 +7,9 @@ public class TestNextColorDisplay : MonoBehaviour
 {
     [SerializeField] SlingShot _slingshot; //probably convert to parent class?
 
-    [SerializeField] RawImage[] _Colors;
+    [SerializeField] GameObject yarnBall;
+
+    private LinkedList<GameObject> _colors = new LinkedList<GameObject>();
 
     private void Start()
     {
@@ -27,11 +29,42 @@ public class TestNextColorDisplay : MonoBehaviour
 
     private void UpdateNextColor(LinkedList<Color> Colors)
     {
-        int count = 0;
-
-        foreach(Color color in Colors)
+        if (_colors.Count > 2)
         {
-            _Colors[count++].color = color;
+            StartCoroutine(PlayAnimation(Colors));
+        } else
+        {
+            // Add the first three yarn balls
+            foreach (Color color in Colors)
+            {
+                yarnBall = Instantiate(yarnBall, transform);
+
+                yarnBall.GetComponent<RawImage>().color = color;
+
+                _colors.AddLast(yarnBall);
+            }
+        }
+    }
+
+    IEnumerator PlayAnimation(LinkedList<Color> Colors)
+    {
+        // Play the fade animation
+        _colors.First.Value.GetComponent<Animator>().Play("Fade");
+
+        yield return new WaitForSeconds(_colors.First.Value.GetComponent<Animator>().runtimeAnimatorController.animationClips[1].length);
+
+        yarnBall = Instantiate(yarnBall, transform);
+
+        // Add the yarn ball to the list and set its color
+        yarnBall.GetComponent<RawImage>().color = Colors.Last.Value;
+
+        _colors.AddLast(yarnBall);
+
+        // Removes extra yarn ball UI's that are caused when the player rapidly throws the yarn balls into the level
+        while (_colors.Count > 3)
+        {
+            Destroy(_colors.First.Value);
+            _colors.RemoveFirst();
         }
     }
 }
