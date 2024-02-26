@@ -13,7 +13,7 @@ public class FurnatureMovement : MonoBehaviour
     private TagSO _YarnTag;
 
     [SerializeField, Tooltip("The velocity limit required for the OnFurnatureMove function to be invoked")]
-    private float veloLimit;
+    private float veloLimit = 1f;
 
     public float VeloLimit
     {
