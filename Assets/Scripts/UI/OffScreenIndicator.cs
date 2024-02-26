@@ -40,7 +40,7 @@ public class OffScreenIndicator : MonoBehaviour
     // Update is called once per frame
     private void LateUpdate()
     {
-        CheckTarget();
+        if(_target && _indicatorUI) CheckTarget();
     }
     #endregion
     
