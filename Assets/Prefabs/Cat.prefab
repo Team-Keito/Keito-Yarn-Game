@@ -375,3 +375,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _textPrefab: {fileID: 7800144406954702931, guid: e43ce8531ff0a884cb9382e51e556cb6, type: 3}
+  _offset: {x: 0, y: 2, z: 0}
+  _default: {r: 1, g: 1, b: 1, a: 1}
+  _bonusColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}

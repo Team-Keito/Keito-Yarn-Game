@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FaceCamera : MonoBehaviour
+public class RotateTowardCamera: MonoBehaviour
 {
     [SerializeField] private Camera _camera;
 
-    private void Start()
+    private void Start() 
     {
         _camera = Camera.main;
     }

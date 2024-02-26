@@ -6,7 +6,7 @@ using TMPro;
 public class ScorePopUp : MonoBehaviour
 {
     [SerializeField] TextMeshPro _textPrefab;
-    [SerializeField] Vector3 _offset = new Vector3(0, 50, 0);
+    [SerializeField] Vector3 _offset = new Vector3(0, 2, 0);
 
     [SerializeField] Color _default = Color.white;
     [SerializeField] Color _bonusColor = Color.yellow;
