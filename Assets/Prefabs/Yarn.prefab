@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 2558765689392952487}
   - component: {fileID: 2505694825250285039}
   - component: {fileID: -7796720557547338020}
+  - component: {fileID: -6499248760467099502}
   m_Layer: 8
   m_Name: Yarn
   m_TagString: Yarn
@@ -271,8 +272,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -6499248760467099502}
+        m_TargetAssemblyTypeName: AddGlow, Scripts
+        m_MethodName: EnableGlowEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _massMultiplier: 1
-  _massCap: 10
+  _massCap: 5
   _scaleMultiplier: 1
   _scaleCap: 5
   YarnCombineSound: Play_Yarn_Combine
@@ -323,7 +336,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   YarnCollisionSound: Play_Yarn_Hit
-  CatYarnCollisionSound: Play_Cat_Purr
   YarnMergeCollisionSound: Play_Yarn_Merge
   MaxSizeGlowSound: Play_MaxSizeGlow
 --- !u!114 &2558765689392952487
@@ -366,3 +378,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _color: {fileID: 0}
+--- !u!114 &-6499248760467099502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998775315433358910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84318ca259e34594b87cdf44d90fad52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _intensity: 5

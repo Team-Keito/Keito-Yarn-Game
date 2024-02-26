@@ -54,7 +54,8 @@ public class BallCombine : MonoBehaviour
             Vector3 combinedScale = transform.localScale + hitBall.transform.localScale * _scaleMultiplier;
             float combinedMass = _rigidBody.mass + collision.rigidbody.mass * _massMultiplier;
             
-            if (transform.localScale.x >= _scaleVectorCap.x || _rigidBody.mass >= _massCap)
+
+            if (transform.localScale.x >= _scaleVectorCap.x * 0.99f || _rigidBody.mass >= _massCap)
             {
                 return;            
             }
