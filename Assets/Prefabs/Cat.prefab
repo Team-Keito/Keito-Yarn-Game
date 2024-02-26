@@ -252,7 +252,7 @@ MonoBehaviour:
   _thoughtBubble: {fileID: 328679437897280706}
   _yarnTag: {fileID: 11400000, guid: a1d0c64b2d711b1408fdeb64edc363fb, type: 2}
   _minSize: 0.6
-  _minSqrVelocityRejection: 1
+  _minSqrVelocityRejection: 5
   OnCatScored:
     m_PersistentCalls:
       m_Calls: []
