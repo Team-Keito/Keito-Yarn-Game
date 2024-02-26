@@ -5,11 +5,15 @@
 			<ChildrenList>
 				<RandomSequenceContainer Name="Cat_Meow" ID="{2BEB764D-E8BC-44F6-BA96-F876936847B8}" ShortID="940124937">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
 						<Property Name="PlayMechanismLoopCount" Type="int32" Value="10"/>
 						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
 						</Reference>
@@ -138,6 +142,7 @@
 				</RandomSequenceContainer>
 				<BlendContainer Name="Yarn_Hit" ID="{4DCF044C-2D3B-4060-8F4D-B2F179823504}" ShortID="1070817757">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -153,7 +158,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>7</Value>
+								<Value>8</Value>
 							</ValueList>
 							<RTPCList>
 								<RTPC Name="" ID="{F23C4E57-4278-4179-98D3-5A7CB11D748F}" ShortID="422457520">
@@ -184,6 +189,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
 						</Reference>
@@ -726,6 +734,7 @@
 				</BlendContainer>
 				<RandomSequenceContainer Name="Cat_Purr" ID="{9BC3A515-8914-480A-BE34-F49A37C66DE9}" ShortID="471153482">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -746,6 +755,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
 						</Reference>
@@ -920,6 +932,20 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Yarn_Combine" ID="{36454334-7DF8-437B-A4D0-DA6EE053663D}" ShortID="579385034">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{31488E2C-B095-42C9-8C01-8BDD26356F37}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="20"/>
+											<Property Name="Min" Type="Real64" Value="-20"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-3</Value>
@@ -927,6 +953,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
 						</Reference>
@@ -1021,7 +1050,13 @@
 					</ChildrenList>
 				</Folder>
 				<BlendContainer Name="FavoriteYarnColor" ID="{03139F3D-6C42-4012-8142-4A3F06C5019C}" ShortID="79225307">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
 						</Reference>
@@ -1353,7 +1388,13 @@
 					<ObjectLists/>
 				</BlendContainer>
 				<BlendContainer Name="HighScore" ID="{5646C782-3167-464A-9062-5FBA689BBA75}" ShortID="885798979">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
 						</Reference>
@@ -1576,13 +1617,12 @@
 				</BlendContainer>
 				<Sound Name="MaxSizeGlow" ID="{F5392106-195D-4BE9-8BE7-6C4A7D29AD1C}" ShortID="1057915798">
 					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-8</Value>
-							</ValueList>
-						</Property>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
 						</Reference>
@@ -1602,6 +1642,48 @@
 					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="Keito_MaxSizeGlow" ID="{44603BD2-62A9-44B5-8670-693A385491C4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="CatRefusesYarn" ID="{55D4A977-CDDC-455B-8D7C-946C4E0010C3}" ShortID="363689144">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{70FA7690-3C09-43DD-97FB-B91BB0D349F9}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="20"/>
+											<Property Name="Min" Type="Real64" Value="-20"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="CATPOCALYPSE_CAT_MEOW_V1_4" ID="{606DFA8D-6700-4176-A65F-D68E360AE26C}">
+							<Language>SFX</Language>
+							<AudioFile>CATPOCALYPSE_CAT_MEOW_V1_4.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="745218962"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="CATPOCALYPSE_CAT_MEOW_V1_4" ID="{606DFA8D-6700-4176-A65F-D68E360AE26C}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

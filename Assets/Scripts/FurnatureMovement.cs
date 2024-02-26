@@ -5,12 +5,21 @@ using UnityEngine.Events;
 
 public class FurnatureMovement : MonoBehaviour
 {
-    public UnityEvent<Vector3> OnFurnatureMove = new();
+    public UnityEvent OnFurnatureMove = new();
 
     private Rigidbody furnatureRb;
 
     [SerializeField, Tooltip("Tag for yarnball")]
     private TagSO _YarnTag;
+
+    [SerializeField, Tooltip("The velocity limit required for the OnFurnatureMove function to be invoked")]
+    private float veloLimit = 1f;
+
+    public float VeloLimit
+    {
+        get { return veloLimit; }
+        set { veloLimit = value; }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +27,9 @@ public class FurnatureMovement : MonoBehaviour
         furnatureRb = GetComponent<Rigidbody>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void FixedUpdate()
     {
-        if (collision.gameObject.CompareTag(_YarnTag.Tag))
-        {
-            OnFurnatureMove.Invoke(furnatureRb.velocity);
-        }
+        if (furnatureRb && furnatureRb.velocity.sqrMagnitude > veloLimit)
+            OnFurnatureMove.Invoke();
     }
 }
