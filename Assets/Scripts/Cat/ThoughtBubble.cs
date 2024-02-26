@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class ThoughtBubble : MonoBehaviour
 {
-    [SerializeField] Material Red, Blue, Green, Reject;
-    [SerializeField] private Renderer _render;
     [SerializeField] private float _rejectShowTime = 1f;
+    
+    [Space(5)]
+    [SerializeField] Material Red, Blue, Green, RejectSmall, RejectFast;
+    [SerializeField] private Renderer _render;
+       
 
     private ColorSO _currentColor;
     private Camera _camera;    
@@ -40,10 +43,16 @@ public class ThoughtBubble : MonoBehaviour
         }
     }
 
-    public void RejectBall()
+    public void RejectSmallBall()
     {
-        _render.sharedMaterial = Reject;
+        _render.sharedMaterial = RejectSmall;
         StartCoroutine(TempShow());   
+    }
+
+    public void RejectFastBall()
+    {
+        _render.sharedMaterial = RejectFast;
+        StartCoroutine(TempShow());
     }
 
     IEnumerator TempShow()
