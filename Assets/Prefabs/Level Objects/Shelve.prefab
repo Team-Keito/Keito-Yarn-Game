@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5872017853136062389}
   - component: {fileID: 5872017853136062390}
   - component: {fileID: 5872017853136062391}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shelve
   m_TagString: Untagged
   m_Icon: {fileID: 0}

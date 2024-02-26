@@ -1020,6 +1020,590 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<BlendContainer Name="FavoriteYarnColor" ID="{03139F3D-6C42-4012-8142-4A3F06C5019C}" ShortID="79225307">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Cat_Meow" ID="{B47A6FBC-4A5A-4067-BDCF-4BF8D1095DB5}" ShortID="739461383">
+							<PropertyList>
+								<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
+								<Property Name="PlayMechanismLoopCount" Type="int32" Value="10"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="CATPOCALYPSE_CAT_MEOW_V1_2" ID="{FD954D09-1382-4CF3-86ED-9E80FE1E7037}" ShortID="802894746">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CATPOCALYPSE_CAT_MEOW_V1_2" ID="{409A7EA8-3BB8-41C8-B895-E0C8F2904238}">
+											<Language>SFX</Language>
+											<AudioFile>CATPOCALYPSE_CAT_MEOW_V1_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="757621186"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="CATPOCALYPSE_CAT_MEOW_V1_2" ID="{409A7EA8-3BB8-41C8-B895-E0C8F2904238}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CATPOCALYPSE_CAT_MEOW_V1_6" ID="{7FAF0B83-EAA2-4B02-A838-4F8B8EE20557}" ShortID="1056639818">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CATPOCALYPSE_CAT_MEOW_V1_6" ID="{66AC6492-24DD-4054-B01D-0E8D21CA06B5}">
+											<Language>SFX</Language>
+											<AudioFile>CATPOCALYPSE_CAT_MEOW_V1_6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="958241183"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="CATPOCALYPSE_CAT_MEOW_V1_6" ID="{66AC6492-24DD-4054-B01D-0E8D21CA06B5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CATPOCALYPSE_CAT_MEOW_V1_12" ID="{775DC13D-0800-40C7-AC18-8CBDF3D00C1F}" ShortID="542522628">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CATPOCALYPSE_CAT_MEOW_V1_12" ID="{EC1ABE28-76A3-44D6-BBC8-04FD9D3DF95D}">
+											<Language>SFX</Language>
+											<AudioFile>CATPOCALYPSE_CAT_MEOW_V1_12.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="707119013"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="CATPOCALYPSE_CAT_MEOW_V1_12" ID="{EC1ABE28-76A3-44D6-BBC8-04FD9D3DF95D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CATPOCALYPSE_CAT_MEOW_V1_13" ID="{761D97F2-2C6B-4C49-886D-AA1B796050DB}" ShortID="842271553">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CATPOCALYPSE_CAT_MEOW_V1_13" ID="{CA966D14-6B27-4A76-8446-56F0F5B0D2F0}">
+											<Language>SFX</Language>
+											<AudioFile>CATPOCALYPSE_CAT_MEOW_V1_13.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="958904981"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="CATPOCALYPSE_CAT_MEOW_V1_13" ID="{CA966D14-6B27-4A76-8446-56F0F5B0D2F0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CATPOCALYPSE_CAT_MEOW_V1_14" ID="{E95F34CE-C629-4429-98DE-9C87F5C0C332}" ShortID="803606558">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CATPOCALYPSE_CAT_MEOW_V1_14" ID="{2E1C4BC1-1F3B-405E-A72C-8A3DAD87D5EC}">
+											<Language>SFX</Language>
+											<AudioFile>CATPOCALYPSE_CAT_MEOW_V1_14.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="352831436"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="CATPOCALYPSE_CAT_MEOW_V1_14" ID="{2E1C4BC1-1F3B-405E-A72C-8A3DAD87D5EC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Cat_Purr" ID="{32B26784-A824-4734-811E-FC23DB5580B9}" ShortID="713434440">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D208981C-EBF0-4067-99DC-B7B6ACE63E53}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="30"/>
+													<Property Name="Min" Type="Real64" Value="-30"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_2" ID="{7660AB6C-A47D-40AA-8198-C9AC102062CF}" ShortID="821231996">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.7</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_2" ID="{2B55BBA2-99DA-4E20-8BA7-B4B3E45D43CD}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0594736308316429"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00660818120351592"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.716987660581478"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.89324391480731"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CATPOCALYPSE_AUDIO_CAT_PURR_V1_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="790194844"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_2" ID="{2B55BBA2-99DA-4E20-8BA7-B4B3E45D43CD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_3" ID="{6F96888B-DEB2-4145-8F9D-B58590C22F55}" ShortID="619215487">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.7</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_3" ID="{BA7DDB0F-A27D-4D9A-BA25-A5A5466D8B5D}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.199548681541582"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.66706294371197"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CATPOCALYPSE_AUDIO_CAT_PURR_V1_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="912852287"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_3" ID="{BA7DDB0F-A27D-4D9A-BA25-A5A5466D8B5D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_4" ID="{7BD74F99-25E3-439A-B4FD-69F098810B10}" ShortID="835970098">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_4" ID="{A54FA1EB-0679-4F85-B171-0B670820740D}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.103924061866126"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.50229963235294"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.38722876521298"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CATPOCALYPSE_AUDIO_CAT_PURR_V1_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="829351928"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_4" ID="{A54FA1EB-0679-4F85-B171-0B670820740D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_7" ID="{1F5019D8-752A-4F52-83A6-80CC99D2D49F}" ShortID="528274602">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_7" ID="{6D6BCF19-B22A-434D-994A-252085B78FD5}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0638838742393509"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.860657750169033"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CATPOCALYPSE_AUDIO_CAT_PURR_V1_7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="364853297"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_7" ID="{6D6BCF19-B22A-434D-994A-252085B78FD5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<ObjectLists/>
+				</BlendContainer>
+				<BlendContainer Name="HighScore" ID="{5646C782-3167-464A-9062-5FBA689BBA75}" ShortID="885798979">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Cat_Purr" ID="{76C6CD64-D581-436B-9E00-DD01C54AEB2A}" ShortID="21737143">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C2A84BDB-58FE-48CF-815C-361CC0ACA14F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="30"/>
+													<Property Name="Min" Type="Real64" Value="-30"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_2" ID="{11C39107-9DD8-4167-B94D-2A49CC27B074}" ShortID="447065343">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.7</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_2" ID="{00C08E7F-B932-404B-B0E8-67ABF0A435A0}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0594736308316429"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00660818120351592"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.716987660581478"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.89324391480731"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CATPOCALYPSE_AUDIO_CAT_PURR_V1_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="790194844"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_2" ID="{00C08E7F-B932-404B-B0E8-67ABF0A435A0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_3" ID="{CA6AE7B6-8BEE-4A5A-92DB-711E2E7117EF}" ShortID="923965614">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.7</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_3" ID="{48152A3D-A1C2-45F4-BA30-57914DDE7E27}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.199548681541582"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.66706294371197"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CATPOCALYPSE_AUDIO_CAT_PURR_V1_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="912852287"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_3" ID="{48152A3D-A1C2-45F4-BA30-57914DDE7E27}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_4" ID="{25B14DF8-6DF0-4A1F-80DD-99674C8A74BC}" ShortID="804823642">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_4" ID="{DCC379B7-26D5-403C-851A-AC1700879E81}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.103924061866126"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.50229963235294"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.38722876521298"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CATPOCALYPSE_AUDIO_CAT_PURR_V1_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="829351928"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_4" ID="{DCC379B7-26D5-403C-851A-AC1700879E81}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_7" ID="{C2CD95E3-C311-463E-9830-2B4333FE2B2D}" ShortID="670759232">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_7" ID="{FF4318E8-5E04-4E7E-A5FD-3A58B8E5FAAE}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0638838742393509"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.860657750169033"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CATPOCALYPSE_AUDIO_CAT_PURR_V1_7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="364853297"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="CATPOCALYPSE_AUDIO_CAT_PURR_V1_7" ID="{FF4318E8-5E04-4E7E-A5FD-3A58B8E5FAAE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<Sound Name="Keito_HighScore" ID="{2D35632B-C948-41AD-96C9-28F7AD291951}" ShortID="751740046">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Keito_HighScore" ID="{53DBDA4B-79FC-4F0F-8888-012B026B4DDC}">
+									<Language>SFX</Language>
+									<AudioFile>Keito_HighScore.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="578830698"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Keito_HighScore" ID="{53DBDA4B-79FC-4F0F-8888-012B026B4DDC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</BlendContainer>
+				<Sound Name="MaxSizeGlow" ID="{F5392106-195D-4BE9-8BE7-6C4A7D29AD1C}" ShortID="1057915798">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Keito_MaxSizeGlow" ID="{44603BD2-62A9-44B5-8670-693A385491C4}">
+							<Language>SFX</Language>
+							<AudioFile>Keito_MaxSizeGlow.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="579490520"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Keito_MaxSizeGlow" ID="{44603BD2-62A9-44B5-8670-693A385491C4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
