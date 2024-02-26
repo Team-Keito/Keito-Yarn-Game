@@ -7,7 +7,8 @@ public class CatSounds : MonoBehaviour
     private string FavoriteYarnColorSound = "Play_FavoriteYarnColor";
     private string DefualtScore = "Play_Cat_Purr";
     private string HighScore = "Play_HighScore";
-    private string RejectBallSound = "Play_CatRefusesYarn";
+    private string RejectBallSizeSound = "Play_CatRefusesYarn";
+    private string RejectBallForceSound = "Play_CatRefusesYarn";
 
     [SerializeField] private int _highScore = 20;
     public void OnScoredEvent(float score, bool isFavoriteColor)
@@ -15,10 +16,11 @@ public class CatSounds : MonoBehaviour
         if (score > _highScore)
         {
             OnHighScore();
-        }else if (isFavoriteColor)
+        }
+        else if (isFavoriteColor)
         {
             OnFavoriteColor();
-        } 
+        }
         else
         {
             DefaultScoreSound();
@@ -45,7 +47,12 @@ public class CatSounds : MonoBehaviour
 
     public void OnRejectBallSize()
     {
-        Debug.Log("Reject Size Sound");
-        AkSoundEngine.PostEvent(RejectBallSound, gameObject);
+        // Debug.Log("Reject Size Sound");
+        AkSoundEngine.PostEvent(RejectBallSizeSound, gameObject);
+    }
+
+    public void OnRejectBallForce()
+    {
+        AkSoundEngine.PostEvent(RejectBallForceSound, gameObject);
     }
 }

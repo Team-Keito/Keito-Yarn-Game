@@ -10,9 +10,12 @@ public class CatYarnInteraction : MonoBehaviour
     private TagSO _yarnTag;
 
     [SerializeField] private float _minSize = 0.6f;
+    [SerializeField, Tooltip("The minimum square velocity at which the cat will reject the yarn ball.\nNOTE: this is velocity^2")]
+    private float _minSqrVelocityRejection = 4;
 
     public UnityEvent<float, bool> OnCatScored;
     public UnityEvent OnRejectBallSize;
+    public UnityEvent OnRejectBallForce;
     public UnityEvent<ColorSO> OnFavoriteColor;
 
     private ColorSO _favoriteColor;
@@ -35,13 +38,20 @@ public class CatYarnInteraction : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(_yarnTag.Tag))
         {
-            if(collision.transform.localScale.x > _minSize)
+            // Find first failure
+            if (collision.relativeVelocity.sqrMagnitude >= _minSqrVelocityRejection)
             {
-                AcceptBall(collision);
+                Debug.Log("Force Reject");
+                RejectBallForce(collision);
+            }
+            else if (collision.transform.localScale.x <= _minSize)
+            {
+                Debug.Log("Size Reject");
+                RejectBallSize(collision);
             }
             else
             {
-                RejectBallSize(collision);
+                AcceptBall(collision);
             }
         }
     }
@@ -56,7 +66,14 @@ public class CatYarnInteraction : MonoBehaviour
 
     private void RejectBallSize(Collision collision)
     {
-        _thoughtBubble.RejectBall();
+        _thoughtBubble.RejectSmallBall();
         OnRejectBallSize.Invoke();
+    }
+
+    private void RejectBallForce(Collision collision)
+    {
+        // TODO: Should this be a different thought bubble function? 
+        _thoughtBubble.RejectFastBall();
+        OnRejectBallForce.Invoke();
     }
 }

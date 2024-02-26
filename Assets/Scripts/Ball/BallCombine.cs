@@ -46,7 +46,7 @@ public class BallCombine : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<BallCombine>(out BallCombine hitBall) && hitBall.Color == Color)
         {
-            if (!DecideBall(hitBall))
+            if (!DecideBall(collision))
             {
                 return;
             }
@@ -61,7 +61,7 @@ public class BallCombine : MonoBehaviour
             }
 
             Destroy(collision.gameObject);
-
+        
             //Combine / absorb the mass
             transform.localScale = Vector3.Min(combinedScale, _scaleVectorCap);
             _rigidBody.mass = Mathf.Min(combinedMass, _massCap);
@@ -78,9 +78,10 @@ public class BallCombine : MonoBehaviour
         }
     }
 
-    private bool DecideBall(BallCombine hitBall)
+    private bool DecideBall(Collision hitBall)
     {
-        if (transform.localScale.x != hitBall.transform.localScale.x)
+        //localScale.x is float rounded i.e. returns false positive when !=
+        if (transform.localScale != hitBall.transform.localScale)
             return transform.localScale.x > hitBall.transform.localScale.x;
         else
             return transform.position.y < hitBall.transform.position.y;
