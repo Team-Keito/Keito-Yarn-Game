@@ -21,7 +21,7 @@
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\MasterVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="3209785407">
+		<SoundBank Id="2641024368" Language="SFX" Hash="924394136">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
@@ -34,7 +34,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2051353701" Name="Play_Cat_Meow" ObjectPath="\Events\Default Work Unit\Play_Cat_Meow" DurationType="OneShot" DurationMin="0.610417" DurationMax="0.970833">
+				<Event Id="2051353701" Name="Play_Cat_Meow" ObjectPath="\Events\Default Work Unit\Play_Cat_Meow" MaxAttenuation="30." DurationType="OneShot" DurationMin="0.610417" DurationMax="0.970833">
 					<IncludedMemoryFiles>
 						<File Id="352831436" Language="SFX">
 							<ShortName>CATPOCALYPSE_CAT_MEOW_V1_14.wav</ShortName>
@@ -58,7 +58,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1160118988" Name="Play_Cat_Purr" ObjectPath="\Events\Default Work Unit\Play_Cat_Purr" DurationType="OneShot" DurationMin="0.845872" DurationMax="1.696203">
+				<Event Id="1160118988" Name="Play_Cat_Purr" ObjectPath="\Events\Default Work Unit\Play_Cat_Purr" MaxAttenuation="30." DurationType="OneShot" DurationMin="0.845872" DurationMax="1.696203">
 					<IncludedMemoryFiles>
 						<File Id="364853297" Language="SFX">
 							<ShortName>CATPOCALYPSE_AUDIO_CAT_PURR_V1_7.wav</ShortName>
@@ -78,15 +78,15 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1815447315" Name="Play_CatRefusesYarn" ObjectPath="\Events\Default Work Unit\Play_CatRefusesYarn" DurationType="OneShot" DurationMin="0.9125" DurationMax="0.9125">
+				<Event Id="1815447315" Name="Play_CatRefusesYarn" ObjectPath="\Events\Default Work Unit\Play_CatRefusesYarn" MaxAttenuation="30." DurationType="OneShot" DurationMin="0.902019" DurationMax="0.923103">
 					<IncludedMemoryFiles>
-						<File Id="107562848" Language="SFX">
+						<File Id="745218962" Language="SFX">
 							<ShortName>CATPOCALYPSE_CAT_MEOW_V1_4.wav</ShortName>
 							<Path>SFX\CATPOCALYPSE_CAT_MEOW_V1_4_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3575780237" Name="Play_FavoriteYarnColor" ObjectPath="\Events\Default Work Unit\Play_FavoriteYarnColor" DurationType="OneShot" DurationMin="1.545872" DurationMax="2.396203">
+				<Event Id="3575780237" Name="Play_FavoriteYarnColor" ObjectPath="\Events\Default Work Unit\Play_FavoriteYarnColor" MaxAttenuation="30." DurationType="OneShot" DurationMin="1.545872" DurationMax="2.396203">
 					<IncludedMemoryFiles>
 						<File Id="352831436" Language="SFX">
 							<ShortName>CATPOCALYPSE_CAT_MEOW_V1_14.wav</ShortName>
@@ -126,7 +126,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2349590460" Name="Play_HighScore" ObjectPath="\Events\Default Work Unit\Play_HighScore" DurationType="OneShot" DurationMin="1.545872" DurationMax="2.396203">
+				<Event Id="2349590460" Name="Play_HighScore" ObjectPath="\Events\Default Work Unit\Play_HighScore" MaxAttenuation="30." DurationType="OneShot" DurationMin="1.545872" DurationMax="2.396203">
 					<IncludedMemoryFiles>
 						<File Id="364853297" Language="SFX">
 							<ShortName>CATPOCALYPSE_AUDIO_CAT_PURR_V1_7.wav</ShortName>
@@ -150,7 +150,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2782737696" Name="Play_MaxSizeGlow" ObjectPath="\Events\Default Work Unit\Play_MaxSizeGlow" DurationType="OneShot" DurationMin="7.71925" DurationMax="7.71925">
+				<Event Id="2782737696" Name="Play_MaxSizeGlow" ObjectPath="\Events\Default Work Unit\Play_MaxSizeGlow" MaxAttenuation="30." DurationType="OneShot" DurationMin="7.71925" DurationMax="7.71925">
 					<IncludedMemoryFiles>
 						<File Id="579490520" Language="SFX">
 							<ShortName>Keito_MaxSizeGlow.wav</ShortName>
@@ -166,7 +166,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="554607610" Name="Play_Yarn_Combine" ObjectPath="\Events\Default Work Unit\Play_Yarn_Combine" DurationType="OneShot" DurationMin="0.483878" DurationMax="0.483878">
+				<Event Id="554607610" Name="Play_Yarn_Combine" ObjectPath="\Events\Default Work Unit\Play_Yarn_Combine" MaxAttenuation="30." DurationType="OneShot" DurationMin="0.47832" DurationMax="0.4895">
 					<IncludedMemoryFiles>
 						<File Id="766138444" Language="SFX">
 							<ShortName>Keito_Yarn_Merge.wav</ShortName>
@@ -174,7 +174,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1677062370" Name="Play_Yarn_Hit" ObjectPath="\Events\Default Work Unit\Play_Yarn_Hit" DurationType="OneShot" DurationMin="0.120438" DurationMax="0.217759">
+				<Event Id="1677062370" Name="Play_Yarn_Hit" ObjectPath="\Events\Default Work Unit\Play_Yarn_Hit" MaxAttenuation="30." DurationType="OneShot" DurationMin="0.120438" DurationMax="0.217759">
 					<IncludedMemoryFiles>
 						<File Id="202934990" Language="SFX">
 							<ShortName>Keito_Yarn_Hit_3_1.wav</ShortName>

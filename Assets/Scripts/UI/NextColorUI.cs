@@ -9,13 +9,29 @@ public class NextColorUI : MonoBehaviour
 
     [SerializeField] GameObject yarnBall;
 
-    private LinkedList<GameObject> _Colors;
+    private LinkedList<GameObject> _colors = new LinkedList<GameObject>();
 
-    public void UpdateNextColor(Queue<Color> Colors)
+    private void Start()
     {
-        if (_Colors.Count > 2)
+
+
+    }
+
+    private void OnEnable()
+    {
+        _slingshot.OnNextColorChange.AddListener(UpdateNextColor);
+    }
+
+    private void OnDisable()
+    {
+        _slingshot.OnNextColorChange.RemoveListener(UpdateNextColor);
+    }
+
+    private void UpdateNextColor(Queue<Color> Colors)
+    {
+        if (_colors.Count > 2)
         {
-            StartCoroutine(PlayAnimation(Colors));
+            StartCoroutine(PlayAnimation(new LinkedList<Color>(Colors.ToArray())));
         }
         else
         {
@@ -26,30 +42,30 @@ public class NextColorUI : MonoBehaviour
 
                 yarnBall.GetComponent<RawImage>().color = color;
 
-                _Colors.AddLast(yarnBall);
+                _colors.AddLast(yarnBall);
             }
         }
     }
 
-    IEnumerator PlayAnimation(Queue<Color> Colors)
+    IEnumerator PlayAnimation(LinkedList<Color> Colors)
     {
         // Play the fade animation
-        _Colors.First.Value.GetComponent<Animator>().Play("Fade");
+        _colors.First.Value.GetComponent<Animator>().Play("Fade");
 
-        yield return new WaitForSeconds(_Colors.First.Value.GetComponent<Animator>().runtimeAnimatorController.animationClips[1].length);
+        yield return new WaitForSeconds(_colors.First.Value.GetComponent<Animator>().runtimeAnimatorController.animationClips[1].length);
 
         yarnBall = Instantiate(yarnBall, transform);
 
         // Add the yarn ball to the list and set its color
-        yarnBall.GetComponent<RawImage>().color = Colors.Peek();
+        yarnBall.GetComponent<RawImage>().color = Colors.Last.Value;
 
-        _Colors.AddLast(yarnBall);
+        _colors.AddLast(yarnBall);
 
         // Removes extra yarn ball UI's that are caused when the player rapidly throws the yarn balls into the level
-        while (_Colors.Count > 3)
+        while (_colors.Count > 3)
         {
-            Destroy(_Colors.First.Value);
-            _Colors.RemoveFirst();
+            Destroy(_colors.First.Value);
+            _colors.RemoveFirst();
         }
     }
 }

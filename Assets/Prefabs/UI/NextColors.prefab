@@ -77,8 +77,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slingshot: {fileID: 0}
-  _colors:
-  - {fileID: 8625727535760580805, guid: 0404226102ca9004b91a2a85e1460837, type: 3}
-  - {fileID: 8625727535760580805, guid: 0404226102ca9004b91a2a85e1460837, type: 3}
-  - {fileID: 8625727535760580805, guid: 0404226102ca9004b91a2a85e1460837, type: 3}
-  yarnBall: {fileID: 8625727535760580805, guid: 0404226102ca9004b91a2a85e1460837, type: 3}
+  yarnBall: {fileID: 0}

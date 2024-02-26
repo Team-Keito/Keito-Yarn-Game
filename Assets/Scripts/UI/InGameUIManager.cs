@@ -111,7 +111,8 @@ public class InGameUIManager : MonoBehaviour
     {
         _gameManager.PauseGame();
         _gameOverUI.SetActive(true);
-       
+        AkSoundEngine.SetState("GameStates", "Game_over");
+
     }
 
     public void OnResetSettings()

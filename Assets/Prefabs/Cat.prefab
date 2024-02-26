@@ -110,7 +110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3456172364774058990}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 2.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1.75, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -179,12 +179,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac5ffb5007ad4f54481d01bf5c10d22a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rejectShowTime: 1
   Red: {fileID: 2100000, guid: 5c0a25df7c21c264f8c49c3e7ec93d6d, type: 2}
   Blue: {fileID: 2100000, guid: 3f2d9caa949e8884aa8afddaf03cd0ce, type: 2}
   Green: {fileID: 2100000, guid: 99241912d7064a14287b6f79381c706c, type: 2}
-  Reject: {fileID: 2100000, guid: a6d141cbb43996e4683843c46314abd7, type: 2}
+  RejectSmall: {fileID: 2100000, guid: a6d141cbb43996e4683843c46314abd7, type: 2}
+  RejectFast: {fileID: 2100000, guid: 62f9d0140eb52204289332193a97f143, type: 2}
   _render: {fileID: 5297466516554578859}
-  _rejectShowTime: 1
 --- !u!1 &4306071415022843939
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,13 +252,25 @@ MonoBehaviour:
   _thoughtBubble: {fileID: 328679437897280706}
   _yarnTag: {fileID: 11400000, guid: a1d0c64b2d711b1408fdeb64edc363fb, type: 2}
   _minSize: 0.6
-  _minSqrVelocityRejection: 10
+  _minSqrVelocityRejection: 6.5
   OnCatScored:
     m_PersistentCalls:
       m_Calls: []
   OnRejectBallSize:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 6213822171653081978}
+        m_TargetAssemblyTypeName: CatAnimationPlay, Scripts
+        m_MethodName: PlayRejectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1029533692401839570}
         m_TargetAssemblyTypeName: CatSounds, Scripts
         m_MethodName: OnRejectBallSize
@@ -270,24 +283,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6213822171653081978}
-        m_TargetAssemblyTypeName: CatAnimationPlay, Scripts
-        m_MethodName: PlayRejectAnimation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   OnRejectBallForce:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1029533692401839570}
-        m_TargetAssemblyTypeName: CatSounds, Scripts
-        m_MethodName: OnRejectBallForce
+      - m_Target: {fileID: 6213822171653081978}
+        m_TargetAssemblyTypeName: CatAnimationPlay, Scripts
+        m_MethodName: PlayRejectAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -297,9 +298,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6213822171653081978}
-        m_TargetAssemblyTypeName: CatAnimationPlay, Scripts
-        m_MethodName: PlayRejectAnimation
+      - m_Target: {fileID: 1029533692401839570}
+        m_TargetAssemblyTypeName: CatSounds, Scripts
+        m_MethodName: OnRejectBallForce
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

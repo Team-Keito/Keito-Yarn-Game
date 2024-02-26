@@ -66,14 +66,14 @@ public class CatYarnInteraction : MonoBehaviour
 
     private void RejectBallSize(Collision collision)
     {
-        _thoughtBubble.RejectBall();
+        _thoughtBubble.RejectSmallBall();
         OnRejectBallSize.Invoke();
     }
 
     private void RejectBallForce(Collision collision)
     {
         // TODO: Should this be a different thought bubble function? 
-        _thoughtBubble.RejectBall();
+        _thoughtBubble.RejectFastBall();
         OnRejectBallForce.Invoke();
     }
 }
