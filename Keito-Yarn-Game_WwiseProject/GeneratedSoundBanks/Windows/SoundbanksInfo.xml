@@ -21,11 +21,19 @@
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\MasterVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="924394136">
+		<SoundBank Id="2641024368" Language="SFX" Hash="2866387147">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\Play_Ambience" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="654882658" Language="SFX">
+							<ShortName>Jasmina_Keito_Ambience.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_Ambience_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3548535810" Name="Play_ButtonClick" ObjectPath="\Events\Default Work Unit\Play_ButtonClick" DurationType="OneShot" DurationMin="0.743021" DurationMax="0.743021">
 					<IncludedMemoryFiles>
 						<File Id="611564981" Language="SFX">
@@ -126,6 +134,38 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="805934378" Name="Play_FurnitureDrag" ObjectPath="\Events\Default Work Unit\Play_FurnitureDrag" MaxAttenuation="30." DurationType="OneShot" DurationMin="0.078445" DurationMax="0.135009">
+					<IncludedMemoryFiles>
+						<File Id="12808572" Language="SFX">
+							<ShortName>Jasmina_Keito_Armchair_Drag_01.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_Armchair_Drag_01_2FB4824F.wem</Path>
+						</File>
+						<File Id="776745431" Language="SFX">
+							<ShortName>Jasmina_Keito_Armchair_Drag_02.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_Armchair_Drag_02_B7A28EF2.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2086089131" Name="Play_FurnitureHit" ObjectPath="\Events\Default Work Unit\Play_FurnitureHit" MaxAttenuation="30." DurationType="OneShot" DurationMin="0.096976" DurationMax="0.155899">
+					<IncludedMemoryFiles>
+						<File Id="8677913" Language="SFX">
+							<ShortName>Jasmina_Keito_Armchair_Hit_01.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_Armchair_Hit_01_94E650BF.wem</Path>
+						</File>
+						<File Id="75780773" Language="SFX">
+							<ShortName>Jasmina_Keito_Armchair_HandHit_02.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_Armchair_HandHit_02_2D5275E1.wem</Path>
+						</File>
+						<File Id="117929561" Language="SFX">
+							<ShortName>Jasmina_Keito_Armchair_HandHit_01.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_Armchair_HandHit_01_8487CC3E.wem</Path>
+						</File>
+						<File Id="464932723" Language="SFX">
+							<ShortName>Jasmina_Keito_Armchair_Hit_02.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_Armchair_Hit_02_00896767.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2349590460" Name="Play_HighScore" ObjectPath="\Events\Default Work Unit\Play_HighScore" MaxAttenuation="30." DurationType="OneShot" DurationMin="1.545872" DurationMax="2.396203">
 					<IncludedMemoryFiles>
 						<File Id="364853297" Language="SFX">
@@ -150,6 +190,22 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2204020340" Name="Play_LeatherHit" ObjectPath="\Events\Default Work Unit\Play_LeatherHit" MaxAttenuation="30." DurationType="OneShot" DurationMin="0.417035" DurationMax="0.468106">
+					<IncludedMemoryFiles>
+						<File Id="75780773" Language="SFX">
+							<ShortName>Jasmina_Keito_Armchair_HandHit_02.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_Armchair_HandHit_02_2D5275E1.wem</Path>
+						</File>
+						<File Id="117929561" Language="SFX">
+							<ShortName>Jasmina_Keito_Armchair_HandHit_01.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_Armchair_HandHit_01_8487CC3E.wem</Path>
+						</File>
+						<File Id="325382742" Language="SFX">
+							<ShortName>Jasmina_Keito_LeatherHit_01.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_LeatherHit_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2782737696" Name="Play_MaxSizeGlow" ObjectPath="\Events\Default Work Unit\Play_MaxSizeGlow" MaxAttenuation="30." DurationType="OneShot" DurationMin="7.71925" DurationMax="7.71925">
 					<IncludedMemoryFiles>
 						<File Id="579490520" Language="SFX">
@@ -158,11 +214,55 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="40205785" Name="Play_SoftClothHit" ObjectPath="\Events\Default Work Unit\Play_SoftClothHit" MaxAttenuation="30." DurationType="OneShot" DurationMin="0.099817" DurationMax="0.151461">
+					<IncludedMemoryFiles>
+						<File Id="75780773" Language="SFX">
+							<ShortName>Jasmina_Keito_Armchair_HandHit_02.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_Armchair_HandHit_02_2D5275E1.wem</Path>
+						</File>
+						<File Id="117929561" Language="SFX">
+							<ShortName>Jasmina_Keito_Armchair_HandHit_01.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_Armchair_HandHit_01_8487CC3E.wem</Path>
+						</File>
+						<File Id="907544814" Language="SFX">
+							<ShortName>Jasmina_Keito_Cloth_02.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_Cloth_02_10322A93.wem</Path>
+						</File>
+						<File Id="988006736" Language="SFX">
+							<ShortName>Jasmina_Keito_Cloth_01.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_Cloth_01_F0B84587.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2777424796" Name="Play_ThrowYarn" ObjectPath="\Events\Default Work Unit\Play_ThrowYarn" DurationType="OneShot" DurationMin="0.041667" DurationMax="0.041667">
 					<IncludedMemoryFiles>
 						<File Id="835207708" Language="SFX">
 							<ShortName>CATPOCALYPSE_AUDIO_RESROUCE_GET_BUBBLE_POP_V1_10.wav</ShortName>
 							<Path>SFX\CATPOCALYPSE_AUDIO_RESROUCE_GET_BUBBLE_POP_V1_10_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4287226464" Name="Play_WoodHit" ObjectPath="\Events\Default Work Unit\Play_WoodHit" MaxAttenuation="30." DurationType="OneShot" DurationMin="0.05104" DurationMax="0.0773">
+					<IncludedMemoryFiles>
+						<File Id="174136757" Language="SFX">
+							<ShortName>Jasmina_Keito_WoodHit_02.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_WoodHit_02_B6141048.wem</Path>
+						</File>
+						<File Id="383783965" Language="SFX">
+							<ShortName>Jasmina_Keito_WoodHit_05.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_WoodHit_05_2463B942.wem</Path>
+						</File>
+						<File Id="397488344" Language="SFX">
+							<ShortName>Jasmina_Keito_WoodHit_01.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_WoodHit_01_10D0FDC6.wem</Path>
+						</File>
+						<File Id="841756326" Language="SFX">
+							<ShortName>Jasmina_Keito_WoodHit_03.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_WoodHit_03_B87ABE3A.wem</Path>
+						</File>
+						<File Id="969356125" Language="SFX">
+							<ShortName>Jasmina_Keito_WoodHit_04.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_WoodHit_04_CD408EEA.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -231,7 +331,7 @@
 				<GameParameter Id="2801574179" Name="VolumeChange" ObjectPath="\Game Parameters\Default Work Unit\VolumeChange"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3589812408" Language="SFX" Hash="254333691">
+		<SoundBank Id="3589812408" Language="SFX" Hash="4093079579">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_SoundBank</ObjectPath>
 			<ShortName>Music_SoundBank</ShortName>
 			<Path>Music_SoundBank.bnk</Path>

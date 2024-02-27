@@ -8,6 +8,11 @@ TagManager:
   - Cat
   - SpawnPoint
   - CameraLookAt
+  - Floor
+  - WoodFurniture
+  - SoftFurniture
+  - Furniture
+  - LeatherFurniture
   layers:
   - Default
   - TransparentFX
