@@ -22,27 +22,27 @@ public class AudioVolumeSettings : MonoBehaviour
 
     private void Start()
     {
-        // Sets the volumes to their defaults in the editor if the key for the volume types isn't there
-        masterVol = masterVolumeSlider.value;
-        musicVol = musicVolumeSlider.value;
-        soundVol = sfxVolumeSlider.value;
+        SetUp();
 
-        if(PlayerPrefs.HasKey(masterSO.currKey.ToString()))
+        masterVolumeSlider.onValueChanged.AddListener(UpdateMasterVolume);
+        musicVolumeSlider.onValueChanged.AddListener(UpdateMusicVolume);
+        sfxVolumeSlider.onValueChanged.AddListener(UpdateSFXVolume);
+    }
+
+    public void SetUp()
+    {
+        if (PlayerPrefs.HasKey(masterSO.currKey.ToString()))
             masterVolumeSlider.value = PlayerPrefs.GetFloat(masterSO.currKey.ToString());
 
-        if(PlayerPrefs.HasKey(musicSO.currKey.ToString()))
+        if (PlayerPrefs.HasKey(musicSO.currKey.ToString()))
             musicVolumeSlider.value = PlayerPrefs.GetFloat(musicSO.currKey.ToString());
 
-        if(PlayerPrefs.HasKey(soundSO.currKey.ToString()))
+        if (PlayerPrefs.HasKey(soundSO.currKey.ToString()))
             sfxVolumeSlider.value = PlayerPrefs.GetFloat(soundSO.currKey.ToString());
 
         AkSoundEngine.SetRTPCValue(wwiseMasterRTPCName, masterVolumeSlider.value);
         AkSoundEngine.SetRTPCValue(wwiseMusicRTPCName, musicVolumeSlider.value);
         AkSoundEngine.SetRTPCValue(wwiseSFXRTPCName, sfxVolumeSlider.value);
-
-        masterVolumeSlider.onValueChanged.AddListener(UpdateMasterVolume);
-        musicVolumeSlider.onValueChanged.AddListener(UpdateMusicVolume);
-        sfxVolumeSlider.onValueChanged.AddListener(UpdateSFXVolume);
     }
 
     public void ResetSettings()

@@ -887,11 +887,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5588047438257184349, guid: 435b8911744a2394685439d73f0fd1e7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000041955047
+      value: 0.000000041955037
       objectReference: {fileID: 0}
     - target: {fileID: 5588047438257184349, guid: 435b8911744a2394685439d73f0fd1e7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000012390838
+      value: -0.000000012390835
       objectReference: {fileID: 0}
     - target: {fileID: 5588047438257184349, guid: 435b8911744a2394685439d73f0fd1e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2796,15 +2796,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2197808507226551863, guid: 8db859489f5b4b845b6f0af8654c85b3, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.28324163
+      value: 0.28324166
       objectReference: {fileID: 0}
     - target: {fileID: 2197808507226551863, guid: 8db859489f5b4b845b6f0af8654c85b3, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000011241824
+      value: 0.000000030713217
       objectReference: {fileID: 0}
     - target: {fileID: 2197808507226551863, guid: 8db859489f5b4b845b6f0af8654c85b3, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000033201162
+      value: -0.000000009070722
       objectReference: {fileID: 0}
     - target: {fileID: 2197808507325120805, guid: 8db859489f5b4b845b6f0af8654c85b3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4804,46 +4804,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2204282110985711366, guid: a702a17a19bfff647a0c63af571aaad4, type: 3}
   m_PrefabInstance: {fileID: 1448361718}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1459096892 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 114707763533623265, guid: 03055bf8e2c5ceb46a63bb23fbd35593, type: 3}
-  m_PrefabInstance: {fileID: 325238071}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1459096895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459096892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 7018477250409352757, guid: 31fff023143f83c498c37a214d03fea0, type: 3}
-          m_TargetAssemblyTypeName: PlayClickSound, Scripts
-          m_MethodName: PlayButtonClickSound
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &1459096896 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2766518682388323811, guid: 03055bf8e2c5ceb46a63bb23fbd35593, type: 3}
   m_PrefabInstance: {fileID: 325238071}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459096892}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
@@ -5695,40 +5661,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.50000024, y: 0}
   m_SizeDelta: {x: -9, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1828493941 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4197659515238862120, guid: 03055bf8e2c5ceb46a63bb23fbd35593, type: 3}
-  m_PrefabInstance: {fileID: 325238071}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1828493944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828493941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 7018477250409352757, guid: 31fff023143f83c498c37a214d03fea0, type: 3}
-          m_TargetAssemblyTypeName: PlayClickSound, Scripts
-          m_MethodName: PlayButtonClickSound
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1845331731
 GameObject:
   m_ObjectHideFlags: 0
@@ -6283,40 +6215,6 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
---- !u!1 &2060113174 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1027310376929471790, guid: 03055bf8e2c5ceb46a63bb23fbd35593, type: 3}
-  m_PrefabInstance: {fileID: 325238071}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2060113177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2060113174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 7018477250409352757, guid: 31fff023143f83c498c37a214d03fea0, type: 3}
-          m_TargetAssemblyTypeName: PlayClickSound, Scripts
-          m_MethodName: PlayButtonClickSound
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &2061142804
 GameObject:
   m_ObjectHideFlags: 0
