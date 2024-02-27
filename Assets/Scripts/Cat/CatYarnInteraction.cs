@@ -39,15 +39,16 @@ public class CatYarnInteraction : MonoBehaviour
         if (collision.gameObject.CompareTag(_yarnTag.Tag))
         {
             // Find first failure
-            if (collision.relativeVelocity.sqrMagnitude >= _minSqrVelocityRejection)
+            if (collision.transform.localScale.x <= _minSize)
             {
-                Debug.Log("Force Reject");
-                RejectBallForce(collision);
-            }
-            else if (collision.transform.localScale.x <= _minSize)
-            {
-                Debug.Log("Size Reject");
-                RejectBallSize(collision);
+                if (collision.relativeVelocity.sqrMagnitude >= _minSqrVelocityRejection)
+                {
+                    RejectBallForce(collision);
+                }
+                else
+                {
+                    RejectBallSize(collision);
+                }                    
             }
             else
             {
