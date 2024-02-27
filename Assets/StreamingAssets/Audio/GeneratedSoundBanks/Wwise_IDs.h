@@ -13,15 +13,21 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_AMBIENCE = 278617630U;
         static const AkUniqueID PLAY_BUTTONCLICK = 3548535810U;
         static const AkUniqueID PLAY_CAT_MEOW = 2051353701U;
         static const AkUniqueID PLAY_CAT_PURR = 1160118988U;
         static const AkUniqueID PLAY_CATREFUSESYARN = 1815447315U;
         static const AkUniqueID PLAY_FAVORITEYARNCOLOR = 3575780237U;
+        static const AkUniqueID PLAY_FURNITUREDRAG = 805934378U;
+        static const AkUniqueID PLAY_FURNITUREHIT = 2086089131U;
         static const AkUniqueID PLAY_HIGHSCORE = 2349590460U;
+        static const AkUniqueID PLAY_LEATHERHIT = 2204020340U;
         static const AkUniqueID PLAY_MAXSIZEGLOW = 2782737696U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
+        static const AkUniqueID PLAY_SOFTCLOTHHIT = 40205785U;
         static const AkUniqueID PLAY_THROWYARN = 2777424796U;
+        static const AkUniqueID PLAY_WOODHIT = 4287226464U;
         static const AkUniqueID PLAY_YARN_COMBINE = 554607610U;
         static const AkUniqueID PLAY_YARN_HIT = 1677062370U;
     } // namespace EVENTS
