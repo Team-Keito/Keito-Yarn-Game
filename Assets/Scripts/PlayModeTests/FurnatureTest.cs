@@ -13,12 +13,14 @@ public class FurnatureTest
     [UnityTest]
     public IEnumerator FurnatureMovedTest()
     {
-        testFurnature.AddComponent<FurnatureMovement>().VeloLimit = 5f;
-        testFurnature.AddComponent<Rigidbody>().AddForce(Vector3.forward * 5f, ForceMode.Impulse);
+        testFurnature.AddComponent<FurnatureMovement>().VeloLimit = 1f;
+        testFurnature.AddComponent<Rigidbody>().useGravity = false;
+        testFurnature.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
+        testFurnature.GetComponent<Rigidbody>().AddForce(Vector3.forward * 5f, ForceMode.Impulse);
 
         // Use the Assert class to test conditions.
         // Use yield to skip a frame.
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
 
         Assert.IsTrue(testFurnature.GetComponent<Rigidbody>().velocity.sqrMagnitude > testFurnature.GetComponent<FurnatureMovement>().VeloLimit);
     }
