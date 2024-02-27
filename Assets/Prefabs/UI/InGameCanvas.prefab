@@ -672,9 +672,9 @@ MonoBehaviour:
   _settingsUI: {fileID: 667002868965942074}
   _confirmationUI: {fileID: 7781372501674324539}
   _gameOverUI: {fileID: 7781372501407015949}
-  masterSO: {fileID: 0}
-  musicSO: {fileID: 0}
-  soundSO: {fileID: 0}
+  masterSO: {fileID: 11400000, guid: fd28435463dd95941b3c16697f385b02, type: 2}
+  musicSO: {fileID: 11400000, guid: 96880441147b57549ad5382a524ceb23, type: 2}
+  soundSO: {fileID: 11400000, guid: af07e0e2051752c4aaccbabc2deb6d09, type: 2}
 --- !u!1 &7781372501407015949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1027,10 @@ PrefabInstance:
       value: SettingsButton
       objectReference: {fileID: 0}
     - target: {fileID: 9002408683449930630, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002408683449930630, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1163,6 +1167,14 @@ PrefabInstance:
     - target: {fileID: 8089336258801749477, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_Name
       value: BackToMainMenuButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002408683449930630, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002408683449930630, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
+      propertyPath: m_Navigation.m_WrapAround
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9002408683449930630, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1786,6 +1798,14 @@ PrefabInstance:
     - target: {fileID: 8089336258801749477, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_Name
       value: ResumeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002408683449930630, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002408683449930630, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
+      propertyPath: m_Navigation.m_WrapAround
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9002408683449930630, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
