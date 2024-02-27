@@ -12,7 +12,11 @@ public class AutoSelect : MonoBehaviour
 
     private void OnEnable()
     {
-        _selectTarget.Select();
+        if(_selectTarget != null)
+        {
+            _selectTarget.Select();
+        }
+            
         InputManager.Input.UI.Cancel.performed += Cancel_performed;
     }
 
@@ -23,8 +27,6 @@ public class AutoSelect : MonoBehaviour
 
     private void Cancel_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-
-        Debug.Log("Cancel");
         if (_cancelTarget != null)
         {
             _cancelTarget.SetActive(true);
