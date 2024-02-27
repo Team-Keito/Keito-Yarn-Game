@@ -103,6 +103,7 @@ public class GameManager : MonoBehaviour
         UpdateCatColor();
 
         OnCatScored.AddListener(catGameObject.GetComponent<CatSounds>().OnScoredEvent);
+        OnCatScored.AddListener(catGameObject.GetComponent<ScorePopUp>().OnScoredEvent);
 
         OnCatSpawn.Invoke(catGameObject);
 
@@ -229,8 +230,6 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(float value, bool isFavoriteColor)
     {
-        ChangeCatLocation();
-
         //Score based on Suika scoring.
         float scaledValue = value * _scoreMulitplier;
         float scoreVal = Mathf.Max(1, (scaledValue * (scaledValue + 1) / 2));
@@ -244,6 +243,8 @@ public class GameManager : MonoBehaviour
 
         score += scoreVal;
         highScore = Mathf.Max(score, highScore);
+
+        ChangeCatLocation();
 
         if (scoreSlider)
         {
