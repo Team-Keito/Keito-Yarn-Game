@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 8478926592162738909}
   - component: {fileID: 4294869829787099320}
   - component: {fileID: 5643969958299876701}
+  - component: {fileID: -6684186799040075602}
+  - component: {fileID: -4284982501138485164}
   m_Layer: 6
   m_Name: Box Closed Large
-  m_TagString: Untagged
+  m_TagString: CardboardBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +47,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.8, y: 0.4, z: 0.4}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5643969958299876701
 Rigidbody:
@@ -63,6 +65,55 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-6684186799040075602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9142590831572411698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f8e1c4b23a53d4187ce42226c3e1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnFurnatureMove:
+    m_PersistentCalls:
+      m_Calls: []
+  _YarnTag: {fileID: 0}
+  veloLimit: 1
+--- !u!114 &-4284982501138485164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9142590831572411698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3dbe437519420f42849a0b08b8440fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureMovementSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  furnitureLandingSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  woodFurnitureCollisionSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  softFurnitureCollisionSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  leatherFurnitureCollisionSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1001 &5192130600137683600
 PrefabInstance:
   m_ObjectHideFlags: 0
