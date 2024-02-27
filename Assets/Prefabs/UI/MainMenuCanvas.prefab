@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 1134431193020022549}
   - component: {fileID: 1134431193020022548}
   - component: {fileID: 1134431193020022551}
+  - component: {fileID: 7069503432326537262}
   m_Layer: 5
   m_Name: MainMenuCanvas
   m_TagString: Untagged
@@ -387,6 +388,33 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7069503432326537262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134431193020022550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762cc04d69a049048bbe64128b580f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 640153323290372153}
+        m_TargetAssemblyTypeName: AudioVolumeSettings, Scripts
+        m_MethodName: SetUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1134431193030302532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,6 +1116,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f9e0a750292f4f4cb7a72197628ba42, type: 3}
+--- !u!114 &640153323290372153 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 632308638917953695, guid: 2f9e0a750292f4f4cb7a72197628ba42, type: 3}
+  m_PrefabInstance: {fileID: 10169748916510886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda6b4a6c085277408fe9ca6f2e200c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &5810139620432408353 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5802292625416671111, guid: 2f9e0a750292f4f4cb7a72197628ba42, type: 3}
