@@ -15,7 +15,7 @@ public class SlingShot : MonoBehaviour
     [SerializeField, Tooltip("x & y are flipped cause unity euler")]
     private Vector2 _rotationOffset;
 
-    [SerializeField] private float _coolDownLength = 0.7f;
+    [SerializeField] private float _afterFireCD = 0.4f;
 
     [Space(5)]
     [SerializeField] private int _linePoints = 25;
@@ -158,8 +158,6 @@ public class SlingShot : MonoBehaviour
         SpawnNextThrownObject();
 
         OnStartThrow.Invoke();
-
-        StartCoroutine(RunCoolDown());
     }
 
     private void CompleteThrow()
@@ -174,6 +172,7 @@ public class SlingShot : MonoBehaviour
         _PrefabPicker.Remove();
         OnNextColorChange.Invoke(GetNextColors());
 
+        StartCoroutine(RunCoolDown(_afterFireCD));
         OnThrow.Invoke();
     }
 
@@ -280,10 +279,10 @@ public class SlingShot : MonoBehaviour
             offset.z * transform.right;
     }
 
-    IEnumerator RunCoolDown()
+    IEnumerator RunCoolDown(float time)
     {
         _onCoolDown = true;
-        yield return new WaitForSeconds(_coolDownLength);
+        yield return new WaitForSeconds(time);
         _onCoolDown = false;
     }
 
