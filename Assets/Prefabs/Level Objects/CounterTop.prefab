@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2935693975026585108}
   - component: {fileID: 2935693975026585111}
   - component: {fileID: 2935693975026585110}
+  - component: {fileID: 9092473401419819443}
   m_Layer: 9
   m_Name: CounterTop
   m_TagString: Untagged
@@ -97,3 +98,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9092473401419819443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2935693975026585105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3dbe437519420f42849a0b08b8440fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureMovementSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 98fff21057076ff4d9dc690f8dceaf21, type: 2}
+  furnitureLandingSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 68c4469f47eb13f439db804369768641, type: 2}
+  woodFurnitureCollisionSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7a6b30e7b8d262243b347c6e2953fade, type: 2}
+  softFurnitureCollisionSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 68cb4d254762c664daa8c0c5de7cd1f6, type: 2}
+  leatherFurnitureCollisionSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 721a01f5d65fb484abd237a33d171e10, type: 2}
