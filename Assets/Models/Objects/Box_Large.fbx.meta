@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c8c560a1750b7400497d3b3bdcdf0cdb
+guid: 1542e47e290f041439825087ed56c889
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,7 +7,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Box_Large_Text.002
+      name: Box_Large_Text
     second: {fileID: 2100000, guid: 61412a35d3e684a24ace6e7840f6df43, type: 2}
   materials:
     materialImportMode: 2
@@ -93,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.19999999
+    globalScale: 20
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

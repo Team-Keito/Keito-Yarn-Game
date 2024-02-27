@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0365a0bc2dc254fe9bd370bed7e9d871
+guid: 3ef71dbefdc3c49ef8d1b546ce59fdb4
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,7 +7,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Box_Small_Text.003
+      name: Material.002
     second: {fileID: 2100000, guid: 98ff8442581374bf28d001d63e5db412, type: 2}
   materials:
     materialImportMode: 2
