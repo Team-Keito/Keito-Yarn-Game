@@ -124,6 +124,72 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_FurnitureDrag" ID="{63248EBF-FA57-42EB-8CCD-E50BE17268BC}">
+					<ChildrenList>
+						<Action Name="" ID="{2536322C-2E39-4AF7-8552-134834AABBCD}" ShortID="482457869">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FurnitureDrag" ID="{FCF40883-60F2-487F-8597-E967F186ED2E}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_FurnitureHit" ID="{5A84C9E8-E063-438A-AB59-2C7784BA5117}">
+					<ChildrenList>
+						<Action Name="" ID="{2CDB0917-8385-4D0A-A0A0-D0305F12241C}" ShortID="19220890">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FurnitureHit" ID="{3D95DD81-520D-424C-84FB-0B25E4FEDF18}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WoodHit" ID="{D16AEE29-8A31-453A-A972-53DCD9D62B2A}">
+					<ChildrenList>
+						<Action Name="" ID="{BA1F6336-57F7-4F67-BB5D-F8DB95540D62}" ShortID="592260879">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WoodHit" ID="{2757D019-B600-422B-A5D8-9717C1404FFF}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SoftClothHit" ID="{EDE21E0D-D4DF-4232-AB2C-8117F7BED9C8}">
+					<ChildrenList>
+						<Action Name="" ID="{CD16EAAF-A635-4204-85FA-8CBE35970175}" ShortID="232040674">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SoftClothHit" ID="{F409B578-0BDC-4CC7-881A-F246A8CFA62E}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_LeatherHit" ID="{462279FF-99B8-4900-A939-EDC5E886DE89}">
+					<ChildrenList>
+						<Action Name="" ID="{C4329784-C987-4D31-8217-76A44E0F8C79}" ShortID="637561385">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LeatherHit" ID="{83774585-6895-445E-B3F1-5E3FEEAA744F}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ambience" ID="{4284309A-D619-4AE9-B070-3F4C8217F70C}">
+					<ChildrenList>
+						<Action Name="" ID="{93B3740C-2CB2-41E2-8885-B93A1B2B4632}" ShortID="168839457">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jasmina_Keito_Ambience" ID="{5604CE14-8D20-4B12-B3AB-DD9DB28D21D0}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

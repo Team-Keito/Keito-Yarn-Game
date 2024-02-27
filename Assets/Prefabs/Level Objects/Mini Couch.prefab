@@ -240,9 +240,10 @@ GameObject:
   - component: {fileID: 411220434822305973}
   - component: {fileID: -1757113816499410101}
   - component: {fileID: -2748769643239647614}
+  - component: {fileID: 6433114582486365857}
   m_Layer: 9
   m_Name: Mini Couch
-  m_TagString: Untagged
+  m_TagString: SoftFurniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -297,6 +298,38 @@ MonoBehaviour:
       m_Calls: []
   _YarnTag: {fileID: 11400000, guid: a1d0c64b2d711b1408fdeb64edc363fb, type: 2}
   veloLimit: 0
+--- !u!114 &6433114582486365857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7011199446937627488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3dbe437519420f42849a0b08b8440fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureMovementSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 98fff21057076ff4d9dc690f8dceaf21, type: 2}
+  furnitureLandingSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 68c4469f47eb13f439db804369768641, type: 2}
+  woodFurnitureCollisionSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7a6b30e7b8d262243b347c6e2953fade, type: 2}
+  softFurnitureCollisionSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 68cb4d254762c664daa8c0c5de7cd1f6, type: 2}
+  leatherFurnitureCollisionSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 721a01f5d65fb484abd237a33d171e10, type: 2}
 --- !u!1 &7305857271522695168
 GameObject:
   m_ObjectHideFlags: 0

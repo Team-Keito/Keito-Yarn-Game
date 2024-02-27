@@ -158,7 +158,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>8</Value>
+								<Value>4</Value>
 							</ValueList>
 							<RTPCList>
 								<RTPC Name="" ID="{F23C4E57-4278-4179-98D3-5A7CB11D748F}" ShortID="422457520">
@@ -1686,6 +1686,1079 @@
 						<ActiveSource Name="CATPOCALYPSE_CAT_MEOW_V1_4" ID="{606DFA8D-6700-4176-A65F-D68E360AE26C}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Folder Name="Furniture" ID="{85E46CFC-6BFF-4E78-B20A-6D2327437CEB}" ShortID="212358582">
+					<ChildrenList>
+						<BlendContainer Name="FurnitureHit" ID="{3D95DD81-520D-424C-84FB-0B25E4FEDF18}" ShortID="140126217">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A90B1C9B-7782-4ACC-9689-E8C4A74A350F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="FloorHit" ID="{3B546087-34E9-4684-BED1-3FD9F9ABDC54}" ShortID="577868608">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{FC8B457A-3E2D-474B-85A4-AF48876ED04C}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Jasmina_Keito_Armchair_Hit_01" ID="{5C37E167-EC31-48D6-A85C-F2645302C424}" ShortID="3348189">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jasmina_Keito_Armchair_Hit_01" ID="{A35148DD-10AA-40B3-8A58-86FDC869B52D}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.073026115618661"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0138438133874239"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.086869929006085"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Jasmina_Keito_Armchair_Hit_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="8677913"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Jasmina_Keito_Armchair_Hit_01" ID="{A35148DD-10AA-40B3-8A58-86FDC869B52D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jasmina_Keito_Armchair_Hit_02" ID="{59FC6BA0-F355-4681-B691-F9902452CB2E}" ShortID="917270127">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jasmina_Keito_Armchair_Hit_02" ID="{1D0EDEB1-AE28-4CAF-8CE3-3F2C7B879814}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00851926977687627"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.093103448275862"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00791075050709939"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.119269776876268"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Jasmina_Keito_Armchair_Hit_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="464932723"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Jasmina_Keito_Armchair_Hit_02" ID="{1D0EDEB1-AE28-4CAF-8CE3-3F2C7B879814}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="HandHit" ID="{3C8743AE-D9F5-4950-95D2-4DAA684B00F8}" ShortID="567220893">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{BC2999C0-D89E-4E98-B82C-6F6EEBF16B86}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Jasmina_Keito_Armchair_HandHit_01" ID="{CD24D97D-448B-411C-9C69-B93E420D37FC}" ShortID="916377370">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jasmina_Keito_Armchair_HandHit_01" ID="{09E4656E-3571-4825-840C-F044C2BE1E68}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0103605476673428"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0768407285327924"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0466224645030426"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.149364562204192"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Jasmina_Keito_Armchair_HandHit_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="117929561"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Jasmina_Keito_Armchair_HandHit_01" ID="{09E4656E-3571-4825-840C-F044C2BE1E68}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jasmina_Keito_Armchair_HandHit_02" ID="{B67A2486-2C94-414F-BFB1-7D5719FCAD06}" ShortID="679526718">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jasmina_Keito_Armchair_HandHit_02" ID="{E2628620-8F35-4DBD-97CE-B6E243AB2B80}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0204373732251521"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.096055654158215"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0613121196754564"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.208461206896552"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Jasmina_Keito_Armchair_HandHit_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="75780773"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Jasmina_Keito_Armchair_HandHit_02" ID="{E2628620-8F35-4DBD-97CE-B6E243AB2B80}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<ObjectLists/>
+						</BlendContainer>
+						<RandomSequenceContainer Name="FurnitureDrag" ID="{FCF40883-60F2-487F-8597-E967F186ED2E}" ShortID="852213509">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{24172C08-C2A8-4F75-90EA-7F320B3D4662}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Jasmina_Keito_Armchair_Drag_01" ID="{54C9C89F-136E-45D8-9F6E-D3A44E3910C8}" ShortID="152877474">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{0E0F4A9F-5244-44DD-932D-AA2A36A32C3B}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jasmina_Keito_Armchair_Drag_01" ID="{6D24DCF3-D018-427A-A811-03F60BEB6163}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0199457403651116"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0808910581473968"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.180619759972955"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.308050878972278"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Jasmina_Keito_Armchair_Drag_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="12808572"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Jasmina_Keito_Armchair_Drag_01" ID="{6D24DCF3-D018-427A-A811-03F60BEB6163}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jasmina_Keito_Armchair_Drag_02" ID="{516BAC9B-49C6-4306-90DE-580920C1AAC5}" ShortID="46224634">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C206116C-A10B-42B7-9905-9C3F1072CD36}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jasmina_Keito_Armchair_Drag_02" ID="{ACDD6548-1345-4CA7-8EA4-81DB15350D91}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0151108857336038"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0670545554428672"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.146386705544287"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.229496577079108"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Jasmina_Keito_Armchair_Drag_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="776745431"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Jasmina_Keito_Armchair_Drag_02" ID="{ACDD6548-1345-4CA7-8EA4-81DB15350D91}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="WoodHit" ID="{2757D019-B600-422B-A5D8-9717C1404FFF}" ShortID="467940070">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{20D398A0-0769-4E15-93CD-989CCAE3D51A}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Jasmina_Keito_WoodHit_01" ID="{F778489A-8083-4B59-9965-84045FC129CD}" ShortID="651134361">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A037BE1F-2E11-4101-8748-DE1A8BAF74C7}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jasmina_Keito_WoodHit_01" ID="{DCE10D15-85CA-44AB-BFBC-B3B341D7AA65}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00600676132521974"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0364159905341446"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0183957065584855"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.0833438133874238"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Jasmina_Keito_WoodHit_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="397488344"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Jasmina_Keito_WoodHit_01" ID="{DCE10D15-85CA-44AB-BFBC-B3B341D7AA65}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jasmina_Keito_WoodHit_02" ID="{F891EBDF-0834-4F01-9E4E-58DAE0BB75B6}" ShortID="594130049">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{5E27A327-59B8-4945-B958-28ACE56B5A86}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jasmina_Keito_WoodHit_02" ID="{2347EC0F-590C-497A-B362-53FD0662E17F}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0706604758282623"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0281162102772143"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.103216087728195"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Jasmina_Keito_WoodHit_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="174136757"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Jasmina_Keito_WoodHit_02" ID="{2347EC0F-590C-497A-B362-53FD0662E17F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jasmina_Keito_WoodHit_03" ID="{8A238C46-43D2-4F17-8F62-FB486A0AE433}" ShortID="506771752">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3EBD7C13-B6E2-4D43-9CF4-17009862A84C}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jasmina_Keito_WoodHit_03" ID="{07A1EDAB-AB57-4A5F-A196-F97A82105824}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0500838404327248"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0154104124408384"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.067945909398242"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Jasmina_Keito_WoodHit_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="841756326"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Jasmina_Keito_WoodHit_03" ID="{07A1EDAB-AB57-4A5F-A196-F97A82105824}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jasmina_Keito_WoodHit_04" ID="{B18CD7E2-6B1B-4997-8256-C808D36BB4A3}" ShortID="589876625">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jasmina_Keito_WoodHit_04" ID="{B4045E5D-7C99-42D7-99A0-25133F3A5924}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00828706051386072"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0589656228870859"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.019442718897904"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.0857392030087896"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Jasmina_Keito_WoodHit_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="969356125"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Jasmina_Keito_WoodHit_04" ID="{B4045E5D-7C99-42D7-99A0-25133F3A5924}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Jasmina_Keito_WoodHit_05" ID="{6FF1394A-9BD9-4A4F-8991-8FBA01CE4250}" ShortID="436750617">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jasmina_Keito_WoodHit_05" ID="{1183A803-E5EE-4D27-A893-93D4BA17976D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00534567275185937"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0353279242731575"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0130155510480054"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.0806499323867478"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Jasmina_Keito_WoodHit_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="383783965"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Jasmina_Keito_WoodHit_05" ID="{1183A803-E5EE-4D27-A893-93D4BA17976D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<BlendContainer Name="SoftClothHit" ID="{F409B578-0BDC-4CC7-881A-F246A8CFA62E}" ShortID="498721071">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{78C3DCE8-84D6-4F82-8EA1-969AAE955E37}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="SoftCloth" ID="{696B6A73-1029-4DA7-8E46-D8997C8FB12D}" ShortID="666839568">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A898A529-9E0F-4908-A4CB-488157583E2E}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Jasmina_Keito_Cloth_01" ID="{CB173698-EA10-4E47-8A1D-47CBB4DAE89A}" ShortID="171870707">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jasmina_Keito_Cloth_01" ID="{6A4146BE-D794-4C94-B50F-2E7EE023A456}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00574976757944557"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0798067740027046"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0404783637592968"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.121205100574713"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Jasmina_Keito_Cloth_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="988006736"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Jasmina_Keito_Cloth_01" ID="{6A4146BE-D794-4C94-B50F-2E7EE023A456}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jasmina_Keito_Cloth_02" ID="{7DC4D6B4-3125-4F1C-B266-E2A4DC3C1E99}" ShortID="106718715">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{EF01557E-B718-44C8-8395-5A0CDFB63C34}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jasmina_Keito_Cloth_02" ID="{633B9D55-3A1B-4728-B523-6F52ADD68B5B}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0114284989858012"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0589858012170383"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0328108519269777"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.101381845841785"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Jasmina_Keito_Cloth_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="907544814"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Jasmina_Keito_Cloth_02" ID="{633B9D55-3A1B-4728-B523-6F52ADD68B5B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="HandHit" ID="{B23FD552-5684-4D70-A004-9B4D3DDAB441}" ShortID="1066533023">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D348D11F-409F-4171-AAD7-89D0FBD383DE}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Jasmina_Keito_Armchair_HandHit_01" ID="{CFB8EDA5-3C4C-4911-BACF-F95D5D12EE2B}" ShortID="756327851">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jasmina_Keito_Armchair_HandHit_01" ID="{009C8D52-C43F-433D-93D3-4B17F3FE348D}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0103605476673428"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0768407285327924"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0466224645030426"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.149364562204192"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Jasmina_Keito_Armchair_HandHit_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="117929561"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Jasmina_Keito_Armchair_HandHit_01" ID="{009C8D52-C43F-433D-93D3-4B17F3FE348D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jasmina_Keito_Armchair_HandHit_02" ID="{558F2340-AF47-4680-A7B2-F919D162E6F6}" ShortID="615234800">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jasmina_Keito_Armchair_HandHit_02" ID="{77430498-ECEE-47EF-A298-39AF8D8B31C4}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0204373732251521"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.096055654158215"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0613121196754564"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.208461206896552"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Jasmina_Keito_Armchair_HandHit_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="75780773"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Jasmina_Keito_Armchair_HandHit_02" ID="{77430498-ECEE-47EF-A298-39AF8D8B31C4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<ObjectLists/>
+						</BlendContainer>
+						<BlendContainer Name="LeatherHit" ID="{83774585-6895-445E-B3F1-5E3FEEAA744F}" ShortID="275661076">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D528432E-8DFD-471E-9B0E-99BF3FAB263C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Leather" ID="{B1FD8F96-9A71-47E8-806B-74FF8D8B39AB}" ShortID="287449333">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{2BF897C9-8286-472E-ACB3-0B1B92348BBE}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Jasmina_Keito_LeatherHit_01" ID="{C6BEF646-EFD0-42EF-A4F0-8E4D6D142BA9}" ShortID="710291344">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jasmina_Keito_LeatherHit_01" ID="{EBC1424A-B2FB-4648-9EA0-BE41AEF7E02A}">
+													<Language>SFX</Language>
+													<AudioFile>Jasmina_Keito_LeatherHit_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="325382742"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Jasmina_Keito_LeatherHit_01" ID="{EBC1424A-B2FB-4648-9EA0-BE41AEF7E02A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="HandHit" ID="{8146DA56-7A74-46D3-8C10-D110E637CC6D}" ShortID="384826575">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{29C784EB-B7A4-46F3-A9D5-F8E23DAB1974}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Jasmina_Keito_Armchair_HandHit_01" ID="{874F3893-F42E-4FAC-B59E-EC49AAF2986A}" ShortID="244930357">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jasmina_Keito_Armchair_HandHit_01" ID="{5D620992-627D-425A-BC60-8D2C622FAEA0}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0103605476673428"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0768407285327924"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0466224645030426"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.149364562204192"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Jasmina_Keito_Armchair_HandHit_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="117929561"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Jasmina_Keito_Armchair_HandHit_01" ID="{5D620992-627D-425A-BC60-8D2C622FAEA0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jasmina_Keito_Armchair_HandHit_02" ID="{1BF9387B-E79E-43D6-920C-35D38B0E939C}" ShortID="123987345">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Jasmina_Keito_Armchair_HandHit_02" ID="{405C9E6A-0C0D-4928-861B-EED3D5A9F31E}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0204373732251521"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.096055654158215"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0613121196754564"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.208461206896552"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Jasmina_Keito_Armchair_HandHit_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="75780773"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Jasmina_Keito_Armchair_HandHit_02" ID="{405C9E6A-0C0D-4928-861B-EED3D5A9F31E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<ObjectLists/>
+						</BlendContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ambience" ID="{AB0DBCB7-30F4-4451-A8FD-0A10B9329EFB}" ShortID="994565558">
+					<ChildrenList>
+						<Sound Name="Jasmina_Keito_Ambience" ID="{5604CE14-8D20-4B12-B3AB-DD9DB28D21D0}" ShortID="643247526">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{F583E082-67A3-433E-9368-9EAE8A998FA0}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Jasmina_Keito_Ambience" ID="{E2B0D753-5FEA-4531-80A4-846081FE1BF7}">
+									<Language>SFX</Language>
+									<AudioFile>Jasmina_Keito_Ambience.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="654882658"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="GameStates" ID="{9B69ADE7-D470-45A4-B082-CFC321D4F120}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Pause_State" ID="{0CA38F66-44BF-4288-92F6-94543C2B555B}"/>
+										<CustomState Name="" ID="{52DB18DB-1FC1-4649-AA95-0B25FDF4C7D8}" ShortID="23842670">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Game_over" ID="{A0DCA826-7E6F-4462-87D3-15F4CCF6BFC5}"/>
+										<CustomState Name="" ID="{942415A1-3470-4B11-A4ED-40E6C18ED5BD}" ShortID="20947231">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="IngameState" ID="{AE3FB139-1538-47C7-8325-8451E6E562C0}"/>
+										<CustomState Name="" ID="{F08DE800-935E-4AC5-99C8-130BEE886418}" ShortID="918726215"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="MainMenu_State" ID="{2DDE41CF-9A05-4A70-8D2D-E01A0ECF4F28}"/>
+										<CustomState Name="" ID="{54E5067D-305E-4C07-B7B5-DD9340C50C5C}" ShortID="879271228">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Jasmina_Keito_Ambience" ID="{E2B0D753-5FEA-4531-80A4-846081FE1BF7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
