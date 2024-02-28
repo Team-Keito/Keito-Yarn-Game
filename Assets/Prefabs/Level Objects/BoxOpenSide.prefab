@@ -185,23 +185,27 @@ MonoBehaviour:
   furnitureMovementSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 98fff21057076ff4d9dc690f8dceaf21, type: 2}
   furnitureLandingSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 68c4469f47eb13f439db804369768641, type: 2}
   woodFurnitureCollisionSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 7a6b30e7b8d262243b347c6e2953fade, type: 2}
   softFurnitureCollisionSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 68cb4d254762c664daa8c0c5de7cd1f6, type: 2}
   leatherFurnitureCollisionSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 721a01f5d65fb484abd237a33d171e10, type: 2}
+  cardboardFurnitureCollisionSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bd0537476a19a3a48a9207e87bd29501, type: 2}
 --- !u!1001 &1504840311673688441
 PrefabInstance:
   m_ObjectHideFlags: 0

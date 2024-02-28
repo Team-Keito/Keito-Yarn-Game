@@ -9,20 +9,23 @@ public class FurniturePart : MonoBehaviour
     public AK.Wwise.Event woodFurnitureCollisionSound;
     public AK.Wwise.Event softFurnitureCollisionSound;
     public AK.Wwise.Event leatherFurnitureCollisionSound;
+    public AK.Wwise.Event cardboardFurnitureCollisionSound; 
 
     private Rigidbody rb;
-    private bool isDragged = false; 
-    private bool hasLanded = false; 
+    private bool isDragged = false;
+    private bool hasLanded = false;
     private bool isInitialized = false;
     private bool isWoodFurniture = false;
+    private bool isCardboardBox = false; 
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
 
         isWoodFurniture = gameObject.CompareTag("WoodFurniture");
+        isCardboardBox = gameObject.CompareTag("CardboardBox"); 
 
-        Invoke("SetInitialized", 1f); // the delay 
+        Invoke("SetInitialized", 3f); // the delay 
     }
 
     private void SetInitialized()
@@ -57,14 +60,30 @@ public class FurniturePart : MonoBehaviour
             if (!isDragged)
             {
                 furnitureMovementSound.Post(gameObject);
-                isDragged = true; 
+                isDragged = true;
             }
         }
 
-        // if the furniture is wood furniture and collides with another wood furniture
-        if (isWoodFurniture && collision.gameObject.CompareTag("WoodFurniture") && !isDragged && hasLanded && !collision.gameObject.GetComponent<FurniturePart>().hasLanded)
+        // Collision with other furniture types
+        if (!isDragged && hasLanded)
         {
-            furnitureLandingSound.Post(gameObject);
+            if (isWoodFurniture && collision.gameObject.CompareTag("WoodFurniture"))
+            {
+                furnitureLandingSound.Post(gameObject);
+            }
+            else if (isCardboardBox && collision.gameObject.CompareTag("CardboardBox")) 
+            {
+                // If two cardboards collide with each other
+                if (!collision.gameObject.GetComponent<FurniturePart>().isDragged && collision.gameObject.GetComponent<FurniturePart>().hasLanded)
+                {
+                    furnitureLandingSound.Post(gameObject);
+                }
+                // If cardboard collides with anything else
+                else
+                {
+                    cardboardFurnitureCollisionSound.Post(gameObject);
+                }
+            }
         }
     }
 
