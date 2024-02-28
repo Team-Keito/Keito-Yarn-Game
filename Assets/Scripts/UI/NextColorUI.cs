@@ -7,13 +7,13 @@ public class NextColorUI : MonoBehaviour
 {
     [SerializeField] SlingShot _slingshot; //probably convert to parent class?
 
-    [SerializeField] GameObject yarnBall;
+    [SerializeField] private GameObject yarnBall;
 
-    private LinkedList<GameObject> _colors = new LinkedList<GameObject>();
+    private Queue<GameObject> _colors = new Queue<GameObject>();
 
     private void Start()
     {
-
+        
 
     }
 
@@ -42,7 +42,7 @@ public class NextColorUI : MonoBehaviour
 
                 yarnBall.GetComponent<RawImage>().color = color;
 
-                _colors.AddLast(yarnBall);
+                _colors.Enqueue(yarnBall);
             }
         }
     }
@@ -50,22 +50,37 @@ public class NextColorUI : MonoBehaviour
     IEnumerator PlayAnimation(LinkedList<Color> Colors)
     {
         // Play the fade animation
-        _colors.First.Value.GetComponent<Animator>().Play("Fade");
+        _colors.Peek().GetComponent<Animator>().Play("Fade");
 
-        yield return new WaitForSeconds(_colors.First.Value.GetComponent<Animator>().runtimeAnimatorController.animationClips[1].length);
+        GetComponent<VerticalLayoutGroup>().enabled = false;
+
+        InvokeRepeating("SlideBallUIDown", 0f, .1f);
+
+        yield return new WaitForSeconds(_colors.Peek().GetComponent<Animator>().runtimeAnimatorController.animationClips[1].length);
+
+        GetComponent<VerticalLayoutGroup>().enabled = true;
 
         yarnBall = Instantiate(yarnBall, transform);
 
         // Add the yarn ball to the list and set its color
         yarnBall.GetComponent<RawImage>().color = Colors.Last.Value;
 
-        _colors.AddLast(yarnBall);
+        _colors.Enqueue(yarnBall);
 
         // Removes extra yarn ball UI's that are caused when the player rapidly throws the yarn balls into the level
         while (_colors.Count > 3)
         {
-            Destroy(_colors.First.Value);
-            _colors.RemoveFirst();
+            Destroy(_colors.Dequeue());
+        }
+
+        CancelInvoke("SlideBallUIDown");
+    }
+
+    public void SlideBallUIDown()
+    {
+        foreach (GameObject ball in _colors)
+        {
+            ball.transform.position += Vector3.down * 5f;
         }
     }
 }

@@ -24,6 +24,7 @@
 						<ObjectRef Name="Play_WoodHit" ID="{D16AEE29-8A31-453A-A972-53DCD9D62B2A}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ThrowYarn" ID="{C3F426FE-588F-464C-9F4B-FE96FC5675C4}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_LeatherHit" ID="{462279FF-99B8-4900-A939-EDC5E886DE89}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Cardboard" ID="{D4B5D124-98F7-4A21-860B-CE3F615FC7C0}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Ambience" ID="{4284309A-D619-4AE9-B070-3F4C8217F70C}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Cat_Purr" ID="{31D552E9-3457-4D5F-9A88-1E21C35D7EE4}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MaxSizeGlow" ID="{D08BE6FC-B03A-4E1D-96FB-F3F526D1CCA2}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>

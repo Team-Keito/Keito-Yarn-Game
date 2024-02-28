@@ -20,11 +20,8 @@ public class GameManager : MonoBehaviour
     private float timePerSecond = 1f, score, highScore;
 
     [SerializeField] private string mainMenuSceneName;
-    [SerializeField] private TextMeshProUGUI endTimeText, bestTimeText, currTimeText;
     [SerializeField] private TagSO _SpawnPoint;
     [SerializeField] private PlayerPrefSO _BestTimePlayerPref;
-    [SerializeField] private Slider scoreSlider;
-    [SerializeField] private GameObject scoreColor;
 
     [SerializeField] private float _scoreMulitplier = 2;
     [SerializeField] private float _favColorMulti = 1.5f;
@@ -52,6 +49,12 @@ public class GameManager : MonoBehaviour
     {
         get { return highScore; }
         set { highScore = value > highScore ? score : highScore; }
+    }
+
+    public float TimePerSecond
+    {
+        get { return timePerSecond; }
+        set { timePerSecond = value; }
     }
 
     // The goal number that the player needs to reach
@@ -103,18 +106,9 @@ public class GameManager : MonoBehaviour
         UpdateCatColor();
 
         OnCatScored.AddListener(catGameObject.GetComponent<CatSounds>().OnScoredEvent);
+        OnCatScored.AddListener(catGameObject.GetComponent<ScorePopUp>().OnScoredEvent);
 
-        OnCatSpawn.Invoke(catGameObject);
-
-        if (currTimeText)
-        {
-            InvokeRepeating("Timer", 1f, timePerSecond);
-        }
-        else
-        {
-            Debug.LogWarning("Missing UI Reference: Timer");
-        }
-        
+        OnCatSpawn.Invoke(catGameObject);        
     }
 
     /// <summary>
@@ -203,34 +197,8 @@ public class GameManager : MonoBehaviour
         StaticUIFunctionality.GoToSceneByName(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
-    /// <summary>
-    /// Timer for counting how much time has passed. Also records best time if it is less than current time.
-    /// </summary>
-    public void Timer()
-    {
-        currTime++;
-        currTimeText.text = "Time Past: " + currTime;
-
-        if (score >= targetScore)
-        {
-            BestTime = currTime;
-
-            PlayerPrefs.SetInt(_BestTimePlayerPref.currKey.ToString(), BestTime);
-            PlayerPrefs.Save();
-
-            CancelInvoke("Timer");
-
-            endTimeText.text = string.Format("Final Time: {0}", CurrentTime);
-            bestTimeText.text = string.Format("Best Time: {0}", BestTime);
-
-            OnGameEnd.Invoke();
-        }
-    }
-
     public void UpdateScore(float value, bool isFavoriteColor)
     {
-        ChangeCatLocation();
-
         //Score based on Suika scoring.
         float scaledValue = value * _scoreMulitplier;
         float scoreVal = Mathf.Max(1, (scaledValue * (scaledValue + 1) / 2));
@@ -240,27 +208,11 @@ public class GameManager : MonoBehaviour
             scoreVal = (scoreVal * _favColorMulti) + _favColorFlatBounus;
         }
 
-        OnCatScored.Invoke(scoreVal, isFavoriteColor);
-
         score += scoreVal;
         highScore = Mathf.Max(score, highScore);
 
-        if (scoreSlider)
-        {
-            scoreSlider.value = score / targetScore;
+        OnCatScored.Invoke(scoreVal, isFavoriteColor);
 
-            if (scoreSlider.value < 0.25f)
-                scoreColor.GetComponent<Image>().color = Color.red;
-            else if (scoreSlider.value > 0.25f && scoreSlider.value < 0.75f)
-                scoreColor.GetComponent<Image>().color = Color.yellow;
-            else if (scoreSlider.value > 0.75f && scoreSlider.value < 0.99f)
-                scoreColor.GetComponent<Image>().color = Color.green;
-            else
-                scoreColor.GetComponent<Image>().color = Color.blue;
-        }
-        else
-        {
-            Debug.LogWarning("Missing UI Reference: Score Slider");
-        }
+        ChangeCatLocation();
     }
 }

@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac5ffb5007ad4f54481d01bf5c10d22a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rejectShowTime: 1
+  _rejectShowTime: 3
   Red: {fileID: 2100000, guid: 5c0a25df7c21c264f8c49c3e7ec93d6d, type: 2}
   Blue: {fileID: 2100000, guid: 3f2d9caa949e8884aa8afddaf03cd0ce, type: 2}
   Green: {fileID: 2100000, guid: 99241912d7064a14287b6f79381c706c, type: 2}
@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 1029533692401839570}
   - component: {fileID: 6213822171653081978}
   - component: {fileID: 4165558730884632648}
+  - component: {fileID: 1468826308608442073}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Cat
@@ -361,3 +362,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1468826308608442073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4306071415022843939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e2039af22f37b047be23aeb827cbb54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textPrefab: {fileID: 7800144406954702931, guid: e43ce8531ff0a884cb9382e51e556cb6, type: 3}
+  _offset: {x: 0, y: 2, z: 0}
+  _default: {r: 1, g: 1, b: 1, a: 1}
+  _bonusColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
