@@ -142,7 +142,7 @@ public class InGameUIManager : MonoBehaviour
     public void Timer()
     {
         _gameManager.CurrentTime++;
-        currTimeText.text = _gameManager.CurrentTime.ToString();
+        currTimeText.text = System.TimeSpan.FromSeconds(_gameManager.CurrentTime).ToString(@"m\:ss");
 
         if (_gameManager.Score >= _gameManager.TargetScore)
         {

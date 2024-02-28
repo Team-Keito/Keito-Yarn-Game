@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac5ffb5007ad4f54481d01bf5c10d22a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rejectShowTime: 1
+  _rejectShowTime: 3
   Red: {fileID: 2100000, guid: 5c0a25df7c21c264f8c49c3e7ec93d6d, type: 2}
   Blue: {fileID: 2100000, guid: 3f2d9caa949e8884aa8afddaf03cd0ce, type: 2}
   Green: {fileID: 2100000, guid: 99241912d7064a14287b6f79381c706c, type: 2}
