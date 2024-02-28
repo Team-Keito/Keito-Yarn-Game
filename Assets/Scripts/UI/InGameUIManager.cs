@@ -136,13 +136,19 @@ public class InGameUIManager : MonoBehaviour
         PlayerPrefs.DeleteKey(soundSO.currKey.ToString());
     }
 
+
+    private string ConvertTime(int sec)
+    {
+        return System.TimeSpan.FromSeconds(sec).ToString(@"m\:ss");
+    }
+
     /// <summary>
     /// Timer for counting how much time has passed. Also records best time if it is less than current time.
     /// </summary>
     public void Timer()
     {
         _gameManager.CurrentTime++;
-        currTimeText.text = System.TimeSpan.FromSeconds(_gameManager.CurrentTime).ToString(@"m\:ss");
+        currTimeText.text = ConvertTime(_gameManager.CurrentTime);
 
         if (_gameManager.Score >= _gameManager.TargetScore)
         {
@@ -153,8 +159,8 @@ public class InGameUIManager : MonoBehaviour
 
             CancelInvoke("Timer");
 
-            endTimeText.text = string.Format("Final Time: {0}", _gameManager.CurrentTime);
-            bestTimeText.text = string.Format("Best Time: {0}", _gameManager.BestTime);
+            endTimeText.text = string.Format("Final Time: {0}", ConvertTime(_gameManager.CurrentTime));
+            bestTimeText.text = string.Format("Best Time: {0}", ConvertTime(_gameManager.BestTime));
 
             _gameManager.OnGameEnd.Invoke();
         }
