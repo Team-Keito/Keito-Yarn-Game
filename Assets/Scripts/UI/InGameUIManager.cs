@@ -29,7 +29,8 @@ public class InGameUIManager : MonoBehaviour
         if (currTimeText)
         {
             InvokeRepeating("Timer", 1f, _gameManager.TimePerSecond);
-        } else
+        }
+        else
         {
             Debug.LogWarning("Missing UI Reference: Timer");
         }
@@ -141,7 +142,7 @@ public class InGameUIManager : MonoBehaviour
     public void Timer()
     {
         _gameManager.CurrentTime++;
-        currTimeText.text = "Time Past: " + _gameManager.CurrentTime;
+        currTimeText.text = _gameManager.CurrentTime.ToString();
 
         if (_gameManager.Score >= _gameManager.TargetScore)
         {
