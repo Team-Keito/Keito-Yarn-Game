@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID PLAY_AMBIENCE = 278617630U;
         static const AkUniqueID PLAY_BUTTONCLICK = 3548535810U;
+        static const AkUniqueID PLAY_CARDBOARD = 4174389764U;
         static const AkUniqueID PLAY_CAT_MEOW = 2051353701U;
         static const AkUniqueID PLAY_CAT_PURR = 1160118988U;
         static const AkUniqueID PLAY_CATREFUSESYARN = 1815447315U;

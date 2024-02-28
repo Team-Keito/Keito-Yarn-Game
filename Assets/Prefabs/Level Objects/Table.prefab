@@ -529,6 +529,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 721a01f5d65fb484abd237a33d171e10, type: 2}
+  cardboardFurnitureCollisionSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bd0537476a19a3a48a9207e87bd29501, type: 2}
 --- !u!1 &5926404903527001676
 GameObject:
   m_ObjectHideFlags: 0

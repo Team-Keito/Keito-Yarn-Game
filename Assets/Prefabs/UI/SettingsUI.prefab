@@ -89,9 +89,17 @@ PrefabInstance:
       value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 232133289669369244, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8fa2ed7838f9f4362ae19387a95c7ec8, type: 2}
+    - target: {fileID: 232133289669369244, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
       propertyPath: m_fontSizeBase
       value: 72
       objectReference: {fileID: 0}
+    - target: {fileID: 232133289669369244, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2949289493946278995, guid: 8fa2ed7838f9f4362ae19387a95c7ec8, type: 2}
     - target: {fileID: 232133289669369244, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
       propertyPath: m_VerticalAlignment
       value: 512
@@ -136,6 +144,18 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1224294752482094891, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224294752482094891, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8fa2ed7838f9f4362ae19387a95c7ec8, type: 2}
+    - target: {fileID: 1224294752482094891, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2949289493946278995, guid: 8fa2ed7838f9f4362ae19387a95c7ec8, type: 2}
     - target: {fileID: 1480736270899254126, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
       propertyPath: m_Name
       value: SingleCanvasVolumeSettings
@@ -228,6 +248,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1893143352340126287, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1893143352340126287, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8fa2ed7838f9f4362ae19387a95c7ec8, type: 2}
+    - target: {fileID: 1893143352340126287, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2949289493946278995, guid: 8fa2ed7838f9f4362ae19387a95c7ec8, type: 2}
     - target: {fileID: 1976766021685191209, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -348,6 +380,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3042156591847282577, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042156591847282577, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8fa2ed7838f9f4362ae19387a95c7ec8, type: 2}
+    - target: {fileID: 3042156591847282577, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2949289493946278995, guid: 8fa2ed7838f9f4362ae19387a95c7ec8, type: 2}
     - target: {fileID: 3084206488186884438, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -442,7 +486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118390079392150756, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
       propertyPath: m_fontSize
-      value: 48.3
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 6100434333093857693, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
       propertyPath: m_AnchorMax.y
@@ -522,7 +566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8551073333989558171, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
       propertyPath: m_fontSize
-      value: 48.3
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 9180936276287885094, guid: 7647a449c7a8a4c92a246af2543e0d13, type: 3}
       propertyPath: m_AnchorMax.y
