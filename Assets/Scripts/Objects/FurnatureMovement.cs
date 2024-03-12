@@ -9,9 +9,6 @@ public class FurnatureMovement : MonoBehaviour
 
     private Rigidbody furnatureRb;
 
-    [SerializeField, Tooltip("Tag for yarnball")]
-    private TagSO _YarnTag;
-
     [SerializeField, Tooltip("The velocity limit required for the OnFurnatureMove function to be invoked")]
     private float veloLimit = 1f;
 
