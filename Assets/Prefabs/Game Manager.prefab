@@ -47,21 +47,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxDuplicateSpawn: 1
+  _firstSpawnIndex: -1
   targetScore: 0
   timePerSecond: 1
-  score: 0
-  highScore: 0
   mainMenuSceneName: Main Menu
-  endTimeText: {fileID: 0}
-  bestTimeText: {fileID: 0}
-  currTimeText: {fileID: 0}
   _SpawnPoint: {fileID: 11400000, guid: 77dade94725caf542a48e1bc05c44481, type: 2}
   _BestTimePlayerPref: {fileID: 11400000, guid: c67cf08776876f347bc8e0345dfdbeac, type: 2}
-  scoreSlider: {fileID: 0}
-  scoreColor: {fileID: 0}
-  _scoreMulitplier: 2
-  _favColorMulti: 1.5
-  _favColorFlatBounus: 0
+  _score:
+    ScoreMultiplier: 2
+    FavoriteColorMultiplier: 2
+    FavoriteColorFlatBonus: 0
+    OnCatScored:
+      m_PersistentCalls:
+        m_Calls: []
   _colorList:
   - {fileID: 11400000, guid: 29e19a1c4d33c8a4786ed45a18fdcf21, type: 2}
   - {fileID: 11400000, guid: b40ea3a328c5556479e00cc115f57182, type: 2}
@@ -117,3 +115,6 @@ MonoBehaviour:
   _camera: {fileID: 0}
   _indicatorUI: {fileID: 0}
   _imageRotationOffset: 180
+  _borderOffset: 0.1
+  _showOnscreenTracker: 0
+  _onscreenOffset: 200

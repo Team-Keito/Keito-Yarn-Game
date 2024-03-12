@@ -19,6 +19,7 @@ public class CatYarnInteraction : MonoBehaviour
     public UnityEvent<ColorSO> OnFavoriteColor;
 
     private ColorSO _favoriteColor;
+    public ColorSO FavoriteColor => _favoriteColor;
 
     public void SetFavoriteColor(ColorSO color)
     {
