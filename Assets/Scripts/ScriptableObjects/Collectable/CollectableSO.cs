@@ -6,7 +6,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Collectable", menuName = "SO/Collectable")]
 public class CollectableSO : ScriptableObject
 {
-    public string Name;
     public CatFactSO CatFact;
     public bool isCollected;
 
