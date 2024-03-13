@@ -16,7 +16,8 @@ using UnityEngine.Events;
 public class Collectable : MonoBehaviour
 {
     [SerializeField] private CollectableSO _collectableData;
-    [SerializeField] private bool _hideCollected = false;
+    [SerializeField] private bool _triggerNearOnce = true;
+    [SerializeField] private bool _hideCollected = true;
     [SerializeField] private float _nearHitRadius = 2f;
 
     [SerializeField] private TagSO _yarnTag;
@@ -79,8 +80,8 @@ public class Collectable : MonoBehaviour
         float distance = Vector3.Distance(go.transform.position, transform.position);
 
         if (distance < _nearHitRadius && go != gameObject)
-        {            
-            _hasPlayedNotification = true;
+        {
+            _hasPlayedNotification = _triggerNearOnce;
             OnNearHit.Invoke(_collectableData);
         }
     }
