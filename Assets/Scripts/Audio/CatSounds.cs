@@ -1,3 +1,4 @@
+using Manager.Score;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,13 +12,13 @@ public class CatSounds : MonoBehaviour
     private string RejectBallForceSound = "Play_CatRefusesYarn";
 
     [SerializeField] private int _highScore = 20;
-    public void OnScoredEvent(float score, bool isFavoriteColor)
+    public void OnScoredEvent(ScoreData data)
     {
-        if (score > _highScore)
+        if (data.value > _highScore)
         {
             OnHighScore();
         }
-        else if (isFavoriteColor)
+        else if (data.isFavoriteColor)
         {
             OnFavoriteColor();
         }

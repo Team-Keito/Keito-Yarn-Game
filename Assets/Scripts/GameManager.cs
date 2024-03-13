@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
+using Manager.Score;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,15 +17,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int targetScore = 0;
 
     [SerializeField, Tooltip("The rate to increase the current time every second")]
-    private float timePerSecond = 1f, score, highScore;
+    private float timePerSecond = 1f;
 
     [SerializeField] private string mainMenuSceneName;
     [SerializeField] private TagSO _SpawnPoint;
     [SerializeField] private PlayerPrefSO _BestTimePlayerPref;
 
-    [SerializeField] private float _scoreMulitplier = 2;
-    [SerializeField] private float _favColorMulti = 1.5f;
-    [SerializeField] private float _favColorFlatBounus = 0;
+    [SerializeField] private ScoreSystem _score;
 
     [SerializeField] private ColorSO[] _colorList;
 
@@ -40,15 +38,15 @@ public class GameManager : MonoBehaviour
 
     public float Score
     {
-        get { return score; }
-        set { score = value; }
+        get { return _score.Score; }
+        set { _score.Score = value; }
     }
 
     // Records the new high score if the current score exceeds the previous high score
     public float HighScore
     {
-        get { return highScore; }
-        set { highScore = value > highScore ? score : highScore; }
+        get { return _score.HighScore; }
+        set { _score.HighScore = value > _score.HighScore ? Score : _score.HighScore; }
     }
 
     public float TimePerSecond
@@ -105,8 +103,7 @@ public class GameManager : MonoBehaviour
         CatInteract.OnCatScored.AddListener(UpdateScore);
         UpdateCatColor();
 
-        OnCatScored.AddListener(catGameObject.GetComponent<CatSounds>().OnScoredEvent);
-        OnCatScored.AddListener(catGameObject.GetComponent<ScorePopUp>().OnScoredEvent);
+        _score.OnCatScored.AddListener((ScoreData data) => catGameObject.BroadcastMessage("OnScoredEvent", data));
 
         OnCatSpawn.Invoke(catGameObject);        
     }
@@ -199,19 +196,9 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(float value, bool isFavoriteColor)
     {
-        //Score based on Suika scoring.
-        float scaledValue = value * _scoreMulitplier;
-        float scoreVal = Mathf.Max(1, (scaledValue * (scaledValue + 1) / 2));
+        ColorSO favColor = catGameObject.GetComponent<CatYarnInteraction>().FavoriteColor;
 
-        if (isFavoriteColor)
-        {
-            scoreVal = (scoreVal * _favColorMulti) + _favColorFlatBounus;
-        }
-
-        score += scoreVal;
-        highScore = Mathf.Max(score, highScore);
-
-        OnCatScored.Invoke(scoreVal, isFavoriteColor);
+        _score.UpdateScore(value, favColor, isFavoriteColor);
 
         ChangeCatLocation();
     }
