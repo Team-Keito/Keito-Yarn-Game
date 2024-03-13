@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.SceneManagement;
 
 
 namespace TestSpace
@@ -28,6 +28,17 @@ namespace TestSpace
 
                 index %= list.Length;
             }
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+            }
+        }
+
+
+        public void Log(string data)
+        {
+            Debug.Log(data);
         }
     }
 }
