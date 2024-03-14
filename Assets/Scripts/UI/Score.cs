@@ -53,6 +53,18 @@ namespace Manager.Score
         public bool isFavoriteColor;
         public ColorSO color;
 
+
+        public ScoreData(int baseValue, int bonus)
+        {
+            value = baseValue + bonus;
+
+            this.isFavoriteColor = false;
+            this.color = null;
+            this.baseValue = baseValue;
+            this.bonus = bonus;
+            this.multiplier = 1;
+        }
+
         public ScoreData(int baseValue, int bonus, bool isFavoritColor, ColorSO color, float multiplier)
         {
             value = baseValue + bonus;

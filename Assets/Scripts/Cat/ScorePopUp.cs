@@ -23,7 +23,7 @@ public class ScorePopUp : MonoBehaviour
     {
         TextMeshPro text = Instantiate(_textPrefab, transform.position + _offset, Quaternion.identity);
 
-        if (data.isFavoriteColor)
+        if (data.bonus > 0)
         {
             _animator.Play("HighScore");
             BonusScore(text, data);
@@ -45,7 +45,10 @@ public class ScorePopUp : MonoBehaviour
     {
         text.fontStyle = FontStyles.Italic;
         text.fontWeight = FontWeight.Bold;
-        text.text = $"+{data.value} ({data.multiplier}x)";
+
+        string multi = data.multiplier != 1 ? $" ({data.multiplier}x)" : ""; 
+
+        text.text = $"+{data.value}{multi}";
 
         text.color = _useFavoriteColor ? data.color.Color : _bonusColor;
     }
