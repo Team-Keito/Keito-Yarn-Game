@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class NextHit : MonoBehaviour
 {
-    public System.Action<GameObject> OnNextHit;
+    public System.Action<GameObject, GameObject> OnNextHit;
 
     private bool _hasHit = false;
 
@@ -14,7 +14,7 @@ public class NextHit : MonoBehaviour
         if(_hasHit == false)
         {
             _hasHit = true;
-            OnNextHit?.Invoke(gameObject);
+            OnNextHit?.Invoke(gameObject, collision.gameObject);
             Destroy(this);
         }        
     }
