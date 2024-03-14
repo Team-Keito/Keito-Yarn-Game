@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CatFactToast : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private TextMeshProUGUI _title;
+    [SerializeField] private TextMeshProUGUI _description;
 
-    // Update is called once per frame
-    void Update()
+    public void SetUp(CatFactSO data)
     {
-        
+        _title.text = data.title;
+        _description.text = data.factText;
     }
 }
