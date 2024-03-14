@@ -19,6 +19,8 @@ namespace AK
         static const AkUniqueID PLAY_CAT_MEOW = 2051353701U;
         static const AkUniqueID PLAY_CAT_PURR = 1160118988U;
         static const AkUniqueID PLAY_CATREFUSESYARN = 1815447315U;
+        static const AkUniqueID PLAY_COLLECT = 2225033368U;
+        static const AkUniqueID PLAY_COLLECTABLE_NEAR = 1669734397U;
         static const AkUniqueID PLAY_FAVORITEYARNCOLOR = 3575780237U;
         static const AkUniqueID PLAY_FURNITUREDRAG = 805934378U;
         static const AkUniqueID PLAY_FURNITUREHIT = 2086089131U;

@@ -3,17 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
 [RequireComponent(typeof(Collectable))]
+
+
 public class AudioCollectable : MonoBehaviour
 {
+    private string collectSound = "Play_Collect";
+    private string collectableNearSound = "Play_Collectable_Near";
     private void OnCollectEvent(CollectableSO data)
     {
         Debug.Log($"{data.name} Collected Called");
+        AkSoundEngine.PostEvent(collectSound, gameObject);
     }
 
     private void OnNearHit(CollectableSO data)
     {
         Debug.Log($"{data.name} Near Hit Called");
+        AkSoundEngine.PostEvent(collectableNearSound, gameObject);
     }
 
 

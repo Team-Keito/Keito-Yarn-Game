@@ -201,6 +201,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Collect" ID="{E6735674-BFD5-48E0-A04D-DF3D16D3CA82}">
+					<ChildrenList>
+						<Action Name="" ID="{7CCEA9DA-BE15-42F1-A4CB-DC9C91648BB1}" ShortID="703033990">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jasmina_Keito_Collect" ID="{3DAC6A20-408B-4825-8146-834ACA47CDF9}" WorkUnitID="{7361336C-77BA-438D-87D1-88609D5AF315}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Collectable_Near" ID="{445F1BEA-82E5-46DA-8FE8-9828BA63A465}">
+					<ChildrenList>
+						<Action Name="" ID="{9CC4F216-601F-482B-95C1-5FCC878007F6}" ShortID="710002063">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jasmina_Keito_Collectable_Near" ID="{F0B44856-0D52-4C51-B3EC-C7AE1B831597}" WorkUnitID="{7361336C-77BA-438D-87D1-88609D5AF315}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
