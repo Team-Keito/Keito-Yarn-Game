@@ -217,7 +217,7 @@
 						<Action Name="" ID="{9CC4F216-601F-482B-95C1-5FCC878007F6}" ShortID="710002063">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Jasmina_Keito_Collectable_Near" ID="{F0B44856-0D52-4C51-B3EC-C7AE1B831597}" WorkUnitID="{7361336C-77BA-438D-87D1-88609D5AF315}"/>
+									<ObjectRef Name="Jasmina_Keito_Collect_Near" ID="{597C640F-2CA9-4E2F-9B62-B60F281179D5}" WorkUnitID="{7361336C-77BA-438D-87D1-88609D5AF315}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

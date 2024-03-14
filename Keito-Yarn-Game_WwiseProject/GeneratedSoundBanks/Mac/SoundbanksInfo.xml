@@ -21,7 +21,7 @@
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\MasterVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="423838314">
+		<SoundBank Id="2641024368" Language="SFX" Hash="1150589956">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
@@ -138,19 +138,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2225033368" Name="Play_Collect" ObjectPath="\Events\Default Work Unit\Play_Collect" DurationType="OneShot" DurationMin="3." DurationMax="3.">
+				<Event Id="2225033368" Name="Play_Collect" ObjectPath="\Events\Default Work Unit\Play_Collect" DurationType="OneShot" DurationMin="1.200628" DurationMax="1.200628">
 					<IncludedMemoryFiles>
 						<File Id="846846878" Language="SFX">
 							<ShortName>Jasmina_Keito_Collect.wav</ShortName>
-							<Path>SFX\Jasmina_Keito_Collect_10C4C929.wem</Path>
+							<Path>SFX\Jasmina_Keito_Collect_E8BF7227.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1669734397" Name="Play_Collectable_Near" ObjectPath="\Events\Default Work Unit\Play_Collectable_Near" DurationType="OneShot" DurationMin="2." DurationMax="2.">
+				<Event Id="1669734397" Name="Play_Collectable_Near" ObjectPath="\Events\Default Work Unit\Play_Collectable_Near" DurationType="OneShot" DurationMin="4." DurationMax="4.">
 					<IncludedMemoryFiles>
-						<File Id="54940682" Language="SFX">
-							<ShortName>Jasmina_Keito_Collectable_Near.wav</ShortName>
-							<Path>SFX\Jasmina_Keito_Collectable_Near_10C4C929.wem</Path>
+						<File Id="366137986" Language="SFX">
+							<ShortName>Jasmina_Keito_Collect_Near.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_Collect_Near_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

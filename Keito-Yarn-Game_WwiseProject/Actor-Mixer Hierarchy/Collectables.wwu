@@ -4,6 +4,13 @@
 		<WorkUnit Name="Collectables" ID="{7361336C-77BA-438D-87D1-88609D5AF315}" OwnerID="{CD330055-646D-425E-8C9F-F02BF73EFF79}" PersistMode="Nested">
 			<ChildrenList>
 				<Sound Name="Jasmina_Keito_Collect" ID="{3DAC6A20-408B-4825-8146-834ACA47CDF9}" ShortID="1049120399">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
@@ -14,6 +21,11 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Jasmina_Keito_Collect" ID="{A074F9AD-AA91-4B5F-BBD2-7FA355E9D5FA}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="1.20062838928675"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.20062838928675"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>Jasmina_Keito_Collect.wav</AudioFile>
 							<MediaIDList>
@@ -26,27 +38,27 @@
 						<ActiveSource Name="Jasmina_Keito_Collect" ID="{A074F9AD-AA91-4B5F-BBD2-7FA355E9D5FA}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="Jasmina_Keito_Collectable_Near" ID="{F0B44856-0D52-4C51-B3EC-C7AE1B831597}" ShortID="588558593">
+				<Sound Name="Jasmina_Keito_Collect_Near" ID="{597C640F-2CA9-4E2F-9B62-B60F281179D5}" ShortID="243519290">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+							<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Jasmina_Keito_Collectable_Near" ID="{0B9CD117-D45D-4BCC-B892-086D1F55F099}">
+						<AudioFileSource Name="Jasmina_Keito_Collect_Near" ID="{40933291-23CF-46F9-B763-E689F82BFB10}">
 							<Language>SFX</Language>
-							<AudioFile>Jasmina_Keito_Collectable_Near.wav</AudioFile>
+							<AudioFile>Jasmina_Keito_Collect_Near.wav</AudioFile>
 							<MediaIDList>
-								<MediaID ID="54940682"/>
+								<MediaID ID="366137986"/>
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ObjectLists/>
 					<ActiveSourceList>
-						<ActiveSource Name="Jasmina_Keito_Collectable_Near" ID="{0B9CD117-D45D-4BCC-B892-086D1F55F099}" Platform="Linked"/>
+						<ActiveSource Name="Jasmina_Keito_Collect_Near" ID="{40933291-23CF-46F9-B763-E689F82BFB10}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>
