@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class DialogUI : MonoBehaviour, IWalkThroughUI
@@ -18,7 +19,6 @@ public class DialogUI : MonoBehaviour, IWalkThroughUI
     private void ImmidateAlphaChange(float value = 1)
     {
         _textUI.alpha = value;
-        // FIXME: Can't change alpha directly for image
         var colorUpdate = _nextButton.image.color;
         colorUpdate.a = value;
         _nextButton.image.color = colorUpdate;
@@ -27,6 +27,7 @@ public class DialogUI : MonoBehaviour, IWalkThroughUI
     public IEnumerator Activate(float animationTime = 0)
     {
         gameObject.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(gameObject);
         if (animationTime > 0)
         {
             float totalTime = Application.targetFrameRate * animationTime;
@@ -60,6 +61,7 @@ public class DialogUI : MonoBehaviour, IWalkThroughUI
 
     public IEnumerator Deactivate(float animationTime = 0)
     {
+        EventSystem.current.SetSelectedGameObject(null);
         if (animationTime > 0)
         {
             float totalTime = Application.targetFrameRate * animationTime;
