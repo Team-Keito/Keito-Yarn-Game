@@ -271,7 +271,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    <b>Controls:</b>\t\t\t <i>Keyboard+Mouse</i>\t <i>GamePad</i>
+    <b>Controls:</b>\t\t <i>Keyboard+Mouse</i>\t <i>GamePad</i>
 
     Escape:
     \t\t\t Escape Key \t Start
@@ -279,21 +279,21 @@ MonoBehaviour:
     Rotate/Zoom Camera: \t WASD/Arrows \t Left Stick
 
     Aim:
-    \t\t\t\t Mouse \t\t Right Stick
+    \t\t\t Mouse \t\t Right Stick
 
-    Fire: \t\t\t\t Left Click \t\t Right Trigger
+    Fire: \t\t\t Left Click \t Right Trigger
 
     Cancel:
-    \t\t\t Right Click \t\t B/Circle/East Button'
+    \t\t\t Right Click \t B/Circle/East Button'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dfe631acefbb3984a8ad61d5f41c9259, type: 2}
+  m_sharedMaterial: {fileID: 3182887998236978296, guid: dfe631acefbb3984a8ad61d5f41c9259, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4293783021
   m_fontColor: {r: 0.92941177, g: 0.92941177, b: 0.92941177, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -634,13 +634,13 @@ MonoBehaviour:
   m_text: Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 27fdb857a77ec4934abb975d63a22d75, type: 2}
-  m_sharedMaterial: {fileID: -2949289493946278995, guid: 8fa2ed7838f9f4362ae19387a95c7ec8, type: 2}
+  m_sharedMaterial: {fileID: -2949289493946278995, guid: 27fdb857a77ec4934abb975d63a22d75, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4281944525
   m_fontColor: {r: 0.8039216, g: 0.28627452, b: 0.22352941, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -883,8 +883,8 @@ MonoBehaviour:
     to make them bigger, up to a certain point. The cat only likes yarn balls that
     have been combined. Be kind and don''t throw the yarn balls at the cat.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dfe631acefbb3984a8ad61d5f41c9259, type: 2}
+  m_sharedMaterial: {fileID: 3182887998236978296, guid: dfe631acefbb3984a8ad61d5f41c9259, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -908,7 +908,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65.2
+  m_fontSize: 72
   m_fontSizeBase: 58
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -947,7 +947,7 @@ MonoBehaviour:
   m_margin: {x: 64, y: 64, z: 64, w: 64}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &4129269787179203853
@@ -1805,7 +1805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197592162346664244, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_fontSize
-      value: 42.4
+      value: 71.95
       objectReference: {fileID: 0}
     - target: {fileID: 3197592162346664244, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -2214,7 +2214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197592162346664244, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_fontSize
-      value: 42.4
+      value: 71.95
       objectReference: {fileID: 0}
     - target: {fileID: 3197592162346664244, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -2554,7 +2554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197592162346664244, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_fontSize
-      value: 42.4
+      value: 67.85
       objectReference: {fileID: 0}
     - target: {fileID: 3197592162346664244, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -2786,7 +2786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197592162346664244, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_fontSize
-      value: 42.4
+      value: 71.95
       objectReference: {fileID: 0}
     - target: {fileID: 3197592162346664244, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -3971,7 +3971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197592162346664244, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_fontSize
-      value: 42.4
+      value: 71.95
       objectReference: {fileID: 0}
     - target: {fileID: 3197592162346664244, guid: d8411f6b4a2544c4a994f15197540203, type: 3}
       propertyPath: m_HorizontalAlignment
