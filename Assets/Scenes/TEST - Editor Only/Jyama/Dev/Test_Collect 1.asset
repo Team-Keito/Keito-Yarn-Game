@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Test_Collect 1
   m_EditorClassIdentifier: 
   CatFact: {fileID: 11400000, guid: f46e82efe298e124c8a90f9d832853bc, type: 2}
-  isCollected: 1
-  points: 5
+  isCollected: 0
+  points: 1

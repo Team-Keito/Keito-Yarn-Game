@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CatFact: {fileID: 11400000, guid: 9e80813337cb64857855517550a3ae84, type: 2}
   isCollected: 0
-  points: 5
+  points: 1
