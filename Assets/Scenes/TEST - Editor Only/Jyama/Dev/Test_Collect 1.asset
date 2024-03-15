@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f0dea561dcc7741a64b03536c6c4a8, type: 3}
   m_Name: Test_Collect 1
   m_EditorClassIdentifier: 
-  Name: TestCollection
-  CatFact: {fileID: 11400000, guid: 3e7db17c849a3e54f9dfb4c7f600e89f, type: 2}
+  CatFact: {fileID: 11400000, guid: f46e82efe298e124c8a90f9d832853bc, type: 2}
   isCollected: 1
   points: 5

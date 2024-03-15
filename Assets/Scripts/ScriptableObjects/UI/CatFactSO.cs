@@ -6,5 +6,7 @@ using UnityEngine;
 public class CatFactSO : ScriptableObject
 {
     public string title;
+
+    [Multiline(3)]
     public string factText;
 }
