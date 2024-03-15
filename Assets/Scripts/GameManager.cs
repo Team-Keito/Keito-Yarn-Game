@@ -202,4 +202,11 @@ public class GameManager : MonoBehaviour
 
         ChangeCatLocation();
     }
+
+    public void UpdateScoreCollectable(CollectableSO collectableSO)
+    {
+        ColorSO favColor = catGameObject.GetComponent<CatYarnInteraction>().FavoriteColor;
+        print(collectableSO.points);
+        _score.UpdateScore(collectableSO.points, favColor, false);
+    }
 }
