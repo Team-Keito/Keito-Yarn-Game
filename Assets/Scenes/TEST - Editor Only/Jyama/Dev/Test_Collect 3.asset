@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09031c00bb9a60648801397da160f4bc, type: 3}
-  m_Name: Test_CatFact
+  m_Script: {fileID: 11500000, guid: e7f0dea561dcc7741a64b03536c6c4a8, type: 3}
+  m_Name: Test_Collect 3
   m_EditorClassIdentifier: 
-  title: Fun Fact
-  factText: "A group of cats is called a \u201Cclowder.\u201D"
+  CatFact: {fileID: 11400000, guid: 9e80813337cb64857855517550a3ae84, type: 2}
+  isCollected: 0
+  points: 5
