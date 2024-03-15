@@ -4,6 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class InGameUIManager : MonoBehaviour
@@ -82,6 +83,21 @@ public class InGameUIManager : MonoBehaviour
         _gameManager.ResumeGame();
         _gameManager.RestartGame();
     }
+
+    public void OnLevelChange(int index)
+    {
+        _gameManager.ResumeGame();
+        AkSoundEngine.StopAll();
+        SceneManager.LoadScene(index);
+    }
+
+    public void OnLevelChange(string sceneName)
+    {
+        _gameManager.ResumeGame();
+        AkSoundEngine.StopAll();
+        SceneManager.LoadScene(sceneName);
+    }
+
 
     public void OnResumeGame()
     {
