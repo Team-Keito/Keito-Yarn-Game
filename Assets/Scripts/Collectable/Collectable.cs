@@ -75,11 +75,11 @@ public class Collectable : MonoBehaviour
         }
     }
     
-    private void CheckNextHit(GameObject go)
+    private void CheckNextHit(GameObject caller, GameObject target)
     {
-        float distance = Vector3.Distance(go.transform.position, transform.position);
+        float distance = Vector3.Distance(caller.transform.position, transform.position);
 
-        if (distance < _nearHitRadius && go != gameObject)
+        if (distance < _nearHitRadius && target != gameObject)
         {
             _hasPlayedNotification = _triggerNearOnce;
             OnNearHit.Invoke(_collectableData);

@@ -3095,6 +3095,7 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<WorkUnit Name="Collectables" ID="{7361336C-77BA-438D-87D1-88609D5AF315}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

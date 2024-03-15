@@ -21,7 +21,7 @@
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\MasterVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="3816959335">
+		<SoundBank Id="2641024368" Language="SFX" Hash="1150589956">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
@@ -46,43 +46,43 @@
 					<IncludedMemoryFiles>
 						<File Id="30697204" Language="SFX">
 							<ShortName>Jasmina_Keito_Cardboard_04.wav</ShortName>
-							<Path>SFX\Jasmina_Keito_Cardboard_04_7907DE5C.wem</Path>
+							<Path>SFX\Jasmina_Keito_Cardboard_04_E95B8004.wem</Path>
 						</File>
 						<File Id="102744929" Language="SFX">
 							<ShortName>Jasmina_Keito_Cardboard_05.wav</ShortName>
-							<Path>SFX\Jasmina_Keito_Cardboard_05_BEDE553B.wem</Path>
+							<Path>SFX\Jasmina_Keito_Cardboard_05_25D6F249.wem</Path>
 						</File>
 						<File Id="237765314" Language="SFX">
 							<ShortName>Jasmina_Keito_Cardboard_01.wav</ShortName>
-							<Path>SFX\Jasmina_Keito_Cardboard_01_08F2A187.wem</Path>
+							<Path>SFX\Jasmina_Keito_Cardboard_01_81837729.wem</Path>
 						</File>
 						<File Id="448537453" Language="SFX">
 							<ShortName>Jasmina_Keito_CardboardSw_04.wav</ShortName>
-							<Path>SFX\Jasmina_Keito_CardboardSw_04_BC8E14C9.wem</Path>
+							<Path>SFX\Jasmina_Keito_CardboardSw_04_0FF01D3F.wem</Path>
 						</File>
 						<File Id="462040877" Language="SFX">
 							<ShortName>Jasmina_Keito_Cardboard_03.wav</ShortName>
-							<Path>SFX\Jasmina_Keito_Cardboard_03_DBAE35C6.wem</Path>
+							<Path>SFX\Jasmina_Keito_Cardboard_03_F038B40D.wem</Path>
 						</File>
 						<File Id="476082614" Language="SFX">
 							<ShortName>Jasmina_Keito_CardboardSw_03.wav</ShortName>
-							<Path>SFX\Jasmina_Keito_CardboardSw_03_C13B09E5.wem</Path>
+							<Path>SFX\Jasmina_Keito_CardboardSw_03_11DFF5DE.wem</Path>
 						</File>
 						<File Id="486775493" Language="SFX">
 							<ShortName>Jasmina_Keito_CardboardSw_05.wav</ShortName>
-							<Path>SFX\Jasmina_Keito_CardboardSw_05_A4B4107C.wem</Path>
+							<Path>SFX\Jasmina_Keito_CardboardSw_05_9112D617.wem</Path>
 						</File>
 						<File Id="623248039" Language="SFX">
 							<ShortName>Jasmina_Keito_CardboardSw_01.wav</ShortName>
-							<Path>SFX\Jasmina_Keito_CardboardSw_01_4D36556F.wem</Path>
+							<Path>SFX\Jasmina_Keito_CardboardSw_01_D1E72BF2.wem</Path>
 						</File>
 						<File Id="965355488" Language="SFX">
 							<ShortName>Jasmina_Keito_CardboardSw_02.wav</ShortName>
-							<Path>SFX\Jasmina_Keito_CardboardSw_02_64437A79.wem</Path>
+							<Path>SFX\Jasmina_Keito_CardboardSw_02_7F681937.wem</Path>
 						</File>
 						<File Id="1043797533" Language="SFX">
 							<ShortName>Jasmina_Keito_Cardboard_02.wav</ShortName>
-							<Path>SFX\Jasmina_Keito_Cardboard_02_92E0D2E8.wem</Path>
+							<Path>SFX\Jasmina_Keito_Cardboard_02_D9C0477C.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -135,6 +135,22 @@
 						<File Id="745218962" Language="SFX">
 							<ShortName>CATPOCALYPSE_CAT_MEOW_V1_4.wav</ShortName>
 							<Path>SFX\CATPOCALYPSE_CAT_MEOW_V1_4_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2225033368" Name="Play_Collect" ObjectPath="\Events\Default Work Unit\Play_Collect" DurationType="OneShot" DurationMin="1.200628" DurationMax="1.200628">
+					<IncludedMemoryFiles>
+						<File Id="846846878" Language="SFX">
+							<ShortName>Jasmina_Keito_Collect.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_Collect_E8BF7227.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1669734397" Name="Play_Collectable_Near" ObjectPath="\Events\Default Work Unit\Play_Collectable_Near" DurationType="OneShot" DurationMin="4." DurationMax="4.">
+					<IncludedMemoryFiles>
+						<File Id="366137986" Language="SFX">
+							<ShortName>Jasmina_Keito_Collect_Near.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_Collect_Near_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
