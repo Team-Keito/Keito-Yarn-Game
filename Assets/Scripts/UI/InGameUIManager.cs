@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class InGameUIManager : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class InGameUIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI endTimeText, bestTimeText, currTimeText;
     [SerializeField] private Slider scoreSlider;
     [SerializeField] private GameObject scoreColor;
+
+    public UnityEvent OnPauseMenuOpen, OnPauseMenuClose;
 
     void Start()
     {
@@ -59,6 +62,10 @@ public class InGameUIManager : MonoBehaviour
         {
             OnCloseConfirmation();
         }
+        else if (!_pauseUI.activeSelf)
+        {
+            OnPauseGame();
+        }
         else
         {
             OnResumeGame();
@@ -72,6 +79,7 @@ public class InGameUIManager : MonoBehaviour
 
     public void OnPauseGame()
     {
+        OnPauseMenuOpen.Invoke();
         _pauseUI.SetActive(true);
         _gameManager.PauseGame();
         AkSoundEngine.SetState("GameStates", "Pause_State");
@@ -101,6 +109,7 @@ public class InGameUIManager : MonoBehaviour
 
     public void OnResumeGame()
     {
+        OnPauseMenuClose.Invoke();
         _gameManager.ResumeGame();
         AkSoundEngine.SetState("GameStates", "IngameState");
         _pauseUI.SetActive(false);
