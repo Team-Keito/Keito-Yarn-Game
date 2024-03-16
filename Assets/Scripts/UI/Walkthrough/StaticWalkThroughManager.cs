@@ -51,16 +51,14 @@ public class StaticWalkThroughManager : MonoBehaviour
     private void OnEnable()
     {
         if (Time.timeScale != 0) Time.timeScale = 0;
-        InputManager.Input.Player.Disable();
-        originalLockMode = Cursor.lockState;
-        Cursor.lockState = CursorLockMode.None;
+        InputManager.SwitchControls(ControlMap.UI);
     }
 
     private void OnDisable()
     {
         if (Time.timeScale == 0) Time.timeScale = 1;
-        InputManager.Input.Player.Enable();
-        Cursor.lockState = originalLockMode;
+        InputManager.SwitchControls(ControlMap.Player);
+
     }
 
 
