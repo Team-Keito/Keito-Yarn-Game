@@ -564,6 +564,7 @@ GameObject:
   - component: {fileID: 7781372501394609600}
   - component: {fileID: 7781372501394609663}
   - component: {fileID: 8121319204630270882}
+  - component: {fileID: 716816679361873524}
   m_Layer: 5
   m_Name: InGameCanvas
   m_TagString: Untagged
@@ -683,6 +684,39 @@ MonoBehaviour:
   currTimeText: {fileID: 0}
   scoreSlider: {fileID: 0}
   scoreColor: {fileID: 0}
+  OnPauseMenuOpen:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPauseMenuClose:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &716816679361873524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7781372501394609662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762cc04d69a049048bbe64128b580f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5837264001056662561}
+        m_TargetAssemblyTypeName: AudioVolumeSettings, Scripts
+        m_MethodName: SetUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7781372501407015949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,6 +1744,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5802292625416671108, guid: 2f9e0a750292f4f4cb7a72197628ba42, type: 3}
   m_PrefabInstance: {fileID: 6468376285322538174}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5837264001056662561 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 632308638917953695, guid: 2f9e0a750292f4f4cb7a72197628ba42, type: 3}
+  m_PrefabInstance: {fileID: 6468376285322538174}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda6b4a6c085277408fe9ca6f2e200c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7578919643029437445
 PrefabInstance:
   m_ObjectHideFlags: 0
