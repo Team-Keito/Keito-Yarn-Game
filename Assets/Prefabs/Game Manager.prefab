@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3745909187391131162}
   - component: {fileID: 3745909187391131161}
   - component: {fileID: 6293817618361023912}
-  - component: {fileID: 6520849972747403318}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -60,6 +59,9 @@ MonoBehaviour:
     OnCatScored:
       m_PersistentCalls:
         m_Calls: []
+    OnScore:
+      m_PersistentCalls:
+        m_Calls: []
   _colorList:
   - {fileID: 11400000, guid: 29e19a1c4d33c8a4786ed45a18fdcf21, type: 2}
   - {fileID: 11400000, guid: b40ea3a328c5556479e00cc115f57182, type: 2}
@@ -68,24 +70,9 @@ MonoBehaviour:
   OnGameEnd:
     m_PersistentCalls:
       m_Calls: []
-  OnCatScored:
-    m_PersistentCalls:
-      m_Calls: []
   OnCatSpawn:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6520849972747403318}
-        m_TargetAssemblyTypeName: OffScreenIndicator, Scripts
-        m_MethodName: UpdateTarget
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &6293817618361023912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,22 +86,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Default: 1
---- !u!114 &6520849972747403318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3745909187391131160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9eccff1e2d006443a82ae21b8565373, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _target: {fileID: 0}
-  _camera: {fileID: 0}
-  _indicatorUI: {fileID: 0}
-  _imageRotationOffset: 180
-  _borderOffset: 0.1
-  _showOnscreenTracker: 0
-  _onscreenOffset: 200

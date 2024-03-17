@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TagSO _SpawnPoint;
     [SerializeField] private PlayerPrefSO _BestTimePlayerPref;
 
-    [SerializeField] private ScoreSystem _score;
+    [SerializeField] public ScoreSystem _score;
 
     [SerializeField] private ColorSO[] _colorList;
 
@@ -33,7 +33,6 @@ public class GameManager : MonoBehaviour
     public GameObject[] spawnLocPrefab; //kept public for test case. Now auto grabs based on spawnpoint tag.
 
     public UnityEvent OnGameEnd = new();
-    public UnityEvent<float, bool> OnCatScored;
     public UnityEvent<GameObject> OnCatSpawn;
 
     public float Score
@@ -198,7 +197,7 @@ public class GameManager : MonoBehaviour
     {
         ColorSO favColor = catGameObject.GetComponent<CatYarnInteraction>().FavoriteColor;
 
-        _score.UpdateScore(value, favColor, isFavoriteColor);
+        _score.UpdateCatScore(value, favColor, isFavoriteColor);
 
         ChangeCatLocation();
     }
@@ -206,7 +205,6 @@ public class GameManager : MonoBehaviour
     public void UpdateScoreCollectable(CollectableSO collectableSO)
     {
         ColorSO favColor = catGameObject.GetComponent<CatYarnInteraction>().FavoriteColor;
-        print(collectableSO.points);
-        _score.UpdateScore(collectableSO.points, favColor, false);
+        _score.AddPoints(collectableSO.points);
     }
 }
