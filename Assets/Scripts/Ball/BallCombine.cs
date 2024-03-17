@@ -27,7 +27,7 @@ public class BallCombine : MonoBehaviour
     public string YarnCombineSound = "Play_Yarn_Combine";
 
     public Color Color => _renderer.material.color;
-    public bool isDamaged => _colorController.isDamaged(); 
+    public bool IsDamaged => _colorController.isDamaged(); 
 
     void Start()
     {
@@ -51,7 +51,7 @@ public class BallCombine : MonoBehaviour
     /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
-        if(!_allowDamageCombine && (isDamaged || !collision.gameObject.TryGetComponent<IDamageable>(out IDamageable hitDamage) || hitDamage.isDamaged()))
+        if(!_allowDamageCombine && (IsDamaged || !collision.gameObject.TryGetComponent<IDamageable>(out IDamageable hitDamage) || hitDamage.isDamaged()))
         {
             return;
         }
