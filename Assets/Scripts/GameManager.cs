@@ -33,7 +33,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] spawnLocPrefab; //kept public for test case. Now auto grabs based on spawnpoint tag.
 
     public UnityEvent OnGameEnd = new();
-    public UnityEvent<float, bool> OnCatScored;
+    // HACK: There should probably be a variable for giving score data properly, rather then just the event
+    public UnityEvent<ScoreData> OnCatScored => _score.OnCatScored;
     public UnityEvent<GameObject> OnCatSpawn;
 
     public float Score
