@@ -60,7 +60,9 @@ public class CatYarnInteraction : MonoBehaviour
 
     private void AcceptBall(Collision collision)
     {
-        bool isFavorite = _favoriteColor == collision.gameObject.GetComponent<ColorController>().Color;
+        ColorController colorHit = collision.gameObject.GetComponent<ColorController>();
+
+        bool isFavorite = _favoriteColor == colorHit.Color && !colorHit.isDamaged();
 
         OnCatScored.Invoke(collision.transform.localScale.x, isFavorite);
         Destroy(collision.gameObject);

@@ -16,13 +16,18 @@ public class BallCombine : MonoBehaviour
     [SerializeField] private float _scaleMultiplier = 1f;
     [SerializeField] private float _scaleCap = 5f;
 
+    [Space(5)]
+    [SerializeField] private bool _allowDamageCombine = false;
+
     private Rigidbody _rigidBody;
     private Renderer _renderer;
     private Vector3 _scaleVectorCap;
+    private ColorController _colorController;
 
     public string YarnCombineSound = "Play_Yarn_Combine";
 
     public Color Color => _renderer.material.color;
+    public bool isDamaged => _colorController.isDamaged(); 
 
     void Start()
     {
@@ -30,6 +35,8 @@ public class BallCombine : MonoBehaviour
         _renderer = GetComponent<Renderer>();
 
         _scaleVectorCap = new Vector3(_scaleCap, _scaleCap, _scaleCap);
+
+        _colorController = GetComponent<ColorController>();
     }
 
     public void SetColor(Color color)
@@ -44,6 +51,11 @@ public class BallCombine : MonoBehaviour
     /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
+        if(!_allowDamageCombine && (isDamaged || !collision.gameObject.TryGetComponent<IDamageable>(out IDamageable hitDamage) || hitDamage.isDamaged()))
+        {
+            return;
+        }
+
         if (collision.gameObject.TryGetComponent<BallCombine>(out BallCombine hitBall) && hitBall.Color == Color)
         {
             if (!DecideBall(collision))
