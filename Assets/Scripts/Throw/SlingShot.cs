@@ -61,6 +61,9 @@ public class SlingShot : MonoBehaviour
         //Parents object to Camera w/offset (Avoids jittery movement)
         transform.position = CalcOffset(Camera.main.transform, _postionOffset);
         transform.SetParent(Camera.main.transform, true);
+        _indicator.SetActive(true); // Try having indicator always enabled
+        _lineRenderer.enabled = true;
+        SetupFirstShot();
     }
 
     private void OnEnable()
@@ -86,15 +89,18 @@ public class SlingShot : MonoBehaviour
     {
         if (_isHeld)
         {
-            UpdateRotation();
-
-            _forceVector = _force * transform.forward;
-
-            DrawWithDrag(_forceVector);
-            _indicator.transform.position = _lineRenderer.GetPosition(_lineRenderer.positionCount - 1);
-
-            _currentBall.transform.position = StartOffset;
+            
         }
+        // Try having them outside the is held
+        UpdateRotation();
+
+        _forceVector = _force * transform.forward;
+
+        DrawWithDrag(_forceVector);
+
+        _currentBall.transform.position = StartOffset; // Need to not destroy curentBall, but have next ball spawn after one is thrown
+
+        _indicator.transform.position = _lineRenderer.GetPosition(_lineRenderer.positionCount - 1);
     }
 
     private void UpdateRotation()
@@ -152,10 +158,7 @@ public class SlingShot : MonoBehaviour
     private void StartThrow()
     {
         ToggleIndicator(true);
-        UpdateLineColor(_PrefabPicker.GetColor());
         ResetSelf();
-
-        SpawnNextThrownObject();
 
         OnStartThrow.Invoke();
     }
@@ -167,13 +170,24 @@ public class SlingShot : MonoBehaviour
 
         ThrowItem(_currentBall);
         AkSoundEngine.PostEvent("Play_ThrowYarn", gameObject);
-        _currentBall = null;
 
         _PrefabPicker.Remove();
         OnNextColorChange.Invoke(GetNextColors());
 
+        SpawnNextThrownObject();
+        UpdateLineColor(_PrefabPicker.GetColor());
+
         StartCoroutine(RunCoolDown(_afterFireCD));
         OnThrow.Invoke();
+    }
+
+    private void SetupFirstShot()
+    {
+        if (_currentBall == null)
+        {
+            SpawnNextThrownObject();
+            UpdateLineColor(_PrefabPicker.GetColor());
+        }
     }
 
     #endregion
@@ -218,8 +232,8 @@ public class SlingShot : MonoBehaviour
     }
     private void ToggleIndicator(bool state)
     {
-        _lineRenderer.enabled = state;
-        _indicator.SetActive(state);
+        // _lineRenderer.enabled = state;
+        // _indicator.SetActive(state);
     }
 
     #endregion
