@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class CatYarnInteraction : MonoBehaviour
 {
-    [SerializeField] private ThoughtBubble _thoughtBubble;
     [SerializeField, Tooltip("Tag for Yarnball")]
     private TagSO _yarnTag;
 
@@ -24,7 +23,6 @@ public class CatYarnInteraction : MonoBehaviour
     public void SetFavoriteColor(ColorSO color)
     {
         _favoriteColor = color;
-        _thoughtBubble.ChangeColor(color);
         OnFavoriteColor.Invoke(color);
     }
 
@@ -68,14 +66,12 @@ public class CatYarnInteraction : MonoBehaviour
 
     private void RejectBallSize(Collision collision)
     {
-        _thoughtBubble.RejectSmallBall();
         OnRejectBallSize.Invoke();
     }
 
     private void RejectBallForce(Collision collision)
     {
         // TODO: Should this be a different thought bubble function? 
-        _thoughtBubble.RejectFastBall();
         OnRejectBallForce.Invoke();
     }
 }
