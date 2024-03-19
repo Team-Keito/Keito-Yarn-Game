@@ -53,9 +53,9 @@ public class BallCombine : MonoBehaviour
 
             Vector3 combinedScale = transform.localScale + hitBall.transform.localScale * _scaleMultiplier;
             float combinedMass = _rigidBody.mass + collision.rigidbody.mass * _massMultiplier;
-            
 
-            if (transform.localScale.x >= _scaleVectorCap.x * 0.99f || _rigidBody.mass >= _massCap)
+
+            if (transform.localScale.x >= _scaleVectorCap.x * 0.99f)// || _rigidBody.mass >= _massCap)
             {
                 return;            
             }
@@ -66,7 +66,7 @@ public class BallCombine : MonoBehaviour
             transform.localScale = Vector3.Min(combinedScale, _scaleVectorCap);
             _rigidBody.mass = Mathf.Min(combinedMass, _massCap);
 
-            if(transform.localScale == _scaleVectorCap || _rigidBody.mass == _massCap)
+            if (transform.localScale == _scaleVectorCap)// || _rigidBody.mass == _massCap)
             {
                 OnMaxSize.Invoke();
             }
