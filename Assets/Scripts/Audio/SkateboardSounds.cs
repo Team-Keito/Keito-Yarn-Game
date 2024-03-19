@@ -2,10 +2,14 @@ using UnityEngine;
 
 public class SkateboardSounds : MonoBehaviour
 {
+    private const int MAX_VOLUME = 100;
     public AK.Wwise.Event skateboardMovementSound;
 
     [SerializeField, Tooltip("The minimum amount of speed required for the sound to play")]
-    private float _minimumSoundSpeed = 1;
+    private float _minimumSoundSpeed = 0.5f;
+
+    [SerializeField, Tooltip("The max speed at which the volume will not go any higher (faster speed will be at 100% volume)")]
+    private float _maximumSpeedVolume = 3;
 
     public float MinSoundSpeedSqr => _minimumSoundSpeed * _minimumSoundSpeed;
 
@@ -23,6 +27,7 @@ public class SkateboardSounds : MonoBehaviour
         // If grounded and above min speed
         if (IsAllGrounded() && _rigidbody.velocity.sqrMagnitude > MinSoundSpeedSqr)
         {
+            var volume = SpeedToVolume();
             // TODO: Uncomment when sound is added
             // skateboardMovementSound.Post(gameObject);
         }
@@ -40,4 +45,10 @@ public class SkateboardSounds : MonoBehaviour
         }
         return true;
     }
+
+    /// <summary>
+    /// Convert speed value (M-N; M=min speed, N=max speed) to volume value (0-100)
+    /// </summary>
+    /// <returns>Volume value between 0 and 100</returns>
+    public float SpeedToVolume() => Mathf.Clamp(_rigidbody.velocity.magnitude - _minimumSoundSpeed, 0, _maximumSpeedVolume) / _maximumSpeedVolume * MAX_VOLUME;
 }

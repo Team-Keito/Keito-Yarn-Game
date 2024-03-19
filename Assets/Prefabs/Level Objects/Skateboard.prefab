@@ -195,6 +195,7 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   _minimumSoundSpeed: 0.5
+  _maximumSpeedVolume: 2
 --- !u!1 &4589442022617111439
 GameObject:
   m_ObjectHideFlags: 0
