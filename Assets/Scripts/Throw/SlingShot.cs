@@ -61,8 +61,6 @@ public class SlingShot : MonoBehaviour
         //Parents object to Camera w/offset (Avoids jittery movement)
         transform.position = CalcOffset(Camera.main.transform, _postionOffset);
         transform.SetParent(Camera.main.transform, true);
-        _indicator.SetActive(true); // Try having indicator always enabled
-        _lineRenderer.enabled = true;
         SetupFirstShot();
     }
 
@@ -98,7 +96,7 @@ public class SlingShot : MonoBehaviour
 
         DrawWithDrag(_forceVector);
 
-        _currentBall.transform.position = StartOffset; // Need to not destroy curentBall, but have next ball spawn after one is thrown
+        _currentBall.transform.position = StartOffset;
 
         _indicator.transform.position = _lineRenderer.GetPosition(_lineRenderer.positionCount - 1);
     }
@@ -151,14 +149,14 @@ public class SlingShot : MonoBehaviour
     {
         _isHeld = false;
 
-        Destroy(_currentBall);
+        //Destroy(_currentBall);
         ToggleIndicator(false);
     }
 
     private void StartThrow()
     {
         ToggleIndicator(true);
-        ResetSelf();
+        //ResetSelf();
 
         OnStartThrow.Invoke();
     }
@@ -171,6 +169,7 @@ public class SlingShot : MonoBehaviour
         ThrowItem(_currentBall);
         AkSoundEngine.PostEvent("Play_ThrowYarn", gameObject);
 
+        _currentBall.GetComponent<Collider>().enabled = true;
         _PrefabPicker.Remove();
         OnNextColorChange.Invoke(GetNextColors());
 
@@ -183,10 +182,14 @@ public class SlingShot : MonoBehaviour
 
     private void SetupFirstShot()
     {
+        _indicator.SetActive(true); // Try having indicator always enabled
+        _lineRenderer.enabled = true;
+        _indicator.transform.position = transform.position; // Force the indicator to be at slingshot
         if (_currentBall == null)
         {
             SpawnNextThrownObject();
             UpdateLineColor(_PrefabPicker.GetColor());
+            ResetSelf();
         }
     }
 
@@ -211,6 +214,7 @@ public class SlingShot : MonoBehaviour
         _radius = prefab.transform.localScale.x * prefab.GetComponent<SphereCollider>().radius;
 
         _currentBall = Instantiate(prefab, StartOffset, Quaternion.identity, transform);
+        _currentBall.GetComponent<Collider>().enabled = false;
     }
     #endregion
 
