@@ -13,6 +13,8 @@ public class InputManager : MonoBehaviour
     public static System.Action<string> OnChangeScheme;
     public UnityEvent<string> OnChangeControl;
 
+    public static string CurrentControlScheme { get; private set; }
+
     private static PlayerControls _input;
     public static PlayerControls Input { get => _input != null ? _input : (_input = new PlayerControls()); }
 
@@ -32,8 +34,10 @@ public class InputManager : MonoBehaviour
 
     public void OnControlsChanged(PlayerInput obj)
     {
-        OnChangeScheme?.Invoke(obj.currentControlScheme);
-        OnChangeControl.Invoke(obj.currentControlScheme);
+        CurrentControlScheme = obj.currentControlScheme;
+
+        OnChangeScheme?.Invoke(CurrentControlScheme);
+        OnChangeControl.Invoke(CurrentControlScheme);
     }
 
     private void OnEnable()
