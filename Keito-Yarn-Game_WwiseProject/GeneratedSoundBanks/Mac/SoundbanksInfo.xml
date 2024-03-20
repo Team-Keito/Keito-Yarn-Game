@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3073233247">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1405484993">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -21,11 +21,12 @@
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\MasterVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="1150589956">
+		<SoundBank Id="2641024368" Language="SFX" Hash="629720997">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="761519245" Name="Break_Skate" ObjectPath="\Events\Default Work Unit\Break_Skate" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\Play_Ambience" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="654882658" Language="SFX">
@@ -142,7 +143,7 @@
 					<IncludedMemoryFiles>
 						<File Id="846846878" Language="SFX">
 							<ShortName>Jasmina_Keito_Collect.wav</ShortName>
-							<Path>SFX\Jasmina_Keito_Collect_E8BF7227.wem</Path>
+							<Path>SFX\Jasmina_Keito_Collect_A9768DDF.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -274,6 +275,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1618563948" Name="Play_Skate" ObjectPath="\Events\Default Work Unit\Play_Skate" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="892083715" Language="SFX">
+							<ShortName>Keito_Skate_Loop.wav</ShortName>
+							<Path>SFX\Keito_Skate_Loop_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="40205785" Name="Play_SoftClothHit" ObjectPath="\Events\Default Work Unit\Play_SoftClothHit" MaxAttenuation="30." DurationType="OneShot" DurationMin="0.099817" DurationMax="0.151461">
 					<IncludedMemoryFiles>
 						<File Id="75780773" Language="SFX">
@@ -388,6 +397,7 @@
 				</Event>
 			</IncludedEvents>
 			<GameParameters>
+				<GameParameter Id="1270318878" Name="SkateSpeed" ObjectPath="\Game Parameters\Default Work Unit\SkateSpeed"/>
 				<GameParameter Id="2801574179" Name="VolumeChange" ObjectPath="\Game Parameters\Default Work Unit\VolumeChange"/>
 			</GameParameters>
 		</SoundBank>

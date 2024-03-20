@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BREAK_SKATE = 761519245U;
         static const AkUniqueID PLAY_AMBIENCE = 278617630U;
         static const AkUniqueID PLAY_BUTTONCLICK = 3548535810U;
         static const AkUniqueID PLAY_CARDBOARD = 4174389764U;
@@ -28,6 +29,7 @@ namespace AK
         static const AkUniqueID PLAY_LEATHERHIT = 2204020340U;
         static const AkUniqueID PLAY_MAXSIZEGLOW = 2782737696U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
+        static const AkUniqueID PLAY_SKATE = 1618563948U;
         static const AkUniqueID PLAY_SOFTCLOTHHIT = 40205785U;
         static const AkUniqueID PLAY_THROWYARN = 2777424796U;
         static const AkUniqueID PLAY_WOODHIT = 4287226464U;
@@ -69,6 +71,7 @@ namespace AK
         static const AkUniqueID MASTERVOLUME = 2918011349U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID SFXVOLUME = 988953028U;
+        static const AkUniqueID SKATESPEED = 1270318878U;
         static const AkUniqueID VOLUMECHANGE = 2801574179U;
     } // namespace GAME_PARAMETERS
 

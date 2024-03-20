@@ -99,11 +99,12 @@ public class YarnBallFocuser : MonoBehaviour
         }
         else
         {
+            var removeIndex = current;
             // Go back and cycle if overflow
             current--;
             current %= _yarnBallSwitchers.Count;
             // Do remove because we encountered a null
-            _yarnBallSwitchers.RemoveAt(current + 1);
+            _yarnBallSwitchers.RemoveAt(removeIndex);
             // Try again
             SwitchCamera();
         }

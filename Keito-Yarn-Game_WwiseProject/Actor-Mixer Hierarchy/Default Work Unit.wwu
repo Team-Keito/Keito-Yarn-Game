@@ -3014,6 +3014,192 @@
 							</ChildrenList>
 							<ObjectLists/>
 						</BlendContainer>
+						<BlendContainer Name="Skate" ID="{0E3211C7-6323-43C9-A689-874F47D9FED4}" ShortID="414822653">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Keito_Skate_Loop" ID="{ED548E85-CB6F-43E4-BE37-31AA0C59D2E4}" ShortID="384531259">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_Skate_Loop" ID="{15DB3C63-A199-4D72-BA23-E4D150F60265}">
+											<Language>SFX</Language>
+											<AudioFile>Keito_Skate_Loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="892083715"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_Skate_Loop" ID="{15DB3C63-A199-4D72-BA23-E4D150F60265}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+							<BlendTrackList>
+								<BlendTrack Name="SkateMovement" ID="{E50EC566-B8F7-4FA8-83FF-2451B7488E41}" ShortID="1046510996">
+									<PropertyList>
+										<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<RTPCList>
+												<RTPC Name="" ID="{2554084A-A41C-4BE6-84EA-D2F200F6DA30}" ShortID="439665558">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="SkateSpeed" ID="{86D7059B-5C60-483C-AB1E-2A1972E1D072}" WorkUnitID="{093F2B0A-B713-4407-A588-B3B0262889F8}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{E8292373-8EB1-4806-BF6F-93BB47FA25CE}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-88</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>20</XPos>
+																<YPos>-57</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>70</XPos>
+																<YPos>-0</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<RTPCList>
+												<RTPC Name="" ID="{958BDD20-8A9C-4ECC-9F89-EEE57E51F8FC}" ShortID="888504008">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="SkateSpeed" ID="{86D7059B-5C60-483C-AB1E-2A1972E1D072}" WorkUnitID="{093F2B0A-B713-4407-A588-B3B0262889F8}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{04479A04-D8DF-485D-825F-3F44B243368C}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-4257</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>20.078125</XPos>
+																<YPos>-2179</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>70</XPos>
+																<YPos>100</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>-0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{1D445006-B471-411B-A902-0F0656FF95D1}" ShortID="676510222">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="SkateSpeed" ID="{86D7059B-5C60-483C-AB1E-2A1972E1D072}" WorkUnitID="{093F2B0A-B713-4407-A588-B3B0262889F8}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{BE819213-EBD6-4CD8-AA56-282483AA47F6}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>1.95313</XPos>
+																<YPos>-200</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>7.10937</XPos>
+																<YPos>-21.86844</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>20</XPos>
+																<YPos>-17.7559055884234</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>70</XPos>
+																<YPos>-11.82361</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>-0.28481</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="LayerCrossFadeControlInput">
+											<ObjectRef Name="SkateSpeed" ID="{86D7059B-5C60-483C-AB1E-2A1972E1D072}" WorkUnitID="{093F2B0A-B713-4407-A588-B3B0262889F8}"/>
+										</Reference>
+									</ReferenceList>
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="Keito_Skate_Loop" ID="{ED548E85-CB6F-43E4-BE37-31AA0C59D2E4}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>100</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ambience" ID="{AB0DBCB7-30F4-4451-A8FD-0A10B9329EFB}" ShortID="994565558">
