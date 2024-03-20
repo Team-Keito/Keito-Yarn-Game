@@ -57,7 +57,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BakedNormal:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: f6001fd11c1014d5db64b19e8a3f46e7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
@@ -169,7 +169,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 60d9095f1e9d942ee8d9a50cc3eca5d2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Outline_Sampler:
@@ -286,7 +286,7 @@ Material:
     - _BlendMode: 0
     - _BlurLevelMatcap: 0
     - _BlurLevelSGM: 0
-    - _BumpScale: 0.283
+    - _BumpScale: 0
     - _BumpScaleMatcap: 1
     - _CameraRolling_Stabilizer: 0
     - _ClearCoatMask: 0
@@ -367,7 +367,7 @@ Material:
     - _IridescenceThickness: 1
     - _IsBaseMapAlphaAsClippingMask: 0
     - _Is_BLD: 0
-    - _Is_BakedNormal: 0
+    - _Is_BakedNormal: 1
     - _Is_BlendAddToHiColor: 0
     - _Is_BlendAddToMatCap: 1
     - _Is_BlendBaseColor: 1
@@ -388,7 +388,7 @@ Material:
     - _Is_NormalMapToHighColor: 0
     - _Is_NormalMapToRimLight: 0
     - _Is_Ortho: 0
-    - _Is_OutlineTex: 0
+    - _Is_OutlineTex: 1
     - _Is_PingPong_Base: 0
     - _Is_SpecularToHighColor: 0
     - _Is_UseTweakHighColorOnShadow: 0
@@ -411,7 +411,7 @@ Material:
     - _Offset_Z: 0
     - _OutlineOverridden: 0
     - _OutlineVisible: 1
-    - _Outline_Width: 6
+    - _Outline_Width: 20
     - _PPDLodThreshold: 5
     - _PPDMaxSamples: 15
     - _PPDMinSamples: 5
@@ -499,8 +499,8 @@ Material:
     - _Unlit_Intensity: 0
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
-    - _Use_1stAs2nd: 0
-    - _Use_BaseAs1st: 0
+    - _Use_1stAs2nd: 1
+    - _Use_BaseAs1st: 1
     - _WorkflowMode: 1
     - _ZOverDrawMode: 0
     - _ZTestDepthEqualForOpaque: 4
@@ -516,8 +516,8 @@ Material:
     - _utsVersionY: 9
     - _utsVersionZ: 7
     m_Colors:
-    - _1st_ShadeColor: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
-    - _2nd_ShadeColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+    - _1st_ShadeColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    - _2nd_ShadeColor: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
     - _AngelRingMaskColor: {r: 0, g: 1, b: 0, a: 1}
     - _AngelRing_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
