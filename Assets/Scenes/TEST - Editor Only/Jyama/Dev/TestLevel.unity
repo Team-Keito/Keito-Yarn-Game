@@ -814,6 +814,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8108264883178041328, guid: 03055bf8e2c5ceb46a63bb23fbd35593, type: 3}
+      propertyPath: _catFactPrefab
+      value: 
+      objectReference: {fileID: 8401522277341119241, guid: b553dc3898f61c9459b88d0b02fed43b, type: 3}
     - target: {fileID: 8121319204630270882, guid: 03055bf8e2c5ceb46a63bb23fbd35593, type: 3}
       propertyPath: _gameManager
       value: 
@@ -1822,6 +1826,10 @@ PrefabInstance:
       propertyPath: ingameScore
       value: 
       objectReference: {fileID: 1033173698}
+    - target: {fileID: 3745909187391131161, guid: 9a77eb49f5bd97343a3415c62f7639be, type: 3}
+      propertyPath: targetScore
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3745909187391131161, guid: 9a77eb49f5bd97343a3415c62f7639be, type: 3}
       propertyPath: highScoreText
       value: 
