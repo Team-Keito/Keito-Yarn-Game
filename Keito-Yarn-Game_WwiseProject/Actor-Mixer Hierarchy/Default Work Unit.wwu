@@ -3056,6 +3056,82 @@
 								<BlendTrack Name="SkateMovement" ID="{E50EC566-B8F7-4FA8-83FF-2451B7488E41}" ShortID="1046510996">
 									<PropertyList>
 										<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<RTPCList>
+												<RTPC Name="" ID="{2554084A-A41C-4BE6-84EA-D2F200F6DA30}" ShortID="439665558">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="SkateSpeed" ID="{86D7059B-5C60-483C-AB1E-2A1972E1D072}" WorkUnitID="{093F2B0A-B713-4407-A588-B3B0262889F8}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{E8292373-8EB1-4806-BF6F-93BB47FA25CE}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-88</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>20</XPos>
+																<YPos>-57</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>70</XPos>
+																<YPos>-0</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<RTPCList>
+												<RTPC Name="" ID="{958BDD20-8A9C-4ECC-9F89-EEE57E51F8FC}" ShortID="888504008">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="SkateSpeed" ID="{86D7059B-5C60-483C-AB1E-2A1972E1D072}" WorkUnitID="{093F2B0A-B713-4407-A588-B3B0262889F8}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{04479A04-D8DF-485D-825F-3F44B243368C}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-4257</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>20.078125</XPos>
+																<YPos>-2179</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>70</XPos>
+																<YPos>100</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>-0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<RTPCList>
 												<RTPC Name="" ID="{1D445006-B471-411B-A902-0F0656FF95D1}" ShortID="676510222">
@@ -3081,11 +3157,16 @@
 															</Point>
 															<Point>
 																<XPos>7.10937</XPos>
-																<YPos>-20.28481</YPos>
+																<YPos>-21.86844</YPos>
 																<Flags>0</Flags>
 															</Point>
 															<Point>
-																<XPos>39.60938</XPos>
+																<XPos>20</XPos>
+																<YPos>-17.7559055884234</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>70</XPos>
 																<YPos>-11.82361</YPos>
 																<Flags>0</Flags>
 															</Point>
@@ -3109,7 +3190,7 @@
 										<BlendTrackAssoc>
 											<ItemRef Name="Keito_Skate_Loop" ID="{ED548E85-CB6F-43E4-BE37-31AA0C59D2E4}"/>
 											<CrossfadingInfo>
-												<LeftEdgePos>0.625</LeftEdgePos>
+												<LeftEdgePos>0</LeftEdgePos>
 												<LeftFadingMode>Automatic</LeftFadingMode>
 												<RightEdgePos>100</RightEdgePos>
 												<RightFadingMode>Automatic</RightFadingMode>
