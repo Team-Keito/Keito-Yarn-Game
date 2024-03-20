@@ -285,9 +285,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _massMultiplier: 1
-  _massCap: 5
+  _massCap: 1
   _scaleMultiplier: 1
-  _scaleCap: 5
+  _scaleCap: 2.5
   YarnCombineSound: Play_Yarn_Combine
 --- !u!114 &-1940726632899412579
 MonoBehaviour:

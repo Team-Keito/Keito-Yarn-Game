@@ -27,6 +27,11 @@ public class CameraSwitch : MonoBehaviour
     public void Focus()
     {
         _camera.m_YAxis.Value = _zoomLevel;
+        ReFocusCamera();
+    }
+
+    public void ReFocusCamera()
+    {
         _camera.Follow = _target;
         _camera.LookAt = _target;        
     }

@@ -50,6 +50,7 @@ public class SlingShot : MonoBehaviour
     private bool _onCoolDown;
 
     private Vector3 StartOffset => CalcOffset(Camera.main.transform, _postionOffset);
+    public GameObject CurrentBall => _currentBall;
 
     private void Start()
     {
@@ -197,6 +198,7 @@ public class SlingShot : MonoBehaviour
         _radius = prefab.transform.localScale.x * prefab.GetComponent<SphereCollider>().radius;
 
         _currentBall = Instantiate(prefab, StartOffset, Quaternion.identity, transform);
+        _currentBall.GetComponent<SphereCollider>().enabled = false; // No physics collision until toss
     }
     #endregion
 
@@ -215,6 +217,7 @@ public class SlingShot : MonoBehaviour
     private void EnableThrownObject(GameObject go)
     {
         go.transform.SetParent(null, true);
+        go.GetComponent<SphereCollider>().enabled = true; // Reactivate physics collision
     }
     private void ToggleIndicator(bool state)
     {
