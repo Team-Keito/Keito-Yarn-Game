@@ -49,6 +49,8 @@ public class SlingShot : MonoBehaviour
     private Vector3 _forceVector;
     private bool _onCoolDown;
 
+    private bool gameSetupPhase;
+
     private Vector3 StartOffset => CalcOffset(Camera.main.transform, _postionOffset);
 
     private void Start()
@@ -61,6 +63,7 @@ public class SlingShot : MonoBehaviour
         //Parents object to Camera w/offset (Avoids jittery movement)
         transform.position = CalcOffset(Camera.main.transform, _postionOffset);
         transform.SetParent(Camera.main.transform, true);
+        gameSetupPhase = true;
         SetupFirstShot();
     }
 
@@ -103,6 +106,8 @@ public class SlingShot : MonoBehaviour
 
     private void UpdateRotation()
     {
+        if (gameSetupPhase) return;
+
         Vector2 mouseDelta = InputManager.Input.Player.Move.ReadValue<Vector2>();
 
         _force = _forceVertical.CalcRotation(_force, mouseDelta.y);
@@ -184,13 +189,16 @@ public class SlingShot : MonoBehaviour
     {
         _indicator.SetActive(true); // Try having indicator always enabled
         _lineRenderer.enabled = true;
-        _indicator.transform.position = transform.position; // Force the indicator to be at slingshot
         if (_currentBall == null)
         {
             SpawnNextThrownObject();
             UpdateLineColor(_PrefabPicker.GetColor());
-            ResetSelf();
         }
+        ResetSelf();
+        
+        // Force the rotation of the slingshot to be 0 for Y to keep indicator at center
+        transform.rotation = Quaternion.Euler(transform.rotation.x, 0, 0);
+        gameSetupPhase = false;
     }
 
     #endregion
