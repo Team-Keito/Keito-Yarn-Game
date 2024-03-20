@@ -2406,6 +2406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CatFactManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8417868435981461560, guid: 5a8f7cdd3d4d2224aa75e64a7d4f74c5, type: 3}
+      propertyPath: _catFactPrefab
+      value: 
+      objectReference: {fileID: 8401522277341119241, guid: b553dc3898f61c9459b88d0b02fed43b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a8f7cdd3d4d2224aa75e64a7d4f74c5, type: 3}
 --- !u!224 &493177538320058705 stripped
