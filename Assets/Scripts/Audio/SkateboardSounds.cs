@@ -1,4 +1,5 @@
 using UnityEngine;
+using AK.Wwise;
 
 public class SkateboardSounds : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class SkateboardSounds : MonoBehaviour
     {
         if (!_rigidbody) _rigidbody = GetComponent<Rigidbody>();
         if (_wheelColliders.Length == 0) _wheelColliders = GetComponentsInChildren<WheelCollider>();
+        AkSoundEngine.SetRTPCValue("SkateSpeed", 0f);
+        skateboardMovementSound.Post(gameObject);
     }
 
     private void Update()
@@ -27,9 +30,19 @@ public class SkateboardSounds : MonoBehaviour
         // If grounded and above min speed
         if (IsAllGrounded() && _rigidbody.velocity.sqrMagnitude > MinSoundSpeedSqr)
         {
-            var volume = SpeedToVolume();
+            var volume = SpeedToVolume(); 
             // TODO: Uncomment when sound is added
             // skateboardMovementSound.Post(gameObject);
+            
+
+            // Map skateboard speed to RTPC value (0-100)
+            float speedRTPCValue = Mathf.Clamp(volume, 0f, 100f);
+
+            // Set the RTPC value in Wwise
+            AkSoundEngine.SetRTPCValue("SkateSpeed", speedRTPCValue); 
+
+            // Post the sound event to play the sound with the updated RTPC value
+            
         }
     }
 

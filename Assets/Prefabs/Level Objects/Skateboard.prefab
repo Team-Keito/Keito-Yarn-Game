@@ -193,9 +193,9 @@ MonoBehaviour:
   skateboardMovementSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  _minimumSoundSpeed: 0.5
-  _maximumSpeedVolume: 2
+    WwiseObjectReference: {fileID: 11400000, guid: abae5577e1feeb94c86d04e3648fbd29, type: 2}
+  _minimumSoundSpeed: 0
+  _maximumSpeedVolume: 100
 --- !u!1 &4589442022617111439
 GameObject:
   m_ObjectHideFlags: 0

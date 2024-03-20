@@ -223,6 +223,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Skate" ID="{D41A1390-7390-4743-956A-34F2CCEEE640}">
+					<ChildrenList>
+						<Action Name="" ID="{23EBC9AC-4E64-4A82-A98F-7AA2FE7EEE47}" ShortID="957336093">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Skate" ID="{0E3211C7-6323-43C9-A689-874F47D9FED4}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Break_Skate" ID="{9BF8DC03-318D-4ADC-BCB9-6A038BA18B8B}">
+					<ChildrenList>
+						<Action Name="" ID="{C98649A0-4E89-48BA-9B23-A6BD47F7A929}" ShortID="302590402">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Skate" ID="{0E3211C7-6323-43C9-A689-874F47D9FED4}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
