@@ -11,6 +11,8 @@ public class SkateboardSounds : MonoBehaviour
 
     [SerializeField, Tooltip("The max speed at which the volume will not go any higher (faster speed will be at 100% volume)")]
     private float _maximumSpeedVolume = 3;
+    [SerializeField, Range(0.001f, 10)]
+    private float _hitForceMultiplier = 1;
 
     public float MinSoundSpeedSqr => _minimumSoundSpeed * _minimumSoundSpeed;
 
@@ -52,7 +54,7 @@ public class SkateboardSounds : MonoBehaviour
             for (int i = 0; i < other.contactCount; i++)
             {
                 var contact = other.GetContact(i);
-                _rigidbody.AddForceAtPosition(contact.normal, contact.point);
+                _rigidbody.AddForceAtPosition(contact.normal * _hitForceMultiplier, contact.point);
             }
         }
     }
