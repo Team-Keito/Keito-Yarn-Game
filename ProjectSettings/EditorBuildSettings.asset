@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/In-Game.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Prototype-YarnCamera.unity
+    guid: 6877455dce62f456a91a56718f26fa9f
+  - enabled: 1
+    path: Assets/Scenes/Prototype-YarnDamage.unity
+    guid: 15d72e8bf81c3476395eb694d0093fd3
   m_configObjects: {}

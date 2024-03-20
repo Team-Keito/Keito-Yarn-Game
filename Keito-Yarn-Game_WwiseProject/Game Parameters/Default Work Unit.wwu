@@ -11,6 +11,7 @@
 						<Property Name="InitialValue" Type="Real64" Value="100"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="SkateSpeed" ID="{86D7059B-5C60-483C-AB1E-2A1972E1D072}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

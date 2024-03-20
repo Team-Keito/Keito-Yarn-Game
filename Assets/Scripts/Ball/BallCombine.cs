@@ -16,13 +16,18 @@ public class BallCombine : MonoBehaviour
     [SerializeField] private float _scaleMultiplier = 1f;
     [SerializeField] private float _scaleCap = 5f;
 
+    [Space(5)]
+    [SerializeField] private bool _allowDamageCombine = false;
+
     private Rigidbody _rigidBody;
     private Renderer _renderer;
     private Vector3 _scaleVectorCap;
+    private ColorController _colorController;
 
     public string YarnCombineSound = "Play_Yarn_Combine";
 
     public Color Color => _renderer.material.color;
+    public bool IsDamaged => _colorController.isDamaged(); 
 
     void Start()
     {
@@ -30,6 +35,8 @@ public class BallCombine : MonoBehaviour
         _renderer = GetComponent<Renderer>();
 
         _scaleVectorCap = new Vector3(_scaleCap, _scaleCap, _scaleCap);
+
+        _colorController = GetComponent<ColorController>();
     }
 
     public void SetColor(Color color)
@@ -44,6 +51,11 @@ public class BallCombine : MonoBehaviour
     /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
+        if(!_allowDamageCombine && (IsDamaged || !collision.gameObject.TryGetComponent<IDamageable>(out IDamageable hitDamage) || hitDamage.isDamaged()))
+        {
+            return;
+        }
+
         if (collision.gameObject.TryGetComponent<BallCombine>(out BallCombine hitBall) && hitBall.Color == Color)
         {
             if (!DecideBall(collision))
@@ -53,9 +65,9 @@ public class BallCombine : MonoBehaviour
 
             Vector3 combinedScale = transform.localScale + hitBall.transform.localScale * _scaleMultiplier;
             float combinedMass = _rigidBody.mass + collision.rigidbody.mass * _massMultiplier;
-            
 
-            if (transform.localScale.x >= _scaleVectorCap.x * 0.99f || _rigidBody.mass >= _massCap)
+
+            if (transform.localScale.x >= _scaleVectorCap.x * 0.99f)// || _rigidBody.mass >= _massCap)
             {
                 return;            
             }
@@ -66,7 +78,7 @@ public class BallCombine : MonoBehaviour
             transform.localScale = Vector3.Min(combinedScale, _scaleVectorCap);
             _rigidBody.mass = Mathf.Min(combinedMass, _massCap);
 
-            if(transform.localScale == _scaleVectorCap || _rigidBody.mass == _massCap)
+            if (transform.localScale == _scaleVectorCap)// || _rigidBody.mass == _massCap)
             {
                 OnMaxSize.Invoke();
             }

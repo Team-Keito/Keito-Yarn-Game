@@ -6,6 +6,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using Manager.Score;
 
 public class InGameUIManager : MonoBehaviour
 {
@@ -14,10 +16,13 @@ public class InGameUIManager : MonoBehaviour
     [SerializeField] GameObject _settingsUI;
     [SerializeField] GameObject _confirmationUI;
     [SerializeField] GameObject _gameOverUI;
+    [SerializeField] OffScreenIndicator _indicator;
     [SerializeField] PlayerPrefSO masterSO, musicSO, soundSO, _BestTimePlayerPref;
     [SerializeField] private TextMeshProUGUI endTimeText, bestTimeText, currTimeText;
     [SerializeField] private Slider scoreSlider;
     [SerializeField] private GameObject scoreColor;
+
+    public UnityEvent OnPauseMenuOpen, OnPauseMenuClose, OnGameEnd;
 
     void Start()
     {
@@ -26,6 +31,11 @@ public class InGameUIManager : MonoBehaviour
         _settingsUI.SetActive(false);
         _confirmationUI.SetActive(false);
         _gameOverUI.SetActive(false);
+
+        _gameManager._score.OnScore.AddListener((ScoreData _) => ChangeProgressBar());
+
+        _gameManager.OnCatSpawn.AddListener(_indicator.UpdateTarget);
+        _gameManager.OnGameEnd.AddListener(HandleGameEnd);
 
         if (currTimeText)
         {
@@ -59,6 +69,10 @@ public class InGameUIManager : MonoBehaviour
         {
             OnCloseConfirmation();
         }
+        else if (!_pauseUI.activeSelf)
+        {
+            OnPauseGame();
+        }
         else
         {
             OnResumeGame();
@@ -72,6 +86,7 @@ public class InGameUIManager : MonoBehaviour
 
     public void OnPauseGame()
     {
+        OnPauseMenuOpen.Invoke();
         _pauseUI.SetActive(true);
         _gameManager.PauseGame();
         AkSoundEngine.SetState("GameStates", "Pause_State");
@@ -101,6 +116,7 @@ public class InGameUIManager : MonoBehaviour
 
     public void OnResumeGame()
     {
+        OnPauseMenuClose.Invoke();
         _gameManager.ResumeGame();
         AkSoundEngine.SetState("GameStates", "IngameState");
         _pauseUI.SetActive(false);
@@ -137,12 +153,13 @@ public class InGameUIManager : MonoBehaviour
         _gameManager.LoadMainMenu();
     }
 
-    public void OnGameEnd()
+    public void HandleGameEnd()
     {
         _gameManager.PauseGame();
         _gameOverUI.SetActive(true);
+        
         AkSoundEngine.SetState("GameStates", "Game_over");
-
+        OnGameEnd.Invoke();
     }
 
     public void OnResetSettings()

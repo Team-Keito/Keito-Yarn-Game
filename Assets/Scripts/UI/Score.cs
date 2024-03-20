@@ -13,12 +13,28 @@ namespace Manager.Score
 
         public UnityEvent<ScoreData> OnCatScored;
 
+        public UnityEvent<ScoreData> OnScore;
+
         [System.NonSerialized]
         public float Score;
         [System.NonSerialized]
         public float HighScore;
 
-        public ScoreData UpdateScore(float value, ColorSO favColor, bool isFavoriteColor)
+        public ScoreData AddPoints(int baseScore, int bonusScore = 0)
+        {
+            Score += baseScore + bonusScore;
+            HighScore = Mathf.Max(Score, HighScore);
+
+            ScoreData data = new(Mathf.RoundToInt(baseScore), Mathf.RoundToInt(bonusScore));
+
+            OnScore.Invoke(data);
+            return data;
+        }
+        public ScoreData AddBonusPoints(int value) {
+            return AddPoints(0, value);
+        }
+
+        public ScoreData UpdateCatScore(float value, ColorSO favColor, bool isFavoriteColor)
         {
             //Score based on Suika scoring.
             float scaledValue = value * ScoreMultiplier;
@@ -36,6 +52,7 @@ namespace Manager.Score
             ScoreData data = new(Mathf.RoundToInt(baseScore), Mathf.RoundToInt(bonusScore), isFavoriteColor, favColor, FavoriteColorMultiplier);
 
             OnCatScored.Invoke(data);
+            OnScore.Invoke(data);
 
             return data;
         }
