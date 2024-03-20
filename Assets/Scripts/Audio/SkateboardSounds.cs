@@ -30,19 +30,30 @@ public class SkateboardSounds : MonoBehaviour
         // If grounded and above min speed
         if (IsAllGrounded() && _rigidbody.velocity.sqrMagnitude > MinSoundSpeedSqr)
         {
-            var volume = SpeedToVolume(); 
+            var volume = SpeedToVolume();
             // TODO: Uncomment when sound is added
             // skateboardMovementSound.Post(gameObject);
-            
 
             // Map skateboard speed to RTPC value (0-100)
             float speedRTPCValue = Mathf.Clamp(volume, 0f, 100f);
 
             // Set the RTPC value in Wwise
-            AkSoundEngine.SetRTPCValue("SkateSpeed", speedRTPCValue); 
+            AkSoundEngine.SetRTPCValue("SkateSpeed", speedRTPCValue);
 
             // Post the sound event to play the sound with the updated RTPC value
-            
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Yarn"))
+        {
+            // Apply force to get skateboard to move
+            for (int i = 0; i < other.contactCount; i++)
+            {
+                var contact = other.GetContact(i);
+                _rigidbody.AddForceAtPosition(contact.normal, contact.point);
+            }
         }
     }
 
