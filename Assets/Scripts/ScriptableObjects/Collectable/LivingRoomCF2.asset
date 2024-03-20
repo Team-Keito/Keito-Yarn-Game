@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LivingRoomCF2
   m_EditorClassIdentifier: 
   title: Fun Fact
-  factText: "A cat\u2019s heart beat is almost double that of a human, \nfrom 110-140
+  factText: "A cat\u2019s heart beat is almost double that of a human, from 110-140
     beats per minute."
