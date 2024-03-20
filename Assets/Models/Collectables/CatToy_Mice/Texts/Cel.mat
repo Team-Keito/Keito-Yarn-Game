@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MouseCel
+  m_Name: Cel
   m_Shader: {fileID: -6465566751694194690, guid: 0152bb286c391da4ab1fff648d2ee40b, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
