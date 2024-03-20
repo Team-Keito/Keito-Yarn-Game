@@ -3015,7 +3015,13 @@
 							<ObjectLists/>
 						</BlendContainer>
 						<BlendContainer Name="Skate" ID="{0E3211C7-6323-43C9-A689-874F47D9FED4}" ShortID="414822653">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
 								</Reference>
