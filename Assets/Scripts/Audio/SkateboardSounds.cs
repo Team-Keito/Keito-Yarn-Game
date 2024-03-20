@@ -9,7 +9,7 @@ public class SkateboardSounds : MonoBehaviour
     [SerializeField, Tooltip("The minimum amount of speed required for the sound to play")]
     private float _minimumSoundSpeed = 0.5f;
 
-    [SerializeField, Tooltip("The max speed at which the volume will not go any higher (faster speed will be at 100% volume)")]
+    [SerializeField, Tooltip("The speed at which max volume will play (100% volume). All faster speed is fixed to 100% volume")]
     private float _maximumSpeedVolume = 3;
     [SerializeField, Range(0.001f, 10)]
     private float _hitForceMultiplier = 1;
