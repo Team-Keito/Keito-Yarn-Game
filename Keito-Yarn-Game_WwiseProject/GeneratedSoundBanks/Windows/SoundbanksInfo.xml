@@ -21,7 +21,7 @@
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\MasterVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="629720997">
+		<SoundBank Id="2641024368" Language="SFX" Hash="3148508623">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
@@ -275,7 +275,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1618563948" Name="Play_Skate" ObjectPath="\Events\Default Work Unit\Play_Skate" DurationType="Infinite">
+				<Event Id="1618563948" Name="Play_Skate" ObjectPath="\Events\Default Work Unit\Play_Skate" MaxAttenuation="30." DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="892083715" Language="SFX">
 							<ShortName>Keito_Skate_Loop.wav</ShortName>
