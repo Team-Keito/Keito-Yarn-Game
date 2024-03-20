@@ -3493,6 +3493,14 @@ PrefabInstance:
       propertyPath: m_ForwardFriction.m_Stiffness
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2439786219631364555, guid: ae322e0aff4b04cf0b794d50b2f7b30b, type: 3}
+      propertyPath: _minimumSoundSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2439786219631364555, guid: ae322e0aff4b04cf0b794d50b2f7b30b, type: 3}
+      propertyPath: _maximumSpeedVolume
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3889494551630044120, guid: ae322e0aff4b04cf0b794d50b2f7b30b, type: 3}
       propertyPath: m_Name
       value: Skateboard
@@ -3692,6 +3700,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1213558213}
     m_Modifications:
+    - target: {fileID: -1757113816499410101, guid: b659257bddf0de74ca4989ea2f8d9374, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 411220434822305973, guid: b659257bddf0de74ca4989ea2f8d9374, type: 3}
       propertyPath: m_RootOrder
       value: 2
