@@ -106,7 +106,14 @@ public class GameManager : MonoBehaviour
 
         _score.OnCatScored.AddListener((ScoreData data) => catGameObject.BroadcastMessage("OnScoredEvent", data));
 
-        OnCatSpawn.Invoke(catGameObject);        
+        OnCatSpawn.Invoke(catGameObject);
+
+        Collectable[] list = FindObjectsOfType<Collectable>();
+
+        foreach(Collectable item in list)
+        {
+            item.OnCollect.AddListener(UpdateScoreCollectable);
+        }
     }
 
     /// <summary>
