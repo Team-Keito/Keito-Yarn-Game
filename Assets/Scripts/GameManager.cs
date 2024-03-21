@@ -88,6 +88,18 @@ public class GameManager : MonoBehaviour
         // Sets the best time to the default best time if it doesn't find the key for it
         BestTime = PlayerPrefs.HasKey(_BestTimePlayerPref.currKey.ToString()) ? PlayerPrefs.GetInt(_BestTimePlayerPref.currKey.ToString()) : bestTime;
 
+        SetUpCat();
+
+        Collectable[] list = FindObjectsOfType<Collectable>();
+
+        foreach(Collectable item in list)
+        {
+            item.OnCollect.AddListener(UpdateScoreCollectable);
+        }
+    }
+
+    private void SetUpCat()
+    {
         spawnLocPrefab = GameObject.FindGameObjectsWithTag(_SpawnPoint.Tag);
 
         if (spawnLocPrefab.Length == 0)
@@ -98,22 +110,22 @@ public class GameManager : MonoBehaviour
 
         // Instantiate, then assign position+rotation
         catGameObject = Instantiate(catGameObject);
-        ChangeCatLocation(0 <= _firstSpawnIndex && _firstSpawnIndex < spawnLocPrefab.Length ? _firstSpawnIndex : null);
+        if(spawnLocPrefab.Length == 1)
+        {
+            catGameObject.transform.SetPositionAndRotation(spawnLocPrefab[0].transform.position, spawnLocPrefab[0].transform.rotation);
+            UpdateCatColor();
+        }
+        else
+        {
+            ChangeCatLocation(0 <= _firstSpawnIndex && _firstSpawnIndex < spawnLocPrefab.Length ? _firstSpawnIndex : null);
+        }
+                
         CatYarnInteraction CatInteract = catGameObject.GetComponent<CatYarnInteraction>();
 
         CatInteract.OnCatScored.AddListener(UpdateScore);
-        UpdateCatColor();
-
         _score.OnCatScored.AddListener((ScoreData data) => catGameObject.BroadcastMessage("OnScoredEvent", data));
 
         OnCatSpawn.Invoke(catGameObject);
-
-        Collectable[] list = FindObjectsOfType<Collectable>();
-
-        foreach(Collectable item in list)
-        {
-            item.OnCollect.AddListener(UpdateScoreCollectable);
-        }
     }
 
     /// <summary>
