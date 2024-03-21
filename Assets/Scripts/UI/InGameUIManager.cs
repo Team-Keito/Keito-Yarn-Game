@@ -24,18 +24,14 @@ public class InGameUIManager : MonoBehaviour
 
     public UnityEvent OnPauseMenuOpen, OnPauseMenuClose, OnGameEnd;
 
+    
     void Start()
     {
         if (!_gameManager) _gameManager = FindObjectOfType<GameManager>();
         _pauseUI.SetActive(false);
         _settingsUI.SetActive(false);
         _confirmationUI.SetActive(false);
-        _gameOverUI.SetActive(false);
-
-        _gameManager._score.OnScore.AddListener((ScoreData _) => ChangeProgressBar());
-
-        _gameManager.OnCatSpawn.AddListener(_indicator.UpdateTarget);
-        _gameManager.OnGameEnd.AddListener(HandleGameEnd);
+        _gameOverUI.SetActive(false);        
 
         if (currTimeText)
         {
@@ -49,14 +45,29 @@ public class InGameUIManager : MonoBehaviour
 
     private void OnEnable()
     {
+        _gameManager._score.OnScore.AddListener(HandleScoreData);
+
+        _gameManager.OnCatSpawn.AddListener(_indicator.UpdateTarget);
+        _gameManager.OnGameEnd.AddListener(HandleGameEnd);
+
         InputManager.Input.Player.Menu.performed += Menu_performed;
         InputManager.Input.UI.Cancel.performed += Cancel_performed;
     }
 
     private void OnDisable()
     {
+        _gameManager._score.OnScore.RemoveListener(HandleScoreData);
+
+        _gameManager.OnCatSpawn.RemoveListener(_indicator.UpdateTarget);
+        _gameManager.OnGameEnd.RemoveListener(HandleGameEnd);
+
         InputManager.Input.Player.Menu.performed -= Menu_performed;
         InputManager.Input.UI.Cancel.performed -= Cancel_performed;
+    }
+
+    private void HandleScoreData(ScoreData data)
+    {
+        ChangeProgressBar();
     }
 
     private void Cancel_performed(InputAction.CallbackContext obj)
