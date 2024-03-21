@@ -285,9 +285,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _massMultiplier: 1
-  _massCap: 5
+  _massCap: 1
   _scaleMultiplier: 1
-  _scaleCap: 5
+  _scaleCap: 2.5
   YarnCombineSound: Play_Yarn_Combine
 --- !u!114 &-1940726632899412579
 MonoBehaviour:
@@ -390,4 +390,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84318ca259e34594b87cdf44d90fad52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _intensity: 5
+  _intensity: 2

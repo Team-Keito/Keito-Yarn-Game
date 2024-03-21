@@ -40,6 +40,12 @@ public class Collectable : MonoBehaviour
         _scorePopup = GetComponent<ScorePopUp>();      
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.grey;
+        Gizmos.DrawWireSphere(transform.position, _nearHitRadius);
+    }
+
     private void HandleHideCollected()
     {
         Destroy(gameObject);

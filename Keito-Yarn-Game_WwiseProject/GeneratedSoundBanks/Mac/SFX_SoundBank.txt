@@ -2,8 +2,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	40205785	Play_SoftClothHit			\Default Work Unit\Play_SoftClothHit	
 	278617630	Play_Ambience			\Default Work Unit\Play_Ambience	
 	554607610	Play_Yarn_Combine			\Default Work Unit\Play_Yarn_Combine	
+	761519245	Break_Skate			\Default Work Unit\Break_Skate	
 	805934378	Play_FurnitureDrag			\Default Work Unit\Play_FurnitureDrag	
 	1160118988	Play_Cat_Purr			\Default Work Unit\Play_Cat_Purr	
+	1618563948	Play_Skate			\Default Work Unit\Play_Skate	
 	1669734397	Play_Collectable_Near			\Default Work Unit\Play_Collectable_Near	
 	1677062370	Play_Yarn_Hit			\Default Work Unit\Play_Yarn_Hit	
 	1815447315	Play_CatRefusesYarn			\Default Work Unit\Play_CatRefusesYarn	
@@ -35,6 +37,7 @@ Custom State	ID	Name	State Group	Owner		Notes
 	879271228	MainMenu_State	GameStates	\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Jasmina_Keito_Ambience		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	1270318878	SkateSpeed			\Default Work Unit\SkateSpeed	
 	2801574179	VolumeChange			\Default Work Unit\VolumeChange	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
@@ -83,7 +86,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	831537192	CATPOCALYPSE_AUDIO_CAT_PURR_V1_2	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Mac\SFX\CATPOCALYPSE_AUDIO_CAT_PURR_V1_2_82BE384A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cat_Purr\CATPOCALYPSE_AUDIO_CAT_PURR_V1_2		225268
 	835207708	ThrowYarn	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Mac\SFX\CATPOCALYPSE_AUDIO_RESROUCE_GET_BUBBLE_POP_V1_10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ThrowYarn		8064
 	841756326	Jasmina_Keito_WoodHit_03	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Mac\SFX\Jasmina_Keito_WoodHit_03_A97E5444.wem		\Actor-Mixer Hierarchy\Default Work Unit\Furniture\WoodHit\Jasmina_Keito_WoodHit_03		5106
-	846846878	Jasmina_Keito_Collect	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Mac\SFX\Jasmina_Keito_Collect_E8BF7227.wem		\Actor-Mixer Hierarchy\Default Work Unit\Collectables\Jasmina_Keito_Collect		211856
+	846846878	Jasmina_Keito_Collect	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Mac\SFX\Jasmina_Keito_Collect_A9768DDF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Collectables\Jasmina_Keito_Collect		211856
+	892083715	Keito_Skate_Loop	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Mac\SFX\Keito_Skate_Loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Furniture\Skate\Keito_Skate_Loop		697220
 	907544814	Jasmina_Keito_Cloth_02	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Mac\SFX\Jasmina_Keito_Cloth_02_1204855B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Furniture\SoftClothHit\SoftCloth\Jasmina_Keito_Cloth_02		6646
 	912852287	CATPOCALYPSE_AUDIO_CAT_PURR_V1_3	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Mac\SFX\CATPOCALYPSE_AUDIO_CAT_PURR_V1_3_DD6D5B0B.wem		\Actor-Mixer Hierarchy\Default Work Unit\FavoriteYarnColor\Cat_Purr\CATPOCALYPSE_AUDIO_CAT_PURR_V1_3		320140
 	958241183	CATPOCALYPSE_CAT_MEOW_V1_6	F:\Poslovi\P1-OM\Keito\KeitoNew\Keito-Yarn-Game\Keito-Yarn-Game_WwiseProject\.cache\Mac\SFX\CATPOCALYPSE_CAT_MEOW_V1_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cat_Meow\CATPOCALYPSE_CAT_MEOW_V1_6		186464
