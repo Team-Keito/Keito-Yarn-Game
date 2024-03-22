@@ -50,7 +50,7 @@ public class CatYarnInteraction : MonoBehaviour
         {
             ColorController colorHit = collision.gameObject.GetComponent<ColorController>();
 
-            if(_rejectNonFavoriteColor && colorHit.Color != FavoriteColor)
+            if(_rejectOffColor && colorHit.Color != FavoriteColor)
             {
                 OnReject.Invoke(RejectType.Color);
                 return;
