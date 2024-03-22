@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+
+public enum RejectType
+{
+    Color,
+    Size,
+    Force,
+    Damage,
+}
+
 public class CatYarnInteraction : MonoBehaviour
 {
     [SerializeField, Tooltip("Tag for Yarnball")]
@@ -15,9 +24,7 @@ public class CatYarnInteraction : MonoBehaviour
     [SerializeField] private bool _rejectDamagedBall = true;
 
     public UnityEvent<float, bool> OnCatScored;
-    public UnityEvent OnRejectBallSize;
-    public UnityEvent OnRejectBallForce;
-    public UnityEvent OnRejectDamagedBall;
+    public UnityEvent<RejectType> OnReject;
     public UnityEvent<ColorSO> OnFavoriteColor;
 
     private ColorSO _favoriteColor;
@@ -40,16 +47,29 @@ public class CatYarnInteraction : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(_yarnTag.Tag))
         {
-            // Find first failure
+            ColorController colorHit = collision.gameObject.GetComponent<ColorController>();
+
+            if(colorHit.Color != FavoriteColor)
+            {
+                OnReject.Invoke(RejectType.Color);
+                return;
+            }
+
+            if (_rejectDamagedBall && colorHit.isDamaged())
+            {
+                OnReject.Invoke(RejectType.Damage);
+                return;
+            }
+
             if (collision.transform.localScale.x <= _minSize)
             {
                 if (collision.relativeVelocity.sqrMagnitude >= _minSqrVelocityRejection)
                 {
-                    RejectBallForce(collision);
+                    OnReject.Invoke(RejectType.Force);
                 }
                 else
                 {
-                    RejectBallSize(collision);
+                    OnReject.Invoke(RejectType.Size);
                 }                    
             }
             else
@@ -63,32 +83,9 @@ public class CatYarnInteraction : MonoBehaviour
     {
         ColorController colorHit = collision.gameObject.GetComponent<ColorController>();
 
-        if(_rejectDamagedBall && colorHit.isDamaged())
-        {
-            RejectDamagedBall();
-            return;
-        }
-
         bool isFavorite = _favoriteColor == colorHit.Color && !colorHit.isDamaged();
 
         OnCatScored.Invoke(collision.transform.localScale.x, isFavorite);
         Destroy(collision.gameObject);
-    }
-
-    private void RejectDamagedBall()
-    {
-        //TODO: Add in damaged ball thought bubble?
-        OnRejectDamagedBall.Invoke();
-    }
-
-    private void RejectBallSize(Collision collision)
-    {
-        OnRejectBallSize.Invoke();
-    }
-
-    private void RejectBallForce(Collision collision)
-    {
-        // TODO: Should this be a different thought bubble function? 
-        OnRejectBallForce.Invoke();
     }
 }
