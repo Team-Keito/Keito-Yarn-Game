@@ -173,6 +173,27 @@ public class GameManager : MonoBehaviour
         return _colorList[RandInt];
     }
 
+    // New functions to support color script and yarn prefabs
+    public ColorSO GetRandomColorSO()
+    {
+        int RandInt = Random.Range(0, _colorDataList.Length);
+        return _colorDataList[RandInt].colorScriptObject;
+    }
+    public GameObject GetRandomColorYarn()
+    {
+        int RandInt = Random.Range(0, _colorDataList.Length);
+        return _colorDataList[RandInt].colorYarnPrefab;
+    }
+    public ColorSO GetIndexColorSO(int index)
+    {
+        return _colorDataList[index].colorScriptObject;
+    }
+    public GameObject GetIndexColorYarn(int index)
+    {
+        return _colorDataList[index].colorYarnPrefab;
+    }
+    // new functions to support color script and yarn prefabs
+
     public void PauseGame()
     {
         Time.timeScale = 0;
