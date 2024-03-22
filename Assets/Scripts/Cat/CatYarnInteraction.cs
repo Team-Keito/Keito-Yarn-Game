@@ -22,6 +22,7 @@ public class CatYarnInteraction : MonoBehaviour
     private float _minSqrVelocityRejection = 4;
 
     [SerializeField] private bool _rejectDamagedBall = true;
+    [SerializeField, Tooltip("Reject Non-Favorite Colors")] private bool _rejectOffColor = true;
 
     public UnityEvent<float, bool> OnCatScored;
     public UnityEvent<RejectType> OnReject;
@@ -49,7 +50,7 @@ public class CatYarnInteraction : MonoBehaviour
         {
             ColorController colorHit = collision.gameObject.GetComponent<ColorController>();
 
-            if(colorHit.Color != FavoriteColor)
+            if(_rejectNonFavoriteColor && colorHit.Color != FavoriteColor)
             {
                 OnReject.Invoke(RejectType.Color);
                 return;
