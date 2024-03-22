@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public ScoreSystem _score;
 
     [SerializeField] private ColorSO[] _colorList;
+    [SerializeField] private ColorData[] _colorDataList; // Trying to replace color list with color data.
 
     public GameObject catGameObject;
 
