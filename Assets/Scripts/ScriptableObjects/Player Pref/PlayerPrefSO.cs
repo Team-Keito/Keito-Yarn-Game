@@ -10,7 +10,8 @@ public class PlayerPrefSO : ScriptableObject
         Best_Time,
         Master_Volume,
         Music_Volume,
-        Sound_Volume
+        Sound_Volume,
+        Mouse_Sensitivity
     }
 
     public Key currKey;
