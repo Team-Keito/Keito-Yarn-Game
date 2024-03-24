@@ -19,8 +19,8 @@ public class InGameUIManager : MonoBehaviour
     [SerializeField] OffScreenIndicator _indicator;
     [SerializeField] PlayerPrefSO masterSO, musicSO, soundSO, _BestTimePlayerPref;
     [SerializeField] private TextMeshProUGUI endTimeText, bestTimeText, currTimeText;
-    [SerializeField] private Slider scoreSlider;
-    [SerializeField] private GameObject scoreColor;
+    [SerializeField] private ScoreProgressController _scoreController;
+    
 
     public UnityEvent OnPauseMenuOpen, OnPauseMenuClose, OnGameEnd;
 
@@ -31,7 +31,9 @@ public class InGameUIManager : MonoBehaviour
         _pauseUI.SetActive(false);
         _settingsUI.SetActive(false);
         _confirmationUI.SetActive(false);
-        _gameOverUI.SetActive(false);        
+        _gameOverUI.SetActive(false);
+
+        _scoreController.Total = _gameManager.TargetScore;
 
         if (currTimeText)
         {
@@ -212,22 +214,6 @@ public class InGameUIManager : MonoBehaviour
 
     public void ChangeProgressBar()
     {
-        if (scoreSlider)
-        {
-            scoreSlider.value = _gameManager.Score / _gameManager.TargetScore;
-
-            if (scoreSlider.value < 0.25f)
-                scoreColor.GetComponent<Image>().color = Color.red;
-            else if (scoreSlider.value > 0.25f && scoreSlider.value < 0.75f)
-                scoreColor.GetComponent<Image>().color = Color.yellow;
-            else if (scoreSlider.value > 0.75f && scoreSlider.value < 0.99f)
-                scoreColor.GetComponent<Image>().color = Color.green;
-            else
-                scoreColor.GetComponent<Image>().color = Color.blue;
-        }
-        else
-        {
-            Debug.LogWarning("Missing UI Reference: Score Slider");
-        }
+        _scoreController.SetScore((int)_gameManager.Score);
     }
 }
