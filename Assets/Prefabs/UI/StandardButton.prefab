@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 7412370664821513003}
   - component: {fileID: 9002408683449930630}
   - component: {fileID: 2646825444383985474}
-  - component: {fileID: 6327096852718724203}
+  - component: {fileID: 6353933447017718162}
   m_Layer: 5
   m_Name: StandardButton
   m_TagString: Untagged
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f43bef1cd398b4fa1237fd86a534fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6327096852718724203
+--- !u!114 &6353933447017718162
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -405,11 +405,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventID: 9
+  - eventID: 4
     callback:
       m_PersistentCalls:
-        m_Calls: []
-  - eventID: 10
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 3251305326081343256}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
