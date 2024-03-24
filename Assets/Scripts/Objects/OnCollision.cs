@@ -7,8 +7,8 @@ namespace ComponentHelper
 {
     public class OnCollision : MonoBehaviour
     {
-        public UnityEvent OnCollisionEvent;
         public TagSO _tag;
+        public UnityEvent OnCollisionEvent;
 
         private void OnCollisionEnter(Collision collision)
         {
@@ -18,5 +18,4 @@ namespace ComponentHelper
             }
         }
     }
-
 }
