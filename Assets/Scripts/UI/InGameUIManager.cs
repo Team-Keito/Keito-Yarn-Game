@@ -74,6 +74,11 @@ public class InGameUIManager : MonoBehaviour
 
     private void Cancel_performed(InputAction.CallbackContext obj)
     {
+        Cancel();
+    }
+
+    public void Cancel()
+    {
         if (_settingsUI.activeSelf)
         {
             OnSettingsClose();
