@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public ScoreSystem _score;
 
     [SerializeField] private ColorSO[] _colorList;
-    [SerializeField] private ColorData[] _colorDataList; // Trying to replace color list with color data.
+    public int NumberOfColors => _colorList.Length;
 
     public GameObject catGameObject;
 
@@ -176,21 +176,20 @@ public class GameManager : MonoBehaviour
     // New functions to support color script and yarn prefabs
     public ColorSO GetRandomColorSO()
     {
-        int RandInt = Random.Range(0, _colorDataList.Length);
-        return _colorDataList[RandInt].colorScriptObject;
+        int RandInt = Random.Range(0, _colorList.Length);
+        return _colorList[RandInt];
     }
     public GameObject GetRandomColorYarn()
     {
-        int RandInt = Random.Range(0, _colorDataList.Length);
-        return _colorDataList[RandInt].colorYarnPrefab;
+        return GetRandomColorSO().YarnPrefab;
     }
     public ColorSO GetIndexColorSO(int index)
     {
-        return _colorDataList[index].colorScriptObject;
+        return _colorList[index];
     }
     public GameObject GetIndexColorYarn(int index)
     {
-        return _colorDataList[index].colorYarnPrefab;
+        return GetIndexColorSO(index).YarnPrefab;
     }
     // new functions to support color script and yarn prefabs
 
