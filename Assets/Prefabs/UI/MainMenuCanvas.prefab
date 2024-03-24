@@ -486,6 +486,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3042334106616013836}
+        m_TargetAssemblyTypeName: MouseSettings, Scripts
+        m_MethodName: SetUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1646307516963588522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,6 +1476,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5514838614322048407, guid: 2f9e0a750292f4f4cb7a72197628ba42, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5802292625416671108, guid: 2f9e0a750292f4f4cb7a72197628ba42, type: 3}
       propertyPath: m_Name
       value: SettingsUI
@@ -1715,6 +1731,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cda6b4a6c085277408fe9ca6f2e200c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3042334106616013836 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3034488907249517738, guid: 2f9e0a750292f4f4cb7a72197628ba42, type: 3}
+  m_PrefabInstance: {fileID: 10169748916510886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c58cc2435d02eb5478fa78f847c96a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &5810139620432408353 stripped

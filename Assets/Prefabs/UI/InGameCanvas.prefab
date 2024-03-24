@@ -1266,6 +1266,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8347670813545949204}
+        m_TargetAssemblyTypeName: MouseSettings, Scripts
+        m_MethodName: SetUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7781372501407015949
 GameObject:
   m_ObjectHideFlags: 0
@@ -2492,6 +2504,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -154
       objectReference: {fileID: 0}
+    - target: {fileID: 4827656868466795039, guid: 2f9e0a750292f4f4cb7a72197628ba42, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5303741235575849386, guid: 2f9e0a750292f4f4cb7a72197628ba42, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
@@ -2660,6 +2676,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -58
       objectReference: {fileID: 0}
+    - target: {fileID: 8232661456697311597, guid: 2f9e0a750292f4f4cb7a72197628ba42, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9010066861513120205, guid: 2f9e0a750292f4f4cb7a72197628ba42, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
@@ -2722,6 +2742,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cda6b4a6c085277408fe9ca6f2e200c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8347670813545949204 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3034488907249517738, guid: 2f9e0a750292f4f4cb7a72197628ba42, type: 3}
+  m_PrefabInstance: {fileID: 6468376285322538174}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c58cc2435d02eb5478fa78f847c96a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &7538568240352733799
