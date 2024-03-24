@@ -21,7 +21,7 @@
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\MasterVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="3148508623">
+		<SoundBank Id="2641024368" Language="SFX" Hash="418201672">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
@@ -139,6 +139,54 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1090132750" Name="Play_Ceramic" ObjectPath="\Events\Default Work Unit\Play_Ceramic" MaxAttenuation="30." DurationType="OneShot" DurationMin="0.215856" DurationMax="0.271962">
+					<IncludedMemoryFiles>
+						<File Id="33003346" Language="SFX">
+							<ShortName>Keito_CeramicHitPt2_01.wav</ShortName>
+							<Path>SFX\Keito_CeramicHitPt2_01_10C4C929.wem</Path>
+						</File>
+						<File Id="106089571" Language="SFX">
+							<ShortName>Keito_CeramicHitPt3_01.wav</ShortName>
+							<Path>SFX\Keito_CeramicHitPt3_01_10C4C929.wem</Path>
+						</File>
+						<File Id="174136757" Language="SFX">
+							<ShortName>Jasmina_Keito_WoodHit_02.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_WoodHit_02_378CD65B.wem</Path>
+						</File>
+						<File Id="221164872" Language="SFX">
+							<ShortName>Keito_CeramicHitPt2_02.wav</ShortName>
+							<Path>SFX\Keito_CeramicHitPt2_02_10C4C929.wem</Path>
+						</File>
+						<File Id="383783965" Language="SFX">
+							<ShortName>Jasmina_Keito_WoodHit_05.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_WoodHit_05_C27E3FCF.wem</Path>
+						</File>
+						<File Id="397488344" Language="SFX">
+							<ShortName>Jasmina_Keito_WoodHit_01.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_WoodHit_01_B3A1CE86.wem</Path>
+						</File>
+						<File Id="631910869" Language="SFX">
+							<ShortName>Keito_CeramicHitPt1_02.wav</ShortName>
+							<Path>SFX\Keito_CeramicHitPt1_02_10C4C929.wem</Path>
+						</File>
+						<File Id="739605702" Language="SFX">
+							<ShortName>Keito_CeramicHitPt3_02.wav</ShortName>
+							<Path>SFX\Keito_CeramicHitPt3_02_10C4C929.wem</Path>
+						</File>
+						<File Id="841756326" Language="SFX">
+							<ShortName>Jasmina_Keito_WoodHit_03.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_WoodHit_03_A97E5444.wem</Path>
+						</File>
+						<File Id="906897115" Language="SFX">
+							<ShortName>Keito_CeramicHitPt1_01.wav</ShortName>
+							<Path>SFX\Keito_CeramicHitPt1_01_10C4C929.wem</Path>
+						</File>
+						<File Id="969356125" Language="SFX">
+							<ShortName>Jasmina_Keito_WoodHit_04.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_WoodHit_04_7796CB6C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2225033368" Name="Play_Collect" ObjectPath="\Events\Default Work Unit\Play_Collect" DurationType="OneShot" DurationMin="1.200628" DurationMax="1.200628">
 					<IncludedMemoryFiles>
 						<File Id="846846878" Language="SFX">
@@ -152,6 +200,14 @@
 						<File Id="366137986" Language="SFX">
 							<ShortName>Jasmina_Keito_Collect_Near.wav</ShortName>
 							<Path>SFX\Jasmina_Keito_Collect_Near_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2757069037" Name="Play_Fan" ObjectPath="\Events\Default Work Unit\Play_Fan" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="495542322" Language="SFX">
+							<ShortName>Keito_Fan_Loop.wav</ShortName>
+							<Path>SFX\Keito_Fan_Loop_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -275,6 +331,66 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3199860711" Name="Play_Metal" ObjectPath="\Events\Default Work Unit\Play_Metal" MaxAttenuation="30." DurationType="OneShot" DurationMin="0.46347" DurationMax="0.668372">
+					<IncludedMemoryFiles>
+						<File Id="159455272" Language="SFX">
+							<ShortName>Keito_MetalHitPt2_02.wav</ShortName>
+							<Path>SFX\Keito_MetalHitPt2_02_10C4C929.wem</Path>
+						</File>
+						<File Id="174136757" Language="SFX">
+							<ShortName>Jasmina_Keito_WoodHit_02.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_WoodHit_02_378CD65B.wem</Path>
+						</File>
+						<File Id="197744113" Language="SFX">
+							<ShortName>Keito_MetalHitPt1_01.wav</ShortName>
+							<Path>SFX\Keito_MetalHitPt1_01_10C4C929.wem</Path>
+						</File>
+						<File Id="383783965" Language="SFX">
+							<ShortName>Jasmina_Keito_WoodHit_05.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_WoodHit_05_C27E3FCF.wem</Path>
+						</File>
+						<File Id="397488344" Language="SFX">
+							<ShortName>Jasmina_Keito_WoodHit_01.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_WoodHit_01_B3A1CE86.wem</Path>
+						</File>
+						<File Id="544772870" Language="SFX">
+							<ShortName>Keito_MetalHitPt2_01.wav</ShortName>
+							<Path>SFX\Keito_MetalHitPt2_01_10C4C929.wem</Path>
+						</File>
+						<File Id="555729388" Language="SFX">
+							<ShortName>Keito_MetalHitPt1_02.wav</ShortName>
+							<Path>SFX\Keito_MetalHitPt1_02_10C4C929.wem</Path>
+						</File>
+						<File Id="577954276" Language="SFX">
+							<ShortName>Keito_MetalHitPt1_03.wav</ShortName>
+							<Path>SFX\Keito_MetalHitPt1_03_10C4C929.wem</Path>
+						</File>
+						<File Id="605174955" Language="SFX">
+							<ShortName>Keito_MetalHitPt3_Mid_01.wav</ShortName>
+							<Path>SFX\Keito_MetalHitPt3_Mid_01_10C4C929.wem</Path>
+						</File>
+						<File Id="711344105" Language="SFX">
+							<ShortName>Keito_MetalHitPt4_End_01.wav</ShortName>
+							<Path>SFX\Keito_MetalHitPt4_End_01_10C4C929.wem</Path>
+						</File>
+						<File Id="841756326" Language="SFX">
+							<ShortName>Jasmina_Keito_WoodHit_03.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_WoodHit_03_A97E5444.wem</Path>
+						</File>
+						<File Id="902095461" Language="SFX">
+							<ShortName>Keito_MetalHitPt4_End_02.wav</ShortName>
+							<Path>SFX\Keito_MetalHitPt4_End_02_10C4C929.wem</Path>
+						</File>
+						<File Id="926663260" Language="SFX">
+							<ShortName>Keito_MetalHitPt3_Mid_02.wav</ShortName>
+							<Path>SFX\Keito_MetalHitPt3_Mid_02_10C4C929.wem</Path>
+						</File>
+						<File Id="969356125" Language="SFX">
+							<ShortName>Jasmina_Keito_WoodHit_04.wav</ShortName>
+							<Path>SFX\Jasmina_Keito_WoodHit_04_7796CB6C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1618563948" Name="Play_Skate" ObjectPath="\Events\Default Work Unit\Play_Skate" MaxAttenuation="30." DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="892083715" Language="SFX">
@@ -395,6 +511,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="503719263" Name="Stop_Fan" ObjectPath="\Events\Default Work Unit\Stop_Fan" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<GameParameters>
 				<GameParameter Id="1270318878" Name="SkateSpeed" ObjectPath="\Game Parameters\Default Work Unit\SkateSpeed"/>

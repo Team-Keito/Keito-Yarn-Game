@@ -16,6 +16,7 @@ TagManager:
   - CardboardBox
   - Metal
   - Ceramic
+  - Fan
   layers:
   - Default
   - TransparentFX

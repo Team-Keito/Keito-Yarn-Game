@@ -288,6 +288,7 @@ MonoBehaviour:
   _massCap: 1
   _scaleMultiplier: 1
   _scaleCap: 2.5
+  _allowDamageCombine: 0
   YarnCombineSound: Play_Yarn_Combine
 --- !u!114 &-1940726632899412579
 MonoBehaviour:
@@ -378,6 +379,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _color: {fileID: 0}
+  _damageMod: 0.5
+  _repairMod: 1
 --- !u!114 &-6499248760467099502
 MonoBehaviour:
   m_ObjectHideFlags: 0
