@@ -21,7 +21,7 @@
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\MasterVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2641024368" Language="SFX" Hash="418201672">
+		<SoundBank Id="2641024368" Language="SFX" Hash="2141049923">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX_SoundBank</ObjectPath>
 			<ShortName>SFX_SoundBank</ShortName>
 			<Path>SFX_SoundBank.bnk</Path>
@@ -424,6 +424,22 @@
 						<File Id="835207708" Language="SFX">
 							<ShortName>CATPOCALYPSE_AUDIO_RESROUCE_GET_BUBBLE_POP_V1_10.wav</ShortName>
 							<Path>SFX\CATPOCALYPSE_AUDIO_RESROUCE_GET_BUBBLE_POP_V1_10_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1174402806" Name="Play_TV_Off" ObjectPath="\Events\Default Work Unit\Play_TV_Off" DurationType="OneShot" DurationMin="1.6" DurationMax="1.6">
+					<IncludedMemoryFiles>
+						<File Id="633615799" Language="SFX">
+							<ShortName>Keito_TV_Off.wav</ShortName>
+							<Path>SFX\Keito_TV_Off_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1865976120" Name="Play_TV_On" ObjectPath="\Events\Default Work Unit\Play_TV_On" DurationType="OneShot" DurationMin="1.6" DurationMax="1.6">
+					<IncludedMemoryFiles>
+						<File Id="862735847" Language="SFX">
+							<ShortName>Keito_TV_On.wav</ShortName>
+							<Path>SFX\Keito_TV_On_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -35,6 +35,8 @@ namespace AK
         static const AkUniqueID PLAY_SKATE = 1618563948U;
         static const AkUniqueID PLAY_SOFTCLOTHHIT = 40205785U;
         static const AkUniqueID PLAY_THROWYARN = 2777424796U;
+        static const AkUniqueID PLAY_TV_OFF = 1174402806U;
+        static const AkUniqueID PLAY_TV_ON = 1865976120U;
         static const AkUniqueID PLAY_WOODHIT = 4287226464U;
         static const AkUniqueID PLAY_YARN_COMBINE = 554607610U;
         static const AkUniqueID PLAY_YARN_HIT = 1677062370U;
