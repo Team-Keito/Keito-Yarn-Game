@@ -49,6 +49,8 @@ public class SlingShot : MonoBehaviour
     private Vector3 _forceVector;
     private bool _onCoolDown;
 
+    private bool gameSetupPhase;
+
     private Vector3 StartOffset => CalcOffset(Camera.main.transform, _postionOffset);
     public GameObject CurrentBall => _currentBall;
 
@@ -68,6 +70,8 @@ public class SlingShot : MonoBehaviour
         //Parents object to Camera w/offset (Avoids jittery movement)
         transform.position = CalcOffset(Camera.main.transform, _postionOffset);
         transform.SetParent(Camera.main.transform, true);
+        gameSetupPhase = true;
+        SetupFirstShot();
     }
 
     private void OnEnable()
@@ -93,19 +97,24 @@ public class SlingShot : MonoBehaviour
     {
         if (_isHeld)
         {
-            UpdateRotation();
-
-            _forceVector = _force * transform.forward;
-
-            DrawWithDrag(_forceVector);
-            _indicator.transform.position = _lineRenderer.GetPosition(_lineRenderer.positionCount - 1);
-
-            _currentBall.transform.position = StartOffset;
+            
         }
+        // Try having them outside the is held
+        UpdateRotation();
+
+        _forceVector = _force * transform.forward;
+
+        DrawWithDrag(_forceVector);
+
+        _currentBall.transform.position = StartOffset;
+
+        _indicator.transform.position = _lineRenderer.GetPosition(_lineRenderer.positionCount - 1);
     }
 
     private void UpdateRotation()
     {
+        if (gameSetupPhase) return;
+
         Vector2 mouseDelta = InputManager.Input.Player.Move.ReadValue<Vector2>();
 
         _force = _forceVertical.CalcRotation(_force, mouseDelta.y);
@@ -152,17 +161,14 @@ public class SlingShot : MonoBehaviour
     {
         _isHeld = false;
 
-        Destroy(_currentBall);
+        //Destroy(_currentBall);
         ToggleIndicator(false);
     }
 
     private void StartThrow()
     {
         ToggleIndicator(true);
-        UpdateLineColor(_PrefabPicker.GetColor());
-        ResetSelf();
-
-        SpawnNextThrownObject();
+        //ResetSelf();
 
         OnStartThrow.Invoke();
     }
@@ -174,13 +180,32 @@ public class SlingShot : MonoBehaviour
 
         ThrowItem(_currentBall);
         AkSoundEngine.PostEvent("Play_ThrowYarn", gameObject);
-        _currentBall = null;
 
+        _currentBall.GetComponent<Collider>().enabled = true;
         _PrefabPicker.Remove();
         OnNextColorChange.Invoke(GetNextColors());
 
+        SpawnNextThrownObject();
+        UpdateLineColor(_PrefabPicker.GetColor());
+
         StartCoroutine(RunCoolDown(_afterFireCD));
         OnThrow.Invoke();
+    }
+
+    private void SetupFirstShot()
+    {
+        _indicator.SetActive(true); // Try having indicator always enabled
+        _lineRenderer.enabled = true;
+        if (_currentBall == null)
+        {
+            SpawnNextThrownObject();
+            UpdateLineColor(_PrefabPicker.GetColor());
+        }
+        ResetSelf();
+        
+        // Force the rotation of the slingshot to be 0 for Y to keep indicator at center
+        transform.rotation = Quaternion.Euler(transform.rotation.x, 0, 0);
+        gameSetupPhase = false;
     }
 
     #endregion
@@ -204,7 +229,7 @@ public class SlingShot : MonoBehaviour
         _radius = prefab.transform.localScale.x * prefab.GetComponent<SphereCollider>().radius;
 
         _currentBall = Instantiate(prefab, StartOffset, Quaternion.identity, transform);
-        _currentBall.GetComponent<SphereCollider>().enabled = false; // No physics collision until toss
+        _currentBall.GetComponent<Collider>().enabled = false; // No physics collision until toss
     }
     #endregion
 
@@ -227,8 +252,8 @@ public class SlingShot : MonoBehaviour
     }
     private void ToggleIndicator(bool state)
     {
-        _lineRenderer.enabled = state;
-        _indicator.SetActive(state);
+        // _lineRenderer.enabled = state;
+        // _indicator.SetActive(state);
     }
 
     #endregion
