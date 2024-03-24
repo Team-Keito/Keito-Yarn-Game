@@ -248,6 +248,67 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Ceramic" ID="{3FCDC045-1C27-4856-947F-E35C90BB3D77}">
+					<ChildrenList>
+						<Action Name="" ID="{E5C4F1DF-4734-4241-8481-EC15EE89F1A5}" ShortID="94393501">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ceramic" ID="{D3ACF80E-8F5D-4DDB-A30C-FF676519C0D4}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CFD39250-AEBE-4FAA-9A8F-028DA9C921ED}" ShortID="500261191">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WoodHit" ID="{2757D019-B600-422B-A5D8-9717C1404FFF}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Metal" ID="{11148DB2-EC59-4F8F-A864-904478FFB627}">
+					<ChildrenList>
+						<Action Name="" ID="{D3DBF515-7F84-4FD8-8028-79AEF4FE6D05}" ShortID="928255846">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Metal" ID="{EA340805-452E-4C19-BC7E-B526F56CB792}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2C2FAE44-A345-40CE-9FC2-D2E69B7D942F}" ShortID="47555152">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WoodHit" ID="{2757D019-B600-422B-A5D8-9717C1404FFF}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Fan" ID="{9CD9A707-339E-4582-8A67-0D57811E30CE}">
+					<ChildrenList>
+						<Action Name="" ID="{8FC45B66-BA69-4ED9-A3EF-AE32B226F2EF}" ShortID="872672982">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Fan" ID="{A9ACD117-EDD5-4B6F-9874-216753840F3F}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Fan" ID="{21F08386-1BF5-4F2F-903F-D7DCA6D9F44E}">
+					<ChildrenList>
+						<Action Name="" ID="{AE080406-057E-4090-9996-32DE55222DD6}" ShortID="763843334">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Fan" ID="{A9ACD117-EDD5-4B6F-9874-216753840F3F}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
