@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class TVAudio : MonoBehaviour
 {
+    public AK.Wwise.Event tvOn;
+    public AK.Wwise.Event tvOff;
     public void PlayOn()
     {
-        //print("TV ON");
+        tvOn.Post(gameObject);
     }
 
     public void PlayOff()
     {
-        //print("TV OFF");
+        tvOff.Post(gameObject);
     }
 }

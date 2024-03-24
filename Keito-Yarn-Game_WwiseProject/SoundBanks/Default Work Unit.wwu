@@ -12,6 +12,7 @@
 				</SoundBank>
 				<SoundBank Name="SFX_SoundBank" ID="{5F04EF33-0B5A-4021-ACEB-772520F472F9}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Play_TV_On" ID="{04B1F170-0AB3-4089-BE70-BB8D5AAFA08B}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Yarn_Hit" ID="{FF2DE81D-3A76-419D-B467-059CD36A65B3}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ButtonClick" ID="{221ABB39-BBDB-41E1-B6A0-F3B0F004C4C3}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_SoftClothHit" ID="{EDE21E0D-D4DF-4232-AB2C-8117F7BED9C8}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
@@ -30,6 +31,7 @@
 						<ObjectRef Name="Play_Collect" ID="{E6735674-BFD5-48E0-A04D-DF3D16D3CA82}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_LeatherHit" ID="{462279FF-99B8-4900-A939-EDC5E886DE89}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Cardboard" ID="{D4B5D124-98F7-4A21-860B-CE3F615FC7C0}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_TV_Off" ID="{629D9A8D-B3A8-4AAE-B202-FB0EE07440F1}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Break_Skate" ID="{9BF8DC03-318D-4ADC-BCB9-6A038BA18B8B}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Ambience" ID="{4284309A-D619-4AE9-B070-3F4C8217F70C}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Cat_Purr" ID="{31D552E9-3457-4D5F-9A88-1E21C35D7EE4}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}" Origin="Manual" Filter="7"/>

@@ -3862,6 +3862,70 @@
 								<ActiveSource Name="Keito_Fan_Loop" ID="{875E47D5-B054-4DF7-B787-B940F14921BF}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Folder Name="TV" ID="{2271A0E1-2852-45DE-822D-AAD9196A299B}" ShortID="608099657">
+							<ChildrenList>
+								<Sound Name="TV_On" ID="{182CFD8E-067A-40DE-8EB4-C554F348E101}" ShortID="1032627571">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_TV_On" ID="{62CCDF34-FD6C-47A7-9234-5A9A9860C63F}">
+											<Language>SFX</Language>
+											<AudioFile>Keito_TV_On.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="862735847"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_TV_On" ID="{62CCDF34-FD6C-47A7-9234-5A9A9860C63F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="TV_Off" ID="{C5B1A22E-2871-4F0D-809B-10EAA79B15B2}" ShortID="625934675">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_TV_Off" ID="{D9169FB6-2682-47BE-9025-0AFD43129CC0}">
+											<Language>SFX</Language>
+											<AudioFile>Keito_TV_Off.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="633615799"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_TV_Off" ID="{D9169FB6-2682-47BE-9025-0AFD43129CC0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ambience" ID="{AB0DBCB7-30F4-4451-A8FD-0A10B9329EFB}" ShortID="994565558">

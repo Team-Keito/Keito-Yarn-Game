@@ -309,6 +309,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_TV_Off" ID="{629D9A8D-B3A8-4AAE-B202-FB0EE07440F1}">
+					<ChildrenList>
+						<Action Name="" ID="{AB00F558-79FC-4F92-8454-BF331AFD3C27}" ShortID="5629761">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TV_Off" ID="{C5B1A22E-2871-4F0D-809B-10EAA79B15B2}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_TV_On" ID="{04B1F170-0AB3-4089-BE70-BB8D5AAFA08B}">
+					<ChildrenList>
+						<Action Name="" ID="{ECCF54E3-7CAB-4734-8877-87A369BBD2C5}" ShortID="6791081">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TV_On" ID="{182CFD8E-067A-40DE-8EB4-C554F348E101}" WorkUnitID="{CD330055-646D-425E-8C9F-F02BF73EFF79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
