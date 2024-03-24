@@ -54,8 +54,14 @@ public class SlingShot : MonoBehaviour
     private Vector3 StartOffset => CalcOffset(Camera.main.transform, _postionOffset);
     public GameObject CurrentBall => _currentBall;
 
+    public float mouseX { get { return _horizontal.Speed; } set { _horizontal.Speed = value; } } 
+    public float mouseY { get { return _forceVertical.Speed; } set { _forceVertical.Speed = value; } }
+
+    public static SlingShot Instance;
+
     private void Start()
     {
+        Instance = this;
         _PrefabPicker.Setup();
         OnNextColorChange.Invoke(GetNextColors());
 
