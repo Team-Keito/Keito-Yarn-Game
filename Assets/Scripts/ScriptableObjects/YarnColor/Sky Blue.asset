@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Sky Blue
   Color: {r: 0.37166253, g: 0.74246484, b: 0.9056604, a: 1}
+  YarnPrefab: {fileID: 660840053069172341, guid: 181c938fd1dbd674b97e726610844b80, type: 3}
+  YarnMaterial: {fileID: 2100000, guid: 10d48055db26ca3488b7567f5ec8a5be, type: 2}

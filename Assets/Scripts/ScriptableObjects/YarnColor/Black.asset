@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Black
   Color: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
+  YarnPrefab: {fileID: 660840053069172341, guid: 42988619c28145d4cb9240cf77452c52, type: 3}
+  YarnMaterial: {fileID: 2100000, guid: 6bb2b8191b1268e439e7631ed6c3c862, type: 2}

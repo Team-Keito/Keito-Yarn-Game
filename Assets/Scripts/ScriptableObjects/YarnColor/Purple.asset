@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Purple
   Color: {r: 0.62925464, g: 0.25098038, b: 1, a: 1}
+  YarnPrefab: {fileID: 660840053069172341, guid: 62d1d92971e071a43bd89013576f1cf2, type: 3}
+  YarnMaterial: {fileID: 2100000, guid: 21f38cc05e7d1464db1ff6607220799e, type: 2}
