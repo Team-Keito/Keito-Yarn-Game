@@ -5,14 +5,15 @@ using UnityEngine;
 [System.Serializable]
 public class NextColor
 {
-    [SerializeField] private int _count = 3;
-    [SerializeField] private GameObject[] _prefabs;
+    [SerializeField, Tooltip("Number of yarn balls in queue")] private int _count = 3;
+    [SerializeField] private GameManager _gameManager;
 
     public Queue<Color> NextColors = new();
     public Queue<GameObject> NextYarns = new();
 
-    public void Setup()
+    public void Setup(GameManager gameManager)
     {
+        _gameManager = gameManager;
         Random.InitState(System.DateTime.Now.Millisecond);
         for (int i = 0; i < _count; i++)
         {
@@ -45,8 +46,7 @@ public class NextColor
     }
 
     private GameObject GetRandomPrefab()
-    {        
-        int RandInt = Random.Range(0, _prefabs.Length);
-        return _prefabs[RandInt];
+    {
+        return _gameManager.GetRandomColorYarn();
     }
 }

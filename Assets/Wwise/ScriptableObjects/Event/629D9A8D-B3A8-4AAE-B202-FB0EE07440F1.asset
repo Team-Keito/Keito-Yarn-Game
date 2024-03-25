@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16292e0f9c3a3f40acdca6758775613, type: 3}
+  m_Name: 629D9A8D-B3A8-4AAE-B202-FB0EE07440F1
+  m_EditorClassIdentifier: 
+  objectName: Play_TV_Off
+  id: 1174402806
+  guid: 629D9A8D-B3A8-4AAE-B202-FB0EE07440F1

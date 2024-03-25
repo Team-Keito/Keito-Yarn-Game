@@ -12,6 +12,10 @@ public class YarnCollision : MonoBehaviour
     //public string CatYarnCollisionSound = "Play_Cat_Purr";
     public string YarnMergeCollisionSound = "Play_Yarn_Merge";
     public string MaxSizeGlowSound = "Play_MaxSizeGlow";
+    public string fanEvent = "Play_Fan";
+    public string stopFanEvent = "Stop_Fan";
+    bool isFanOn = false;
+
 
     /// <summary>
     /// When yarn first collides with another object
@@ -104,5 +108,27 @@ public class YarnCollision : MonoBehaviour
         {
             Debug.LogError("Cat-Yarn Collision Sound event name is not specified!");
         }
+    }
+    public void PayFan()
+    {
+        if (!isFanOn) {
+            AkSoundEngine.PostEvent(fanEvent, gameObject);
+            isFanOn = true;
+        }
+        
+        
+    }
+
+
+
+    public void StopFan()
+    {
+        if (isFanOn)
+        {
+            AkSoundEngine.PostEvent(stopFanEvent, gameObject);
+            isFanOn = false;
+        }
+       
+
     }
 }

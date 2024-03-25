@@ -3087,7 +3087,7 @@
 															</Point>
 															<Point>
 																<XPos>70</XPos>
-																<YPos>-0</YPos>
+																<YPos>0</YPos>
 																<Flags>0</Flags>
 															</Point>
 															<Point>
@@ -3130,7 +3130,7 @@
 															</Point>
 															<Point>
 																<XPos>100</XPos>
-																<YPos>-0</YPos>
+																<YPos>0</YPos>
 																<Flags>37</Flags>
 															</Point>
 														</PointList>
@@ -3206,6 +3206,726 @@
 								</BlendTrack>
 							</BlendTrackList>
 						</BlendContainer>
+						<BlendContainer Name="Metal" ID="{EA340805-452E-4C19-BC7E-B526F56CB792}" ShortID="345024432">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C0FA243A-0BF6-4DB4-839D-E75C5D723647}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="MetalHitPt1" ID="{882FC0A5-CDB3-49A7-B42F-BBA7A9752A00}" ShortID="1043715692">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{937D634B-9769-410E-930A-0AA79375EDE4}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Keito_MetalHitPt1_01" ID="{29D303C5-8DC0-4647-8DCE-3C14F3FCB8C2}" ShortID="57495720">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Keito_MetalHitPt1_01" ID="{6F767401-18CD-4153-9EE6-F684D882C16D}">
+													<Language>SFX</Language>
+													<AudioFile>Keito_MetalHitPt1_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="197744113"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Keito_MetalHitPt1_01" ID="{6F767401-18CD-4153-9EE6-F684D882C16D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Keito_MetalHitPt1_02" ID="{40D86096-4E84-4405-8480-ABED6D53D934}" ShortID="334244466">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Keito_MetalHitPt1_02" ID="{6D8E2B7D-D01C-45D2-8DBA-60347D733540}">
+													<Language>SFX</Language>
+													<AudioFile>Keito_MetalHitPt1_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="555729388"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Keito_MetalHitPt1_02" ID="{6D8E2B7D-D01C-45D2-8DBA-60347D733540}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Keito_MetalHitPt1_03" ID="{9EF227F4-D142-42B7-B6AE-CE74E0B17319}" ShortID="640545654">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Keito_MetalHitPt1_03" ID="{A90EA05D-BA71-4DF2-9465-87C6DBE363FE}">
+													<Language>SFX</Language>
+													<AudioFile>Keito_MetalHitPt1_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="577954276"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Keito_MetalHitPt1_03" ID="{A90EA05D-BA71-4DF2-9465-87C6DBE363FE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MetalHitPt2" ID="{B5D46BAA-20E2-449B-9A86-B6D594E109CD}" ShortID="920257408">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{48DA2F96-1767-42B6-8640-6E097050701A}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Keito_MetalHitPt2_01" ID="{03B834C4-1000-4FB1-907E-4460C5E7D91F}" ShortID="223227512">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Keito_MetalHitPt2_01" ID="{61775B64-73F0-4068-95FE-6EE605770B9D}">
+													<Language>SFX</Language>
+													<AudioFile>Keito_MetalHitPt2_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="544772870"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Keito_MetalHitPt2_01" ID="{61775B64-73F0-4068-95FE-6EE605770B9D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Keito_MetalHitPt2_02" ID="{198C3A8D-C10E-4B76-AA08-19BFE3125FD4}" ShortID="889229544">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Keito_MetalHitPt2_02" ID="{3C13CA31-9F7E-4BF0-9ABD-737722DEAE1E}">
+													<Language>SFX</Language>
+													<AudioFile>Keito_MetalHitPt2_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="159455272"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Keito_MetalHitPt2_02" ID="{3C13CA31-9F7E-4BF0-9ABD-737722DEAE1E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MetalHitPt3" ID="{84428297-3A25-4575-85DE-59B38D3CDC31}" ShortID="670594101">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.05</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{93B8D225-2931-4693-B67C-F6C6666097CA}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Keito_MetalHitPt3_Mid_01" ID="{9F1849A5-599A-4883-9A5F-850682D84A4D}" ShortID="522068901">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Keito_MetalHitPt3_Mid_01" ID="{B56AAC33-1388-453F-B0C1-AF908B4F72B4}">
+													<Language>SFX</Language>
+													<AudioFile>Keito_MetalHitPt3_Mid_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="605174955"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Keito_MetalHitPt3_Mid_01" ID="{B56AAC33-1388-453F-B0C1-AF908B4F72B4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Keito_MetalHitPt3_Mid_02" ID="{36630538-0EE5-4FC4-B486-A9FD24905994}" ShortID="755451284">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Keito_MetalHitPt3_Mid_02" ID="{0C92CD1C-5A00-41E7-BC07-1F7B62763147}">
+													<Language>SFX</Language>
+													<AudioFile>Keito_MetalHitPt3_Mid_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="926663260"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Keito_MetalHitPt3_Mid_02" ID="{0C92CD1C-5A00-41E7-BC07-1F7B62763147}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="MetalHitPt4" ID="{83CE837B-73F0-47AE-8D7C-6C3ADB1214B9}" ShortID="662653843">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.07</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{B107C413-99CA-4C85-963E-FA1A8A70C345}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Keito_MetalHitPt4_End_01" ID="{488289AF-8DBD-464E-990F-33B95D94FD4E}" ShortID="497264913">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Keito_MetalHitPt4_End_01" ID="{4E5D174E-9C24-473A-BDB8-F4DED7F464C3}">
+													<Language>SFX</Language>
+													<AudioFile>Keito_MetalHitPt4_End_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="711344105"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Keito_MetalHitPt4_End_01" ID="{4E5D174E-9C24-473A-BDB8-F4DED7F464C3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Keito_MetalHitPt4_End_02" ID="{4C311B17-2CED-4232-849C-4B9B05F3C643}" ShortID="347553085">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Keito_MetalHitPt4_End_02" ID="{C0CAA890-CDB2-4F07-8CDB-E12524B9E0BD}">
+													<Language>SFX</Language>
+													<AudioFile>Keito_MetalHitPt4_End_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="902095461"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Keito_MetalHitPt4_End_02" ID="{C0CAA890-CDB2-4F07-8CDB-E12524B9E0BD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<ObjectLists/>
+						</BlendContainer>
+						<BlendContainer Name="Ceramic" ID="{D3ACF80E-8F5D-4DDB-A30C-FF676519C0D4}" ShortID="177551846">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{8C5502C6-19AA-407E-A196-E8FAAA13B1F1}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="YarnHitAttenuation" ID="{74B892F1-ACEF-4765-818A-9F143C54D814}" WorkUnitID="{52E5A211-CE2E-4CEC-A58A-88EB059F03CF}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="CeramicHitPt1" ID="{0692507A-A10E-4C6A-A560-4FFBA219E8F0}" ShortID="788509722">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{9BE5FD62-045B-4F35-AD92-35637093C35A}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Keito_CeramicHitPt1_01" ID="{430641AF-5BA9-429D-9D21-FA98458C794E}" ShortID="1012508164">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Keito_CeramicHitPt1_01" ID="{CC772EEB-0322-4BFE-BA13-7AA660C0B816}">
+													<Language>SFX</Language>
+													<AudioFile>Keito_CeramicHitPt1_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="906897115"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Keito_CeramicHitPt1_01" ID="{CC772EEB-0322-4BFE-BA13-7AA660C0B816}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Keito_CeramicHitPt1_02" ID="{357BDEF0-3CD7-4775-9901-8543B4BB614F}" ShortID="223331411">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Keito_CeramicHitPt1_02" ID="{0132C6BE-3760-4FA5-9BBF-B221F23D7482}">
+													<Language>SFX</Language>
+													<AudioFile>Keito_CeramicHitPt1_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="631910869"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Keito_CeramicHitPt1_02" ID="{0132C6BE-3760-4FA5-9BBF-B221F23D7482}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="CeramicHitPt2" ID="{B832F273-F3CF-4363-8DCD-8FD160C3CF93}" ShortID="305439606">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E6C74202-5D0C-4344-B935-534883EEC130}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Keito_CeramicHitPt2_01" ID="{2ADF6FF9-5A55-4E6C-9D74-A255EDD41A2D}" ShortID="653538066">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Keito_CeramicHitPt2_01" ID="{6B5FC99B-9FF1-4BFA-BACE-27E14FB4031E}">
+													<Language>SFX</Language>
+													<AudioFile>Keito_CeramicHitPt2_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="33003346"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Keito_CeramicHitPt2_01" ID="{6B5FC99B-9FF1-4BFA-BACE-27E14FB4031E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Keito_CeramicHitPt2_02" ID="{74B4D670-CD61-40D6-B80D-56895FE0B8DB}" ShortID="124832649">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Keito_CeramicHitPt2_02" ID="{CF129916-B504-4873-AAC0-0FBB51ACCBEE}">
+													<Language>SFX</Language>
+													<AudioFile>Keito_CeramicHitPt2_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="221164872"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Keito_CeramicHitPt2_02" ID="{CF129916-B504-4873-AAC0-0FBB51ACCBEE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<BlendContainer Name="CeramicHitPt3" ID="{08315184-CCF0-41C6-A07B-1011944454EC}" ShortID="837115227">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{922B9E17-2770-470C-A8CB-567A565267A6}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Keito_CeramicHitPt3_01" ID="{E276D749-AE4B-4917-92F0-C5DAE983975A}" ShortID="877160751">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Keito_CeramicHitPt3_01" ID="{54A3B343-82DF-4EA8-B378-AC039B7B4AC8}">
+													<Language>SFX</Language>
+													<AudioFile>Keito_CeramicHitPt3_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="106089571"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Keito_CeramicHitPt3_01" ID="{54A3B343-82DF-4EA8-B378-AC039B7B4AC8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Keito_CeramicHitPt3_02" ID="{4DE35B43-77EE-4835-A7B1-730D3D8D7297}" ShortID="519000518">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MasterVolume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Keito_CeramicHitPt3_02" ID="{4FAEDC9A-B50A-45FF-89BC-68A1323F9CD4}">
+													<Language>SFX</Language>
+													<AudioFile>Keito_CeramicHitPt3_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="739605702"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Keito_CeramicHitPt3_02" ID="{4FAEDC9A-B50A-45FF-89BC-68A1323F9CD4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</BlendContainer>
+							</ChildrenList>
+							<ObjectLists/>
+						</BlendContainer>
+						<Sound Name="Fan" ID="{A9ACD117-EDD5-4B6F-9874-216753840F3F}" ShortID="186218938">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Keito_Fan_Loop" ID="{875E47D5-B054-4DF7-B787-B940F14921BF}">
+									<Language>SFX</Language>
+									<AudioFile>Keito_Fan_Loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="495542322"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Keito_Fan_Loop" ID="{875E47D5-B054-4DF7-B787-B940F14921BF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Folder Name="TV" ID="{2271A0E1-2852-45DE-822D-AAD9196A299B}" ShortID="608099657">
+							<ChildrenList>
+								<Sound Name="TV_On" ID="{182CFD8E-067A-40DE-8EB4-C554F348E101}" ShortID="1032627571">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_TV_On" ID="{62CCDF34-FD6C-47A7-9234-5A9A9860C63F}">
+											<Language>SFX</Language>
+											<AudioFile>Keito_TV_On.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="862735847"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_TV_On" ID="{62CCDF34-FD6C-47A7-9234-5A9A9860C63F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="TV_Off" ID="{C5B1A22E-2871-4F0D-809B-10EAA79B15B2}" ShortID="625934675">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{49230A57-CA9B-4EC7-A979-132E006EAD43}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFXVolume" ID="{8D504B07-577E-47F5-869F-667FACC6023D}" WorkUnitID="{6EA42FA9-AF09-40E7-B758-5A08C9D5B94D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Keito_TV_Off" ID="{D9169FB6-2682-47BE-9025-0AFD43129CC0}">
+											<Language>SFX</Language>
+											<AudioFile>Keito_TV_Off.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="633615799"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Keito_TV_Off" ID="{D9169FB6-2682-47BE-9025-0AFD43129CC0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ambience" ID="{AB0DBCB7-30F4-4451-A8FD-0A10B9329EFB}" ShortID="994565558">

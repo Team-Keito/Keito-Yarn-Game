@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A26031C9-2344-4028-B9DA-A30DBDB77C09}" SchemaVersion="103">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{A26031C9-2344-4028-B9DA-A30DBDB77C09}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A26031C9-2344-4028-B9DA-A30DBDB77C09}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="FanSoundcaster" ID="{A7E2B4F6-33F2-445F-B907-7C60E5C912A3}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Fan" ID="{9CD9A707-339E-4582-8A67-0D57811E30CE}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Fan" ID="{21F08386-1BF5-4F2F-903F-D7DCA6D9F44E}" WorkUnitID="{EFF0B148-0024-4912-B316-5F6123798618}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="MusicVolume" ID="{3A4E3210-72B7-44BA-BABA-0637CA3E8FEF}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SkateSpeed" ID="{86D7059B-5C60-483C-AB1E-2A1972E1D072}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="MasterVolume" ID="{059C2B49-0C86-4948-9130-58488696048B}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="VolumeChange" ID="{146E0643-7B5E-49B5-8912-A3328AD1A445}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SFXVolume" ID="{DB772168-0D22-49B6-9958-948AA1EC0BD3}"/>
+							<Value>50</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

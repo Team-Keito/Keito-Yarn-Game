@@ -50,8 +50,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _signPrefab: {fileID: 7454302467891201102, guid: 236accd40078e1248a323b369e6a15a7, type: 3}
-  _angryCat: {fileID: 21300000, guid: 189437e486fed418a9895d57ccd9d1b9, type: 3}
-  _happyCat: {fileID: -1241481357, guid: d85eb8473b66f4658a56e6a0531aca48, type: 3}
+  _animationTime: 0.5
+  _displayTime: 2
+  _angryCat: {fileID: 21300000, guid: 0c44fefc5c1d9874faa856fc5ec001ec, type: 3}
+  _happyCat: {fileID: 21300000, guid: db92bf9521412b14cb9ef79c9511c9a1, type: 3}
   _redYarn: {fileID: 21300000, guid: 80967001393c141e8981fc309f8d6dd5, type: 3}
   _greenYarn: {fileID: 21300000, guid: 83d3440dffe954b878c0053773f19498, type: 3}
   _blueYarn: {fileID: 21300000, guid: fffba4979a388458eb6362236c44b1d2, type: 3}

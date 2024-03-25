@@ -4,6 +4,7 @@ using AK.Wwise;
 public class SkateboardSounds : MonoBehaviour
 {
     private const int MAX_VOLUME = 100;
+    private const string SKATE_SOUND = "SkateSpeed";
     public AK.Wwise.Event skateboardMovementSound;
 
     [SerializeField, Tooltip("The minimum amount of speed required for the sound to play")]
@@ -23,26 +24,33 @@ public class SkateboardSounds : MonoBehaviour
     {
         if (!_rigidbody) _rigidbody = GetComponent<Rigidbody>();
         if (_wheelColliders.Length == 0) _wheelColliders = GetComponentsInChildren<WheelCollider>();
-        AkSoundEngine.SetRTPCValue("SkateSpeed", 0f);
+        AkSoundEngine.SetRTPCValue(SKATE_SOUND, 0f);
         skateboardMovementSound.Post(gameObject);
     }
 
     private void Update()
     {
-        // If grounded and above min speed
-        if (IsAllGrounded() && _rigidbody.velocity.sqrMagnitude > MinSoundSpeedSqr)
+        // Above min speed => maybe change volume
+        if (_rigidbody.velocity.sqrMagnitude > MinSoundSpeedSqr)
         {
-            var volume = SpeedToVolume();
-            // TODO: Uncomment when sound is added
-            // skateboardMovementSound.Post(gameObject);
+            // If all wheels grounded
+            if (IsAllGrounded())
+            {
+                var volume = SpeedToVolume();
 
-            // Map skateboard speed to RTPC value (0-100)
-            float speedRTPCValue = Mathf.Clamp(volume, 0f, 100f);
+                // Map skateboard speed to RTPC value (0-100)
+                float speedRTPCValue = Mathf.Clamp(volume, 0f, 100f);
 
-            // Set the RTPC value in Wwise
-            AkSoundEngine.SetRTPCValue("SkateSpeed", speedRTPCValue);
+                // Set the RTPC value in Wwise
+                AkSoundEngine.SetRTPCValue(SKATE_SOUND, speedRTPCValue);
 
-            // Post the sound event to play the sound with the updated RTPC value
+                // Post the sound event to play the sound with the updated RTPC value
+            }
+        }
+        // otherwise => keep at 0
+        else
+        {
+            AkSoundEngine.SetRTPCValue(SKATE_SOUND, 0);
         }
     }
 
