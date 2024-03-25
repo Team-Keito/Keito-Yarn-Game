@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a04513f5ff3eb04aa1d99f35d135005, type: 3}
-  m_Name: Blue
+  m_Name: Grey
   m_EditorClassIdentifier: 
-  Name: Blue
-  Color: {r: 0.2509804, g: 0.2509804, b: 1, a: 1}
-  YarnPrefab: {fileID: 3154276696338372515, guid: 2630d7eda4b5643cab9f5ec813539c8e, type: 3}
-  YarnMaterial: {fileID: 2100000, guid: b9925f4a1775941f595b4a38c9058df0, type: 2}
+  Name: Grey
+  Color: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+  YarnPrefab: {fileID: 660840053069172341, guid: 5a11d48095977cd4c828dd3b840a6477, type: 3}
+  YarnMaterial: {fileID: 2100000, guid: 5182674df5d22f444abc43b2b563a7b2, type: 2}

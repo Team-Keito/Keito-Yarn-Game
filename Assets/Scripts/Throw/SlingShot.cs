@@ -61,8 +61,8 @@ public class SlingShot : MonoBehaviour
 
     private void Start()
     {
-        Instance = this;
-        _PrefabPicker.Setup();
+        var gameManager = FindObjectOfType<GameManager>();
+        _PrefabPicker.Setup(gameManager);
         OnNextColorChange.Invoke(GetNextColors());
 
         _lineRenderer = gameObject.GetComponent<LineRenderer>();
