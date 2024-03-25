@@ -3,7 +3,22 @@ guid: a7045f2b447b943fd83a7a8b60ee8d31
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eyes Texture
+    second: {fileID: 2100000, guid: b6c1989bdc9044d82b45496aa0076df3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 00739e61ca77b4d04a924494c3aef2d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 158b88281cb6b4d69817d5b3d69bab42, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
