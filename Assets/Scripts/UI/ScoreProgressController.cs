@@ -25,9 +25,8 @@ public class ScoreProgressController : MonoBehaviour
 
         _progressBar.fillAmount = amount;
 
-        int index = Mathf.Max((int)(amount / (1f / _sprites.Length)), _sprites.Length-1);
-
-        _catFace.sprite = _sprites[index];
+        int index = Mathf.Min((int)(amount / (1f / _sprites.Length)), _sprites.Length-1);
+        _catFace.sprite = _sprites[index];        
     }
 
 }

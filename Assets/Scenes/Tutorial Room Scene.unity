@@ -7368,21 +7368,22 @@ MonoBehaviour:
   - text: Use WASD/Arrow keys or Left Stick to move the camera.
     usesImage: 0
     image: {fileID: 0}
-  - text: Hold down the left mouse or right trigger to start tossing.
+  - text: You can use the mouse or right stick to steer where the ball will land.
     usesImage: 0
     image: {fileID: 0}
-  - text: You can use the mouse or right stick to steer where the ball will land.
+  - text: Hold down the left mouse or right trigger to start tossing.
     usesImage: 0
     image: {fileID: 0}
   - text: Let go to toss the yarn ball!
     usesImage: 0
     image: {fileID: 0}
-  - text: Keito is picky with the yarn they collect. Make sure the yarn is big enough
-      to play with by combining yarn balls of the same color.
+  - text: Keito is picky with the yarn they collect. Make sure the yarn <b>match
+      Keito's favorite color</b> and is <b>big enough</b> to play with by combining
+      yarn balls of the same color.
     usesImage: 1
     image: {fileID: 21300000, guid: 24caf40cff6224e5d8f55477da8f0ffd, type: 3}
-  - text: If you get a yarn ball big enough, Keito will accept it. Bonus points for
-      giving their favorite color.
+  - text: Keito will move around the room and will often change their favorite color,
+      so be on the lookout.
     usesImage: 0
     image: {fileID: 0}
   - text: The progress bar raises every time you toss Keito the yarn. Play with Keito
