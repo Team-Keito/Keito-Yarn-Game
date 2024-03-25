@@ -4,13 +4,16 @@ using AK.Wwise;
 public class SkateboardSounds : MonoBehaviour
 {
     private const int MAX_VOLUME = 100;
+    private const string SKATE_SOUND = "SkateSpeed";
     public AK.Wwise.Event skateboardMovementSound;
 
     [SerializeField, Tooltip("The minimum amount of speed required for the sound to play")]
     private float _minimumSoundSpeed = 0.5f;
 
-    [SerializeField, Tooltip("The max speed at which the volume will not go any higher (faster speed will be at 100% volume)")]
+    [SerializeField, Tooltip("The speed at which max volume will play (100% volume). All faster speed is fixed to 100% volume")]
     private float _maximumSpeedVolume = 3;
+    [SerializeField, Range(0.001f, 10)]
+    private float _hitForceMultiplier = 1;
 
     public float MinSoundSpeedSqr => _minimumSoundSpeed * _minimumSoundSpeed;
 
@@ -21,26 +24,33 @@ public class SkateboardSounds : MonoBehaviour
     {
         if (!_rigidbody) _rigidbody = GetComponent<Rigidbody>();
         if (_wheelColliders.Length == 0) _wheelColliders = GetComponentsInChildren<WheelCollider>();
-        AkSoundEngine.SetRTPCValue("SkateSpeed", 0f);
+        AkSoundEngine.SetRTPCValue(SKATE_SOUND, 0f);
         skateboardMovementSound.Post(gameObject);
     }
 
     private void Update()
     {
-        // If grounded and above min speed
-        if (IsAllGrounded() && _rigidbody.velocity.sqrMagnitude > MinSoundSpeedSqr)
+        // Above min speed => maybe change volume
+        if (_rigidbody.velocity.sqrMagnitude > MinSoundSpeedSqr)
         {
-            var volume = SpeedToVolume();
-            // TODO: Uncomment when sound is added
-            // skateboardMovementSound.Post(gameObject);
+            // If all wheels grounded
+            if (IsAllGrounded())
+            {
+                var volume = SpeedToVolume();
 
-            // Map skateboard speed to RTPC value (0-100)
-            float speedRTPCValue = Mathf.Clamp(volume, 0f, 100f);
+                // Map skateboard speed to RTPC value (0-100)
+                float speedRTPCValue = Mathf.Clamp(volume, 0f, 100f);
 
-            // Set the RTPC value in Wwise
-            AkSoundEngine.SetRTPCValue("SkateSpeed", speedRTPCValue);
+                // Set the RTPC value in Wwise
+                AkSoundEngine.SetRTPCValue(SKATE_SOUND, speedRTPCValue);
 
-            // Post the sound event to play the sound with the updated RTPC value
+                // Post the sound event to play the sound with the updated RTPC value
+            }
+        }
+        // otherwise => keep at 0
+        else
+        {
+            AkSoundEngine.SetRTPCValue(SKATE_SOUND, 0);
         }
     }
 
@@ -52,7 +62,7 @@ public class SkateboardSounds : MonoBehaviour
             for (int i = 0; i < other.contactCount; i++)
             {
                 var contact = other.GetContact(i);
-                _rigidbody.AddForceAtPosition(contact.normal, contact.point);
+                _rigidbody.AddForceAtPosition(contact.normal * _hitForceMultiplier, contact.point);
             }
         }
     }

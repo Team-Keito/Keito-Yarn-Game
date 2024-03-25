@@ -15,6 +15,18 @@ public class AddGlow : MonoBehaviour
        
     }
 
+    public void Toggle()
+    {
+        if (_renderer.material.IsKeywordEnabled("_EMISSION"))
+        {
+            DisableGlowEffect();
+        }
+        else
+        {
+            EnableGlowEffect();
+        }
+    }
+
     public void EnableGlowEffect()
     {
         _renderer.material.EnableKeyword("_EMISSION");

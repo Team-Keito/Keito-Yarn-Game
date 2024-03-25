@@ -15,7 +15,7 @@ public class AutoConnectSign : MonoBehaviour
 
     public void Open(SignPostTypes type)
     {
-        _signs.Open(type);
+        _signs?.Open(type);
     }
 
     public void HandleCatScored(float _, bool isFav)
@@ -32,23 +32,21 @@ public class AutoConnectSign : MonoBehaviour
 
     public void SignAngry()
     {
-        _signs.Open(SignPostTypes.AngryCat);
+        _signs?.Open(SignPostTypes.AngryCat);
     }
 
     public void SignHappyCat()
     {
-        _signs.Open(SignPostTypes.HappyCat);
+        _signs?.Open(SignPostTypes.HappyCat);
     }
 
     public void SignFavoriteColor(ColorSO color)
     {
-        print(color);
-
         switch (color.name)
         {
-            case "Blue": _signs.Open(SignPostTypes.BlueYarn); break;
-            case "Green": _signs.Open(SignPostTypes.GreenYarn); break;
-            case "Red": _signs.Open(SignPostTypes.RedYarn); break;
+            case "Blue": _signs?.Open(SignPostTypes.BlueYarn); break;
+            case "Green": _signs?.Open(SignPostTypes.GreenYarn); break;
+            case "Red": _signs?.Open(SignPostTypes.RedYarn); break;
         }        
     }
 }

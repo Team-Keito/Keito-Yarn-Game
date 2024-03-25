@@ -20,21 +20,27 @@ namespace AK
         static const AkUniqueID PLAY_CAT_MEOW = 2051353701U;
         static const AkUniqueID PLAY_CAT_PURR = 1160118988U;
         static const AkUniqueID PLAY_CATREFUSESYARN = 1815447315U;
+        static const AkUniqueID PLAY_CERAMIC = 1090132750U;
         static const AkUniqueID PLAY_COLLECT = 2225033368U;
         static const AkUniqueID PLAY_COLLECTABLE_NEAR = 1669734397U;
+        static const AkUniqueID PLAY_FAN = 2757069037U;
         static const AkUniqueID PLAY_FAVORITEYARNCOLOR = 3575780237U;
         static const AkUniqueID PLAY_FURNITUREDRAG = 805934378U;
         static const AkUniqueID PLAY_FURNITUREHIT = 2086089131U;
         static const AkUniqueID PLAY_HIGHSCORE = 2349590460U;
         static const AkUniqueID PLAY_LEATHERHIT = 2204020340U;
         static const AkUniqueID PLAY_MAXSIZEGLOW = 2782737696U;
+        static const AkUniqueID PLAY_METAL = 3199860711U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_SKATE = 1618563948U;
         static const AkUniqueID PLAY_SOFTCLOTHHIT = 40205785U;
         static const AkUniqueID PLAY_THROWYARN = 2777424796U;
+        static const AkUniqueID PLAY_TV_OFF = 1174402806U;
+        static const AkUniqueID PLAY_TV_ON = 1865976120U;
         static const AkUniqueID PLAY_WOODHIT = 4287226464U;
         static const AkUniqueID PLAY_YARN_COMBINE = 554607610U;
         static const AkUniqueID PLAY_YARN_HIT = 1677062370U;
+        static const AkUniqueID STOP_FAN = 503719263U;
     } // namespace EVENTS
 
     namespace STATES
