@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class CatSounds : MonoBehaviour
 {
-    private string FavoriteYarnColorSound = "Play_FavoriteYarnColor";
-    private string DefualtScore = "Play_Cat_Purr";
-    private string HighScore = "Play_HighScore";
-    private string RejectBallSizeSound = "Play_CatRefusesYarn";
-    private string RejectBallForceSound = "Play_CatRefusesYarn";
+    private readonly string FavoriteYarnColorSound = "Play_FavoriteYarnColor";
+    private readonly string DefualtScore = "Play_Cat_Purr";
+    private readonly string HighScore = "Play_HighScore";
+    private readonly string RejectBallSizeSound = "Play_CatRefusesYarn";
+    private readonly string RejectBallForceSound = "Play_CatRefusesYarn";
+    private readonly string RejectDefault = "Play_CatRefusesYarn";
 
     [SerializeField] private int _highScore = 20;
     public void OnScoredEvent(ScoreData data)
@@ -25,6 +26,17 @@ public class CatSounds : MonoBehaviour
         else
         {
             DefaultScoreSound();
+        }
+    }
+
+    public void HandleRejectType(RejectType type)
+    {
+        switch (type)
+        {
+            case RejectType.Force: OnRejectBallForce(); break;
+            case RejectType.Size: OnRejectBallForce(); break;
+
+            default: AkSoundEngine.PostEvent(RejectDefault, gameObject); break;
         }
     }
 

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a04513f5ff3eb04aa1d99f35d135005, type: 3}
+  m_Name: White
+  m_EditorClassIdentifier: 
+  Name: White
+  Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  YarnPrefab: {fileID: 660840053069172341, guid: 3b6b4971148bf2146b75f0a1aad2e2dc, type: 3}
+  YarnMaterial: {fileID: 2100000, guid: 73f259e81d48a423498aeecf29ea92fe, type: 2}

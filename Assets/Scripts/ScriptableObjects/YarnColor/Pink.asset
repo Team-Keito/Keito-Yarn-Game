@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a04513f5ff3eb04aa1d99f35d135005, type: 3}
+  m_Name: Pink
+  m_EditorClassIdentifier: 
+  Name: Pink
+  Color: {r: 1, g: 0.495283, b: 0.76900244, a: 1}
+  YarnPrefab: {fileID: 660840053069172341, guid: 679fdb3302ebb2e4dbf7695f610ee3c0, type: 3}
+  YarnMaterial: {fileID: 2100000, guid: 0828c91ec2cc94a4c9e7678a326a7a18, type: 2}
